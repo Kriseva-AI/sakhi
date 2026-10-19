@@ -1,0 +1,17 @@
+node_modules/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.coverage
+*.db
+*.sqlite*
+.env
+.env.*
+!.env.example
+apps/web/dist/
+test-results/
+playwright-report/
+models/cache/
+.superpowers/
+.DS_Store

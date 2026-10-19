@@ -1,0 +1,180 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/25.9.0_1/bin/node",
+      "/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/.bin/playwright",
+      "test",
+      "-g",
+      "anonymous cyber"
+    ],
+    "configFile": "/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/playwright.config.ts",
+    "rootDir": "/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests",
+        "snapshotDir": "/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests",
+        "testIgnore": [],
+        "testMatch": "*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "browserName": "chromium",
+          "screenshot": "only-on-failure",
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "e2e.spec.ts",
+      "file": "e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "anonymous cyber journey, exact destination preview and cancel sends nothing",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30047,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/e2e.spec.ts",
+                        "column": 78,
+                        "line": 8
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Find my next step', exact: true })\u001b[22m\n\n\n   6 |   page.on('request', r => { if (!r.url().startsWith('http://127.0.0.1:5173')) outgoing.push(r.url()); });\n   7 |   await page.goto('/en-IN/');\n>  8 |   await page.getByRole('button', { name: 'Find my next step', exact: true }).click();\n     |                                                                              ^\n   9 |   await page.getByRole('button', { name: 'Understand my options', exact: true }).click();\n  10 |   await page.getByRole('button', { name: '18 or older', exact: true }).click();\n  11 |   await page.getByLabel('A few words, if you want').fill('Someone made an impersonation account of me');\n    at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/e2e.spec.ts:8:78"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T13:00:04.964Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/test-results/e2e-anonymous-cyber-journe-93dfd-ew-and-cancel-sends-nothing/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/test-results/e2e-anonymous-cyber-journe-93dfd-ew-and-cancel-sends-nothing/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/test-results/e2e-anonymous-cyber-journe-93dfd-ew-and-cancel-sends-nothing/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b1c7859d981cc20c96be-b70b690dff1f5f2d1d6d",
+          "file": "e2e.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-19T13:00:02.904Z",
+    "duration": 33447.678,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

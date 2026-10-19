@@ -1,0 +1,72 @@
+# Product capabilities: 68 features
+
+28 original capabilities + 40 additional X-factor capabilities. These are candidate product requirements, not implemented claims.
+
+- **F01** [CORE/P0] **Anonymous First Contact**: No login or identity to find public help.
+- **F02** [CORE/P0] **Emergency Fast Lane**: Deterministic 112 and other verified immediate help links.
+- **F03** [CORE/P0] **Multilingual Conversation**: Verified public navigation in 15 Indic languages plus English.
+- **F04** [CORE/P0] **Minimum Question Interview**: Only ask the minimum necessary to identify an applicable pathway.
+- **F05** [CORE/P0] **Uncertain Situation Mode**: Explore without presupposing offence or requesting sensitive details.
+- **F06** [CORE/P0] **Device Safety Awareness**: Explain device monitoring and history risks without claiming stealth.
+- **F07** [CORE/P0] **Help Someone Else Mode**: Expert reviewed bystander guidance.
+- **F08** [CORE/P0] **Live Verified HelpGraph**: Source-backed help entries with jurisdiction and review timestamps.
+- **F09** [CORE/P0] **181 to OSC Navigator**: User directed connection to 181 and its official OSC referral role.
+- **F10** [CORE/P1] **OSC Appointment Copilot**: Prepare and review information for official appointment portal.
+- **F11** [CORE/P0] **No Wrong Door Routing**: Show appropriate support pathway alternatives without imposing one.
+- **F12** [CORE/P1] **Local Service Discovery**: Verified district scoped service search without exact location.
+- **F13** [CORE/P1] **Tell Your Story Once**: User-approved compact summary for optional sharing.
+- **F14** [CORE/P2] **Verified Human Handoff**: Consent-controlled delivery and provider-accepted states.
+- **F15** [CORE/P1] **Action Approval Centre**: Exact recipient payload and intention before outbound action.
+- **F16** [CORE/P1] **Incident Timeline Builder**: User controlled chronology with assertions separated from inference.
+- **F17** [CORE/P1] **Private Case Vault**: Explicit opt-in encrypted local record and delete/export options.
+- **F18** [CORE/P1] **Evidence Inventory**: Metadata and optional local hashes without intimate uploads.
+- **F19** [CORE/P1] **Reference Tracker**: User entered complaint IDs and verified acknowledgements only.
+- **F20** [CORE/P1] **Rights and Deadline Navigator**: Source reviewed procedural information and uncertainty.
+- **F21** [CORE/P1] **User Controlled Follow-up Agent**: Only user approved reminders and outreach.
+- **F22** [CORE/P0] **Outcome First Navigation**: Ask preferred outcome instead of assuming reporting.
+- **F23** [CORE/P1] **Personal Pattern Finder**: User permitted descriptive grouping without accusing others.
+- **F24** [CORE/P0] **Digital Abuse Response Mode**: Authorized and verified cyber help and takedown guidance.
+- **F25** [CORE/P1] **Workplace and Campus Navigator**: Reviewed PoSH and institutional options.
+- **F26** [CORE/P2] **Assisted Human Advocate Workspace**: Partner authenticated narrowly scoped workspace.
+- **F27** [CORE/P1] **Share Only What's Necessary**: Consent scoped per recipient and redact preview.
+- **F28** [CORE/P1] **Offline Help Pack**: Cached public verified numbers and generic guide only.
+- **F29** [EXPANSION/P0] **Three Tap Need Finder**: Immediate choice among understand options report and help friend.
+- **F30** [EXPANSION/P0] **Sentence to Path Router**: Tolerant user input mapped to in-scope reviewed categories.
+- **F31** [EXPANSION/P1] **On Demand Voice Input**: Microphone requires foreground action; no ambient listening.
+- **F32** [EXPANSION/P1] **Romanized Indic Understanding**: Handle Hinglish and informal romanized Indic phrases.
+- **F33** [EXPANSION/P0] **Mid Session Language Switch**: Switch language preserving only permitted ephemeral state.
+- **F34** [EXPANSION/P0] **One Question At A Time**: Cognitive load controlled stepper with back/edit and skip.
+- **F35** [EXPANSION/P1] **Read Aloud General Help Card**: Optional voice of public information only.
+- **F36** [EXPANSION/P1] **Easy Read and Icon Mode**: Illustrated user-tested plain language resource content.
+- **F37** [EXPANSION/P1] **Pocket Service Cards**: Locally downloaded non-sensitive emergency directory export.
+- **F38** [EXPANSION/P0] **Low Bandwidth Lite Mode**: Fast no images mode on low tier Android connections.
+- **F39** [EXPANSION/P1] **Screen Privacy Control**: One touch hide detailed on-screen content, no stealth claims.
+- **F40** [EXPANSION/P0] **Ephemeral Session Erase**: Explicit clear app state and warns history/backups may persist.
+- **F41** [EXPANSION/P0] **Safe Device Checkpoint**: Optional warning before sensitive actions in shared device scenarios.
+- **F42** [EXPANSION/P1] **Consent Receipt Dashboard**: Explain what would be stored shared and deleted.
+- **F43** [EXPANSION/P0] **Citation Evidence Chips**: Every help assertion links to last verified authoritative source.
+- **F44** [EXPANSION/P0] **Source Freshness Watch**: Warn if a source or contact has passed verification TTL.
+- **F45** [EXPANSION/P0] **Verified Domain Preview**: Shows exact official hostname before leaving Sakhi.
+- **F46** [EXPANSION/P1] **Conflict Aware Sources**: Expose inconsistent official records and prefer safe fallback.
+- **F47** [EXPANSION/P0] **No Answer with Fallback**: Graceful admission of uncertainty and trustworthy next step.
+- **F48** [EXPANSION/P0] **Human Reviewed Language Stamps**: Locale and content version tracking with review signoff.
+- **F49** [EXPANSION/P1] **Three Path Comparison**: Explain multiple legitimate approaches and user choice.
+- **F50** [EXPANSION/P1] **Draft Difference Viewer**: Show exact AI drafted edits compared to user facts.
+- **F51** [EXPANSION/P1] **Channel Choice Companion**: Explain call official portal or assisted provider pathways.
+- **F52** [EXPANSION/P2] **External Receipt Verifier**: No claim sent unless delivery response confirmed by adapter.
+- **F53** [EXPANSION/P1] **On Device Evidence Fingerprints**: Hash user selected local file; do not retain file.
+- **F54** [EXPANSION/P1] **Evidence Origin Labels**: Preserve original versus user paraphrase and AI suggested text.
+- **F55** [EXPANSION/P2] **Per Recipient Share Preview**: User selects fields and previews post redaction handoff.
+- **F56** [EXPANSION/P1] **Official Form Companion**: Step by step guidance alongside portals no CAPTCHA automation.
+- **F57** [EXPANSION/P1] **Pre Call Talking Points**: Create optional short question checklist with user review.
+- **F58** [EXPANSION/P2] **Human Handoff Alternatives**: Offer verified fallback when partner unavailable.
+- **F59** [EXPANSION/P1] **Print Safe Referral Sheet**: Generate generic PDF card without user story by default.
+- **F60** [EXPANSION/P2] **Trusted Partner Embed Widget**: Independent read only support finder widget for partner pages.
+- **F61** [EXPANSION/P0] **Shareable General Help Cards**: No personalized disclosure in viral/share material.
+- **F62** [EXPANSION/P1] **Bystander Training Micro Guides**: Expert reviewed Do and Dont guide for trusted helpers.
+- **F63** [EXPANSION/P1] **Community Resource Corrections**: Moderated issue or PR review for nonprivate directory facts.
+- **F64** [EXPANSION/P1] **991 OSC Validation Console**: Provenance based verification queue not fabricated API sync.
+- **F65** [EXPANSION/P1] **Provider Contact Aging Alerts**: Flags stale contacts for authorized human recheck.
+- **F66** [EXPANSION/P1] **Translator Review Workflow**: Crowd submissions never published without professional review.
+- **F67** [EXPANSION/P0] **Safe Scenario Sandbox**: Synthetic workflows with visible Demo banner and no real action.
+- **F68** [EXPANSION/P0] **Multilingual Evaluation Console**: Per locale test suites including emergency routing and abstention.
