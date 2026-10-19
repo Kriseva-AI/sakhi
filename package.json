@@ -14,6 +14,7 @@
     "preview": "vite preview --config apps/web/vite.config.ts --host 127.0.0.1"
   },
   "dependencies": {
+    "leaflet": "^1.9.4",
     "lucide-react": "^0.577.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",
     "@playwright/test": "^1.58.0",
+    "@types/leaflet": "^1.9.21",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "lighthouse": "^13.0.0",

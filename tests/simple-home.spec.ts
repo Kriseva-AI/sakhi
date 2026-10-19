@@ -29,11 +29,11 @@ test("pink and black theme continues from the landing to the finder", async ({
   await page.goto("/en-IN/");
   await expect(page.locator("body")).toHaveCSS(
     "background-color",
-    "rgb(255, 244, 248)",
+    "rgb(255, 249, 252)",
   );
   await expect(
     page.getByRole("button", { name: "Find my next step", exact: true }),
-  ).toHaveCSS("background-color", "rgb(24, 18, 22)");
+  ).toHaveCSS("background-color", "rgb(19, 16, 19)");
   await page
     .getByRole("button", { name: "Find my next step", exact: true })
     .click();
@@ -45,7 +45,7 @@ test("pink and black theme continues from the landing to the finder", async ({
   ).toBeVisible();
   await expect(page.locator("body")).toHaveCSS(
     "background-color",
-    "rgb(255, 244, 248)",
+    "rgb(255, 249, 252)",
   );
   expect((await page.locator("main h1").boundingBox())!.y).toBeLessThan(320);
 });

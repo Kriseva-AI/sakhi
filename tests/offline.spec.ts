@@ -37,7 +37,7 @@ test("production PWA reloads offline and caches only hashed public assets", asyn
     return result;
   });
   expect(urls.length).toBeGreaterThan(0);
-  expect(urls.filter((u) => u.endsWith(".woff2"))).toHaveLength(16);
+  expect(urls.filter((u) => u.endsWith(".woff2"))).toHaveLength(17);
   expect(
     urls.some(
       (u) =>
@@ -67,11 +67,11 @@ test("production PWA reloads offline and caches only hashed public assets", asyn
   ).toBe(true);
   expect(outside).toEqual([]);
 });
-test("production headers forbid device sensors, framing, and external scripts", async ({
+test("production headers restrict sensors to explicit same-origin location and forbid external scripts", async ({
   request,
 }) => {
   const r = await request.get("http://127.0.0.1:8767/en-IN/");
   expect(r.headers()["content-security-policy"]).toContain("script-src 'self'");
-  expect(r.headers()["permissions-policy"]).toContain("geolocation=()");
+  expect(r.headers()["permissions-policy"]).toContain("geolocation=(self)");
   expect(r.headers()["referrer-policy"]).toBe("no-referrer");
 });

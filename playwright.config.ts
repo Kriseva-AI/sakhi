@@ -10,12 +10,12 @@ export default defineConfig({
     { name: "chromium", use: { browserName: "chromium" } },
     {
       name: "firefox",
-      testMatch: "pillars.spec.ts",
+      testMatch: ["pillars.spec.ts", "travel.spec.ts"],
       use: { browserName: "firefox" },
     },
     {
       name: "webkit",
-      testMatch: "pillars.spec.ts",
+      testMatch: ["pillars.spec.ts", "travel.spec.ts"],
       use: { browserName: "webkit" },
     },
   ],

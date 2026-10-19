@@ -23,7 +23,7 @@ import { ResourceCard } from "./ResourceCard";
 import { Maintenance } from "./Maintenance";
 import { SakhiHome } from "./SakhiHome";
 import { PreparationLibrary } from "./PreparationLibrary";
-import { LocalMapHandoff } from "./LocalMapHandoff";
+import { TravelWorkspace } from "./travel/TravelWorkspace";
 import { Community } from "./Community";
 import { ResourceCompare } from "./ResourceCompare";
 import { DataBoundary } from "./DataBoundary";
@@ -119,7 +119,7 @@ export function App() {
     return () => window.removeEventListener("popstate", handler);
   }, []);
   useEffect(() => {
-    document.title = `Sakhi | ${page === "home" ? "Public support for women" : page === "finder" ? "Find support" : page === "resources" ? "Public options" : page === "trust" ? "Privacy & trust" : page === "prepare" ? "Prepare and learn" : page === "nearby" ? "Public map search" : page === "community" ? "Community contribution" : "Maintainer review"}`;
+    document.title = `Sakhi | ${page === "home" ? "Public support for women" : page === "finder" ? "Find support" : page === "resources" ? "Public options" : page === "trust" ? "Privacy & trust" : page === "prepare" ? "Prepare and learn" : page === "nearby" ? "Public travel tools" : page === "community" ? "Community contribution" : "Maintainer review"}`;
     if (
       lastFocusTarget.current.page !== page ||
       lastFocusTarget.current.result !== result
@@ -216,7 +216,8 @@ export function App() {
     go("home", true);
   }
   const safeT = (key: string) => getCatalog("en-IN").messages[key] || key;
-  const compactEntry = page === "home" || page === "finder";
+  const compactEntry =
+    page === "home" || page === "finder" || page === "nearby";
   return (
     <div
       className={`app page-${page} ${compactEntry ? "compact-entry" : ""} ${lite ? "lite" : ""} ${comfortable ? "comfortable" : ""}`}
@@ -258,11 +259,9 @@ export function App() {
           lang="en-IN"
           dir="ltr"
         >
-          <span className="brand-symbol">
-            <Leaf size={23} strokeWidth={1.5} />
-          </span>
-          <span>
-            sakhi<span className="brand-by">BY KRISEVA</span>
+          <span className="sakhi-word">
+            sakhi<span className="brand-dot">.</span>
+            <span className="brand-by">BY KRISEVA</span>
           </span>
         </button>
         <div className="header-tools">
@@ -368,7 +367,7 @@ export function App() {
           />
         )}
         {page === "nearby" && (
-          <LocalMapHandoff key={session} open={setDestination} demo={demo} />
+          <TravelWorkspace key={session} open={setDestination} demo={demo} />
         )}
         {page === "community" && (
           <Community key={session} demo={demo} notify={setNotice} />
@@ -589,8 +588,7 @@ export function App() {
         <footer lang="en-IN" dir="ltr">
           <div>
             <span className="footer-brand">
-              <Leaf size={18} />
-              sakhi
+              sakhi<span className="brand-dot">.</span>
             </span>
             <p>{safeT("motto")}</p>
           </div>

@@ -60,6 +60,7 @@ test("map handoff omits origin and GPS and makes external disclosure explicit", 
 }) => {
   await page.goto("/en-IN/nearby");
   await page.getByLabel("Choose a city or district").selectOption("Ahmedabad");
+  await page.getByText("Prefer to use Google Maps?", { exact: true }).click();
   await page
     .getByRole("button", { name: "Preview map search", exact: true })
     .click();
@@ -286,6 +287,7 @@ test("fictional examples cannot use new downloads or external handoffs", async (
   ).toBeDisabled();
   await page.getByRole("link", { name: "Public places", exact: true }).click();
   await page.getByLabel("Choose a city or district").selectOption("Ahmedabad");
+  await page.getByText("Prefer to use Google Maps?", { exact: true }).click();
   await page
     .getByRole("button", { name: "Preview map search", exact: true })
     .click();
@@ -422,6 +424,7 @@ test("long destination preview begins at its title before the consent checkpoint
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/en-IN/nearby");
   await page.getByLabel("Choose a city or district").selectOption("Ahmedabad");
+  await page.getByText("Prefer to use Google Maps?", { exact: true }).click();
   await page
     .getByRole("button", { name: "Preview map search", exact: true })
     .click();

@@ -8,6 +8,7 @@ from fastapi.staticfiles import StaticFiles
 from starlette.middleware.gzip import GZipMiddleware
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
+from .explore import router as explore_router
 from .registry import ROOT, maintenance, resources
 from .retrieval import retriever
 from .runtime import optional_rank, semantic_status
@@ -26,6 +27,8 @@ app = FastAPI(
         "auto_configure": False,
     },
 )
+app.include_router(explore_router)
+
 app.add_middleware(
     TrustedHostMiddleware,
     allowed_hosts=os.environ.get("SAKHI_ALLOWED_HOSTS", "127.0.0.1,localhost,testserver").split(","),
@@ -49,9 +52,9 @@ async def security_headers(request, call_next):
             "Referrer-Policy": "no-referrer",
             "X-Content-Type-Options": "nosniff",
             "X-Frame-Options": "DENY",
-            "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=()",
+            "Permissions-Policy": "camera=(), microphone=(), geolocation=(self), payment=()",
             "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self'; "
-            "img-src 'self' data:; font-src 'self'; connect-src 'self'; "
+            "img-src 'self' data: https://tile.openstreetmap.org; font-src 'self'; connect-src 'self'; "
             "frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'",
         }
     )
@@ -66,6 +69,8 @@ def health():
         "semantic_search": semantic_status(),
         "engine": "sqlite_fts5_bm25",
         "external_actions": False,
+        "external_data_lookups": "user_requested_public_travel",
+        "device_position": "local_city_suggestion_only",
         "storage": "public_index_in_memory",
     }
 

@@ -25,7 +25,7 @@ const states = [
     label: "Opening a service",
     icon: ExternalLink,
     title: "You see the destination and the data first.",
-    body: "Official links carry no story or form fields. A map search carries only the selected public query. A WhatsApp public card contains only the shown resource text. The external service sees normal browser information and applies its own privacy rules.",
+    body: "Official links carry no story or form fields. Optional live travel tools send selected public city/map areas to the named providers after your action. Device location is used locally to suggest a city. A WhatsApp public card contains only the shown resource text. The external service sees normal browser information and applies its own privacy rules.",
     fields: [
       "Exact domain before leaving",
       "Action-specific public fields shown",
