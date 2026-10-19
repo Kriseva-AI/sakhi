@@ -2,7 +2,7 @@
 
 Recovered from the supplied canonical backlog. The original matrix was absent. No GitHub Issues have been created because no remote has been published.
 
-P1/P2 remain disabled while P0 human review gates are open. Implemented local does not mean production approved.
+Original priorities are preserved. The founder requested public-only Sprint 2 extensions on 2026-10-19 while human P0 release gates remain open. Partial prototypes are identified individually. Private workflows and institutional P1/P2 adapters remain disabled. Implemented local does not mean production approved.
 
 | ID | Capability | Priority | Actual state |
 | --- | --- | --- | --- |
@@ -17,10 +17,10 @@ P1/P2 remain disabled while P0 human review gates are open. Implemented local do
 | F09 | 181 to OSC Navigator | P0 | implemented_local |
 | F10 | OSC Appointment Copilot | P1 | not_implemented |
 | F11 | No Wrong Door Routing | P0 | implemented_local |
-| F12 | Local Service Discovery | P1 | not_implemented |
+| F12 | Local Service Discovery | P1 | partial_preview_only |
 | F13 | Tell Your Story Once | P1 | not_implemented |
 | F14 | Verified Human Handoff | P2 | not_implemented |
-| F15 | Action Approval Centre | P1 | not_implemented |
+| F15 | Action Approval Centre | P1 | partial_preview_only |
 | F16 | Incident Timeline Builder | P1 | not_implemented |
 | F17 | Private Case Vault | P1 | not_implemented |
 | F18 | Evidence Inventory | P1 | not_implemented |
@@ -33,7 +33,7 @@ P1/P2 remain disabled while P0 human review gates are open. Implemented local do
 | F25 | Workplace and Campus Navigator | P1 | not_implemented |
 | F26 | Assisted Human Advocate Workspace | P2 | not_implemented |
 | F27 | Share Only What's Necessary | P1 | not_implemented |
-| F28 | Offline Help Pack | P1 | not_implemented |
+| F28 | Offline Help Pack | P1 | implemented_local_review_blocked |
 | F29 | Three Tap Need Finder | P0 | implemented_local |
 | F30 | Sentence to Path Router | P0 | implemented_local |
 | F31 | On Demand Voice Input | P1 | not_implemented |
@@ -41,28 +41,28 @@ P1/P2 remain disabled while P0 human review gates are open. Implemented local do
 | F33 | Mid Session Language Switch | P0 | implemented_local |
 | F34 | One Question At A Time | P0 | implemented_local |
 | F35 | Read Aloud General Help Card | P1 | not_implemented |
-| F36 | Easy Read and Icon Mode | P1 | not_implemented |
-| F37 | Pocket Service Cards | P1 | not_implemented |
+| F36 | Easy Read and Icon Mode | P1 | partial_preview_only |
+| F37 | Pocket Service Cards | P1 | implemented_local |
 | F38 | Low Bandwidth Lite Mode | P0 | implemented_local |
 | F39 | Screen Privacy Control | P1 | not_implemented |
 | F40 | Ephemeral Session Erase | P0 | implemented_local |
 | F41 | Safe Device Checkpoint | P0 | implemented_local |
-| F42 | Consent Receipt Dashboard | P1 | not_implemented |
+| F42 | Consent Receipt Dashboard | P1 | partial_preview_only |
 | F43 | Citation Evidence Chips | P0 | implemented_local |
 | F44 | Source Freshness Watch | P0 | implemented_local |
 | F45 | Verified Domain Preview | P0 | implemented_local |
 | F46 | Conflict Aware Sources | P1 | not_implemented |
 | F47 | No Answer with Fallback | P0 | implemented_local |
 | F48 | Human Reviewed Language Stamps | P0 | implemented_local_review_blocked |
-| F49 | Three Path Comparison | P1 | not_implemented |
+| F49 | Three Path Comparison | P1 | implemented_local |
 | F50 | Draft Difference Viewer | P1 | not_implemented |
-| F51 | Channel Choice Companion | P1 | not_implemented |
+| F51 | Channel Choice Companion | P1 | partial_preview_only |
 | F52 | External Receipt Verifier | P2 | not_implemented |
 | F53 | On Device Evidence Fingerprints | P1 | not_implemented |
 | F54 | Evidence Origin Labels | P1 | not_implemented |
 | F55 | Per Recipient Share Preview | P2 | not_implemented |
 | F56 | Official Form Companion | P1 | not_implemented |
-| F57 | Pre Call Talking Points | P1 | not_implemented |
+| F57 | Pre Call Talking Points | P1 | implemented_local |
 | F58 | Human Handoff Alternatives | P2 | not_implemented |
 | F59 | Print Safe Referral Sheet | P1 | not_implemented |
 | F60 | Trusted Partner Embed Widget | P2 | not_implemented |

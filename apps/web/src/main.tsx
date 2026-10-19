@@ -2,6 +2,9 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
 import "./styles.css";
+import "./brand-fonts.css";
+import "./sprint2.css";
+import "./indic-fonts.css";
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />

@@ -3,6 +3,9 @@ import { ExternalLink, ShieldCheck } from "lucide-react";
 export interface Destination {
   url: string;
   title: string;
+  kind?: "public_link" | "map" | "whatsapp";
+  fields?: { label: string; value: string }[];
+  disclosure?: string;
 }
 export function OutboundModal({
   destination,
@@ -48,7 +51,17 @@ export function OutboundModal({
         <p className="notice">{t("demoDisabled")}</p>
       ) : (
         <>
-          <p>{t("payload")}</p>
+          <p>{destination.disclosure || t("payload")}</p>
+          {destination.fields && (
+            <dl className="payload-fields">
+              {destination.fields.map((field) => (
+                <div key={field.label}>
+                  <dt>{field.label}</dt>
+                  <dd>{field.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
           <p>{t("deviceBody")}</p>
           <label className="checkbox">
             <input

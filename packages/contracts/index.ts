@@ -28,7 +28,10 @@ export type Page =
   | "resources"
   | "trust"
   | "maintenance"
-  | "components";
+  | "components"
+  | "prepare"
+  | "nearby"
+  | "community";
 export interface Resource {
   id: string;
   title: string;

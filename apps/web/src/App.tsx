@@ -7,14 +7,9 @@ import {
   Languages,
   Phone,
   ShieldCheck,
-  Fingerprint,
-  Check,
   Sparkles,
-  HeartHandshake,
-  BookOpen,
   Trash2,
   WifiOff,
-  Feather,
 } from "lucide-react";
 import type {
   Category,
@@ -23,9 +18,16 @@ import type {
   Result,
 } from "../../../packages/contracts";
 import { catalogs, getCatalog, readLocale } from "./locale";
-import { Finder, topics } from "./Finder";
+import { Finder } from "./Finder";
 import { ResourceCard } from "./ResourceCard";
 import { Maintenance } from "./Maintenance";
+import { SakhiHome } from "./SakhiHome";
+import { PreparationLibrary } from "./PreparationLibrary";
+import { LocalMapHandoff } from "./LocalMapHandoff";
+import { Community } from "./Community";
+import { ResourceCompare } from "./ResourceCompare";
+import { DataBoundary } from "./DataBoundary";
+import { ResultGuide } from "./ResultGuide";
 import { OutboundModal, type Destination } from "./Modal";
 import {
   publicFallback,
@@ -42,6 +44,9 @@ const pages: Page[] = [
   "trust",
   "maintenance",
   "components",
+  "prepare",
+  "nearby",
+  "community",
 ];
 function currentPage(): Page {
   const value = location.pathname.split("/")[2];
@@ -58,6 +63,7 @@ export function App() {
   const [destination, setDestination] = useState<Destination | null>(null);
   const [notice, setNotice] = useState("");
   const [lite, setLite] = useState(false);
+  const [comfortable, setComfortable] = useState(false);
   const [session, setSession] = useState(0);
   const pendingRequest = useRef<AbortController | null>(null);
   const requestGeneration = useRef(0);
@@ -69,6 +75,8 @@ export function App() {
   const catalog = getCatalog(locale);
   const t = (key: string) =>
     catalog.messages[key] || getCatalog("en-IN").messages[key] || `[${key}]`;
+  const languageFor = (key: string) =>
+    catalog.fallback_keys.includes(key) ? "en-IN" : locale;
   function go(next: Page, replace = false) {
     invalidateRequest();
     const path = `/${locale}/${next === "home" ? "" : next}`;
@@ -106,7 +114,7 @@ export function App() {
     return () => window.removeEventListener("popstate", handler);
   }, []);
   useEffect(() => {
-    document.title = `Sakhi | ${page === "home" ? "Your next step, on your terms" : page === "finder" ? "Find support" : page === "resources" ? "Public options" : page === "trust" ? "Privacy & trust" : "Maintainer review"}`;
+    document.title = `Sakhi | ${page === "home" ? "Your next step, on your terms" : page === "finder" ? "Find support" : page === "resources" ? "Public options" : page === "trust" ? "Privacy & trust" : page === "prepare" ? "Prepare and learn" : page === "nearby" ? "Public map search" : page === "community" ? "Community contribution" : "Maintainer review"}`;
     const h = document.querySelector<HTMLElement>("main h1");
     h?.focus({ preventScroll: true });
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -128,6 +136,7 @@ export function App() {
     goal: string,
     scope: string,
   ) {
+    setInitialGoal(goal);
     invalidateRequest();
     const generation = requestGeneration.current;
     const safety = localSafety(text, under18);
@@ -188,13 +197,17 @@ export function App() {
     setDestination(null);
     setInitialCategory(undefined);
     setInitialGoal(undefined);
+    setComfortable(false);
+    setLite(false);
     setSession((s) => s + 1);
     setNotice(t("cleared"));
     go("home", true);
   }
   const safeT = (key: string) => getCatalog("en-IN").messages[key] || key;
   return (
-    <div className={lite ? "app lite" : "app"}>
+    <div
+      className={`app ${lite ? "lite" : ""} ${comfortable ? "comfortable" : ""}`}
+    >
       <a className="skip-link" href="#main">
         {t("skipContent")}
       </a>
@@ -218,7 +231,13 @@ export function App() {
         <span className="emergency-boundary">{safeT("urgentNoDispatch")}</span>
       </div>
       <header className="site-header">
-        <button className="wordmark" onClick={() => go("home")} title="Home">
+        <button
+          className="wordmark"
+          onClick={() => go("home")}
+          title="Home"
+          lang="en-IN"
+          dir="ltr"
+        >
           <span className="brand-symbol">
             <Leaf size={23} strokeWidth={1.5} />
           </span>
@@ -227,6 +246,13 @@ export function App() {
           </span>
         </button>
         <nav aria-label="Main navigation">
+          <button
+            aria-current={page === "prepare" ? "page" : undefined}
+            lang="en-IN"
+            onClick={() => go("prepare")}
+          >
+            {t("prepareEntry")}
+          </button>
           <button
             aria-current={page === "resources" ? "page" : undefined}
             onClick={() => {
@@ -243,8 +269,31 @@ export function App() {
           >
             {t("trust")}
           </button>
+          <button
+            aria-current={page === "nearby" ? "page" : undefined}
+            lang="en-IN"
+            onClick={() => go("nearby")}
+          >
+            {t("mapsEntry")}
+          </button>
+          <button
+            aria-current={page === "community" ? "page" : undefined}
+            lang="en-IN"
+            onClick={() => go("community")}
+          >
+            {t("communityEntry")}
+          </button>
         </nav>
         <div className="header-tools">
+          <button
+            className="comfort-control"
+            onClick={() => setComfortable(!comfortable)}
+            aria-pressed={comfortable}
+            aria-label="Larger text"
+            title="Larger text"
+          >
+            Aa
+          </button>
           <label className="locale-label">
             <Languages size={17} />
             <span className="sr-only">{t("language")}</span>
@@ -275,6 +324,7 @@ export function App() {
         role="region"
         aria-label="Product status"
         lang="en-IN"
+        dir="ltr"
       >
         <span>
           <i />
@@ -302,133 +352,30 @@ export function App() {
       </p>
       <main id="main">
         {page === "home" && (
-          <>
-            <section className="hero">
-              <div className="hero-copy">
-                <div className="eyebrow">
-                  <span className="short-line" />
-                  {t("eyebrow")}
-                </div>
-                <h1 tabIndex={-1}>
-                  {t("hero")
-                    .split("\n")
-                    .map((line, i) => (
-                      <span key={i}>
-                        {line}
-                        {i === 0 ? <br /> : null}
-                      </span>
-                    ))}
-                </h1>
-                <p className="hero-intro" lang="en-IN">
-                  {t("intro")}
-                </p>
-                <button
-                  className="button primary hero-cta"
-                  onClick={() => start()}
-                >
-                  {t("start")}
-                  <ArrowRight size={18} />
-                </button>
-                <button className="example-button" onClick={synthetic}>
-                  <span className="play-circle">▷</span>
-                  {t("example")}
-                </button>
-                <div className="trust-notes" lang="en-IN">
-                  <span>
-                    <Fingerprint size={15} />
-                    {t("anonymous")}
-                  </span>
-                  <span>
-                    <Check size={15} />
-                    {t("control")}
-                  </span>
-                </div>
-              </div>
-              <div className="hero-aside">
-                <div className="botanical" aria-hidden="true">
-                  <svg viewBox="0 0 340 360">
-                    <path d="M168 342c6-96 12-137 13-211M180 236c-55-2-86-24-93-62 48-4 78 16 93 62ZM180 195c52-15 79-45 80-82-47 7-75 37-80 82ZM182 145c-41-16-60-47-57-79 40 10 59 40 57 79ZM181 126c36-28 49-62 39-94-32 24-45 58-39 94Z" />
-                  </svg>
-                </div>
-                <div className="start-card">
-                  <div className="card-eyebrow">
-                    <span className="small-leaf">
-                      <Feather size={18} />
-                    </span>
-                    <span>{t("stepOneTime")}</span>
-                  </div>
-                  <h2>{t("choose")}</h2>
-                  <p lang="en-IN">{t("smallStart")}</p>
-                  <div className="start-choices">
-                    {[
-                      { key: "understand", icon: BookOpen },
-                      { key: "support", icon: HeartHandshake },
-                      { key: "friend", icon: ShieldCheck },
-                    ].map(({ key, icon: Icon }) => (
-                      <button
-                        key={key}
-                        onClick={() =>
-                          start(key === "friend" ? "friend" : undefined, key)
-                        }
-                      >
-                        <Icon size={20} />
-                        <span>{t(key)}</span>
-                        <ArrowRight size={17} />
-                      </button>
-                    ))}
-                  </div>
-                  <div className="card-foot" lang="en-IN">
-                    <ShieldCheck size={15} />
-                    {t("private")}
-                  </div>
-                </div>
-                <span className="aside-caption">{t("asideCaption")}</span>
-              </div>
-            </section>
-            <section className="topic-section">
-              <div className="section-top">
-                <div>
-                  <div className="eyebrow">{t("supportPace")}</div>
-                  <h2>{t("topics")}</h2>
-                </div>
-                <p lang="en-IN">{t("topicIntro")}</p>
-              </div>
-              <div className="topic-grid">
-                {topics.map(({ category, key, icon: Icon }, i) => (
-                  <button
-                    key={category}
-                    className="topic-card"
-                    onClick={() => start(category, "understand")}
-                  >
-                    <span className={`topic-icon tone-${i % 3}`}>
-                      <Icon size={22} strokeWidth={1.5} />
-                    </span>
-                    <h3>{t(key)}</h3>
-                    <p lang="en-IN">{t(`detail${category}`)}</p>
-                    <span className="topic-arrow">
-                      <ArrowUpRight size={18} />
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </section>
-            <section className="how-section">
-              <div className="how-title">
-                <span className="eyebrow">{t("controlEyebrow")}</span>
-                <h2>{t("how")}</h2>
-              </div>
-              <div className="how-grid">
-                {[1, 2, 3].map((n) => (
-                  <div key={n}>
-                    <span className="step-number">0{n}</span>
-                    <h3>{t(`how${n}`)}</h3>
-                    <p lang="en-IN">{t(`how${n}body`)}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-            <DeviceNotice t={safeT} />
-          </>
+          <SakhiHome
+            key={session}
+            t={t}
+            start={start}
+            synthetic={synthetic}
+            open={setDestination}
+            go={go}
+            languageFor={languageFor}
+          />
+        )}
+        {page === "prepare" && (
+          <PreparationLibrary
+            key={session}
+            open={setDestination}
+            demo={demo}
+            notify={setNotice}
+            onFind={() => start()}
+          />
+        )}
+        {page === "nearby" && (
+          <LocalMapHandoff key={session} open={setDestination} demo={demo} />
+        )}
+        {page === "community" && (
+          <Community key={session} demo={demo} notify={setNotice} />
         )}
         {page === "finder" && (
           <div className="flow-layout">
@@ -498,6 +445,13 @@ export function App() {
                   {w}
                 </p>
               ))}
+            {result?.state === "present_options" && (
+              <ResultGuide goal={initialGoal || "understand"} />
+            )}
+            <ResourceCompare
+              records={result?.resources ?? publicDirectory()}
+              open={setDestination}
+            />
             <div className="resource-grid">
               {(result?.resources ?? publicDirectory()).map((r) => (
                 <ResourceCard
@@ -529,6 +483,7 @@ export function App() {
             <div className="eyebrow">PRIVACY & TRUST</div>
             <h1 tabIndex={-1}>{safeT("privacyTitle")}</h1>
             <p className="lead">{safeT("policy")}</p>
+            <DataBoundary compact />
             <div className="trust-detail">
               <h2>What stays on this device</h2>
               <p>
@@ -575,6 +530,7 @@ export function App() {
               <p>{safeT("correctionBody")}</p>
               <button
                 className="button secondary"
+                disabled={demo}
                 onClick={() => {
                   download(
                     "PUBLIC RESOURCE CORRECTION\nResource ID:\nOfficial source URL:\nProposed correction:\nEvidence date:\nNo personal stories, names, intimate media or private contacts. Submit a reviewed repository issue or pull request after the repository is published.\n",
@@ -596,7 +552,7 @@ export function App() {
             </button>
           </section>
         )}
-        {page === "maintenance" && <Maintenance />}
+        {page === "maintenance" && <Maintenance demo={demo} />}
         {page === "components" && (
           <section className="results" lang="en-IN">
             <h1 tabIndex={-1}>{safeT("componentTitle")}</h1>
@@ -614,7 +570,7 @@ export function App() {
           </section>
         )}
       </main>
-      <footer lang="en-IN">
+      <footer lang="en-IN" dir="ltr">
         <div>
           <span className="footer-brand">
             <Leaf size={18} />

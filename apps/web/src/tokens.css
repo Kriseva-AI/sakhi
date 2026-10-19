@@ -1,11 +1,16 @@
 :root {
-  --paper: #f8f6f1;
-  --card: #fffefa;
-  --ink: #25372e;
-  --secondary: #5e6759;
-  --forest: #284f3d;
-  --line: #dedfd3;
-  --body: "Avenir Next", Avenir, "Segoe UI", "Noto Sans", sans-serif;
-  --display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --paper: #f2efe7;
+  --card: #fbfaf6;
+  --ink: #1a2238;
+  --secondary: #4b5368;
+  --forest: #0a1f44;
+  --navy-hover: #1e3a6b;
+  --line: #d9d3c2;
+  --brass: #a87229;
+  --brass-text: #6e4a10;
+  --sunken: #eae6da;
+  --body: "IBM Plex Sans", system-ui, sans-serif;
+  --display: "Instrument Serif", Georgia, serif;
+  --mono: "IBM Plex Mono", monospace;
   color-scheme: light;
 }

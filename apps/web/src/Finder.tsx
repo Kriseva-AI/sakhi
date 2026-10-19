@@ -107,7 +107,13 @@ export function Finder({
           ))}
         </div>
       </div>
-      <h1 ref={heading} id="finder-heading" tabIndex={-1} aria-live="polite">
+      <h1
+        ref={heading}
+        id="finder-heading"
+        tabIndex={-1}
+        aria-live="polite"
+        lang="en-IN"
+      >
         {t(["goalQuestion", "ageQuestion", "situationQuestion"][step])}
       </h1>
       <p className="muted" lang="en-IN">

@@ -37,6 +37,7 @@ test("production PWA reloads offline and caches only hashed public assets", asyn
     return result;
   });
   expect(urls.length).toBeGreaterThan(0);
+  expect(urls.filter((u) => u.endsWith(".woff2"))).toHaveLength(16);
   expect(
     urls.some(
       (u) =>
@@ -56,6 +57,14 @@ test("production PWA reloads offline and caches only hashed public assets", asyn
   await expect(
     page.getByRole("heading", { name: "Report a cyber concern" }),
   ).toBeVisible();
+  await page.getByLabel("Language", { exact: true }).selectOption("hi-IN");
+  await page.locator(".wordmark").click();
+  await page.evaluate(() => document.fonts.ready);
+  expect(
+    await page.evaluate(() =>
+      document.fonts.check('400 16px "Noto Sans Devanagari"', "अ"),
+    ),
+  ).toBe(true);
   expect(outside).toEqual([]);
 });
 test("production headers forbid device sensors, framing, and external scripts", async ({

@@ -38,6 +38,15 @@ export function ResourceCard({
         {new URL(r.url).hostname}
         <ArrowUpRight size={13} />
       </div>
+      <div className="resource-checked">
+        <Clock3 size={15} />
+        <div>
+          <span>
+            Checked {r.checked_at} · review by {r.expires_at}
+          </span>
+          <span>Human verification pending</span>
+        </div>
+      </div>
       {!isFresh(r) && (
         <p className="notice warning">
           <Clock3 size={16} />

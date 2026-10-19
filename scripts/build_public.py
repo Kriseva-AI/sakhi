@@ -34,6 +34,7 @@ def service_worker():
         "/resource-pack.sha256",
     ]
     paths.extend("/" + str(p.relative_to(dist)) for p in (dist / "assets").rglob("*") if p.is_file())
+    paths.extend("/" + str(p.relative_to(dist)) for p in (dist / "fonts").rglob("*") if p.is_file())
     mapping = {p: hashlib.sha256((dist / p.lstrip("/")).read_bytes()).hexdigest() for p in paths}
     version = hashlib.sha256(json.dumps(mapping, sort_keys=True).encode()).hexdigest()[:16]
     worker = """// Generated versioned public-only cache. Does not cache runtime requests.

@@ -315,9 +315,7 @@ test("direct goal reaches public options in three selections", async ({
   page,
 }) => {
   await page.goto("/en-IN/");
-  await page
-    .getByRole("button", { name: "Understand my options", exact: true })
-    .click();
+  await page.getByRole("button", { name: /^Understand my options/ }).click();
   await page.getByRole("button", { name: "18 or older", exact: true }).click();
   await page
     .getByRole("button", { name: "Online or digital concerns", exact: true })

@@ -19,7 +19,7 @@ interface Metrics {
   };
   pack_sha256: string;
 }
-export function Maintenance() {
+export function Maintenance({ demo = false }: { demo?: boolean }) {
   const [data, setData] = useState<Metrics | null>(null);
   useEffect(() => {
     fetch("/api/maintenance", { cache: "no-store" })
@@ -146,6 +146,7 @@ export function Maintenance() {
       </p>
       <button
         className="button secondary"
+        disabled={demo}
         onClick={() =>
           download(
             JSON.stringify(

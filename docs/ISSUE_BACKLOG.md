@@ -136,15 +136,15 @@ Gate: Internal public preview only. Production human review remains open.
 
 ## F12: Local Service Discovery
 
-Priority: P1. State: not_implemented.
+Priority: P1. State: partial_preview_only.
 
 Acceptance: Verified district scoped service search without exact location.
 
 Safety: No personal persistence, no external actions, no fabricated contacts.
 
-Verification: Not available until implementation and review.
+Verification: make verify.
 
-Gate: Deferred until P0 gates pass. No simulated success.
+Gate: Coarse city Google Maps search only. No verified district provider directory.
 
 ## F13: Tell Your Story Once
 
@@ -172,15 +172,15 @@ Gate: Deferred until P0 gates pass. No simulated success.
 
 ## F15: Action Approval Centre
 
-Priority: P1. State: not_implemented.
+Priority: P1. State: partial_preview_only.
 
 Acceptance: Exact recipient payload and intention before outbound action.
 
 Safety: No personal persistence, no external actions, no fabricated contacts.
 
-Verification: Not available until implementation and review.
+Verification: make verify.
 
-Gate: Deferred until P0 gates pass. No simulated success.
+Gate: Exact public-link/map/card preview. No private payload or institutional action centre.
 
 ## F16: Incident Timeline Builder
 
@@ -328,15 +328,15 @@ Gate: Deferred until P0 gates pass. No simulated success.
 
 ## F28: Offline Help Pack
 
-Priority: P1. State: not_implemented.
+Priority: P1. State: implemented_local_review_blocked.
 
 Acceptance: Cached public verified numbers and generic guide only.
 
 Safety: No personal persistence, no external actions, no fabricated contacts.
 
-Verification: Not available until implementation and review.
+Verification: make verify.
 
-Gate: Deferred until P0 gates pass. No simulated success.
+Gate: Hashed public PWA pack and fonts; human service verification and physical cold boot remain pending.
 
 ## F29: Three Tap Need Finder
 
@@ -424,27 +424,27 @@ Gate: Deferred until P0 gates pass. No simulated success.
 
 ## F36: Easy Read and Icon Mode
 
-Priority: P1. State: not_implemented.
+Priority: P1. State: partial_preview_only.
 
 Acceptance: Illustrated user-tested plain language resource content.
 
 Safety: No personal persistence, no external actions, no fabricated contacts.
 
-Verification: Not available until implementation and review.
+Verification: make verify.
 
-Gate: Deferred until P0 gates pass. No simulated success.
+Gate: Readable illustrated public content; user-tested easy-read content is not established.
 
 ## F37: Pocket Service Cards
 
-Priority: P1. State: not_implemented.
+Priority: P1. State: implemented_local.
 
 Acceptance: Locally downloaded non-sensitive emergency directory export.
 
 Safety: No personal persistence, no external actions, no fabricated contacts.
 
-Verification: Not available until implementation and review.
+Verification: make verify.
 
-Gate: Deferred until P0 gates pass. No simulated success.
+Gate: User-selected public TXT kit. No personal narrative, location or private data.
 
 ## F38: Low Bandwidth Lite Mode
 
@@ -496,15 +496,15 @@ Gate: Internal public preview only. Production human review remains open.
 
 ## F42: Consent Receipt Dashboard
 
-Priority: P1. State: not_implemented.
+Priority: P1. State: partial_preview_only.
 
 Acceptance: Explain what would be stored shared and deleted.
 
 Safety: No personal persistence, no external actions, no fabricated contacts.
 
-Verification: Not available until implementation and review.
+Verification: make verify.
 
-Gate: Deferred until P0 gates pass. No simulated success.
+Gate: Interactive data-boundary explanation only. No persistent consent receipts.
 
 ## F43: Citation Evidence Chips
 
@@ -580,15 +580,15 @@ Gate: Review metadata and pending status implemented. No human signoff exists.
 
 ## F49: Three Path Comparison
 
-Priority: P1. State: not_implemented.
+Priority: P1. State: implemented_local.
 
 Acceptance: Explain multiple legitimate approaches and user choice.
 
 Safety: No personal persistence, no external actions, no fabricated contacts.
 
-Verification: Not available until implementation and review.
+Verification: make verify.
 
-Gate: Deferred until P0 gates pass. No simulated success.
+Gate: User-selected comparison of up to three actual public pathways.
 
 ## F50: Draft Difference Viewer
 
@@ -604,15 +604,15 @@ Gate: Deferred until P0 gates pass. No simulated success.
 
 ## F51: Channel Choice Companion
 
-Priority: P1. State: not_implemented.
+Priority: P1. State: partial_preview_only.
 
 Acceptance: Explain call official portal or assisted provider pathways.
 
 Safety: No personal persistence, no external actions, no fabricated contacts.
 
-Verification: Not available until implementation and review.
+Verification: make verify.
 
-Gate: Deferred until P0 gates pass. No simulated success.
+Gate: Published phone/web channel comparison. No assisted-provider handoff.
 
 ## F52: External Receipt Verifier
 
@@ -676,15 +676,15 @@ Gate: Deferred until P0 gates pass. No simulated success.
 
 ## F57: Pre Call Talking Points
 
-Priority: P1. State: not_implemented.
+Priority: P1. State: implemented_local.
 
 Acceptance: Create optional short question checklist with user review.
 
 Safety: No personal persistence, no external actions, no fabricated contacts.
 
-Verification: Not available until implementation and review.
+Verification: make verify.
 
-Gate: Deferred until P0 gates pass. No simulated success.
+Gate: Generic user-visible first-contact questions. No generated personal narrative.
 
 ## F58: Human Handoff Alternatives
 

@@ -81,3 +81,7 @@ Decisions: keep native accessible controls and the existing stack; reuse canonic
 The current WhatsApp Business policy restricts platform use by law-enforcement entities. This is a separate policy concern from a citizen voluntarily opening a public contact, and is not interpreted as proof of an authorized Sakhi intake channel. Business helpdesk/authority alert work remains a future reviewed provider deployment.
 
 NCRB/OGD are discovery references for annual administrative data; no verified raw nationwide dataset was acquired. No heatmap or model is fabricated. The community page will explain data limits and link to the research, while user support routing stays independent of crime counts.
+
+## Scope clarification during execution
+
+The founder's explicit Sprint 2 instruction authorizes public preparation, comparison, generic-card and map/WhatsApp URL prototypes alongside continued P0 verification. This changes the local preview scope, not the production release gate. The original 68 priorities remain intact; FEATURES.json now identifies overlapping P1 work as implemented local or partial preview, rather than incorrectly claiming it is all disabled. Private workflows, personalized evidence sharing and institutional/authority adapters remain disabled. X02 and X12 strengthen existing foundations; twelve other X entries add new public interactions. No safety outcome or defensible uniqueness is claimed.

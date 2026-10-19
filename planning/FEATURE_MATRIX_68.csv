@@ -11,10 +11,10 @@ F08,Live Verified HelpGraph,P0,implemented_local,Internal public preview only. P
 F09,181 to OSC Navigator,P0,implemented_local,Internal public preview only. Production human review remains open.
 F10,OSC Appointment Copilot,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
 F11,No Wrong Door Routing,P0,implemented_local,Internal public preview only. Production human review remains open.
-F12,Local Service Discovery,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
+F12,Local Service Discovery,P1,partial_preview_only,Coarse city Google Maps search only. No verified district provider directory.
 F13,Tell Your Story Once,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
 F14,Verified Human Handoff,P2,not_implemented,Deferred until P0 gates pass. No simulated success.
-F15,Action Approval Centre,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
+F15,Action Approval Centre,P1,partial_preview_only,Exact public-link/map/card preview. No private payload or institutional action centre.
 F16,Incident Timeline Builder,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
 F17,Private Case Vault,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
 F18,Evidence Inventory,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
@@ -27,7 +27,7 @@ F24,Digital Abuse Response Mode,P0,implemented_local,Internal public preview onl
 F25,Workplace and Campus Navigator,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
 F26,Assisted Human Advocate Workspace,P2,not_implemented,Deferred until P0 gates pass. No simulated success.
 F27,Share Only What's Necessary,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
-F28,Offline Help Pack,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
+F28,Offline Help Pack,P1,implemented_local_review_blocked,Hashed public PWA pack and fonts; human service verification and physical cold boot remain pending.
 F29,Three Tap Need Finder,P0,implemented_local,Internal public preview only. Production human review remains open.
 F30,Sentence to Path Router,P0,implemented_local,Internal public preview only. Production human review remains open.
 F31,On Demand Voice Input,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
@@ -35,28 +35,28 @@ F32,Romanized Indic Understanding,P1,not_implemented,Deferred until P0 gates pas
 F33,Mid Session Language Switch,P0,implemented_local,Internal public preview only. Production human review remains open.
 F34,One Question At A Time,P0,implemented_local,Internal public preview only. Production human review remains open.
 F35,Read Aloud General Help Card,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
-F36,Easy Read and Icon Mode,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
-F37,Pocket Service Cards,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
+F36,Easy Read and Icon Mode,P1,partial_preview_only,Readable illustrated public content; user-tested easy-read content is not established.
+F37,Pocket Service Cards,P1,implemented_local,"User-selected public TXT kit. No personal narrative, location or private data."
 F38,Low Bandwidth Lite Mode,P0,implemented_local,Internal public preview only. Production human review remains open.
 F39,Screen Privacy Control,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
 F40,Ephemeral Session Erase,P0,implemented_local,Internal public preview only. Production human review remains open.
 F41,Safe Device Checkpoint,P0,implemented_local,Internal public preview only. Production human review remains open.
-F42,Consent Receipt Dashboard,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
+F42,Consent Receipt Dashboard,P1,partial_preview_only,Interactive data-boundary explanation only. No persistent consent receipts.
 F43,Citation Evidence Chips,P0,implemented_local,Internal public preview only. Production human review remains open.
 F44,Source Freshness Watch,P0,implemented_local,Internal public preview only. Production human review remains open.
 F45,Verified Domain Preview,P0,implemented_local,Internal public preview only. Production human review remains open.
 F46,Conflict Aware Sources,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
 F47,No Answer with Fallback,P0,implemented_local,Internal public preview only. Production human review remains open.
 F48,Human Reviewed Language Stamps,P0,implemented_local_review_blocked,Review metadata and pending status implemented. No human signoff exists.
-F49,Three Path Comparison,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
+F49,Three Path Comparison,P1,implemented_local,User-selected comparison of up to three actual public pathways.
 F50,Draft Difference Viewer,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
-F51,Channel Choice Companion,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
+F51,Channel Choice Companion,P1,partial_preview_only,Published phone/web channel comparison. No assisted-provider handoff.
 F52,External Receipt Verifier,P2,not_implemented,Deferred until P0 gates pass. No simulated success.
 F53,On Device Evidence Fingerprints,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
 F54,Evidence Origin Labels,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
 F55,Per Recipient Share Preview,P2,not_implemented,Deferred until P0 gates pass. No simulated success.
 F56,Official Form Companion,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
-F57,Pre Call Talking Points,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
+F57,Pre Call Talking Points,P1,implemented_local,Generic user-visible first-contact questions. No generated personal narrative.
 F58,Human Handoff Alternatives,P2,not_implemented,Deferred until P0 gates pass. No simulated success.
 F59,Print Safe Referral Sheet,P1,not_implemented,Deferred until P0 gates pass. No simulated success.
 F60,Trusted Partner Embed Widget,P2,not_implemented,Deferred until P0 gates pass. No simulated success.
