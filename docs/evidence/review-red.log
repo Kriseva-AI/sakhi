@@ -1,0 +1,171 @@
+..........F....F.................                                        [100%]
+=================================== FAILURES ===================================
+________ test_common_explicit_minor_age_constructions_stop_adult_routes ________
+
+    def test_common_explicit_minor_age_constructions_stop_adult_routes():
+        for text in ['I am a 15 year old and need legal help', 'My 14 year old sister is being stalked online',
+                     'I am sixteen and need workplace help']:
+            data = navigate(text=text).json()
+>           assert data['state'] == 'minor_redirect'
+E           AssertionError: assert 'present_options' == 'minor_redirect'
+E             
+E             - minor_redirect
+E             + present_options
+
+tests/test_api.py:80: AssertionError
+____ test_minor_keeps_child_and_emergency_fallback_even_after_source_expiry ____
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x107d73a80>
+
+    def test_minor_keeps_child_and_emergency_fallback_even_after_source_expiry(monkeypatch):
+        import services.api.retrieval as module
+        from services.api.registry import resources as real_resources
+        monkeypatch.setattr(module, 'resources', lambda fresh_only=True: [] if fresh_only else real_resources(False))
+        result = module.Retriever().find('unsure', minor=True)
+>       assert {r.id for r in result} == {'child', 'emergency'}
+E       AssertionError: assert set() == {'child', 'emergency'}
+E         
+E         Extra items in the right set:
+E         'emergency'
+E         'child'
+E         Use -v to get more diff
+
+tests/test_registry.py:42: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_api.py::test_common_explicit_minor_age_constructions_stop_adult_routes
+FAILED tests/test_registry.py::test_minor_keeps_child_and_emergency_fallback_even_after_source_expiry
+2 failed, 31 passed in 0.20s
+[WebServer] INFO:     Started server process [34740]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 3 tests using 1 worker
+
+(node:34952) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e.spec.ts:102:1 › clear invalidates a delayed navigation response (5.9s)
+(node:35181) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e.spec.ts:109:1 › step change focuses and announces the next question (5.2s)
+(node:35289) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/e2e.spec.ts:112:1 › expired public pack retains honest general fallback links (5.2s)
+
+
+  1) tests/e2e.spec.ts:102:1 › clear invalidates a delayed navigation response ─────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: /Your next step/ })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: /Your next step/ }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: /Your next step/ })
+
+
+      105 |   await page.goto('/en-IN/finder');await page.getByRole('button',{name:'Understand my options',exact:true}).click();await page.getByRole('button',{name:'18 or older',exact:true}).click();await page.getByLabel('A few words, if you want').fill('fictional online impersonation');
+      106 |   await page.getByRole('button',{name:'Show my options',exact:true}).click();await page.getByRole('button',{name:'Clear session',exact:true}).click();release();
+    > 107 |   await page.waitForTimeout(250);await expect(page.getByRole('heading',{name:/Your next step/})).toBeVisible();expect(new URL(page.url()).pathname).toBe('/en-IN/');
+          |                                                                                                  ^
+      108 | });
+      109 | test('step change focuses and announces the next question',async({page})=>{
+      110 |   await page.goto('/en-IN/finder');await page.getByRole('button',{name:'Understand my options',exact:true}).click();await expect(page.getByRole('heading',{name:'Is this for someone 18 or older?'})).toBeFocused();
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/e2e.spec.ts:107:98
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-clear-invalidates-a-delayed-navigation-response/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-clear-invalidates-a-delayed-navigation-response/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-clear-invalidates-a-delayed-navigation-response/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-clear-invalidates-a-delayed-navigation-response/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/e2e.spec.ts:109:1 › step change focuses and announces the next question ─────────────────
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('heading', { name: 'Is this for someone 18 or older?' })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('heading', { name: 'Is this for someone 18 or older?' }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Is this for someone 18 or older?' })
+        14 × locator resolved to <h1 tabindex="-1" id="finder-heading">Is this for someone 18 or older?</h1>
+           - unexpected value "inactive"
+
+
+      108 | });
+      109 | test('step change focuses and announces the next question',async({page})=>{
+    > 110 |   await page.goto('/en-IN/finder');await page.getByRole('button',{name:'Understand my options',exact:true}).click();await expect(page.getByRole('heading',{name:'Is this for someone 18 or older?'})).toBeFocused();
+          |                                                                                                                                                                                                       ^
+      111 | });
+      112 | test('expired public pack retains honest general fallback links',async({page})=>{
+      113 |   await page.clock.setFixedTime(new Date('2030-01-01'));await page.route('**/api/**',r=>r.abort());await page.goto('/en-IN/resources');
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/e2e.spec.ts:110:199
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-step-change-focuses-and-announces-the-next-question/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-step-change-focuses-and-announces-the-next-question/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-step-change-focuses-and-announces-the-next-question/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-step-change-focuses-and-announces-the-next-question/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/e2e.spec.ts:112:1 › expired public pack retains honest general fallback links ───────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText(/This source is past its review date/).first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText(/This source is past its review date/).first() with timeout 5000ms
+      - waiting for getByText(/This source is past its review date/).first()
+
+
+      112 | test('expired public pack retains honest general fallback links',async({page})=>{
+      113 |   await page.clock.setFixedTime(new Date('2030-01-01'));await page.route('**/api/**',r=>r.abort());await page.goto('/en-IN/resources');
+    > 114 |   await expect(page.getByText(/This source is past its review date/).first()).toBeVisible();await expect(page.getByRole('button',{name:'Open official website'}).first()).toBeVisible();
+          |                                                                               ^
+      115 | });
+      116 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/e2e.spec.ts:114:79
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-expired-public-pack-re-82d83-nest-general-fallback-links/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-expired-public-pack-re-82d83-nest-general-fallback-links/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-expired-public-pack-re-82d83-nest-general-fallback-links/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-expired-public-pack-re-82d83-nest-general-fallback-links/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    tests/e2e.spec.ts:102:1 › clear invalidates a delayed navigation response ──────────────────────
+    tests/e2e.spec.ts:109:1 › step change focuses and announces the next question ──────────────────
+    tests/e2e.spec.ts:112:1 › expired public pack retains honest general fallback links ────────────

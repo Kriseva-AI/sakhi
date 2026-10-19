@@ -1,0 +1,65 @@
+{
+  "profile": "HSDS-inspired service export; not a full HSDS compliance claim",
+  "service": [
+    {
+      "id": "emergency",
+      "name": "Emergency assistance",
+      "description": "112 is the official emergency response number in India. Calling requires your own phone connection.",
+      "url": "https://112.gov.in/",
+      "organization_id": "Ministry of Home Affairs",
+      "status": "preview_information_only"
+    },
+    {
+      "id": "women",
+      "name": "Women Helpline and One Stop Centres",
+      "description": "181 provides information and support, including connection to One Stop Centres.",
+      "url": "https://wcd.gov.in/women/help",
+      "organization_id": "Ministry of Women and Child Development",
+      "status": "preview_information_only"
+    },
+    {
+      "id": "child",
+      "name": "Child Helpline",
+      "description": "1098 is the Child Helpline listed by the Ministry. Adult Sakhi workflows stop here.",
+      "url": "https://www.spniwcd.wcd.gov.in/",
+      "organization_id": "Ministry of Women and Child Development",
+      "status": "preview_information_only"
+    },
+    {
+      "id": "legal",
+      "name": "Legal aid options",
+      "description": "NALSA provides information on assistance for women and routes to legal services authorities.",
+      "url": "https://nalsa.gov.in/womens-assistance/",
+      "organization_id": "National Legal Services Authority",
+      "status": "preview_information_only"
+    },
+    {
+      "id": "cyber",
+      "name": "Report a cyber concern",
+      "description": "The National Cyber Crime Reporting Portal is the official online entry point for cybercrime complaints.",
+      "url": "https://cybercrime.gov.in/",
+      "organization_id": "Ministry of Home Affairs",
+      "status": "preview_information_only"
+    },
+    {
+      "id": "workplace",
+      "name": "Workplace harassment options",
+      "description": "SHe-Box is an official entry point for complaints of sexual harassment at the workplace.",
+      "url": "https://shebox.wcd.gov.in/",
+      "organization_id": "Ministry of Women and Child Development",
+      "status": "preview_information_only"
+    },
+    {
+      "id": "ncw",
+      "name": "National Commission for Women",
+      "description": "The NCW official portal provides complaint registration and registered complaint status access.",
+      "url": "https://ncwapps.nic.in/onlinecomplaintsv2/",
+      "organization_id": "National Commission for Women",
+      "status": "preview_information_only"
+    }
+  ],
+  "location": [],
+  "organization": [],
+  "phone": [],
+  "note": "No individual OSC locations or partner capacity records."
+}

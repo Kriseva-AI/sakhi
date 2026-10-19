@@ -1,0 +1,10 @@
+.git
+node_modules
+.venv
+models/cache
+.env*
+!*.example
+test-results
+playwright-report
+docs/evidence
+apps/web/dist

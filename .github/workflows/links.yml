@@ -1,0 +1,16 @@
+name: Public source maintenance report
+on: [workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  source-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen --group dev
+      - run: PYTHONPATH=. uv run python scripts/resources.py validate --online
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-health-pending-human-review
+          path: docs/evidence/resource-validation.json

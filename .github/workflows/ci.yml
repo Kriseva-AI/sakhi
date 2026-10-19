@@ -1,0 +1,26 @@
+name: Local preview checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.11.6'
+      - run: uv python install 3.13
+      - run: npm ci
+      - run: uv sync --frozen --group dev
+      - run: npx playwright install --with-deps chromium
+      - run: make verify
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: local-preview-evidence
+          path: docs/evidence

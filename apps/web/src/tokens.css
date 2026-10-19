@@ -1,0 +1,11 @@
+:root {
+  --paper: #f8f6f1;
+  --card: #fffefa;
+  --ink: #25372e;
+  --secondary: #5e6759;
+  --forest: #284f3d;
+  --line: #dedfd3;
+  --body: "Avenir Next", Avenir, "Segoe UI", "Noto Sans", sans-serif;
+  --display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  color-scheme: light;
+}

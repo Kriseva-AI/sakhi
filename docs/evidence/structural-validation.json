@@ -1,0 +1,119 @@
+{
+  "locale_rows": [
+    {
+      "locale": "en-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 0,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "hi-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "bn-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "mr-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "te-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "ta-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "gu-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "kn-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "ml-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "or-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "pa-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "as-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "ur-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "ne-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "kok-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    },
+    {
+      "locale": "ks-Arab-IN",
+      "keys": 133,
+      "coverage": 1.0,
+      "english_fallback_keys": 113,
+      "language_status": "review_pending"
+    }
+  ],
+  "features": 68,
+  "seed_leads": 211,
+  "source_pack_consistent": true
+}

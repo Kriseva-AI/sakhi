@@ -2,22 +2,54 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-LOCALES = ('en-IN', 'hi-IN', 'bn-IN', 'mr-IN', 'te-IN', 'ta-IN', 'gu-IN', 'kn-IN',
-           'ml-IN', 'or-IN', 'pa-IN', 'as-IN', 'ur-IN', 'ne-IN', 'kok-IN', 'ks-Arab-IN')
-Locale = Literal['en-IN', 'hi-IN', 'bn-IN', 'mr-IN', 'te-IN', 'ta-IN', 'gu-IN', 'kn-IN',
-                 'ml-IN', 'or-IN', 'pa-IN', 'as-IN', 'ur-IN', 'ne-IN', 'kok-IN', 'ks-Arab-IN']
-Category = Literal['cyber', 'home', 'workplace', 'legal', 'friend', 'unsure']
+LOCALES = (
+    "en-IN",
+    "hi-IN",
+    "bn-IN",
+    "mr-IN",
+    "te-IN",
+    "ta-IN",
+    "gu-IN",
+    "kn-IN",
+    "ml-IN",
+    "or-IN",
+    "pa-IN",
+    "as-IN",
+    "ur-IN",
+    "ne-IN",
+    "kok-IN",
+    "ks-Arab-IN",
+)
+Locale = Literal[
+    "en-IN",
+    "hi-IN",
+    "bn-IN",
+    "mr-IN",
+    "te-IN",
+    "ta-IN",
+    "gu-IN",
+    "kn-IN",
+    "ml-IN",
+    "or-IN",
+    "pa-IN",
+    "as-IN",
+    "ur-IN",
+    "ne-IN",
+    "kok-IN",
+    "ks-Arab-IN",
+]
+Category = Literal["cyber", "home", "workplace", "legal", "friend", "unsure"]
 
 
 class NavigateRequest(BaseModel):
-    model_config = ConfigDict(extra='forbid', strict=True)
-    text: str = Field(default='', max_length=2000)
-    locale: Locale = 'en-IN'
+    model_config = ConfigDict(extra="forbid", strict=True)
+    text: str = Field(default="", max_length=2000)
+    locale: Locale = "en-IN"
     category: Category | None = None
     urgency: bool = False
     under18: bool = False
-    jurisdiction: Literal['India', 'West Bengal', 'Other state or UT'] = 'India'
-    goal: Literal['understand', 'report', 'support', 'friend'] = 'understand'
+    jurisdiction: Literal["India", "West Bengal", "Other state or UT"] = "India"
+    goal: Literal["understand", "report", "support", "friend"] = "understand"
 
 
 class Resource(BaseModel):
@@ -39,16 +71,16 @@ class Resource(BaseModel):
     service_cost: str
     permission: str
     limitations: str
-    status: Literal['verified_public_link'] = 'verified_public_link'
+    status: Literal["verified_public_link"] = "verified_public_link"
 
 
 class NavigateResponse(BaseModel):
-    state: Literal['urgent_redirect', 'minor_redirect', 'present_options']
+    state: Literal["urgent_redirect", "minor_redirect", "present_options"]
     category: str
     abstained: bool
     resources: list[Resource]
     engine: str
     warnings: list[str]
-    language_status: Literal['review_pending'] = 'review_pending'
-    content_locale: str = 'en-IN'
+    language_status: Literal["review_pending"] = "review_pending"
+    content_locale: str = "en-IN"
     external_actions: bool = False

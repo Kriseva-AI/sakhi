@@ -1,0 +1,17 @@
+uv run --frozen python scripts/dev.py
+Sakhi public preview: http://127.0.0.1:5173/en-IN/
+
+> kriseva-sakhi@0.1.0 dev
+> vite --config apps/web/vite.config.ts --host 127.0.0.1
+
+INFO:     Started server process [45075]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+
+  VITE v7.3.7  ready in 363 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+7:01:09 PM [vite] (client) page reload src/Finder.tsx
+7:01:10 PM [vite] (client) page reload src/Finder.tsx
+7:02:42 PM [vite] (client) page reload src/routing.json

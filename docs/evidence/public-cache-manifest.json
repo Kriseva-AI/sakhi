@@ -1,0 +1,12 @@
+{
+  "version": "d4194625ef93e38c",
+  "sha256": {
+    "/index.html": "5773f6e2083f22d1b30d17312d0b37821e4cee6b42a5f05faa48287e5bb81144",
+    "/icon.svg": "2f24cbca672918009f42211cbad0ad643eb95927fe5d713654c12105da3f8d4a",
+    "/manifest.webmanifest": "94c9c1ba26ff429091d36edabbd9d8a5f28a57543ada18913b74a29385241830",
+    "/resource-pack.json": "8317d31f1ab9e76e098940e19a3d171a50e0df6916de0613bb180b5f47acd4c8",
+    "/resource-pack.sha256": "8223a1133bac1efd39449531b4b8efab4997526439f0d64533702397ebdc1294",
+    "/assets/index-D9lPiFxA.js": "155d650abbbf203402439601b9fee0e16af19a9f92421cf6245ae5d317e03d04",
+    "/assets/index-B7FQDYlK.css": "f979ee05a58e5376233ea01c2ee46df0b468685dd2afe40f5ac9b4ee69a031c1"
+  }
+}

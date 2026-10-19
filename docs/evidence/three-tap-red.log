@@ -1,0 +1,50 @@
+[WebServer] INFO:     Started server process [45153]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 1 test using 1 worker
+
+(node:45261) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e.spec.ts:314:1 › direct goal reaches public options in three selections (5.5s)
+
+
+  1) tests/e2e.spec.ts:314:1 › direct goal reaches public options in three selections ──────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Your options, your choice' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: 'Your options, your choice' }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Your options, your choice' })
+
+
+      316 |   await page.getByRole('button',{name:'18 or older',exact:true}).click();
+      317 |   await page.getByRole('button',{name:'Online or digital concerns',exact:true}).click();
+    > 318 |   await expect(page.getByRole('heading',{name:'Your options, your choice'})).toBeVisible();
+          |                                                                              ^
+      319 | });
+      320 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/e2e.spec.ts:318:78
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-direct-goal-reaches-public-options-in-three-selections/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-direct-goal-reaches-public-options-in-three-selections/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-direct-goal-reaches-public-options-in-three-selections/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-direct-goal-reaches-public-options-in-three-selections/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/e2e.spec.ts:314:1 › direct goal reaches public options in three selections ───────────────

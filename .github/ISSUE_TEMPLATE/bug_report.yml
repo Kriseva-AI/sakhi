@@ -1,0 +1,12 @@
+name: Software bug
+description: Public software and source maintenance only
+body:
+  - type: markdown
+    attributes:
+      value: "Never include personal cases, intimate media, identities, private contacts or credentials. This is not an emergency channel."
+  - type: textarea
+    id: public_details
+    attributes:
+      label: Synthetic reproduction and expected behavior
+    validations:
+      required: true

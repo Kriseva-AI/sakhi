@@ -1,0 +1,9 @@
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 33.64it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 33.58it/s]
+{
+  "model": "google/embeddinggemma-2",
+  "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+  "license": "apache-2.0",
+  "bytes": 1525790864,
+  "source": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2"
+}

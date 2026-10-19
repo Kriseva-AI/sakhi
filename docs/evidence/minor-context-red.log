@@ -1,0 +1,55 @@
+...........F                                                             [100%]
+=================================== FAILURES ===================================
+________ test_number_words_without_age_context_do_not_force_child_path _________
+
+    def test_number_words_without_age_context_do_not_force_child_path():
+        for text in ['I am one of several women experiencing workplace harassment',
+                     'I am sixteen weeks pregnant and need legal help',
+                     'I am 16 weeks pregnant and need legal help']:
+>           assert navigate(text=text).json()['state'] == 'present_options'
+E           AssertionError: assert 'minor_redirect' == 'present_options'
+E             
+E             - present_options
+E             + minor_redirect
+
+tests/test_api.py:91: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_api.py::test_number_words_without_age_context_do_not_force_child_path
+1 failed, 11 passed in 0.16s
+
+> kriseva-sakhi@0.1.0 test
+> vitest run
+
+
+ RUN  v4.1.12 /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi
+
+ ❯ tests/local.test.ts (6 tests | 1 failed) 4ms
+   × does not treat number words describing groups or pregnancy as age 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/local.test.ts > does not treat number words describing groups or pregnancy as age
+AssertionError: expected 'minor_redirect' to be null
+
+- Expected:
+null
+
++ Received:
+"minor_redirect"
+
+ ❯ tests/local.test.ts:29:86
+     27| });
+     28| it('does not treat number words describing groups or pregnancy as age'…
+     29|   expect(localSafety('I am one of several women experiencing workplace…
+       |                                                                                      ^
+     30|   expect(localSafety('I am sixteen weeks pregnant and need legal help'…
+     31|   expect(localSafety('I am 16 weeks pregnant and need legal help')).to…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 5 passed (6)
+   Start at  18:59:07
+   Duration  109ms (transform 16ms, setup 0ms, import 21ms, tests 4ms, environment 0ms)
+

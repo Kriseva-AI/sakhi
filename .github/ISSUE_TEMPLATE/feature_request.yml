@@ -1,0 +1,12 @@
+name: Feature request
+description: Public software and source maintenance only
+body:
+  - type: markdown
+    attributes:
+      value: "Never include personal cases, intimate media, identities, private contacts or credentials. This is not an emergency channel."
+  - type: textarea
+    id: public_details
+    attributes:
+      label: User need and safe acceptance criteria
+    validations:
+      required: true

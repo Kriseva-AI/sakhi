@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-19",
+  "browser": "156.0.8078.4",
+  "viewports": [
+    1440,
+    390
+  ],
+  "journey": [
+    "/en-IN/",
+    "Try a fictional example",
+    "Preview official website",
+    "Escape",
+    "/en-IN/maintenance"
+  ],
+  "private_data": false,
+  "external_actions": false
+}

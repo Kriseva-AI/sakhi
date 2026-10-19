@@ -1,0 +1,17 @@
+apps/web/src/App.tsx 66ms
+apps/web/src/Finder.tsx 9ms
+apps/web/src/local.ts 6ms
+apps/web/src/locale.ts 2ms
+apps/web/src/main.tsx 1ms
+apps/web/src/Maintenance.tsx 5ms
+apps/web/src/Modal.tsx 3ms
+apps/web/src/ResourceCard.tsx 3ms
+apps/web/src/styles.css 42ms
+apps/web/src/tokens.css 1ms
+apps/web/src/vite-env.d.ts 1ms (unchanged)
+packages/contracts/index.ts 1ms
+tests/e2e.spec.ts 20ms
+tests/local.test.ts 3ms
+tests/offline.spec.ts 5ms
+playwright.config.ts 2ms
+vitest.config.ts 1ms

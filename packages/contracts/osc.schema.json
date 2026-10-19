@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sourced One Stop Centre record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "centre_id",
+    "canonical_name",
+    "state",
+    "district",
+    "source_link",
+    "centre_status",
+    "last_verified_at",
+    "verification_method",
+    "source_date",
+    "publicly_verified_contact",
+    "public_service_scope",
+    "consented_partner_status",
+    "availability_status",
+    "update_history"
+  ],
+  "properties": {
+    "centre_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "canonical_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "state": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "district": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_link": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "last_verified_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "verification_method": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "publicly_verified_contact": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "public_service_scope": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "consented_partner_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "availability_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "centre_status": {
+      "enum": [
+        "unseen",
+        "official_source_found",
+        "under_review",
+        "public_details_verified",
+        "partner_agreement_signed",
+        "authorized_integration_active",
+        "stale_or_disputed"
+      ]
+    },
+    "coordinates_if_public_and_necessary": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "update_history": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}
