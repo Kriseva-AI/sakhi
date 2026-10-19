@@ -1,8 +1,8 @@
-.PHONY: setup dev build verify evaluate resources model clean-preview
+.PHONY: setup dev build verify evaluate resources model quality
 setup:
 	npm ci
 	uv sync --frozen --group dev
-	npx playwright install chromium
+	npx playwright install chromium firefox webkit
 dev:
 	uv run --frozen python scripts/dev.py
 build:
@@ -14,6 +14,7 @@ verify:
 	uv run --frozen pytest -q --junitxml=docs/evidence/pytest.xml
 	npm test
 	PYTHONPATH=. uv run --frozen python scripts/validate_project.py
+	PYTHONPATH=. uv run --frozen python scripts/check_readme_links.py
 	$(MAKE) build
 	$(MAKE) evaluate
 	npx playwright test
@@ -24,3 +25,5 @@ resources:
 model:
 	uv sync --frozen --group dev --group embeddings
 	uv run --frozen --group embeddings python models/setup.py --accept-license
+quality: build
+	node scripts/quality-gate.mjs

@@ -28,6 +28,7 @@ import { Community } from "./Community";
 import { ResourceCompare } from "./ResourceCompare";
 import { DataBoundary } from "./DataBoundary";
 import { ResultGuide } from "./ResultGuide";
+import { SiteNavigation } from "./SiteNavigation";
 import { OutboundModal, type Destination } from "./Modal";
 import {
   publicFallback,
@@ -67,6 +68,8 @@ export function App() {
   const [session, setSession] = useState(0);
   const pendingRequest = useRef<AbortController | null>(null);
   const requestGeneration = useRef(0);
+  const lastInteraction = useRef<HTMLElement | null>(null);
+  const lastFocusTarget = useRef({ page, result });
   function invalidateRequest() {
     requestGeneration.current++;
     pendingRequest.current?.abort();
@@ -78,6 +81,7 @@ export function App() {
   const languageFor = (key: string) =>
     catalog.fallback_keys.includes(key) ? "en-IN" : locale;
   function go(next: Page, replace = false) {
+    lastInteraction.current = null;
     invalidateRequest();
     const path = `/${locale}/${next === "home" ? "" : next}`;
     history[replace ? "replaceState" : "pushState"](null, "", path);
@@ -106,6 +110,7 @@ export function App() {
   useEffect(() => {
     const handler = () => {
       invalidateRequest();
+      lastInteraction.current = null;
       setPage(currentPage());
       setLocale(readLocale());
       setDestination(null);
@@ -115,9 +120,16 @@ export function App() {
   }, []);
   useEffect(() => {
     document.title = `Sakhi | ${page === "home" ? "Your next step, on your terms" : page === "finder" ? "Find support" : page === "resources" ? "Public options" : page === "trust" ? "Privacy & trust" : page === "prepare" ? "Prepare and learn" : page === "nearby" ? "Public map search" : page === "community" ? "Community contribution" : "Maintainer review"}`;
-    const h = document.querySelector<HTMLElement>("main h1");
-    h?.focus({ preventScroll: true });
-    window.scrollTo({ top: 0, behavior: "instant" });
+    if (
+      lastFocusTarget.current.page !== page ||
+      lastFocusTarget.current.result !== result
+    ) {
+      document
+        .querySelector<HTMLElement>("main h1")
+        ?.focus({ preventScroll: true });
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+    lastFocusTarget.current = { page, result };
   }, [page, result]);
   function start(category?: Category, goal?: string) {
     setDemo(false);
@@ -207,6 +219,13 @@ export function App() {
   return (
     <div
       className={`app ${lite ? "lite" : ""} ${comfortable ? "comfortable" : ""}`}
+      onClickCapture={(event) => {
+        if (event.target instanceof Element) {
+          const control = event.target.closest("button,a");
+          if (control instanceof HTMLElement && !control.closest("dialog"))
+            lastInteraction.current = control;
+        }
+      }}
     >
       <a className="skip-link" href="#main">
         {t("skipContent")}
@@ -245,45 +264,6 @@ export function App() {
             sakhi<span className="brand-by">BY KRISEVA</span>
           </span>
         </button>
-        <nav aria-label="Main navigation">
-          <button
-            aria-current={page === "prepare" ? "page" : undefined}
-            lang="en-IN"
-            onClick={() => go("prepare")}
-          >
-            {t("prepareEntry")}
-          </button>
-          <button
-            aria-current={page === "resources" ? "page" : undefined}
-            onClick={() => {
-              setResult(null);
-              setDemo(false);
-              go("resources");
-            }}
-          >
-            {t("resources")}
-          </button>
-          <button
-            aria-current={page === "trust" ? "page" : undefined}
-            onClick={() => go("trust")}
-          >
-            {t("trust")}
-          </button>
-          <button
-            aria-current={page === "nearby" ? "page" : undefined}
-            lang="en-IN"
-            onClick={() => go("nearby")}
-          >
-            {t("mapsEntry")}
-          </button>
-          <button
-            aria-current={page === "community" ? "page" : undefined}
-            lang="en-IN"
-            onClick={() => go("community")}
-          >
-            {t("communityEntry")}
-          </button>
-        </nav>
         <div className="header-tools">
           <button
             className="comfort-control"
@@ -318,6 +298,17 @@ export function App() {
             <span>{t("clear")}</span>
           </button>
         </div>
+        <SiteNavigation
+          locale={locale}
+          page={page}
+          t={t}
+          languageFor={languageFor}
+          go={go}
+          onResources={() => {
+            setResult(null);
+            setDemo(false);
+          }}
+        />
       </header>
       <div
         className="preview-line"
@@ -350,7 +341,7 @@ export function App() {
       <p role="status" className={notice ? "toast" : "sr-only"} lang="en-IN">
         {notice}
       </p>
-      <main id="main">
+      <main id="main" tabIndex={-1}>
         {page === "home" && (
           <SakhiHome
             key={session}
@@ -383,6 +374,7 @@ export function App() {
               key={session}
               t={t}
               submit={submit}
+              cancel={invalidateRequest}
               initialCategory={initialCategory}
               initialGoal={initialGoal}
             />
@@ -589,6 +581,7 @@ export function App() {
       </footer>
       {destination && (
         <OutboundModal
+          returnFocus={lastInteraction.current}
           destination={destination}
           demo={demo}
           t={safeT}

@@ -203,7 +203,7 @@ test("mid-session switch preserves only memory, browser back works, clear erases
   await page.reload();
   expect(await page.content()).not.toContain("SYNTHETIC-PRIVATE-MARKER");
   await page
-    .getByRole("button", { name: "Public resources", exact: true })
+    .getByRole("link", { name: "Public resources", exact: true })
     .click();
   await page.goBack();
   await expect(

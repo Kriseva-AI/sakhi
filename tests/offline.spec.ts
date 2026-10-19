@@ -52,7 +52,7 @@ test("production PWA reloads offline and caches only hashed public assets", asyn
     page.getByRole("link", { name: /Call 112/ }).first(),
   ).toHaveAttribute("href", "tel:112");
   await page
-    .getByRole("button", { name: "Public resources", exact: true })
+    .getByRole("link", { name: "Public resources", exact: true })
     .click();
   await expect(
     page.getByRole("heading", { name: "Report a cyber concern" }),

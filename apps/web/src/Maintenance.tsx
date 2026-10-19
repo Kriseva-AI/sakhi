@@ -30,7 +30,7 @@ export function Maintenance({ demo = false }: { demo?: boolean }) {
   return (
     <section className="maintenance" lang="en-IN" dir="ltr">
       <div className="eyebrow">READ-ONLY LOCAL CONSOLE</div>
-      <h1>Trust is a process.</h1>
+      <h1 tabIndex={-1}>Trust is a process.</h1>
       <p>
         No private interactions are collected here. Changes require a reviewed
         repository commit.

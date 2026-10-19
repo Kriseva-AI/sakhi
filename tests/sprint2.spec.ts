@@ -250,20 +250,16 @@ test("clear session discards contribution and coarse map choices", async ({
   await page
     .getByRole("button", { name: "Clear session", exact: true })
     .click();
-  await page.getByRole("button", { name: "Community", exact: true }).click();
+  await page.getByRole("link", { name: "Community", exact: true }).click();
   await expect(
     page.getByLabel("Proposed public correction (optional)"),
   ).toHaveValue("");
-  await page
-    .getByRole("button", { name: "Public places", exact: true })
-    .click();
+  await page.getByRole("link", { name: "Public places", exact: true }).click();
   await page.getByLabel("Choose a city or district").selectOption("Ahmedabad");
   await page
     .getByRole("button", { name: "Clear session", exact: true })
     .click();
-  await page
-    .getByRole("button", { name: "Public places", exact: true })
-    .click();
+  await page.getByRole("link", { name: "Public places", exact: true }).click();
   await expect(page.getByLabel("Choose a city or district")).toHaveValue("");
   expect(await page.evaluate(() => Object.keys(localStorage))).toEqual([
     "sakhi.locale",
@@ -277,7 +273,7 @@ test("fictional examples cannot use new downloads or external handoffs", async (
     .getByRole("button", { name: "Try a fictional example", exact: true })
     .click();
   await page
-    .getByRole("button", { name: "Prepare & learn", exact: true })
+    .getByRole("link", { name: "Prepare & learn", exact: true })
     .click();
   await expect(
     page.getByRole("button", { name: "Download my public kit", exact: true }),
@@ -288,16 +284,14 @@ test("fictional examples cannot use new downloads or external handoffs", async (
       exact: true,
     }),
   ).toBeDisabled();
-  await page
-    .getByRole("button", { name: "Public places", exact: true })
-    .click();
+  await page.getByRole("link", { name: "Public places", exact: true }).click();
   await page.getByLabel("Choose a city or district").selectOption("Ahmedabad");
   await page
     .getByRole("button", { name: "Preview map search", exact: true })
     .click();
   await expect(page.getByRole("dialog").locator("a[href]")).toHaveCount(0);
   await page.keyboard.press("Escape");
-  await page.getByRole("button", { name: "Community", exact: true }).click();
+  await page.getByRole("link", { name: "Community", exact: true }).click();
   await expect(
     page.getByRole("button", {
       name: "Download correction proposal",
@@ -314,7 +308,7 @@ test("overdue pathway checks are visible and do not become fresh claims", async 
     page.getByText("Review overdue 2026-11-18", { exact: false }).first(),
   ).toBeVisible();
   await page
-    .getByRole("button", { name: "Prepare & learn", exact: true })
+    .getByRole("link", { name: "Prepare & learn", exact: true })
     .first()
     .click();
   await expect(
@@ -425,4 +419,22 @@ test("English fallback sections keep English metadata inside Urdu shell", async 
     "lang",
     "ur-IN",
   );
+});
+
+test("long destination preview begins at its title before the consent checkpoint", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/en-IN/nearby");
+  await page.getByLabel("Choose a city or district").selectOption("Ahmedabad");
+  await page
+    .getByRole("button", { name: "Preview map search", exact: true })
+    .click();
+  const dialog = page.getByRole("dialog");
+  expect(await dialog.evaluate((e) => e.scrollTop)).toBe(0);
+  await expect(
+    dialog.getByRole("heading", {
+      name: "You are in control of this next step",
+    }),
+  ).toBeFocused();
 });

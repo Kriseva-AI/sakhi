@@ -4,14 +4,14 @@
   --display: "Instrument Serif", Georgia, serif;
 }
 body {
-  font-size: 17px;
+  font-size: 1.0625rem;
   line-height: 1.65;
 }
 button,
 input,
 select,
 textarea {
-  font-size: 16px;
+  font-size: 1rem;
 }
 h1,
 h2 {
@@ -48,7 +48,7 @@ button:hover:not(:disabled) {
 .emergency-strip {
   background: #eae2d7;
   color: #65302c;
-  font-size: 14px;
+  font-size: 0.875rem;
   min-height: 48px;
 }
 .emergency-strip a {
@@ -65,7 +65,7 @@ button:hover:not(:disabled) {
 }
 .wordmark {
   letter-spacing: -0.045em;
-  font-size: 42px;
+  font-size: 2.625rem;
 }
 .brand-symbol {
   border: 1px solid var(--brass);
@@ -77,14 +77,14 @@ button:hover:not(:disabled) {
 .brand-by {
   font-family: var(--mono);
   letter-spacing: 1.1px;
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 .site-header nav {
   gap: 22px;
   margin-inline: auto 0;
 }
 .site-header nav button {
-  font-size: 15px;
+  font-size: 0.9375rem;
   min-height: 48px;
   white-space: nowrap;
   padding-block: 12px;
@@ -93,12 +93,12 @@ button:hover:not(:disabled) {
   gap: 10px;
 }
 .locale-label select {
-  font-size: 15px;
+  font-size: 0.9375rem;
   width: 94px;
   min-height: 48px;
 }
 .clear-button {
-  font-size: 14px;
+  font-size: 0.875rem;
   min-height: 48px;
   padding-inline: 4px;
 }
@@ -116,11 +116,11 @@ button:hover:not(:disabled) {
 .preview-line {
   max-width: var(--content);
   margin: 0 auto;
-  font-size: 14px;
+  font-size: 0.875rem;
   padding: 6px 0;
 }
 .preview-line button {
-  font-size: 14px;
+  font-size: 0.875rem;
   min-height: 44px;
 }
 .preview-line i {
@@ -129,7 +129,7 @@ button:hover:not(:disabled) {
 .eyebrow,
 .micro-label {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.6;
   letter-spacing: 0.055em;
   color: var(--brass-text);
@@ -138,7 +138,7 @@ button:hover:not(:disabled) {
   border-radius: 3px;
   min-height: 52px;
   padding: 13px 20px;
-  font-size: 16px;
+  font-size: 1rem;
   gap: 12px;
   font-weight: 500;
 }
@@ -162,12 +162,12 @@ button:hover:not(:disabled) {
 }
 .text-button {
   min-height: 48px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .small,
 .small-note,
 .muted {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.7;
   color: var(--secondary);
 }
@@ -182,7 +182,7 @@ button:hover:not(:disabled) {
   gap: 20px;
   border-top: 1px solid var(--line);
   padding-top: 17px;
-  font: 12px/1.6 var(--mono);
+  font: 0.75rem/1.6 var(--mono);
   letter-spacing: 0.045em;
   color: var(--secondary);
 }
@@ -214,7 +214,7 @@ button:hover:not(:disabled) {
   padding-top: 36px;
 }
 .hero-annotation {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.6;
   max-width: 360px;
   padding-inline-start: 14px;
@@ -222,7 +222,7 @@ button:hover:not(:disabled) {
   margin-bottom: 28px;
 }
 .sprint2-hero h1 {
-  font-size: clamp(60px, 6.1vw, 88px);
+  font-size: clamp(3.75rem, 6.1vw, 5.5rem);
   line-height: 1.02;
   letter-spacing: -0.025em;
 }
@@ -230,7 +230,7 @@ button:hover:not(:disabled) {
   color: var(--forest);
 }
 .sprint2-intro {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.75;
   max-width: 510px;
   margin-block: 27px;
@@ -244,7 +244,7 @@ button:hover:not(:disabled) {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 20px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--secondary);
   margin-top: 20px;
 }
@@ -257,7 +257,7 @@ button:hover:not(:disabled) {
   color: var(--brass-text);
 }
 .example-button {
-  font-size: 14px;
+  font-size: 0.875rem;
   min-height: 48px;
   margin-top: 10px;
 }
@@ -276,7 +276,7 @@ button:hover:not(:disabled) {
   justify-content: space-between;
   align-items: center;
   padding: 17px 22px;
-  font: 11px/1.6 var(--mono);
+  font: 0.6875rem/1.6 var(--mono);
   border-bottom: 1px solid var(--line);
   color: var(--brass-text);
 }
@@ -303,7 +303,7 @@ button:hover:not(:disabled) {
   flex: 1;
   padding: 10px 6px;
   min-height: 54px;
-  font-size: 14px;
+  font-size: 0.875rem;
   border-bottom: 2px solid transparent;
   line-height: 1.4;
 }
@@ -317,18 +317,18 @@ button:hover:not(:disabled) {
   min-height: 205px;
 }
 .context-copy .micro-label {
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 .context-copy h2 {
   font-family: var(--body);
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 500;
   line-height: 1.4;
   margin-block: 10px;
   letter-spacing: -0.015em;
 }
 .context-copy p {
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.65;
 }
 .desk-goals {
@@ -349,17 +349,17 @@ button:hover:not(:disabled) {
   background: #f2efe780;
 }
 .desk-number {
-  font: 11px var(--mono);
+  font: 0.6875rem var(--mono);
   color: var(--brass-text);
 }
 .desk-goals strong {
   display: block;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
 }
 .desk-goals small {
   display: block;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: var(--secondary);
   margin-top: 4px;
@@ -371,7 +371,7 @@ button:hover:not(:disabled) {
   border-top: 1px solid var(--line);
   padding: 14px 24px;
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--secondary);
   background: #f4f1e9;
 }
@@ -386,7 +386,7 @@ button:hover:not(:disabled) {
   gap: 24px;
 }
 .pathway-heading h2 {
-  font-size: 34px;
+  font-size: 2.125rem;
   margin-top: 7px;
 }
 .mobile-break {
@@ -409,7 +409,7 @@ button:hover:not(:disabled) {
 }
 .pathway-disclosure {
   margin-top: 13px;
-  font-size: 14px;
+  font-size: 0.875rem;
   max-width: 760px;
 }
 .pathway-rail {
@@ -439,12 +439,12 @@ button:hover:not(:disabled) {
   border-color: var(--brass);
 }
 .pathway-mark {
-  font: 500 26px/1.3 var(--body);
+  font: 500 1.625rem/1.3 var(--body);
   letter-spacing: -0.04em;
   color: var(--forest);
 }
 .pathway-item strong {
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.5;
   font-weight: 400;
   margin-block: 14px 17px;
@@ -453,12 +453,12 @@ button:hover:not(:disabled) {
   display: flex;
   gap: 8px;
   align-items: center;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--secondary);
   margin-top: auto;
 }
 .pathway-item small {
-  font: 14px/1.6 var(--body);
+  font: 0.875rem/1.6 var(--body);
   color: var(--secondary);
   margin-top: 9px;
 }
@@ -467,11 +467,11 @@ button:hover:not(:disabled) {
   border-block: 1px solid var(--line);
 }
 .kit-questions summary {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .kit-questions ul {
   padding-inline-start: 21px;
-  font-size: 15px;
+  font-size: 0.9375rem;
   color: var(--secondary);
 }
 .kit-questions li {
@@ -490,12 +490,12 @@ button:hover:not(:disabled) {
 }
 .index-heading h2,
 .boundary-heading h2 {
-  font-size: clamp(36px, 3.7vw, 50px);
+  font-size: clamp(2.25rem, 3.7vw, 3.125rem);
 }
 .index-heading p,
 .boundary-heading p {
   max-width: 490px;
-  font-size: 17px;
+  font-size: 1.0625rem;
 }
 .concern-list {
   display: grid;
@@ -519,17 +519,17 @@ button:hover:not(:disabled) {
   color: var(--brass-text);
 }
 .concern-index-number {
-  font: 12px var(--mono);
+  font: 0.75rem var(--mono);
   color: var(--secondary);
 }
 .concern-list strong {
   font-weight: 500;
-  font-size: 17px;
+  font-size: 1.0625rem;
   display: block;
 }
 .concern-list small {
   display: block;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--secondary);
   line-height: 1.5;
   margin-top: 7px;
@@ -548,12 +548,12 @@ button:hover:not(:disabled) {
   color: #d4b17b;
 }
 .preparedness-promo h2 {
-  font-size: clamp(38px, 4vw, 56px);
+  font-size: clamp(2.375rem, 4vw, 3.5rem);
   margin-top: 19px;
 }
 .preparedness-promo p {
   color: #d3d9e3;
-  font-size: 17px;
+  font-size: 1.0625rem;
   margin-block: 20px 25px;
 }
 .preparedness-promo .primary {
@@ -578,21 +578,21 @@ button:hover:not(:disabled) {
   border-bottom: 1px solid #566783;
 }
 .readiness-diagram span {
-  font: 12px var(--mono);
+  font: 0.75rem var(--mono);
   color: #d4b17b;
   margin-top: 5px;
 }
 .readiness-diagram strong {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 .readiness-diagram div p {
   grid-column: 2;
   margin-block: 5px 0;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 .readiness-diagram .diagram-note {
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-block: 18px 0;
   color: #d4b17b;
 }
@@ -623,7 +623,7 @@ button:hover:not(:disabled) {
 }
 .boundary-tabs button span {
   color: var(--brass-text);
-  font: 12px var(--mono);
+  font: 0.75rem var(--mono);
 }
 .boundary-panel {
   display: grid;
@@ -644,7 +644,7 @@ button:hover:not(:disabled) {
   color: var(--brass-text);
 }
 .boundary-visual span {
-  font: 11px/1.6 var(--mono);
+  font: 0.6875rem/1.6 var(--mono);
 }
 .boundary-line {
   height: 1px;
@@ -652,13 +652,13 @@ button:hover:not(:disabled) {
   background: var(--brass);
 }
 .boundary-panel h3 {
-  font-size: 22px;
+  font-size: 1.375rem;
   margin-bottom: 13px;
   font-weight: 500;
   line-height: 1.45;
 }
 .boundary-panel p {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .boundary-panel ul,
 .check-list {
@@ -671,7 +671,7 @@ button:hover:not(:disabled) {
   display: flex;
   align-items: start;
   gap: 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-top: 9px;
 }
 .boundary-panel li svg,
@@ -685,13 +685,13 @@ button:hover:not(:disabled) {
   border-top: 1px solid var(--line);
 }
 .community-promo h2 {
-  font-size: clamp(43px, 5vw, 68px);
+  font-size: clamp(2.6875rem, 5vw, 4.25rem);
   margin-top: 22px;
 }
 .community-promo > p {
   max-width: 610px;
   margin-top: 22px;
-  font-size: 17px;
+  font-size: 1.0625rem;
 }
 .community-promo > .text-button {
   margin-top: 14px;
@@ -706,13 +706,13 @@ button:hover:not(:disabled) {
 }
 .community-proof span {
   color: var(--secondary);
-  font-size: 14px;
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   gap: 18px;
 }
 .community-proof b {
-  font: 48px var(--display);
+  font: 3rem var(--display);
   color: var(--ink);
 }
 .page-intro {
@@ -723,11 +723,11 @@ button:hover:not(:disabled) {
   margin-block: 30px 45px;
 }
 .page-intro h1 {
-  font-size: clamp(44px, 4.8vw, 65px);
+  font-size: clamp(2.75rem, 4.8vw, 4.0625rem);
   line-height: 1.1;
 }
 .page-intro p {
-  font-size: 18px;
+  font-size: 1.125rem;
   max-width: 490px;
 }
 .prepare-page,
@@ -768,11 +768,11 @@ button:hover:not(:disabled) {
   background: var(--card);
 }
 .guide-content h2 {
-  font-size: 39px;
+  font-size: 2.4375rem;
   margin-block: 15px;
 }
 .lead-copy {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .guide-points {
   list-style: none;
@@ -787,7 +787,7 @@ button:hover:not(:disabled) {
   border-top: 1px solid var(--line);
 }
 .guide-points span {
-  font: 12px var(--mono);
+  font: 0.75rem var(--mono);
   color: var(--brass-text);
   margin-top: 5px;
 }
@@ -804,15 +804,15 @@ button:hover:not(:disabled) {
   color: var(--brass-text);
 }
 .guide-source strong {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 500;
 }
 .guide-source p {
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-top: 5px;
 }
 .guide-source .text-button {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .public-kit {
   display: grid;
@@ -824,7 +824,7 @@ button:hover:not(:disabled) {
 }
 .public-kit h2,
 .contribution-workbench h2 {
-  font-size: clamp(38px, 4vw, 52px);
+  font-size: clamp(2.375rem, 4vw, 3.25rem);
   margin-block: 20px;
 }
 .kit-controls {
@@ -851,12 +851,12 @@ button:hover:not(:disabled) {
 }
 .kit-option strong {
   display: block;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
 }
 .kit-option small {
   display: block;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--secondary);
   overflow-wrap: anywhere;
   margin-top: 4px;
@@ -880,7 +880,7 @@ button:hover:not(:disabled) {
   margin-top: 25px;
 }
 .map-explainer h2 {
-  font-size: 36px;
+  font-size: 2.25rem;
   margin-block: 22px 17px;
 }
 .abstract-map {
@@ -934,7 +934,7 @@ button:hover:not(:disabled) {
   position: absolute;
   left: 15px;
   bottom: 15px;
-  font: 11px var(--mono);
+  font: 0.6875rem var(--mono);
   color: var(--secondary);
   background: var(--card);
   padding: 7px 10px;
@@ -949,10 +949,10 @@ button:hover:not(:disabled) {
   gap: 15px;
   padding-block: 13px;
   border-top: 1px solid var(--line);
-  font-size: 16px;
+  font-size: 1rem;
 }
 .map-boundaries span {
-  font: 12px var(--mono);
+  font: 0.75rem var(--mono);
   margin-top: 5px;
   color: var(--brass-text);
 }
@@ -964,11 +964,11 @@ button:hover:not(:disabled) {
 }
 .source-context-note p {
   margin-top: 12px;
-  font-size: 16px;
+  font-size: 1rem;
   max-width: 900px;
 }
 .source-context-note .text-button {
-  font-size: 14px;
+  font-size: 0.875rem;
   text-align: start;
 }
 .community-principles {
@@ -982,11 +982,11 @@ button:hover:not(:disabled) {
   padding-top: 17px;
 }
 .community-principles h2 {
-  font-size: 29px;
+  font-size: 1.8125rem;
   margin-block: 20px 15px;
 }
 .community-principles p {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .contribution-workbench {
   display: grid;
@@ -1006,15 +1006,15 @@ button:hover:not(:disabled) {
   padding-block: 35px 0;
 }
 .community-release-note h2 {
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 .community-release-note p {
   max-width: 900px;
-  font-size: 16px;
+  font-size: 1rem;
   margin-top: 13px;
 }
 .community-release-note span {
-  font-size: 14px;
+  font-size: 0.875rem;
   justify-content: start;
   text-decoration: none;
 }
@@ -1045,7 +1045,7 @@ button:hover:not(:disabled) {
   padding: 25px;
 }
 .compact .boundary-tabs button {
-  font-size: 15px;
+  font-size: 0.9375rem;
   padding-inline: 10px;
 }
 .compact .boundary-tabs button > svg {
@@ -1065,16 +1065,16 @@ button:hover:not(:disabled) {
   background: var(--card);
 }
 .finder h1 {
-  font-size: 38px;
+  font-size: 2.375rem;
 }
 .flow-aside h2 {
-  font-size: 37px;
+  font-size: 2.3125rem;
 }
 .flow-aside > p {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .choice {
-  font-size: 17px;
+  font-size: 1.0625rem;
   border-color: var(--line);
   border-radius: 3px;
   min-height: 65px;
@@ -1084,7 +1084,7 @@ button:hover:not(:disabled) {
   background: var(--sunken);
 }
 .topic-choice {
-  font-size: 15px;
+  font-size: 0.9375rem;
   border-radius: 3px;
   min-height: 76px;
 }
@@ -1093,12 +1093,12 @@ button:hover:not(:disabled) {
   background: #e5e8ed;
 }
 label {
-  font-size: 16px;
+  font-size: 1rem;
 }
 input:not([type="checkbox"]),
 textarea,
 select:not(.locale-label select) {
-  font-size: 16px;
+  font-size: 1rem;
   border-color: #8e91a0;
   border-radius: 3px;
   min-height: 48px;
@@ -1107,7 +1107,7 @@ textarea::placeholder {
   color: var(--secondary);
 }
 .inline-boundary {
-  font-size: 14px;
+  font-size: 0.875rem;
   align-items: start;
 }
 .inline-boundary svg {
@@ -1119,23 +1119,23 @@ textarea::placeholder {
   border-radius: 3px;
 }
 .device-notice h2 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: var(--body);
   font-weight: 500;
   letter-spacing: 0;
 }
 .device-notice p,
 .flow-aside .device-notice p {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.75;
 }
 .results h1,
 .trust-page h1,
 .maintenance h1 {
-  font-size: clamp(44px, 4.8vw, 64px);
+  font-size: clamp(2.75rem, 4.8vw, 4rem);
 }
 .results-intro {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .resource-grid {
   gap: 22px;
@@ -1146,31 +1146,31 @@ textarea::placeholder {
   border-top: 3px solid #9a886a;
 }
 .resource-top {
-  font-size: 14px;
+  font-size: 0.875rem;
   align-items: start;
   flex-wrap: wrap;
 }
 .source-pill {
   background: #eae6da;
   color: var(--forest);
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .resource-card h2 {
-  font-size: 31px;
+  font-size: 1.9375rem;
 }
 .resource-card > p {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.75;
 }
 .resource-card .host {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .resource-checked {
   display: flex;
   gap: 7px;
   align-items: start;
   color: var(--secondary);
-  font-size: 14px;
+  font-size: 0.875rem;
   border-top: 1px solid var(--line);
   padding-top: 14px;
   margin-block: -3px 20px;
@@ -1183,24 +1183,24 @@ textarea::placeholder {
 }
 .card-actions .button,
 .resource-card .button {
-  font-size: 15px;
+  font-size: 0.9375rem;
   min-height: 52px;
 }
 .resource-card .share {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 summary,
 .receipt {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .receipt .text-button {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .notice,
 .toast,
 .demo-banner,
 .translation-banner {
-  font-size: 15px;
+  font-size: 0.9375rem;
   border-radius: 3px;
   background: #e8ebed;
   border-color: #bdc7d5;
@@ -1213,10 +1213,10 @@ summary,
   color: #61420e;
 }
 .trust-detail p {
-  font-size: 17px;
+  font-size: 1.0625rem;
 }
 .trust-detail h2 {
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 .comparison {
   margin-top: 30px;
@@ -1225,15 +1225,15 @@ summary,
   padding-block: 30px 0;
 }
 .comparison-body h2 {
-  font-size: 34px;
+  font-size: 2.125rem;
 }
 .comparison-body > p {
   margin-top: 15px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .comparison table {
   min-width: 820px;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 .comparison th {
   min-width: 150px;
@@ -1253,10 +1253,10 @@ td {
 }
 table,
 caption {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .metric span {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .outbound {
   max-width: 630px;
@@ -1267,10 +1267,10 @@ caption {
 }
 .outbound > p,
 .checkbox {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .outbound h2 {
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 .destination {
   background: var(--sunken);
@@ -1278,7 +1278,7 @@ caption {
 }
 .destination span,
 .destination code {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .payload-fields {
   margin: 20px 0;
@@ -1286,7 +1286,7 @@ caption {
   border-block: 1px solid var(--line);
 }
 .payload-fields dt {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   margin-top: 12px;
   color: var(--secondary);
@@ -1296,25 +1296,25 @@ caption {
 }
 .payload-fields dd {
   margin: 5px 0 0;
-  font-size: 15px;
+  font-size: 0.9375rem;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
 footer {
   width: min(var(--content), calc(100% - var(--gutter) * 2));
   margin-inline: auto;
-  font-size: 14px;
+  font-size: 0.875rem;
   gap: 70px;
 }
 footer p,
 .footer-right button {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .footer-brand {
-  font-size: 33px;
+  font-size: 2.0625rem;
 }
 .comfortable {
-  font-size: 19px;
+  font-size: 1.1875rem;
 }
 .comfortable
   :is(
@@ -1330,7 +1330,7 @@ footer p,
     .resource-card > p,
     .trust-detail p
   ) {
-  font-size: 19px;
+  font-size: 1.1875rem;
 }
 .comfortable
   :is(
@@ -1341,11 +1341,11 @@ footer p,
     .desk-goals strong,
     .concern-list strong
   ) {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .comfortable
   :is(.small, .small-note, small, .muted, .device-notice p, .receipt, .host) {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .comfortable .context-copy {
   min-height: 235px;
@@ -1383,7 +1383,7 @@ footer p,
     gap: 30px;
   }
   .sprint2-hero h1 {
-    font-size: 64px;
+    font-size: 4rem;
   }
   .context-copy {
     padding: 19px;
@@ -1443,7 +1443,7 @@ footer p,
     padding-block: 16px 7px;
   }
   .wordmark {
-    font-size: 37px;
+    font-size: 2.3125rem;
   }
   .brand-symbol {
     width: 30px;
@@ -1451,7 +1451,7 @@ footer p,
     margin-inline-end: 0;
   }
   .brand-by {
-    font-size: 9px;
+    font-size: 0.5625rem;
     margin-top: 5px;
   }
   .header-tools {
@@ -1466,7 +1466,7 @@ footer p,
   .locale-label select {
     width: 86px;
     padding-inline: 3px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .comfort-control {
     min-width: 36px;
@@ -1486,11 +1486,11 @@ footer p,
   }
   .site-header nav button {
     min-height: 48px;
-    font-size: 14px;
+    font-size: 0.875rem;
     flex-shrink: 0;
   }
   .emergency-strip {
-    font-size: 14px;
+    font-size: 0.875rem;
     gap: 10px;
     padding-inline: var(--gutter);
   }
@@ -1498,17 +1498,17 @@ footer p,
     width: calc(100% - var(--gutter) * 2);
     margin-inline: auto;
     gap: 8px;
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
   .preview-line button {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
   .sprint2-hero {
     padding-block: 25px 40px;
   }
   .hero-folio,
   .section-folio {
-    font-size: 10px;
+    font-size: 0.625rem;
     gap: 20px;
   }
   .hero-folio span:last-child {
@@ -1521,16 +1521,16 @@ footer p,
     gap: 35px;
   }
   .hero-annotation {
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-bottom: 24px;
     max-width: 340px;
   }
   .sprint2-hero h1 {
-    font-size: clamp(53px, 11.8vw, 74px);
+    font-size: clamp(3.3125rem, 11.8vw, 4.625rem);
     line-height: 1.05;
   }
   .sprint2-intro {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-block: 23px;
   }
   .sprint2-primary-actions {
@@ -1541,25 +1541,25 @@ footer p,
   }
   .sprint2-trustline {
     gap: 8px 16px;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .context-copy {
     min-height: 205px;
     padding: 21px;
   }
   .context-copy h2 {
-    font-size: 23px;
+    font-size: 1.4375rem;
   }
   .context-tabs {
     padding-inline: 8px;
   }
   .context-tabs button {
-    font-size: 14px;
+    font-size: 0.875rem;
     min-height: 59px;
   }
   .action-desk-top {
     padding-inline: 19px;
-    font-size: 10px;
+    font-size: 0.625rem;
   }
   .desk-goals {
     padding-inline: 20px;
@@ -1570,10 +1570,10 @@ footer p,
     padding-block: 16px;
   }
   .desk-goals strong {
-    font-size: 17px;
+    font-size: 1.0625rem;
   }
   .desk-foot {
-    font-size: 14px;
+    font-size: 0.875rem;
     padding-inline: 20px;
   }
   .pathway-section {
@@ -1584,10 +1584,10 @@ footer p,
     gap: 10px;
   }
   .pathway-heading h2 {
-    font-size: 31px;
+    font-size: 1.9375rem;
   }
   .pathway-heading .micro-label {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
   .rail-controls {
     gap: 5px;
@@ -1620,7 +1620,7 @@ footer p,
   }
   .index-heading h2,
   .boundary-heading h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
   .concern-list {
     grid-template-columns: 1fr;
@@ -1632,7 +1632,7 @@ footer p,
     padding-block: 20px;
   }
   .concern-list strong {
-    font-size: 17px;
+    font-size: 1.0625rem;
   }
   .preparedness-promo {
     grid-template-columns: 1fr;
@@ -1641,11 +1641,11 @@ footer p,
     margin-bottom: 40px;
   }
   .preparedness-promo h2 {
-    font-size: 42px;
+    font-size: 2.625rem;
   }
   .preparedness-promo .button {
     width: 100%;
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
   .readiness-diagram {
     padding-inline-start: 20px;
@@ -1660,7 +1660,7 @@ footer p,
   .compact .boundary-tabs button {
     padding: 14px 15px;
     min-height: 54px;
-    font-size: 16px;
+    font-size: 1rem;
     justify-content: start;
   }
   .boundary-tabs button + button {
@@ -1693,13 +1693,13 @@ footer p,
     height: 24px;
   }
   .boundary-panel h3 {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
   .community-promo {
     padding-block: 35px;
   }
   .community-promo h2 {
-    font-size: 49px;
+    font-size: 3.0625rem;
   }
   .community-proof {
     grid-template-columns: 1fr;
@@ -1711,7 +1711,7 @@ footer p,
   }
   .community-proof b {
     width: 48px;
-    font-size: 43px;
+    font-size: 2.6875rem;
   }
   .page-intro {
     grid-template-columns: 1fr;
@@ -1719,10 +1719,10 @@ footer p,
     margin-block: 25px 32px;
   }
   .page-intro h1 {
-    font-size: clamp(42px, 10vw, 58px);
+    font-size: clamp(2.625rem, 10vw, 3.625rem);
   }
   .page-intro p {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .prepare-page,
   .nearby-page,
@@ -1741,7 +1741,7 @@ footer p,
   .guide-menu button {
     border: 1px solid var(--line);
     padding: 14px 12px;
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
   .guide-menu .small-note {
     grid-column: 1/-1;
@@ -1751,10 +1751,10 @@ footer p,
     padding: 25px 21px;
   }
   .guide-content h2 {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
   .guide-content .lead-copy {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .guide-points li {
     gap: 10px;
@@ -1775,7 +1775,7 @@ footer p,
   }
   .public-kit h2,
   .contribution-workbench h2 {
-    font-size: 42px;
+    font-size: 2.625rem;
   }
   .kit-option {
     padding-block: 18px;
@@ -1791,7 +1791,7 @@ footer p,
     height: 215px;
   }
   .map-explainer h2 {
-    font-size: 34px;
+    font-size: 2.125rem;
   }
   .source-context-note {
     padding: 22px;
@@ -1803,7 +1803,7 @@ footer p,
     padding-block: 10px 35px;
   }
   .community-principles h2 {
-    font-size: 31px;
+    font-size: 1.9375rem;
     margin-top: 14px;
   }
   .contribution-workbench {
@@ -1812,7 +1812,7 @@ footer p,
     gap: 25px;
   }
   .community-release-note h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
   .results,
   .maintenance,
@@ -1822,10 +1822,10 @@ footer p,
   .results h1,
   .trust-page h1,
   .maintenance h1 {
-    font-size: 43px;
+    font-size: 2.6875rem;
   }
   .results-intro {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .flow-layout {
     display: block;
@@ -1835,20 +1835,20 @@ footer p,
     padding: 25px 20px;
   }
   .finder h1 {
-    font-size: 34px;
+    font-size: 2.125rem;
   }
   .flow-aside {
     padding: 30px 0 0;
   }
   .flow-aside h2 {
     max-width: 450px;
-    font-size: 34px;
+    font-size: 2.125rem;
   }
   .flow-aside .device-notice {
     margin-inline: 0;
   }
   .topic-choice {
-    font-size: 15px;
+    font-size: 0.9375rem;
     min-height: 84px;
   }
   .device-notice {
@@ -1856,26 +1856,26 @@ footer p,
   }
   .notice {
     padding: 17px;
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
   .resource-card {
     padding: 24px 21px;
   }
   .resource-card h2 {
-    font-size: 33px;
+    font-size: 2.0625rem;
   }
   .resource-card > p {
-    font-size: 17px;
+    font-size: 1.0625rem;
   }
   .card-actions .button,
   .resource-card .button {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .outbound {
     padding: 26px 21px;
   }
   .outbound h2 {
-    font-size: 32px;
+    font-size: 2rem;
   }
   footer {
     padding-block: 27px 35px;
@@ -1889,7 +1889,7 @@ footer p,
     --gutter: 16px;
   }
   .wordmark {
-    font-size: 34px;
+    font-size: 2.125rem;
     gap: 7px;
   }
   .brand-symbol {
@@ -1900,7 +1900,7 @@ footer p,
     width: 19px;
   }
   .brand-by {
-    font-size: 8px;
+    font-size: 0.5rem;
   }
   .header-tools {
     gap: 1px;
@@ -1915,13 +1915,13 @@ footer p,
     padding-inline: 18px;
   }
   .context-copy h2 {
-    font-size: 21px;
+    font-size: 1.3125rem;
   }
   .desk-goals {
     padding-inline: 17px;
   }
   .desk-goals strong {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .pathway-heading {
     flex-wrap: wrap;
@@ -1930,16 +1930,16 @@ footer p,
     margin-inline-start: auto;
   }
   .pathway-heading h2 {
-    font-size: 31px;
+    font-size: 1.9375rem;
   }
   .preparedness-promo {
     padding-inline: 20px;
   }
   .preparedness-promo h2 {
-    font-size: 37px;
+    font-size: 2.3125rem;
   }
   .preparedness-promo .button {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .guide-menu {
     grid-template-columns: 1fr;
@@ -1951,7 +1951,7 @@ footer p,
     padding-inline: 12px;
   }
   .public-kit h2 {
-    font-size: 39px;
+    font-size: 2.4375rem;
   }
   .map-controls {
     padding-inline: 19px;
@@ -2010,7 +2010,7 @@ footer p,
   border-inline-start: 2px solid var(--brass);
 }
 .result-guide h2 {
-  font-size: 29px;
+  font-size: 1.8125rem;
   margin-top: 13px;
 }
 .result-guide ol {
@@ -2022,7 +2022,7 @@ footer p,
   display: flex;
   align-items: start;
   gap: 10px;
-  font-size: 15px;
+  font-size: 0.9375rem;
   margin-block: 7px;
 }
 .result-guide li svg {
@@ -2040,7 +2040,7 @@ footer p,
   margin-top: 25px;
 }
 .comparison-select legend {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
 }
 .comparison-select > div {
@@ -2055,7 +2055,7 @@ footer p,
   gap: 10px;
   padding: 12px 15px;
   border: 1px solid var(--line);
-  font-size: 15px;
+  font-size: 0.9375rem;
   min-height: 52px;
   background: var(--card);
   cursor: pointer;
@@ -2072,4 +2072,180 @@ footer p,
     display: grid;
     grid-template-columns: 1fr;
   }
+}
+/* Three quality pillars: visible destinations, browser font preferences and explicit states. */
+h1,
+h2 {
+  overflow-wrap: break-word;
+}
+.site-header {
+  flex-wrap: wrap;
+  padding-block: 16px 6px;
+  gap: 8px 24px;
+}
+.header-tools {
+  margin-inline-start: auto;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+.site-header .service-navigation {
+  flex: 1 0 100%;
+  width: 100%;
+  margin: 0;
+  order: initial;
+  display: block;
+  border-top: 1px solid var(--line);
+}
+.service-navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 30px;
+  list-style: none;
+  padding: 5px 0 0;
+  margin: 0;
+}
+.service-navigation li {
+  min-width: 0;
+}
+.service-navigation a {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  font-size: 0.9375rem;
+  padding: 10px 0;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.service-navigation a[aria-current="page"] {
+  border-color: var(--brass);
+  font-weight: 500;
+}
+.service-navigation a:hover {
+  text-decoration: underline;
+}
+.error-summary {
+  border: 2px solid #7a2e2e;
+  border-inline-start-width: 5px;
+  padding: 22px;
+  margin-bottom: 26px;
+}
+.error-summary h2 {
+  font-family: var(--body);
+  font-size: 1.375rem;
+  font-weight: 500;
+  margin: 0;
+}
+.error-summary ul {
+  padding-inline-start: 22px;
+  margin-block: 13px 0;
+}
+.error-summary li {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+.error-summary a {
+  color: #7a2e2e;
+}
+.field-error {
+  color: #7a2e2e;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+input[aria-invalid="true"] {
+  border: 2px solid #7a2e2e;
+}
+.contribution-workbench label ~ .small-note {
+  margin-top: 8px;
+}
+.address-details {
+  margin-top: 10px;
+}
+.address-details summary {
+  font-size: 0.875rem;
+  min-height: 48px;
+  text-decoration: underline;
+}
+.address-details code {
+  display: block;
+  padding-block: 10px;
+}
+.preparedness-promo :focus-visible {
+  outline-color: #e3c58b;
+}
+.context-tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 6rem), 1fr));
+}
+.context-tabs button {
+  min-width: 0;
+}
+.locale-label select {
+  width: 6rem;
+}
+.emergency-strip {
+  flex-wrap: wrap;
+}
+@media (max-width: 760px) {
+  .site-header .service-navigation {
+    overflow: visible;
+  }
+  .service-navigation ul {
+    gap: 0 22px;
+  }
+  .service-navigation a {
+    font-size: 0.875rem;
+  }
+  .locale-label select {
+    width: 5.4rem;
+  }
+  .preview-line {
+    flex-wrap: wrap;
+  }
+  .sprint2-primary-actions > button {
+    white-space: normal;
+  }
+}
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 3px solid Highlight;
+  }
+  .primary,
+  .secondary,
+  .source-pill,
+  .context-tabs button,
+  .comfort-control {
+    border: 1px solid ButtonText;
+  }
+  .context-tabs button[aria-selected="true"],
+  .boundary-tabs button[aria-selected="true"],
+  .service-navigation a[aria-current="page"] {
+    border-bottom: 3px solid Highlight;
+  }
+  .desk-status i,
+  .preview-line i {
+    background: CanvasText;
+  }
+}
+.app {
+  overflow-wrap: break-word;
+}
+.resource-fit {
+  padding-block: 17px;
+  border-top: 1px solid var(--line);
+  margin-bottom: 12px;
+}
+.resource-fit > strong {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 12px;
+}
+.resource-fit > strong:first-child {
+  margin-top: 0;
+}
+.resource-fit p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin-top: 5px;
 }

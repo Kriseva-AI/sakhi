@@ -53,6 +53,12 @@ export function ResourceCard({
           {t("stale")}
         </p>
       )}
+      <div className="resource-fit">
+        <strong>{t("scope")}</strong>
+        <p>{r.eligibility}</p>
+        <strong>{t("limits")}</strong>
+        <p>{r.limitations}</p>
+      </div>
       <div className="card-actions">
         <button
           className="button primary"
@@ -86,16 +92,6 @@ export function ResourceCard({
             {t("checked")}: {r.checked_at}. Review by {r.expires_at}.
           </p>
           <p>{t("sourcePending")}</p>
-          <p>
-            <strong>{t("scope")}</strong>
-            <br />
-            {r.eligibility}
-          </p>
-          <p>
-            <strong>{t("limits")}</strong>
-            <br />
-            {r.limitations}
-          </p>
           <p>{r.permission}</p>
           <button
             className="text-button"

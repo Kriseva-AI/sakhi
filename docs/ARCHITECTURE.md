@@ -34,3 +34,11 @@ LocalMapHandoff accepts only preset coarse cities and place types. It constructs
 Community constructs a local unsubmitted public correction file. HTTPS URLs are checked syntactically, not fetched or approved. Query fields are restricted to public numeric PIB article selectors; credentials, fragments and unknown query fields are rejected. Proposed text remains memory-only until a user deliberately downloads it. Maintainers must validate the evidence before any publication.
 
 Only the language preference persists. Reading comfort, context, map choice and correction text are ephemeral. Clear invalidates requests, drops route state and remounts interactive screens. All synthetic-mode downloads and external continuations remain blocked, including maintenance templates. Six canonical Latin and ten Noto script font assets are included in the SHA-256 public-cache manifest. No runtime font CDN is used.
+
+## Three-pillar interaction contract
+
+SiteNavigation uses native links and preserves modifier/new-tab behavior. Initial load keeps the skip-link tab order; actual route/result changes focus the destination heading. Finder exposes a status message during lookup and aborts pending work on Back, clear or route change; request generations prevent late responses restoring discarded state. Local attempt generations also prevent an older completion changing a newer request's busy state.
+
+ErrorSummary links to matching inline field errors, focuses after unsuccessful correction attempts, preserves nonsensitive input and sets the Error title prefix. OutboundModal starts at its title, keeps readable outgoing public fields visible, offers the encoded address as secondary detail and returns focus to the triggering control after Escape/close. Material resource eligibility and limitations remain outside collapsed provenance details.
+
+Browser text sizes use relative units; navigation, panels and cards wrap under larger text. Dedicated Chromium/Firefox/WebKit contracts cover the principal states. Quality budgets run against an owned production listener on 8768 and fail closed on missing measurement/configuration. [QUALITY.md](QUALITY.md) records state evidence, role ownership and the distinct human gates. No actual usability sessions or physical assistive-technology approval is inferred.

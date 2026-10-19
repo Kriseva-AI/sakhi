@@ -68,7 +68,7 @@ Original priorities are preserved. The founder requested public-only Sprint 2 ex
 | F60 | Trusted Partner Embed Widget | P2 | not_implemented |
 | F61 | Shareable General Help Cards | P0 | implemented_local |
 | F62 | Bystander Training Micro Guides | P1 | not_implemented |
-| F63 | Community Resource Corrections | P1 | not_implemented |
+| F63 | Community Resource Corrections | P1 | partial_preview_only |
 | F64 | 991 OSC Validation Console | P1 | not_implemented |
 | F65 | Provider Contact Aging Alerts | P1 | not_implemented |
 | F66 | Translator Review Workflow | P1 | not_implemented |

@@ -61,7 +61,12 @@ export const PUBLIC_SERVICE_QUESTIONS = [
 ];
 // A proposal is unverified data. Allow public PIB article selectors, never case fields.
 export function validatePublicEvidenceUrl(value: string): URL {
-  const url = new URL(value);
+  let url: URL;
+  try {
+    url = new URL(value);
+  } catch {
+    throw new Error("Enter a complete official public HTTPS source URL.");
+  }
   if (url.protocol !== "https:" || url.username || url.password || url.hash)
     throw new Error(
       "Use an HTTPS source without credentials, fragments or private reference data.",

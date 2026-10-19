@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Check, Download } from "lucide-react";
 import { download } from "./local";
 import { validatePublicEvidenceUrl } from "./public-actions";
+import { ErrorSummary, type FieldError } from "./ErrorSummary";
 export function Community({
   demo = false,
   notify,
@@ -12,20 +13,48 @@ export function Community({
   const [resource, setResource] = useState("");
   const [source, setSource] = useState("");
   const [change, setChange] = useState("");
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState<FieldError[]>([]);
+  const [attempt, setAttempt] = useState(0);
+  const summaryRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (attempt) summaryRef.current?.focus();
+  }, [attempt]);
+  useEffect(() => {
+    document.title =
+      (errors.length ? "Error: " : "") + document.title.replace(/^Error: /, "");
+    return () => {
+      document.title = document.title.replace(/^Error: /, "");
+    };
+  }, [errors.length]);
+  const errorFor = (field: string) => errors.find((e) => e.field === field);
+  function clearError(field: string) {
+    setErrors((values) => values.filter((e) => e.field !== field));
+  }
   function proposal() {
-    setError("");
-    let url: URL;
+    if (demo) return;
+    const nextErrors: FieldError[] = [];
+    if (!/^[a-zA-Z0-9_-]{1,50}$/.test(resource))
+      nextErrors.push({
+        field: "public-resource-id",
+        message:
+          "Enter a public resource ID using letters, numbers, underscores or hyphens. Leave personal information out.",
+      });
+    let url: URL | undefined;
     try {
       url = validatePublicEvidenceUrl(source);
     } catch (error) {
-      setError(
-        error instanceof Error ? error.message : "Enter a public HTTPS source.",
-      );
-      return;
+      nextErrors.push({
+        field: "evidence-url",
+        message: source.trim()
+          ? error instanceof Error
+            ? error.message
+            : "Enter a public HTTPS source."
+          : "Enter an official public HTTPS source URL.",
+      });
     }
-    if (!/^[a-zA-Z0-9_-]{1,50}$/.test(resource)) {
-      setError("Use the public resource ID, without personal information.");
+    setErrors(nextErrors);
+    if (nextErrors.length || !url) {
+      setAttempt((value) => value + 1);
       return;
     }
     download(
@@ -120,29 +149,61 @@ export function Community({
           </ul>
         </div>
         <form
+          noValidate
           onSubmit={(e) => {
             e.preventDefault();
             proposal();
           }}
         >
+          {errors.length > 0 && (
+            <ErrorSummary errors={errors} summaryRef={summaryRef} />
+          )}
           <label htmlFor="public-resource-id">Public resource ID</label>
+          <p id="resource-id-hint" className="small-note">
+            A public ID such as legal, women or workplace. No personal
+            identifiers.
+          </p>
+          {errorFor("public-resource-id") && (
+            <p className="field-error" id="public-resource-id-error">
+              Error: {errorFor("public-resource-id")!.message}
+            </p>
+          )}
           <input
             id="public-resource-id"
             maxLength={50}
             required
             value={resource}
-            onChange={(e) => setResource(e.target.value)}
+            onChange={(e) => {
+              setResource(e.target.value);
+              clearError("public-resource-id");
+            }}
+            aria-invalid={Boolean(errorFor("public-resource-id")) || undefined}
+            aria-describedby={`resource-id-hint ${errorFor("public-resource-id") ? "public-resource-id-error" : ""}`}
             placeholder="For example: legal"
             autoComplete="off"
           />
           <label htmlFor="evidence-url">Official evidence URL</label>
+          <p id="evidence-url-hint" className="small-note">
+            Public HTTPS source only. Leave private case references and contact
+            details out.
+          </p>
+          {errorFor("evidence-url") && (
+            <p className="field-error" id="evidence-url-error">
+              Error: {errorFor("evidence-url")!.message}
+            </p>
+          )}
           <input
             id="evidence-url"
             type="url"
             maxLength={300}
             required
             value={source}
-            onChange={(e) => setSource(e.target.value)}
+            onChange={(e) => {
+              setSource(e.target.value);
+              clearError("evidence-url");
+            }}
+            aria-invalid={Boolean(errorFor("evidence-url")) || undefined}
+            aria-describedby={`evidence-url-hint ${errorFor("evidence-url") ? "evidence-url-error" : ""}`}
             placeholder="https://nalsa.gov.in/womens-assistance/"
             autoComplete="off"
           />
@@ -161,11 +222,6 @@ export function Community({
             This text is held only in this page’s memory. A downloaded proposal
             may remain on your device or in backups.
           </p>
-          {error && (
-            <p role="alert" className="notice">
-              {error}
-            </p>
-          )}
           <button className="button primary wide" disabled={demo}>
             <Download size={16} />
             Download correction proposal

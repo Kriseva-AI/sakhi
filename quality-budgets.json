@@ -1,0 +1,14 @@
+{
+  "profile": "Local production build, Lighthouse mobile simulation, 150ms RTT, 1.6Mbps, 4x CPU",
+  "goals": { "lcp_ms": 2500, "cls": 0.1, "field_inp_ms": 200 },
+  "release_regression_budgets": {
+    "performance": 90,
+    "accessibility": 95,
+    "best-practices": 95,
+    "lcp_ms": 3000,
+    "cls": 0.1,
+    "tbt_ms": 300,
+    "page_bytes": 1500000
+  },
+  "limits": "Lab budgets are not field INP, physical-device, availability or accessibility certification. Goals are not asserted as measured outcomes."
+}

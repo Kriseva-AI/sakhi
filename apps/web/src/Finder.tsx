@@ -57,6 +57,7 @@ export const topics: {
 export function Finder({
   t,
   submit,
+  cancel,
   initialCategory,
   initialGoal,
 }: {
@@ -68,31 +69,37 @@ export function Finder({
     goal: string,
     scope: string,
   ) => Promise<void>;
+  cancel: () => void;
   initialCategory?: Category;
   initialGoal?: string;
 }) {
   const [step, setStep] = useState(initialGoal ? 1 : 0);
   const heading = useRef<HTMLHeadingElement>(null);
+  const lastStep = useRef(step);
   useEffect(() => {
-    heading.current?.focus({ preventScroll: true });
+    if (lastStep.current !== step)
+      heading.current?.focus({ preventScroll: true });
+    lastStep.current = step;
   }, [step]);
   const [goal, setGoal] = useState(initialGoal || "understand");
   const [text, setText] = useState("");
   const [scope, setScope] = useState("India");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const submission = useRef(0);
   const [category, setCategory] = useState<Category | undefined>(
     initialCategory,
   );
   async function finish(minor = false, cat = category) {
+    const attempt = ++submission.current;
     setBusy(true);
     setError("");
     try {
       await submit(text, cat, minor, goal, scope);
     } catch {
-      setError(t("error"));
+      if (attempt === submission.current) setError(t("error"));
     } finally {
-      setBusy(false);
+      if (attempt === submission.current) setBusy(false);
     }
   }
   return (
@@ -119,6 +126,12 @@ export function Finder({
       <p className="muted" lang="en-IN">
         {t("textHint")}
       </p>
+      {busy && (
+        <p role="status" lang="en-IN">
+          Looking up public information. You can go back or clear the session to
+          cancel.
+        </p>
+      )}
       {step === 0 && (
         <div className="choices">
           {["understand", "report", "support", "friend"].map((key) => (
@@ -158,6 +171,7 @@ export function Finder({
       )}
       {step === 2 && (
         <form
+          aria-busy={busy}
           onSubmit={(e) => {
             e.preventDefault();
             finish();
@@ -213,7 +227,9 @@ export function Finder({
             <option value="Other state or UT">{t("otherState")}</option>
           </select>
           <button className="button primary wide" disabled={busy}>
-            {busy ? "…" : t("showOptions")}
+            <span lang={busy ? "en-IN" : undefined}>
+              {busy ? "Looking up options" : t("showOptions")}
+            </span>
             <ArrowRight size={18} />
           </button>
           <button
@@ -228,7 +244,16 @@ export function Finder({
       )}
       {error && <p role="alert">{error}</p>}
       {step > 0 && (
-        <button className="text-button back" onClick={() => setStep(step - 1)}>
+        <button
+          className="text-button back"
+          onClick={() => {
+            submission.current++;
+            cancel();
+            setBusy(false);
+            setError("");
+            setStep(step - 1);
+          }}
+        >
           <ArrowLeft size={16} />
           {t("back")}
         </button>

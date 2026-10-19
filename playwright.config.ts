@@ -6,6 +6,19 @@ export default defineConfig({
   timeout: 30_000,
   retries: 0,
   workers: 1,
+  projects: [
+    { name: "chromium", use: { browserName: "chromium" } },
+    {
+      name: "firefox",
+      testMatch: "pillars.spec.ts",
+      use: { browserName: "firefox" },
+    },
+    {
+      name: "webkit",
+      testMatch: "pillars.spec.ts",
+      use: { browserName: "webkit" },
+    },
+  ],
   reporter: [
     ["list"],
     ["json", { outputFile: "docs/evidence/browser-results.json" }],

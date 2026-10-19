@@ -77,17 +77,23 @@ export function ResourceCompare({
               tabIndex={0}
             >
               <table aria-label="Public pathway comparison">
+                <caption>
+                  Published public information for your chosen pathways. Human
+                  verification and availability confirmation are pending.
+                </caption>
                 <thead>
                   <tr>
-                    <th>What to compare</th>
+                    <th scope="col">What to compare</th>
                     {comparable.map((r) => (
-                      <th key={r.id}>{r.title}</th>
+                      <th key={r.id} scope="col">
+                        {r.title}
+                      </th>
                     ))}
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th>Channel</th>
+                    <th scope="row">Channel</th>
                     {comparable.map((r) => (
                       <td key={r.id}>
                         {r.phone
@@ -97,7 +103,7 @@ export function ResourceCompare({
                     ))}
                   </tr>
                   <tr>
-                    <th>Eligibility and limits</th>
+                    <th scope="row">Eligibility and limits</th>
                     {comparable.map((r) => (
                       <td key={r.id}>
                         {r.eligibility}
@@ -107,7 +113,7 @@ export function ResourceCompare({
                     ))}
                   </tr>
                   <tr>
-                    <th>Source and freshness</th>
+                    <th scope="row">Source and freshness</th>
                     {comparable.map((r) => (
                       <td key={r.id}>
                         {r.authority}
@@ -121,7 +127,7 @@ export function ResourceCompare({
                     ))}
                   </tr>
                   <tr>
-                    <th>What Sakhi sends</th>
+                    <th scope="row">What Sakhi sends</th>
                     {comparable.map((r) => (
                       <td key={r.id}>
                         No story or form fields. You choose what to enter on the
@@ -130,7 +136,7 @@ export function ResourceCompare({
                     ))}
                   </tr>
                   <tr>
-                    <th>Choose a next step</th>
+                    <th scope="row">Choose a next step</th>
                     {comparable.map((r) => (
                       <td key={r.id}>
                         <button

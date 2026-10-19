@@ -84,6 +84,18 @@ export function PublicPathways({ open }: { open: (d: Destination) => void }) {
                 : `Review overdue ${r.expires_at}`}
               <br />
               Human verification pending
+              {r.id === "women" && (
+                <>
+                  <br />
+                  Official 181 page excludes West Bengal.
+                </>
+              )}
+              {r.id === "workplace" && (
+                <>
+                  <br />
+                  Workplace scope. Campus routes may differ.
+                </>
+              )}
             </small>
           </button>
         ))}

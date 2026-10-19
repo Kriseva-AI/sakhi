@@ -12,18 +12,30 @@ export function OutboundModal({
   demo,
   t,
   close,
+  returnFocus,
 }: {
   destination: Destination;
   demo: boolean;
   t: (key: string) => string;
   close: () => void;
+  returnFocus?: HTMLElement | null;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
+  const trigger = useRef<HTMLElement | null>(returnFocus ?? null);
   const [checked, setChecked] = useState(false);
   useEffect(() => {
-    const previous = document.activeElement as HTMLElement;
-    ref.current?.showModal();
-    return () => previous?.focus();
+    const dialog = ref.current;
+    if (!trigger.current)
+      trigger.current = document.activeElement as HTMLElement;
+    dialog?.showModal();
+    dialog
+      ?.querySelector<HTMLElement>("#outbound-title")
+      ?.focus({ preventScroll: true });
+    if (dialog) dialog.scrollTop = 0;
+    return () => {
+      dialog?.close();
+      if (trigger.current?.isConnected) trigger.current.focus();
+    };
   }, []);
   const domain = destination.url.startsWith("tel:")
     ? destination.url
@@ -40,12 +52,21 @@ export function OutboundModal({
       <div className="modal-icon">
         <ShieldCheck size={26} />
       </div>
-      <h2 id="outbound-title">{t("leaveTitle")}</h2>
+      <h2 id="outbound-title" tabIndex={-1}>
+        {t("leaveTitle")}
+      </h2>
       <p>{destination.title}</p>
       <div className="destination">
         <span>{t("destination")}</span>
         <strong>{domain}</strong>
-        <code>{destination.url}</code>
+        {destination.fields?.length ? (
+          <details className="address-details">
+            <summary>Show exact encoded address</summary>
+            <code>{destination.url}</code>
+          </details>
+        ) : (
+          <code>{destination.url}</code>
+        )}
       </div>
       {demo ? (
         <p className="notice">{t("demoDisabled")}</p>
