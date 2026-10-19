@@ -1,0 +1,95 @@
+[WebServer] INFO:     Started server process [95468]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 2 tests using 1 worker
+
+(node:95582) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/sprint2.spec.ts:325:1 › review regression: synthetic maintainer download stays disabled (5.5s)
+(node:95837) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/sprint2.spec.ts:330:1 › review regression: comparison can include every eligible public entry (5.3s)
+
+
+  1) tests/sprint2.spec.ts:325:1 › review regression: synthetic maintainer download stays disabled ─
+
+    Error: expect(locator).toBeDisabled() failed
+
+    Locator:  getByRole('button', { name: 'Download correction template', exact: true })
+    Expected: disabled
+    Received: enabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeDisabled" getByRole('button', { name: 'Download correction template', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Download correction template', exact: true })
+        14 × locator resolved to <button class="button secondary">Download correction template</button>
+           - unexpected value "enabled"
+
+
+      326 |  await page.goto('/en-IN/');await page.getByRole('button',{name:'Try a fictional example',exact:true}).click();
+      327 |  await page.getByRole('button',{name:'Maintainer review',exact:true}).click();
+    > 328 |  await expect(page.getByRole('button',{name:'Download correction template',exact:true})).toBeDisabled();
+          |                                                                                          ^
+      329 | });
+      330 | test('review regression: comparison can include every eligible public entry',async({page})=>{
+      331 |  await page.goto('/en-IN/resources');await page.getByRole('button',{name:'Compare public pathways',exact:true}).click();
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:328:90
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-review-regression--76668-ner-download-stays-disabled/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-review-regression--76668-ner-download-stays-disabled/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-review-regression--76668-ner-download-stays-disabled/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-review-regression--76668-ner-download-stays-disabled/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/sprint2.spec.ts:330:1 › review regression: comparison can include every eligible public entry 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.comparison-select input[type=checkbox]')
+    Expected: 5
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('.comparison-select input[type=checkbox]') with timeout 5000ms
+      - waiting for locator('.comparison-select input[type=checkbox]')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      330 | test('review regression: comparison can include every eligible public entry',async({page})=>{
+      331 |  await page.goto('/en-IN/resources');await page.getByRole('button',{name:'Compare public pathways',exact:true}).click();
+    > 332 |  await expect(page.locator('.comparison-select input[type=checkbox]')).toHaveCount(5);
+          |                                                                        ^
+      333 | });
+      334 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:332:72
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-review-regression--f3f41-every-eligible-public-entry/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-review-regression--f3f41-every-eligible-public-entry/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-review-regression--f3f41-every-eligible-public-entry/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-review-regression--f3f41-every-eligible-public-entry/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    tests/sprint2.spec.ts:325:1 › review regression: synthetic maintainer download stays disabled ──
+    tests/sprint2.spec.ts:330:1 › review regression: comparison can include every eligible public entry 

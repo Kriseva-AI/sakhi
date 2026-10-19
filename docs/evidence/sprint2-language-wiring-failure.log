@@ -1,0 +1,424 @@
+[WebServer] INFO:     Started server process [92924]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 16 tests using 1 worker
+
+(node:92925) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 tests/e2e.spec.ts:314:1 › direct goal reaches public options in three selections (30.0s)
+(node:93151) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   2 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 320 (5.2s)
+(node:93430) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   3 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 360 (5.2s)
+(node:93536) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   4 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 375 (5.2s)
+(node:93541) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   5 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 390 (5.2s)
+(node:93628) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   6 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 414 (5.2s)
+(node:93833) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   7 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 768 (5.2s)
+(node:94059) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   8 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1024 (5.2s)
+(node:94698) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1280 (5.2s)
+(node:94703) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1440 (5.2s)
+(node:94708) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 tests/sprint2.spec.ts:167:3 › action desk Understand my options reaches options in three selections (2.6s)
+  ✓  12 tests/sprint2.spec.ts:167:3 › action desk Explore reporting options reaches options in three selections (371ms)
+  ✓  13 tests/sprint2.spec.ts:167:3 › action desk Find support reaches options in three selections (373ms)
+  ✓  14 tests/sprint2.spec.ts:167:3 › action desk Help someone else reaches options in three selections (355ms)
+  ✓  15 tests/sprint2.spec.ts:190:1 › tabs support keyboard movement and one tab stop (335ms)
+  ✓  16 tests/sprint2.spec.ts:272:1 › fictional examples cannot use new downloads or external handoffs (463ms)
+
+
+  1) tests/e2e.spec.ts:314:1 › direct goal reaches public options in three selections ──────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Understand my options', exact: true })
+
+
+      318 |   await page
+      319 |     .getByRole("button", { name: "Understand my options", exact: true })
+    > 320 |     .click();
+          |      ^
+      321 |   await page.getByRole("button", { name: "18 or older", exact: true }).click();
+      322 |   await page
+      323 |     .getByRole("button", { name: "Online or digital concerns", exact: true })
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/e2e.spec.ts:320:6
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-direct-goal-reaches-public-options-in-three-selections/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-direct-goal-reaches-public-options-in-three-selections/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-direct-goal-reaches-public-options-in-three-selections/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-direct-goal-reaches-public-options-in-three-selections/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 320 ────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main h1')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('main h1') with timeout 5000ms
+      - waiting for locator('main h1')
+
+
+      142 |       await page.setViewportSize({ width, height: 900 });
+      143 |       await page.goto(`/en-IN/${route}`);
+    > 144 |       await expect(page.locator("main h1")).toBeVisible();
+          |                                             ^
+      145 |       expect(
+      146 |         await page.evaluate(
+      147 |           () => document.documentElement.scrollWidth <= innerWidth,
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:144:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-320/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-320/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-320/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-320/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 360 ────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main h1')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('main h1') with timeout 5000ms
+      - waiting for locator('main h1')
+
+
+      142 |       await page.setViewportSize({ width, height: 900 });
+      143 |       await page.goto(`/en-IN/${route}`);
+    > 144 |       await expect(page.locator("main h1")).toBeVisible();
+          |                                             ^
+      145 |       expect(
+      146 |         await page.evaluate(
+      147 |           () => document.documentElement.scrollWidth <= innerWidth,
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:144:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-360/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-360/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-360/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-360/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 375 ────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main h1')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('main h1') with timeout 5000ms
+      - waiting for locator('main h1')
+
+
+      142 |       await page.setViewportSize({ width, height: 900 });
+      143 |       await page.goto(`/en-IN/${route}`);
+    > 144 |       await expect(page.locator("main h1")).toBeVisible();
+          |                                             ^
+      145 |       expect(
+      146 |         await page.evaluate(
+      147 |           () => document.documentElement.scrollWidth <= innerWidth,
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:144:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-375/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-375/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-375/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-375/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 390 ────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main h1')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('main h1') with timeout 5000ms
+      - waiting for locator('main h1')
+
+
+      142 |       await page.setViewportSize({ width, height: 900 });
+      143 |       await page.goto(`/en-IN/${route}`);
+    > 144 |       await expect(page.locator("main h1")).toBeVisible();
+          |                                             ^
+      145 |       expect(
+      146 |         await page.evaluate(
+      147 |           () => document.documentElement.scrollWidth <= innerWidth,
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:144:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-390/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-390/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-390/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 414 ────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main h1')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('main h1') with timeout 5000ms
+      - waiting for locator('main h1')
+
+
+      142 |       await page.setViewportSize({ width, height: 900 });
+      143 |       await page.goto(`/en-IN/${route}`);
+    > 144 |       await expect(page.locator("main h1")).toBeVisible();
+          |                                             ^
+      145 |       expect(
+      146 |         await page.evaluate(
+      147 |           () => document.documentElement.scrollWidth <= innerWidth,
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:144:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-414/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-414/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-414/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-414/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 768 ────────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main h1')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('main h1') with timeout 5000ms
+      - waiting for locator('main h1')
+
+
+      142 |       await page.setViewportSize({ width, height: 900 });
+      143 |       await page.goto(`/en-IN/${route}`);
+    > 144 |       await expect(page.locator("main h1")).toBeVisible();
+          |                                             ^
+      145 |       expect(
+      146 |         await page.evaluate(
+      147 |           () => document.documentElement.scrollWidth <= innerWidth,
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:144:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-768/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-768/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-768/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1024 ───────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main h1')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('main h1') with timeout 5000ms
+      - waiting for locator('main h1')
+
+
+      142 |       await page.setViewportSize({ width, height: 900 });
+      143 |       await page.goto(`/en-IN/${route}`);
+    > 144 |       await expect(page.locator("main h1")).toBeVisible();
+          |                                             ^
+      145 |       expect(
+      146 |         await page.evaluate(
+      147 |           () => document.documentElement.scrollWidth <= innerWidth,
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:144:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-1024/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-1024/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-1024/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-1024/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1280 ───────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main h1')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('main h1') with timeout 5000ms
+      - waiting for locator('main h1')
+
+
+      142 |       await page.setViewportSize({ width, height: 900 });
+      143 |       await page.goto(`/en-IN/${route}`);
+    > 144 |       await expect(page.locator("main h1")).toBeVisible();
+          |                                             ^
+      145 |       expect(
+      146 |         await page.evaluate(
+      147 |           () => document.documentElement.scrollWidth <= innerWidth,
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:144:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-1280/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-1280/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-1280/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-1280/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1440 ──────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main h1')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('main h1') with timeout 5000ms
+      - waiting for locator('main h1')
+
+
+      142 |       await page.setViewportSize({ width, height: 900 });
+      143 |       await page.goto(`/en-IN/${route}`);
+    > 144 |       await expect(page.locator("main h1")).toBeVisible();
+          |                                             ^
+      145 |       expect(
+      146 |         await page.evaluate(
+      147 |           () => document.documentElement.scrollWidth <= innerWidth,
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:144:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-1440/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-1440/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-1440/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-1440/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10 failed
+    tests/e2e.spec.ts:314:1 › direct goal reaches public options in three selections ───────────────
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 320 ─────────────────────────────────────────
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 360 ─────────────────────────────────────────
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 375 ─────────────────────────────────────────
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 390 ─────────────────────────────────────────
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 414 ─────────────────────────────────────────
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 768 ─────────────────────────────────────────
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1024 ────────────────────────────────────────
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1280 ────────────────────────────────────────
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1440 ────────────────────────────────────────
+  6 passed (1.4m)

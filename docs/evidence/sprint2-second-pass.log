@@ -1,0 +1,169 @@
+[WebServer] INFO:     Started server process [85942]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 24 tests using 1 worker
+
+(node:85943) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/sprint2.spec.ts:4:1 › preparation and recovery contexts are distinct and do not collect a story (713ms)
+  ✓   2 tests/sprint2.spec.ts:24:1 › official pathway rail opens an honest destination preview (286ms)
+  ✓   3 tests/sprint2.spec.ts:37:1 › prepare page has a public checklist and a generic kit download (263ms)
+  ✓   4 tests/sprint2.spec.ts:58:1 › map handoff omits origin and GPS and makes external disclosure explicit (282ms)
+  ✓   5 tests/sprint2.spec.ts:73:1 › WhatsApp prepares only a public card and does not claim a message was sent (278ms)
+  ✓   6 tests/sprint2.spec.ts:93:1 › comparison explains different channel choices (261ms)
+  ✓   7 tests/sprint2.spec.ts:105:1 › data boundary and reading comfort are visible and ephemeral (263ms)
+  ✓   8 tests/sprint2.spec.ts:119:1 › community proposal is local and never submits a case (613ms)
+  ✘   9 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 320 (259ms)
+(node:86802) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 390 (244ms)
+(node:86807) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  11 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 768 (250ms)
+(node:86812) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  12 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1440 (254ms)
+(node:86817) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  13 tests/sprint2.spec.ts:141:5 › Sprint 2 prepare reflow 320 (484ms)
+  ✓  14 tests/sprint2.spec.ts:141:5 › Sprint 2 prepare reflow 390 (181ms)
+  ✓  15 tests/sprint2.spec.ts:141:5 › Sprint 2 prepare reflow 768 (179ms)
+  ✓  16 tests/sprint2.spec.ts:141:5 › Sprint 2 prepare reflow 1440 (520ms)
+  ✓  17 tests/sprint2.spec.ts:141:5 › Sprint 2 nearby reflow 320 (559ms)
+  ✓  18 tests/sprint2.spec.ts:141:5 › Sprint 2 nearby reflow 390 (178ms)
+  ✓  19 tests/sprint2.spec.ts:141:5 › Sprint 2 nearby reflow 768 (182ms)
+  ✓  20 tests/sprint2.spec.ts:141:5 › Sprint 2 nearby reflow 1440 (454ms)
+  ✓  21 tests/sprint2.spec.ts:141:5 › Sprint 2 community reflow 320 (557ms)
+  ✓  22 tests/sprint2.spec.ts:141:5 › Sprint 2 community reflow 390 (210ms)
+  ✓  23 tests/sprint2.spec.ts:141:5 › Sprint 2 community reflow 768 (259ms)
+  ✓  24 tests/sprint2.spec.ts:141:5 › Sprint 2 community reflow 1440 (465ms)
+
+
+  1) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 320 ────────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      147 |           () => document.documentElement.scrollWidth <= innerWidth,
+      148 |         ),
+    > 149 |       ).toBe(true);
+          |         ^
+      150 |       if (width === 320 || width === 1440) {
+      151 |         const r = await new AxeBuilder({ page }).analyze();
+      152 |         expect(
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:149:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-320/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-320/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-320/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-320/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 390 ────────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      147 |           () => document.documentElement.scrollWidth <= innerWidth,
+      148 |         ),
+    > 149 |       ).toBe(true);
+          |         ^
+      150 |       if (width === 320 || width === 1440) {
+      151 |         const r = await new AxeBuilder({ page }).analyze();
+      152 |         expect(
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:149:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-390/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-390/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-390/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 768 ────────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      147 |           () => document.documentElement.scrollWidth <= innerWidth,
+      148 |         ),
+    > 149 |       ).toBe(true);
+          |         ^
+      150 |       if (width === 320 || width === 1440) {
+      151 |         const r = await new AxeBuilder({ page }).analyze();
+      152 |         expect(
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:149:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-768/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-768/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-768/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1440 ───────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      147 |           () => document.documentElement.scrollWidth <= innerWidth,
+      148 |         ),
+    > 149 |       ).toBe(true);
+          |         ^
+      150 |       if (width === 320 || width === 1440) {
+      151 |         const r = await new AxeBuilder({ page }).analyze();
+      152 |         expect(
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:149:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-1440/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-1440/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-1440/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-1440/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 320 ─────────────────────────────────────────
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 390 ─────────────────────────────────────────
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 768 ─────────────────────────────────────────
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1440 ────────────────────────────────────────
+  20 passed (10.5s)

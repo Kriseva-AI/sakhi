@@ -1,0 +1,24 @@
+
+> kriseva-sakhi@0.1.0 test
+> vitest run
+
+
+ RUN  v4.1.12 /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi
+
+ ❯ tests/public-actions.test.ts (0 test)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/public-actions.test.ts [ tests/public-actions.test.ts ]
+Error: Cannot find module '../apps/web/src/public-actions' imported from /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/public-actions.test.ts
+ ❯ tests/public-actions.test.ts:2:1
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  6 passed (6)
+   Start at  22:20:51
+   Duration  133ms (transform 43ms, setup 0ms, import 35ms, tests 3ms, environment 0ms)
+

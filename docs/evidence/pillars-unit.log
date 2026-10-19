@@ -1,0 +1,13 @@
+
+> kriseva-sakhi@0.1.0 test
+> vitest run
+
+
+ RUN  v4.1.12 /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi
+
+
+ Test Files  3 passed (3)
+      Tests  15 passed (15)
+   Start at  23:36:47
+   Duration  127ms (transform 62ms, setup 0ms, import 83ms, tests 7ms, environment 0ms)
+

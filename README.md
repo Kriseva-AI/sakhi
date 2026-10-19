@@ -4,7 +4,7 @@
 
 **Sakhi handles the complexity. You stay in control.**
 
-A local, source-backed starting point for women exploring public support in India.
+A free public-benefit navigator for women in India: prepare beforehand, understand a concern, and explore support after an incident.
 
 `Internal preview` · `Apache-2.0 project code` · `No paid API key` · `No institutional integrations`
 
@@ -15,7 +15,7 @@ A local, source-backed starting point for women exploring public support in Indi
 **Device safety:** someone with access to your device, browser history or backups may see your activity. Clearing Sakhi does not erase those copies or make browsing untraceable.
 
 <table>
-<tr><td width="70%"><img src="docs/evidence/desktop-home.png" alt="Actual Sakhi desktop landing page with public support choices, anonymous entry and emergency information" /></td><td width="30%"><img src="docs/evidence/mobile-home.png" alt="Actual mobile landing page at 390 CSS pixels" /></td></tr>
+<tr><td width="70%"><img src="docs/evidence/sprint2-desktop-home.png" alt="Actual Sakhi desktop landing page with public support choices, anonymous entry and emergency information" /></td><td width="30%"><img src="docs/evidence/sprint2-mobile-home.png" alt="Actual mobile landing page at 390 CSS pixels" /></td></tr>
 </table>
 
 ## Start locally
@@ -35,7 +35,7 @@ make setup
 make dev
 ```
 
-Open **[http://127.0.0.1:5173/en-IN/](http://127.0.0.1:5173/en-IN/)**. Requirements: Node 22+, uv, Python 3.13 (uv can install the pinned runtime), Make and a browser. `make setup` installs locked Node/Python dependencies and Chromium for tests. The launcher refuses occupied ports instead of replacing a listener. Ctrl+C stops its own processes.
+Open **[http://127.0.0.1:5173/en-IN/](http://127.0.0.1:5173/en-IN/)**. Requirements: Node 22+, uv, Python 3.13 (uv can install the pinned runtime), Make and a browser. `make setup` installs locked Node/Python dependencies and Chromium, Firefox and WebKit for tests. Linux hosts may also need `npx playwright install --with-deps chromium firefox webkit`. The launcher refuses occupied ports instead of replacing a listener. Ctrl+C stops its own processes.
 
 | Environment | Observed state |
 | --- | --- |
@@ -53,7 +53,7 @@ Choose **Understand my options → 18 or older → Online or digital concerns**,
 The landing-page **Try a fictional example** mode visibly disables calls, outbound links and sharing. It never simulates an acknowledgement. See the [60-second synthetic storyboard](docs/DEMO.md).
 
 <table>
-<tr><td width="50%"><img src="docs/evidence/mobile-options.png" alt="Synthetic mobile cyber concern journey showing official public resources and no-action status" /></td><td width="50%"><img src="docs/evidence/destination-preview.png" alt="Actual destination preview showing cybercrime.gov.in with external actions disabled in the fictional example" /></td></tr>
+<tr><td width="50%"><img src="docs/evidence/sprint2-mobile-options.png" alt="Synthetic mobile cyber concern journey showing official public resources and no-action status" /></td><td width="50%"><img src="docs/evidence/sprint2-destination-preview.png" alt="Actual destination preview showing cybercrime.gov.in with external actions disabled in the fictional example" /></td></tr>
 </table>
 
 Illustrative before/after, with no measured time-saving claim:
@@ -72,7 +72,11 @@ Illustrative before/after, with no measured time-saving claim:
 | Local SQLite FTS5 BM25 plus intact Indic word matching | Functional without models |
 | Source dates, expiry warnings, coarse jurisdiction and official hostname preview | Functional locally; 181 West Bengal exception preserved |
 | Clear ephemeral session, pending-request cancellation, no sensitive persistence | Functional locally |
-| Generic public-card downloads, lite view and synthetic sandbox | Functional locally |
+| Public learning, generic questions and user-selected resource kit | Functional locally; source and safeguarding review pending |
+| Choose up to three services for channel/scope/source comparison | Functional locally |
+| Coarse-city Google Maps query and exact WhatsApp public-card draft | Functional locally; user-opened external services, no GPS or sent state |
+| Interactive data boundary, reading comfort and structured local corrections | Functional locally; nothing automatically submitted |
+| Lite view and synthetic sandbox | Functional locally |
 | Hash-checked public-only PWA cache and offline reload | Browser tested; no live-service promise |
 | 16 language shells, mid-session switch and RTL | Structurally complete; all require human review |
 | Read-only source/locale/evaluation console and 211-lead ingestion | Functional locally; no private interactions shown |
@@ -81,9 +85,21 @@ Illustrative before/after, with no measured time-saving claim:
 | Private vault, personal drafts, timelines, uploads, voice and reminders | Not available; P1 deferred |
 | Provider handoffs, OSC appointment automation, submissions and acknowledgement tracking | Not available; partner authorization required |
 
-All **68 candidate capabilities** have honest individual states in [FEATURES.json](FEATURES.json) and [the feature inventory](docs/FEATURES.md). This is not a claim that all 68 work. [Issue bodies](docs/ISSUE_BACKLOG.md) are prepared locally; no remote Issues exist. P1/P2 remain disabled until P0 review gates pass.
+All **68 candidate capabilities** have honest individual states in [FEATURES.json](FEATURES.json) and [the feature inventory](docs/FEATURES.md). This is not a claim that all 68 work. [Issue bodies](docs/ISSUE_BACKLOG.md) are prepared locally; no remote Issues exist. Original priorities are preserved. The founder-requested Sprint 2 public-only extensions are individually implemented or partial, while human P0 release gates remain open. Private workflows and institutional adapters stay disabled. See [the 14-interaction Sprint 2 inventory](docs/SPRINT2_FEATURES.md).
+
+## Sprint 2 research and design
+
+The [execution plan](docs/SPRINT2_PLAN.md), [design system](DESIGN.md), [service and eight-product comparison](docs/research/sprint2-services-competitors.md), [seventeen-repository review](docs/research/sprint2-open-source.md) and [Maps, messaging and crime-data research](docs/research/sprint2-maps-messaging-data.md) record sources, tradeoffs and gaps. These are evidence-informed hypotheses, not validated uniqueness or user-impact claims.
+
+The experience now covers before / concerning now / after, a public preparation library, manually scrolling official pathways, user-selected comparison, first-contact questions, public kit, data-boundary explorer, map and WhatsApp previews, comfortable reading and community corrections. It follows Kriseva paper/navy/brass with self-hosted Instrument Serif, IBM Plex and Noto. No government logo or partner endorsement is implied.
+
+Accessibility, usability and UI/UX are equal product pillars. The [quality contract and state-level evidence matrix](docs/QUALITY.md) turn lessons from GOV.UK, NHS, USWDS and Carbon into semantic controls, actionable errors, visible eligibility, cancellation, large-text reflow and repeatable regression budgets. The [primary-source study](docs/research/sprint2-three-pillars.md) records their published tools and production maintenance practices. No participant research or human assistive-technology signoff has been completed.
+
+Maps URLs do not require a key, but map results are not vetted providers or safe routes. The WhatsApp card is a generic draft; the recipient and Send are chosen in WhatsApp. No personal narrative, GPS, authority alert or staffed helpdesk is supplied. Historical crime statistics cannot certify present safety, so no crime heatmap or prediction is fabricated. [Operational roadmap and gates](ROADMAP.md).
 
 ## Public sources and directory coverage
+
+Five learning cards linked to four public source pages are counted separately from directory entries. They carry general information and pending-review labels.
 
 **211 discovery leads ingested · 7 agent-reviewed and curated for this preview · 0 human production approvals · 7 exposed public entry points.** Leads are not APIs. Public reading, service cost, open-source licensing and permission to integrate are separate facts.
 
@@ -114,26 +130,26 @@ EmbeddingGemma is an **encoder, not a generative model or legal reasoning engine
 
 ## Language status
 
-Every shell contains **133/133 keys**. Non-English shells have 20 draft navigation translations and **113 explicit English fallback entries**, with a visible notice. Key coverage is not translation completeness or quality. Even English safeguarding content has no external expert signoff.
+Every shell contains **136/136 keys**. Non-English shells have 20 draft navigation translations and **116 explicit English fallback entries**, with a visible notice. Key coverage is not translation completeness or quality. New preparation, map, community and comparison copy is explicitly English and is outside this catalog key count. Even English safeguarding content has no external expert signoff. Locally hosted Noto subsets cover the current catalog codepoints; glyph coverage is not language or shaping approval.
 
 | Locale | Language/script | Structural keys | Human review |
 | --- | --- | --- | --- |
-| en-IN | English | 133/133 | Pending |
-| hi-IN | हिन्दी | 133/133 | Pending |
-| bn-IN | বাংলা | 133/133 | Pending |
-| mr-IN | मराठी | 133/133 | Pending |
-| te-IN | తెలుగు | 133/133 | Pending |
-| ta-IN | தமிழ் | 133/133 | Pending |
-| gu-IN | ગુજરાતી | 133/133 | Pending |
-| kn-IN | ಕನ್ನಡ | 133/133 | Pending |
-| ml-IN | മലയാളം | 133/133 | Pending |
-| or-IN | ଓଡ଼ିଆ | 133/133 | Pending |
-| pa-IN | ਪੰਜਾਬੀ, Gurmukhi | 133/133 | Pending |
-| as-IN | অসমীয়া | 133/133 | Pending |
-| ur-IN | اردو, RTL | 133/133 | Pending |
-| ne-IN | नेपाली | 133/133 | Pending |
-| kok-IN | कोंकणी, Devanagari | 133/133 | Pending |
-| ks-Arab-IN | کٲشُر, Perso-Arabic, RTL | 133/133 | Pending |
+| en-IN | English | 136/136 | Pending |
+| hi-IN | हिन्दी | 136/136 | Pending |
+| bn-IN | বাংলা | 136/136 | Pending |
+| mr-IN | मराठी | 136/136 | Pending |
+| te-IN | తెలుగు | 136/136 | Pending |
+| ta-IN | தமிழ் | 136/136 | Pending |
+| gu-IN | ગુજરાતી | 136/136 | Pending |
+| kn-IN | ಕನ್ನಡ | 136/136 | Pending |
+| ml-IN | മലയാളം | 136/136 | Pending |
+| or-IN | ଓଡ଼ିଆ | 136/136 | Pending |
+| pa-IN | ਪੰਜਾਬੀ, Gurmukhi | 136/136 | Pending |
+| as-IN | অসমীয়া | 136/136 | Pending |
+| ur-IN | اردو, RTL | 136/136 | Pending |
+| ne-IN | नेपाली | 136/136 | Pending |
+| kok-IN | कोंकणी, Devanagari | 136/136 | Pending |
+| ks-Arab-IN | کٲشُر, Perso-Arabic, RTL | 136/136 | Pending |
 
 [Translation review process](docs/TRANSLATION_REVIEW.md). No speech or transcription support is implied by language selection.
 
@@ -161,6 +177,7 @@ See [architecture](docs/ARCHITECTURE.md), [ADRs](docs/ADRs/001-local-architectur
 
 ```sh
 make verify
+make quality
 make evaluate
 PYTHONPATH=. uv run python scripts/resources.py validate
 # Explicit maintainer-only public link check, never driven by a private story:
@@ -169,9 +186,9 @@ PYTHONPATH=. uv run python scripts/resources.py validate --online
 PYTHONPATH=. uv run --group embeddings python scripts/model_benchmark.py
 ```
 
-`make verify` runs Ruff, Python tests, browser-local tests, catalog/data checks, a production build, draft scenario evaluation and Playwright. It exits non-zero on failures. Application tests use only local/synthetic inputs and do not call real services. Link maintenance and model download are separate explicit online actions.
+`make verify` runs Ruff, Python tests, browser-local tests, catalog/data/README checks, a production build, draft scenario evaluation and Playwright. It exits non-zero on failures. Chromium runs the complete browser suite; Firefox and WebKit run the three-pillar interaction contract. `make quality` serves its own local production build and fails on missing measurements or exceeded Lighthouse budgets. Application tests use only local/synthetic inputs and do not call real services. Link maintenance and model download are separate explicit online actions.
 
-Measured on 2026-10-19: local Chromium lab Lighthouse **99 performance / 100 accessibility / 100 best practices**. Required widths 320, 360, 375, 390, 414, 768, 1024, 1280 and 1440 are exercised. Axe scans cover the landing at every width, other main surfaces at 320/1440 and selected Indic/RTL shells. Browser tests also cover cancellation, session erase, minors, keyboard focus, stale packs, language switch, offline reload and no automatic external requests. 200%/400% reflow equivalents use 640/320 CSS-pixel widths; physical zoom, TalkBack/VoiceOver and physical Android remain unverified.
+Measured on 2026-10-19: **35 Python, 17 unit and 167 browser tests passed; 2 unsupported forced-colors emulation cases explicitly skipped.** Local Chromium lab Lighthouse: **96 performance / 100 accessibility / 100 best practices**, LCP 2.56s, CLS 0 and TBT 0ms. The 3s LCP regression budget passed; the stricter 2.5s product goal was missed by 0.06s in this run. Required widths 320, 360, 375, 390, 414, 768, 1024, 1280 and 1440 are exercised. Axe scans cover the landing at every width, other main surfaces at 320/1440 and selected Indic/RTL shells. Browser tests cover cancellation, session erase, minors, focus, stale packs, language switch, offline reload and no automatic external requests. All three engines passed the 200% font-preference, text-spacing and font-failure checks. 200%/400% viewport reflow equivalents use 640/320 CSS-pixel widths; physical zoom, TalkBack/VoiceOver and physical Android remain unverified.
 
 The **410 draft routing cases** are in-sample, include generated surface variants and have no expert labels. The **104 authored-phrase model comparison** is also small and in-sample. Passing these does not establish real-world accuracy or emergency detection reliability. Per-language scores, timing, known limits and test counts are in the [release report](docs/RELEASE_REPORT.md) and [evidence directory](docs/evidence).
 
@@ -186,14 +203,14 @@ No physical Wi-Fi-off cold-start test was performed. Browser offline reload is a
 | SAKHI_WEB_DIST | path, apps/web/dist | Production static bundle location |
 | HF_HUB_OFFLINE / TRANSFORMERS_OFFLINE | string `1` recommended at model runtime | Prevent inference-time downloads |
 
-No environment file or secret is required for core operation. No automatic dotenv loader exists. Ports: 5173 web, 8765 local API, 8787 container; test production server 8767. Keep no-access-log settings. Before external exposure, obtain security/safeguarding review, HTTPS, ingress rate limiting and a real private disclosure channel. No production hardening certification is claimed.
+No environment file or secret is required for core operation. No automatic dotenv loader exists. Ports: 5173 web, 8765 local API, 8787 container; test production server 8767 and owned quality-audit server 8768. Keep no-access-log settings. Before external exposure, obtain security/safeguarding review, HTTPS, ingress rate limiting and a real private disclosure channel. No production hardening certification is claimed.
 
 ## Contribute carefully
 
-A public-resource correction can be prepared locally from the trust page. It never publishes automatically. Propose a pull request with the authoritative source, date, scope and nonsensitive diff. Human verification and review are required for critical contacts. Follow [CONTRIBUTING](CONTRIBUTING.md), [maintainer guidance](docs/MAINTAINER.md), [community conduct](CODE_OF_CONDUCT.md) and [SECURITY](SECURITY.md). **Do not put personal cases, intimate images, private contacts or credentials in GitHub Issues.**
+A structured public-resource correction can be prepared locally from the Community page. The trust page also offers a blank template. It never publishes automatically. Propose a pull request with the authoritative source, date, scope and nonsensitive diff. Human verification and review are required for critical contacts. Follow [CONTRIBUTING](CONTRIBUTING.md), [maintainer guidance](docs/MAINTAINER.md), [community conduct](CODE_OF_CONDUCT.md) and [SECURITY](SECURITY.md). **Do not put personal cases, intimate images, private contacts or credentials in GitHub Issues.**
 
 Good first contributions: an independently reviewed source, native-language review, a synthetic held-out case, a physical-device accessibility check or a reproducible setup on another OS. [Roadmap](ROADMAP.md) and [release gates](docs/RELEASE_GATES.md) state what is missing. Private vaults need a separate security design; provider APIs need written agreements, authentication, trained partners and observable acknowledgements.
 
-Project code: [Apache-2.0](LICENSE). Dependencies, native fonts, public sources and the optional model retain their own terms. [Notices and license-review limits](docs/THIRD_PARTY_NOTICES.md). Source links and OSS acknowledgements do not imply endorsement.
+Project code: [Apache-2.0](LICENSE). Dependencies, OFL font assets, public sources and the optional model retain their own terms. [Notices and license-review limits](docs/THIRD_PARTY_NOTICES.md). Source links and OSS acknowledgements do not imply endorsement.
 
 _Last resource review: 2026-10-19. Local preview only. No public release tag or hosted crisis service._

@@ -1,0 +1,95 @@
+[WebServer] INFO:     Started server process [21425]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 7 tests using 1 worker
+
+(node:21426) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone (550ms)
+  ✓  2 tests/pillars.spec.ts:16:1 › public correction errors link back to the field and preserve entered public text (1.0s)
+  ✘  3 tests/pillars.spec.ts:43:1 › WhatsApp shows readable public fields before an optional encoded address (5.3s)
+(node:21907) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 tests/pillars.spec.ts:74:1 › comparison has a caption and explicit row and column headers (377ms)
+  ✘  5 tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey (269ms)
+(node:21913) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  6 tests/pillars.spec.ts:114:1 › skip link and keyboard journey preserve visible focus without a mouse (295ms)
+  ✓  7 tests/pillars.spec.ts:142:1 › forced colors and reduced motion retain operable controls (616ms)
+
+
+  1) tests/pillars.spec.ts:43:1 › WhatsApp shows readable public fields before an optional encoded address 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('button', { name: 'Preview WhatsApp public card', exact: true })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('button', { name: 'Preview WhatsApp public card', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Preview WhatsApp public card', exact: true })
+        14 × locator resolved to <button class="text-button">…</button>
+           - unexpected value "inactive"
+
+
+      70 |       exact: true,
+      71 |     }),
+    > 72 |   ).toBeFocused();
+         |     ^
+      73 | });
+      74 | test("comparison has a caption and explicit row and column headers", async ({
+      75 |   page,
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/pillars.spec.ts:72:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pillars-WhatsApp-shows-rea-6978d-an-optional-encoded-address/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pillars-WhatsApp-shows-rea-6978d-an-optional-encoded-address/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pillars-WhatsApp-shows-rea-6978d-an-optional-encoded-address/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pillars-WhatsApp-shows-rea-6978d-an-optional-encoded-address/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      101 |       () => document.documentElement.scrollWidth <= innerWidth,
+      102 |     ),
+    > 103 |   ).toBe(true);
+          |     ^
+      104 |   await page
+      105 |     .getByRole("button", { name: "Find my next step", exact: true })
+      106 |     .click();
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/pillars.spec.ts:103:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pillars-browser-font-prefe-c17e5-ll-reflows-the-main-journey/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pillars-browser-font-prefe-c17e5-ll-reflows-the-main-journey/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pillars-browser-font-prefe-c17e5-ll-reflows-the-main-journey/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pillars-browser-font-prefe-c17e5-ll-reflows-the-main-journey/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    tests/pillars.spec.ts:43:1 › WhatsApp shows readable public fields before an optional encoded address 
+    tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey 
+  5 passed (10.3s)

@@ -1,0 +1,462 @@
+[WebServer] INFO:     Started server process [82833]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 24 tests using 1 worker
+
+(node:82834) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/sprint2.spec.ts:4:1 › preparation and recovery contexts are distinct and do not collect a story (461ms)
+  ✓   2 tests/sprint2.spec.ts:11:1 › official pathway rail opens an honest destination preview (302ms)
+  ✓   3 tests/sprint2.spec.ts:15:1 › prepare page has a public checklist and a generic kit download (263ms)
+  ✓   4 tests/sprint2.spec.ts:22:1 › map handoff omits origin and GPS and makes external disclosure explicit (299ms)
+  ✓   5 tests/sprint2.spec.ts:29:1 › WhatsApp prepares only a public card and does not claim a message was sent (281ms)
+  ✓   6 tests/sprint2.spec.ts:36:1 › comparison explains different channel choices (250ms)
+  ✘   7 tests/sprint2.spec.ts:41:1 › data boundary and reading comfort are visible and ephemeral (30.1s)
+(node:83391) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 tests/sprint2.spec.ts:47:1 › community proposal is local and never submits a case (648ms)
+  ✘   9 tests/sprint2.spec.ts:54:2 › Sprint 2 home reflow 320 (696ms)
+(node:83400) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 tests/sprint2.spec.ts:54:2 › Sprint 2 home reflow 390 (199ms)
+  ✓  11 tests/sprint2.spec.ts:54:2 › Sprint 2 home reflow 768 (213ms)
+  ✘  12 tests/sprint2.spec.ts:54:2 › Sprint 2 home reflow 1440 (701ms)
+(node:83410) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  13 tests/sprint2.spec.ts:54:2 › Sprint 2 prepare reflow 320 (464ms)
+  ✓  14 tests/sprint2.spec.ts:54:2 › Sprint 2 prepare reflow 390 (171ms)
+  ✓  15 tests/sprint2.spec.ts:54:2 › Sprint 2 prepare reflow 768 (196ms)
+  ✓  16 tests/sprint2.spec.ts:54:2 › Sprint 2 prepare reflow 1440 (460ms)
+  ✓  17 tests/sprint2.spec.ts:54:2 › Sprint 2 nearby reflow 320 (415ms)
+  ✓  18 tests/sprint2.spec.ts:54:2 › Sprint 2 nearby reflow 390 (173ms)
+  ✓  19 tests/sprint2.spec.ts:54:2 › Sprint 2 nearby reflow 768 (182ms)
+  ✓  20 tests/sprint2.spec.ts:54:2 › Sprint 2 nearby reflow 1440 (434ms)
+  ✓  21 tests/sprint2.spec.ts:54:2 › Sprint 2 community reflow 320 (412ms)
+  ✓  22 tests/sprint2.spec.ts:54:2 › Sprint 2 community reflow 390 (188ms)
+  ✓  23 tests/sprint2.spec.ts:54:2 › Sprint 2 community reflow 768 (182ms)
+  ✓  24 tests/sprint2.spec.ts:54:2 › Sprint 2 community reflow 1440 (429ms)
+
+
+  1) tests/sprint2.spec.ts:41:1 › data boundary and reading comfort are visible and ephemeral ──────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('tab', { name: 'Inside Sakhi', exact: true })
+
+
+      40 | });
+      41 | test('data boundary and reading comfort are visible and ephemeral',async({page})=>{
+    > 42 |  await page.goto('/en-IN/trust');await page.getByRole('tab',{name:'Inside Sakhi',exact:true}).click();
+         |                                                                                               ^
+      43 |  await expect(page.getByText('Only your language preference is saved.')).toBeVisible();
+      44 |  await page.getByRole('button',{name:'Larger text',exact:true}).click();await expect(page.locator('.app')).toHaveClass(/comfortable/);
+      45 |  expect(await page.evaluate(()=>Object.keys(localStorage))).toEqual(['sakhi.locale']);
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:42:95
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-data-boundary-and--fdd00-t-are-visible-and-ephemeral/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-data-boundary-and--fdd00-t-are-visible-and-ephemeral/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-data-boundary-and--fdd00-t-are-visible-and-ephemeral/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-data-boundary-and--fdd00-t-are-visible-and-ephemeral/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/sprint2.spec.ts:54:2 › Sprint 2 home reflow 320 ─────────────────────────────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -   1
+    + Received  + 160
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+    +     "help": "Elements must have their visible text as part of their accessible name",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright",
+    +     "id": "label-content-name-mismatch",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"112 · Emergency response\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "button[aria-label=\"112 · Emergency response\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"181 · Women Helpline & OSC information\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".pathway-item:nth-child(2)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"1098 · Child Helpline information\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".pathway-item:nth-child(3)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"NALSA · Public legal aid information\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".pathway-item:nth-child(4)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"CYBERCRIME · National cybercrime reporting portal\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".pathway-item:nth-child(5)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"SHe-Box · Workplace complaint information\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".pathway-item:nth-child(6)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"NCW · Women’s complaint information\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".pathway-item:nth-child(7)",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.semantics",
+    +       "wcag21a",
+    +       "wcag253",
+    +       "EN-301-549",
+    +       "EN-9.2.5.3",
+    +       "RGAAv4",
+    +       "RGAA-6.1.5",
+    +     ],
+    +   },
+    + ]
+
+      55 |   await page.setViewportSize({width,height:900});await page.goto(`/en-IN/${route}`);await expect(page.locator('main h1')).toBeVisible();
+      56 |   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+    > 57 |   if(width===320||width===1440){const r=await new AxeBuilder({page}).analyze();expect(r.violations.filter(v=>['critical','serious'].includes(v.impact??''))).toEqual([]);}
+         |                                                                                                                                                              ^
+      58 |  });
+      59 | }
+      60 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:57:158
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-320/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-320/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-320/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-320/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/sprint2.spec.ts:54:2 › Sprint 2 home reflow 1440 ────────────────────────────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -   1
+    + Received  + 160
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+    +     "help": "Elements must have their visible text as part of their accessible name",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright",
+    +     "id": "label-content-name-mismatch",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"112 · Emergency response\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "button[aria-label=\"112 · Emergency response\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"181 · Women Helpline & OSC information\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".pathway-item:nth-child(2)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"1098 · Child Helpline information\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".pathway-item:nth-child(3)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"NALSA · Public legal aid information\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".pathway-item:nth-child(4)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"CYBERCRIME · National cybercrime reporting portal\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".pathway-item:nth-child(5)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"SHe-Box · Workplace complaint information\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".pathway-item:nth-child(6)",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button class=\"pathway-item\" aria-label=\"NCW · Women’s complaint information\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           ".pathway-item:nth-child(7)",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.semantics",
+    +       "wcag21a",
+    +       "wcag253",
+    +       "EN-301-549",
+    +       "EN-9.2.5.3",
+    +       "RGAAv4",
+    +       "RGAA-6.1.5",
+    +     ],
+    +   },
+    + ]
+
+      55 |   await page.setViewportSize({width,height:900});await page.goto(`/en-IN/${route}`);await expect(page.locator('main h1')).toBeVisible();
+      56 |   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+    > 57 |   if(width===320||width===1440){const r=await new AxeBuilder({page}).analyze();expect(r.violations.filter(v=>['critical','serious'].includes(v.impact??''))).toEqual([]);}
+         |                                                                                                                                                              ^
+      58 |  });
+      59 | }
+      60 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:57:158
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-1440/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-1440/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-1440/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-1440/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    tests/sprint2.spec.ts:41:1 › data boundary and reading comfort are visible and ephemeral ───────
+    tests/sprint2.spec.ts:54:2 › Sprint 2 home reflow 320 ──────────────────────────────────────────
+    tests/sprint2.spec.ts:54:2 › Sprint 2 home reflow 1440 ─────────────────────────────────────────
+  21 passed (40.2s)

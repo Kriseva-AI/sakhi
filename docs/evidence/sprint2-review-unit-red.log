@@ -1,0 +1,30 @@
+
+> kriseva-sakhi@0.1.0 test
+> vitest run
+
+
+ RUN  v4.1.12 /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi
+
+ ❯ tests/public-actions.test.ts (5 tests | 1 failed) 3ms
+   × accepts official public PIB article fields but rejects private query data 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/public-actions.test.ts > accepts official public PIB article fields but rejects private query data
+TypeError: validatePublicEvidenceUrl is not a function
+ ❯ tests/public-actions.test.ts:36:9
+     34|  const {validatePublicEvidenceUrl}=await import('../apps/web/src/publi…
+     35|  const url='https://www.pib.gov.in/PressReleasePage.aspx?PRID=2224438&…
+     36|  expect(validatePublicEvidenceUrl(url).href).toBe(url);
+       |         ^
+     37|  expect(()=>validatePublicEvidenceUrl('https://www.pib.gov.in/PressRel…
+     38|  expect(()=>validatePublicEvidenceUrl('https://example.org/?email=PRIV…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 10 passed (11)
+   Start at  22:38:28
+   Duration  116ms (transform 36ms, setup 0ms, import 50ms, tests 6ms, environment 0ms)
+

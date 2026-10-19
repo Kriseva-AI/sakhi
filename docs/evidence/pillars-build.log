@@ -1,0 +1,13 @@
+
+> kriseva-sakhi@0.1.0 build
+> tsc --noEmit && vite build --config apps/web/vite.config.ts
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 1781 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.56 kB │ gzip:   0.74 kB
+dist/assets/index-D7yFx5WE.css   62.04 kB │ gzip:  12.90 kB
+dist/assets/index-0ZSU9WvT.js   463.72 kB │ gzip: 108.55 kB
+✓ built in 704ms

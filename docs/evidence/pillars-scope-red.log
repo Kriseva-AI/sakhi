@@ -1,0 +1,53 @@
+[WebServer] INFO:     Started server process [25207]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 1 test using 1 worker
+
+(node:25208) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/pillars.spec.ts:187:1 › critical service eligibility limits remain visible before opening details (5.4s)
+
+
+  1) [chromium] › tests/pillars.spec.ts:187:1 › critical service eligibility limits remain visible before opening details 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  getByRole('article').filter({ has: getByRole('heading', { name: 'Women Helpline and One Stop Centres', exact: true }) }).getByText('The official page excludes West Bengal.')
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" getByRole('article').filter({ has: getByRole('heading', { name: 'Women Helpline and One Stop Centres', exact: true }) }).getByText('The official page excludes West Bengal.') with timeout 5000ms
+      - waiting for getByRole('article').filter({ has: getByRole('heading', { name: 'Women Helpline and One Stop Centres', exact: true }) }).getByText('The official page excludes West Bengal.')
+        14 × locator resolved to <p>…</p>
+           - unexpected value "hidden"
+
+
+      187 | test('critical service eligibility limits remain visible before opening details',async({page})=>{
+      188 |  await page.goto('/en-IN/resources');const card=page.getByRole('article').filter({has:page.getByRole('heading',{name:'Women Helpline and One Stop Centres',exact:true})});
+    > 189 |  await expect(card.getByText('The official page excludes West Bengal.',{exact:false})).toBeVisible();
+          |                                                                                        ^
+      190 |  await expect(card.locator('details')).not.toHaveAttribute('open','');
+      191 | });
+      192 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/pillars.spec.ts:189:88
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pillars-critical-service-e-60333-ible-before-opening-details-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pillars-critical-service-e-60333-ible-before-opening-details-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pillars-critical-service-e-60333-ible-before-opening-details-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pillars-critical-service-e-60333-ible-before-opening-details-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/pillars.spec.ts:187:1 › critical service eligibility limits remain visible before opening details 

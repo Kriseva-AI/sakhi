@@ -1,0 +1,18 @@
+{
+  "scope": "240 synthetic requests to local Docker API, one run, no external calls",
+  "date": "2026-10-19",
+  "concurrency": 10,
+  "requests": 240,
+  "elapsed_seconds": 0.257,
+  "requests_per_second": 934.44,
+  "p50_ms": 7.94,
+  "p95_ms": 23.72,
+  "max_ms": 40.43,
+  "states": {
+    "present_options": 160,
+    "minor_redirect": 40,
+    "urgent_redirect": 40
+  },
+  "failures": [],
+  "limits": "Local smoke probe, not internet scale, endurance, availability SLA or service outcome validation."
+}

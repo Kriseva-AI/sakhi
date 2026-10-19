@@ -1,0 +1,44 @@
+[WebServer] INFO:     Started server process [11612]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 1 test using 1 worker
+
+(node:11613) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/sprint2.spec.ts:430:1 › long destination preview begins at its title before the consent checkpoint (505ms)
+
+
+  1) tests/sprint2.spec.ts:430:1 › long destination preview begins at its title before the consent checkpoint 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 574
+
+      431 |  await page.setViewportSize({width:390,height:844});await page.goto('/en-IN/nearby');
+      432 |  await page.getByLabel('Choose a city or district').selectOption('Ahmedabad');await page.getByRole('button',{name:'Preview map search',exact:true}).click();
+    > 433 |  const dialog=page.getByRole('dialog');expect(await dialog.evaluate(e=>e.scrollTop)).toBe(0);
+          |                                                                                      ^
+      434 |  await expect(dialog.getByRole('heading',{name:'Before you leave Sakhi'})).toBeFocused();
+      435 | });
+      436 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:433:86
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-long-destination-p-fea64-fore-the-consent-checkpoint/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-long-destination-p-fea64-fore-the-consent-checkpoint/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-long-destination-p-fea64-fore-the-consent-checkpoint/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-long-destination-p-fea64-fore-the-consent-checkpoint/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/sprint2.spec.ts:430:1 › long destination preview begins at its title before the consent checkpoint 

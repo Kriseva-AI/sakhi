@@ -1,0 +1,286 @@
+uv run --frozen ruff check services scripts tests models
+All checks passed!
+uv run --frozen pytest -q --junitxml=docs/evidence/pytest.xml
+...................................                                      [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.13/site-packages/fastapi/testclient.py:1
+  /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+35 passed, 1 warning in 0.21s
+npm test
+
+> kriseva-sakhi@0.1.0 test
+> vitest run
+
+
+ RUN  v4.1.12 /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi
+
+
+ Test Files  2 passed (2)
+      Tests  10 passed (10)
+   Start at  22:33:38
+   Duration  131ms (transform 35ms, setup 0ms, import 50ms, tests 5ms, environment 0ms)
+
+PYTHONPATH=. uv run --frozen python scripts/validate_project.py
+16 locale shells, 136 keys each, 68 features, 211 leads; structural validation passed.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make build
+PYTHONPATH=. uv run --frozen python scripts/build_public.py
+npm run build
+
+> kriseva-sakhi@0.1.0 build
+> tsc --noEmit && vite build --config apps/web/vite.config.ts
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 1778 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.04 kB │ gzip:   0.52 kB
+dist/assets/index-YUwj-A10.css   57.79 kB │ gzip:  12.14 kB
+dist/assets/index-CvQ2iGXm.js   456.98 kB │ gzip: 106.30 kB
+✓ built in 724ms
+PYTHONPATH=. uv run --frozen python scripts/build_public.py --after-build
+Generated immutable public cache ba7cb41f1380f8f0, 36 assets. No API or query cache.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make evaluate
+PYTHONPATH=. uv run --frozen python scripts/evaluate.py
+{
+  "cases": 410,
+  "emergency_failures": 0,
+  "mismatches": 0,
+  "latency_ms": {
+    "p50": 0.07899990305304527,
+    "p95": 0.09408313781023026
+  },
+  "by_locale": {
+    "en-IN": 1,
+    "hi-IN": 1,
+    "bn-IN": 1,
+    "mr-IN": 1,
+    "te-IN": 1,
+    "ta-IN": 1,
+    "gu-IN": 1,
+    "kn-IN": 1,
+    "ml-IN": 1,
+    "or-IN": 1,
+    "pa-IN": 1,
+    "as-IN": 1,
+    "ur-IN": 1,
+    "ne-IN": 1,
+    "kok-IN": 1,
+    "ks-Arab-IN": 1
+  }
+}
+npx playwright test
+[WebServer] INFO:     Started server process [88893]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 127 tests using 1 worker
+
+(node:88895) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    1 tests/e2e.spec.ts:4:1 › anonymous cyber journey, exact destination preview and cancel sends nothing (891ms)
+  ✓    2 tests/e2e.spec.ts:41:1 › emergency is available before API and in airplane mode (239ms)
+  ✓    3 tests/e2e.spec.ts:53:1 › synthetic demo cannot open services and erase removes input (396ms)
+  ✓    4 tests/e2e.spec.ts:79:1 › minor receives child route rather than adult results (261ms)
+  ✓    5 tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 320 (607ms)
+  ✓    6 tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 360 (596ms)
+  ✓    7 tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 375 (562ms)
+  ✓    8 tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 390 (574ms)
+  ✓    9 tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 414 (560ms)
+  ✓   10 tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 768 (547ms)
+  ✓   11 tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 1024 (549ms)
+  ✓   12 tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 1280 (558ms)
+  ✓   13 tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 1440 (570ms)
+  ✓   14 tests/e2e.spec.ts:117:5 › finder reflows at 320 (409ms)
+  ✓   15 tests/e2e.spec.ts:117:5 › finder reflows at 360 (173ms)
+  ✓   16 tests/e2e.spec.ts:117:5 › finder reflows at 375 (173ms)
+  ✓   17 tests/e2e.spec.ts:117:5 › finder reflows at 390 (173ms)
+  ✓   18 tests/e2e.spec.ts:117:5 › finder reflows at 414 (175ms)
+  ✓   19 tests/e2e.spec.ts:117:5 › finder reflows at 768 (192ms)
+  ✓   20 tests/e2e.spec.ts:117:5 › finder reflows at 1024 (196ms)
+  ✓   21 tests/e2e.spec.ts:117:5 › finder reflows at 1280 (198ms)
+  ✓   22 tests/e2e.spec.ts:117:5 › finder reflows at 1440 (423ms)
+  ✓   23 tests/e2e.spec.ts:117:5 › resources reflows at 320 (493ms)
+  ✓   24 tests/e2e.spec.ts:117:5 › resources reflows at 360 (192ms)
+  ✓   25 tests/e2e.spec.ts:117:5 › resources reflows at 375 (211ms)
+  ✓   26 tests/e2e.spec.ts:117:5 › resources reflows at 390 (189ms)
+  ✓   27 tests/e2e.spec.ts:117:5 › resources reflows at 414 (195ms)
+  ✓   28 tests/e2e.spec.ts:117:5 › resources reflows at 768 (195ms)
+  ✓   29 tests/e2e.spec.ts:117:5 › resources reflows at 1024 (179ms)
+  ✓   30 tests/e2e.spec.ts:117:5 › resources reflows at 1280 (204ms)
+  ✓   31 tests/e2e.spec.ts:117:5 › resources reflows at 1440 (520ms)
+  ✓   32 tests/e2e.spec.ts:117:5 › trust reflows at 320 (431ms)
+  ✓   33 tests/e2e.spec.ts:117:5 › trust reflows at 360 (217ms)
+  ✓   34 tests/e2e.spec.ts:117:5 › trust reflows at 375 (174ms)
+  ✓   35 tests/e2e.spec.ts:117:5 › trust reflows at 390 (191ms)
+  ✓   36 tests/e2e.spec.ts:117:5 › trust reflows at 414 (174ms)
+  ✓   37 tests/e2e.spec.ts:117:5 › trust reflows at 768 (192ms)
+  ✓   38 tests/e2e.spec.ts:117:5 › trust reflows at 1024 (178ms)
+  ✓   39 tests/e2e.spec.ts:117:5 › trust reflows at 1280 (179ms)
+  ✓   40 tests/e2e.spec.ts:117:5 › trust reflows at 1440 (445ms)
+  ✓   41 tests/e2e.spec.ts:117:5 › maintenance reflows at 320 (529ms)
+  ✓   42 tests/e2e.spec.ts:117:5 › maintenance reflows at 360 (189ms)
+  ✓   43 tests/e2e.spec.ts:117:5 › maintenance reflows at 375 (195ms)
+  ✓   44 tests/e2e.spec.ts:117:5 › maintenance reflows at 390 (190ms)
+  ✓   45 tests/e2e.spec.ts:117:5 › maintenance reflows at 414 (190ms)
+  ✓   46 tests/e2e.spec.ts:117:5 › maintenance reflows at 768 (202ms)
+  ✓   47 tests/e2e.spec.ts:117:5 › maintenance reflows at 1024 (422ms)
+  ✓   48 tests/e2e.spec.ts:117:5 › maintenance reflows at 1280 (220ms)
+  ✓   49 tests/e2e.spec.ts:117:5 › maintenance reflows at 1440 (644ms)
+  ✓   50 tests/e2e.spec.ts:155:3 › locale shell en-IN has explicit fallback and correct direction (250ms)
+  ✓   51 tests/e2e.spec.ts:155:3 › locale shell hi-IN has explicit fallback and correct direction (594ms)
+  ✓   52 tests/e2e.spec.ts:155:3 › locale shell bn-IN has explicit fallback and correct direction (241ms)
+  ✓   53 tests/e2e.spec.ts:155:3 › locale shell mr-IN has explicit fallback and correct direction (224ms)
+  ✓   54 tests/e2e.spec.ts:155:3 › locale shell te-IN has explicit fallback and correct direction (207ms)
+  ✓   55 tests/e2e.spec.ts:155:3 › locale shell ta-IN has explicit fallback and correct direction (240ms)
+  ✓   56 tests/e2e.spec.ts:155:3 › locale shell gu-IN has explicit fallback and correct direction (224ms)
+  ✓   57 tests/e2e.spec.ts:155:3 › locale shell kn-IN has explicit fallback and correct direction (189ms)
+  ✓   58 tests/e2e.spec.ts:155:3 › locale shell ml-IN has explicit fallback and correct direction (205ms)
+  ✓   59 tests/e2e.spec.ts:155:3 › locale shell or-IN has explicit fallback and correct direction (210ms)
+  ✓   60 tests/e2e.spec.ts:155:3 › locale shell pa-IN has explicit fallback and correct direction (225ms)
+  ✓   61 tests/e2e.spec.ts:155:3 › locale shell as-IN has explicit fallback and correct direction (207ms)
+  ✓   62 tests/e2e.spec.ts:155:3 › locale shell ur-IN has explicit fallback and correct direction (559ms)
+  ✓   63 tests/e2e.spec.ts:155:3 › locale shell ne-IN has explicit fallback and correct direction (217ms)
+  ✓   64 tests/e2e.spec.ts:155:3 › locale shell kok-IN has explicit fallback and correct direction (223ms)
+  ✓   65 tests/e2e.spec.ts:155:3 › locale shell ks-Arab-IN has explicit fallback and correct direction (582ms)
+  ✓   66 tests/e2e.spec.ts:184:1 › mid-session switch preserves only memory, browser back works, clear erases narrative (597ms)
+  ✓   67 tests/e2e.spec.ts:213:1 › general help download excludes any story and keyboard escapes destination preview (315ms)
+  ✓   68 tests/e2e.spec.ts:232:1 › 200 and 400 percent reflow equivalents at 640 and 320 CSS pixels (206ms)
+  ✓   69 tests/e2e.spec.ts:247:1 › clear invalidates a delayed navigation response (837ms)
+  ✓   70 tests/e2e.spec.ts:289:1 › step change focuses and announces the next question (247ms)
+  ✓   71 tests/e2e.spec.ts:300:1 › expired public pack retains honest general fallback links (215ms)
+  ✘   72 tests/e2e.spec.ts:314:1 › direct goal reaches public options in three selections (30.1s)
+(node:90158) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   73 tests/offline.spec.ts:2:1 › production PWA reloads offline and caches only hashed public assets (720ms)
+  ✓   74 tests/offline.spec.ts:61:1 › production headers forbid device sensors, framing, and external scripts (22ms)
+  ✓   75 tests/sprint2.spec.ts:4:1 › preparation and recovery contexts are distinct and do not collect a story (298ms)
+  ✓   76 tests/sprint2.spec.ts:24:1 › official pathway rail opens an honest destination preview (290ms)
+  ✓   77 tests/sprint2.spec.ts:37:1 › prepare page has a public checklist and a generic kit download (264ms)
+  ✓   78 tests/sprint2.spec.ts:58:1 › map handoff omits origin and GPS and makes external disclosure explicit (284ms)
+  ✓   79 tests/sprint2.spec.ts:73:1 › WhatsApp prepares only a public card and does not claim a message was sent (281ms)
+  ✓   80 tests/sprint2.spec.ts:93:1 › comparison explains different channel choices (280ms)
+  ✓   81 tests/sprint2.spec.ts:105:1 › data boundary and reading comfort are visible and ephemeral (247ms)
+  ✓   82 tests/sprint2.spec.ts:119:1 › community proposal is local and never submits a case (615ms)
+  ✓   83 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 320 (587ms)
+  ✓   84 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 360 (192ms)
+  ✓   85 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 375 (192ms)
+  ✓   86 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 390 (189ms)
+  ✓   87 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 414 (193ms)
+  ✓   88 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 768 (195ms)
+  ✓   89 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1024 (197ms)
+  ✓   90 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1280 (218ms)
+  ✓   91 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1440 (580ms)
+  ✓   92 tests/sprint2.spec.ts:141:5 › Sprint 2 prepare reflow 320 (448ms)
+  ✓   93 tests/sprint2.spec.ts:141:5 › Sprint 2 prepare reflow 360 (198ms)
+  ✓   94 tests/sprint2.spec.ts:141:5 › Sprint 2 prepare reflow 375 (175ms)
+  ✓   95 tests/sprint2.spec.ts:141:5 › Sprint 2 prepare reflow 390 (173ms)
+  ✓   96 tests/sprint2.spec.ts:141:5 › Sprint 2 prepare reflow 414 (188ms)
+  ✓   97 tests/sprint2.spec.ts:141:5 › Sprint 2 prepare reflow 768 (195ms)
+  ✓   98 tests/sprint2.spec.ts:141:5 › Sprint 2 prepare reflow 1024 (217ms)
+  ✓   99 tests/sprint2.spec.ts:141:5 › Sprint 2 prepare reflow 1280 (222ms)
+  ✓  100 tests/sprint2.spec.ts:141:5 › Sprint 2 prepare reflow 1440 (495ms)
+  ✓  101 tests/sprint2.spec.ts:141:5 › Sprint 2 nearby reflow 320 (526ms)
+  ✓  102 tests/sprint2.spec.ts:141:5 › Sprint 2 nearby reflow 360 (222ms)
+  ✓  103 tests/sprint2.spec.ts:141:5 › Sprint 2 nearby reflow 375 (197ms)
+  ✓  104 tests/sprint2.spec.ts:141:5 › Sprint 2 nearby reflow 390 (212ms)
+  ✓  105 tests/sprint2.spec.ts:141:5 › Sprint 2 nearby reflow 414 (177ms)
+  ✓  106 tests/sprint2.spec.ts:141:5 › Sprint 2 nearby reflow 768 (205ms)
+  ✓  107 tests/sprint2.spec.ts:141:5 › Sprint 2 nearby reflow 1024 (230ms)
+  ✓  108 tests/sprint2.spec.ts:141:5 › Sprint 2 nearby reflow 1280 (216ms)
+  ✓  109 tests/sprint2.spec.ts:141:5 › Sprint 2 nearby reflow 1440 (502ms)
+  ✓  110 tests/sprint2.spec.ts:141:5 › Sprint 2 community reflow 320 (453ms)
+  ✓  111 tests/sprint2.spec.ts:141:5 › Sprint 2 community reflow 360 (200ms)
+  ✓  112 tests/sprint2.spec.ts:141:5 › Sprint 2 community reflow 375 (177ms)
+  ✓  113 tests/sprint2.spec.ts:141:5 › Sprint 2 community reflow 390 (193ms)
+  ✓  114 tests/sprint2.spec.ts:141:5 › Sprint 2 community reflow 414 (207ms)
+  ✓  115 tests/sprint2.spec.ts:141:5 › Sprint 2 community reflow 768 (218ms)
+  ✓  116 tests/sprint2.spec.ts:141:5 › Sprint 2 community reflow 1024 (203ms)
+  ✓  117 tests/sprint2.spec.ts:141:5 › Sprint 2 community reflow 1280 (204ms)
+  ✓  118 tests/sprint2.spec.ts:141:5 › Sprint 2 community reflow 1440 (473ms)
+  ✓  119 tests/sprint2.spec.ts:167:3 › action desk Understand my options reaches options in three selections (346ms)
+  ✓  120 tests/sprint2.spec.ts:167:3 › action desk Explore reporting options reaches options in three selections (328ms)
+  ✓  121 tests/sprint2.spec.ts:167:3 › action desk Find support reaches options in three selections (343ms)
+  ✓  122 tests/sprint2.spec.ts:167:3 › action desk Help someone else reaches options in three selections (328ms)
+  ✓  123 tests/sprint2.spec.ts:190:1 › tabs support keyboard movement and one tab stop (334ms)
+  ✓  124 tests/sprint2.spec.ts:212:1 › new screens never request GPS, microphone or notification permission (474ms)
+  ✓  125 tests/sprint2.spec.ts:239:1 › clear session discards contribution and coarse map choices (803ms)
+  ✘  126 tests/sprint2.spec.ts:268:1 › fictional examples cannot use new downloads or external handoffs (30.1s)
+(node:91437) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  127 tests/sprint2.spec.ts:304:1 › overdue pathway checks are visible and do not become fresh claims (280ms)
+
+
+  1) tests/e2e.spec.ts:314:1 › direct goal reaches public options in three selections ──────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Understand my options', exact: true })
+
+
+      318 |   await page
+      319 |     .getByRole("button", { name: "Understand my options", exact: true })
+    > 320 |     .click();
+          |      ^
+      321 |   await page.getByRole("button", { name: "18 or older", exact: true }).click();
+      322 |   await page
+      323 |     .getByRole("button", { name: "Online or digital concerns", exact: true })
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/e2e.spec.ts:320:6
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/e2e-direct-goal-reaches-public-options-in-three-selections/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/e2e-direct-goal-reaches-public-options-in-three-selections/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-direct-goal-reaches-public-options-in-three-selections/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-direct-goal-reaches-public-options-in-three-selections/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/sprint2.spec.ts:268:1 › fictional examples cannot use new downloads or external handoffs 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Try a fictional example', exact: true })
+
+
+      272 |   await page
+      273 |     .getByRole("button", { name: "Try a fictional example", exact: true })
+    > 274 |     .click();
+          |      ^
+      275 |   await page
+      276 |     .getByRole("button", { name: "Prepare & learn", exact: true })
+      277 |     .click();
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:274:6
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-fictional-examples-7faa1-nloads-or-external-handoffs/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-fictional-examples-7faa1-nloads-or-external-handoffs/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-fictional-examples-7faa1-nloads-or-external-handoffs/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-fictional-examples-7faa1-nloads-or-external-handoffs/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    tests/e2e.spec.ts:314:1 › direct goal reaches public options in three selections ───────────────
+    tests/sprint2.spec.ts:268:1 › fictional examples cannot use new downloads or external handoffs ─
+  125 passed (1.7m)
+make: *** [verify] Error 1

@@ -1,0 +1,289 @@
+[WebServer] INFO:     Started server process [19045]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 7 tests using 1 worker
+
+(node:19046) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone (5.5s)
+(node:19490) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/pillars.spec.ts:10:1 › public correction errors link back to the field and preserve entered public text (5.7s)
+(node:19501) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/pillars.spec.ts:17:1 › WhatsApp shows readable public fields before an optional encoded address (5.3s)
+(node:19667) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/pillars.spec.ts:26:1 › comparison has a caption and explicit row and column headers (5.3s)
+(node:19674) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 tests/pillars.spec.ts:31:1 › browser font preference at 200 percent still reflows the main journey (242ms)
+(node:19679) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  6 tests/pillars.spec.ts:40:1 › skip link and keyboard journey preserve visible focus without a mouse (5.3s)
+(node:19900) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  7 tests/pillars.spec.ts:48:1 › forced colors and reduced motion retain operable controls (30.1s)
+
+
+  1) tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone ─────────
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('navigation', { name: 'Main navigation' }).getByRole('link')
+    Expected: 5
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('navigation', { name: 'Main navigation' }).getByRole('link') with timeout 5000ms
+      - waiting for getByRole('navigation', { name: 'Main navigation' }).getByRole('link')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      4 | test('all main destinations are visible links on a narrow phone',async({page})=>{
+      5 |  await page.setViewportSize({width:320,height:844});await page.goto('/en-IN/');
+    > 6 |  const nav=page.getByRole('navigation',{name:'Main navigation'});await expect(nav.getByRole('link')).toHaveCount(5);
+        |                                                                                                      ^
+      7 |  for(const link of await nav.getByRole('link').all())await expect(link).toBeInViewport();
+      8 |  await nav.getByRole('link',{name:'Community',exact:true}).click();await expect(page.locator('main h1')).toBeFocused();
+      9 | });
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/pillars.spec.ts:6:102
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pillars-all-main-destinati-5b812-ble-links-on-a-narrow-phone/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pillars-all-main-destinati-5b812-ble-links-on-a-narrow-phone/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pillars-all-main-destinati-5b812-ble-links-on-a-narrow-phone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pillars-all-main-destinati-5b812-ble-links-on-a-narrow-phone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/pillars.spec.ts:10:1 › public correction errors link back to the field and preserve entered public text 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator: getByRole('region', { name: 'There is a problem' })
+    Expected: focused
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeFocused" getByRole('region', { name: 'There is a problem' }) with timeout 5000ms
+      - waiting for getByRole('region', { name: 'There is a problem' })
+
+
+      11 |  await page.goto('/en-IN/community');await page.getByLabel('Public resource ID').fill('legal');await page.getByLabel('Official evidence URL').fill('https://example.org/?case=PRIVATE');
+      12 |  await page.getByLabel('Proposed public correction (optional)').fill('SYNTHETIC public wording');await page.getByRole('button',{name:'Download correction proposal',exact:true}).click();
+    > 13 |  const summary=page.getByRole('region',{name:'There is a problem'});await expect(summary).toBeFocused();await expect(page).toHaveTitle(/^Error:/);
+         |                                                                                           ^
+      14 |  await summary.getByRole('link').click();await expect(page.getByLabel('Official evidence URL')).toBeFocused();await expect(page.getByLabel('Official evidence URL')).toHaveAttribute('aria-invalid','true');
+      15 |  await expect(page.getByLabel('Proposed public correction (optional)')).toHaveValue('SYNTHETIC public wording');
+      16 | });
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/pillars.spec.ts:13:91
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pillars-public-correction--a13aa-reserve-entered-public-text/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pillars-public-correction--a13aa-reserve-entered-public-text/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pillars-public-correction--a13aa-reserve-entered-public-text/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pillars-public-correction--a13aa-reserve-entered-public-text/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/pillars.spec.ts:17:1 › WhatsApp shows readable public fields before an optional encoded address 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('dialog').getByText('Show exact encoded address', { exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('dialog').getByText('Show exact encoded address', { exact: true }) with timeout 5000ms
+      - waiting for getByRole('dialog').getByText('Show exact encoded address', { exact: true })
+
+
+      18 |  await page.goto('/en-IN/prepare');await page.getByRole('button',{name:'Preview WhatsApp public card',exact:true}).click();
+      19 |  const dialog=page.getByRole('dialog');await expect(dialog.locator('.payload-fields')).toContainText('You choose the recipient and press Send');
+    > 20 |  await expect(dialog.getByText('Show exact encoded address',{exact:true})).toBeVisible();
+         |                                                                            ^
+      21 |  await expect(dialog.locator('.address-details')).not.toHaveAttribute('open','');
+      22 |  await expect(dialog.locator('.address-details code')).toBeHidden();
+      23 |  await dialog.getByText('Show exact encoded address',{exact:true}).click();await expect(dialog.locator('.address-details code')).toContainText('https://wa.me/');
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/pillars.spec.ts:20:76
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pillars-WhatsApp-shows-rea-6978d-an-optional-encoded-address/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pillars-WhatsApp-shows-rea-6978d-an-optional-encoded-address/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pillars-WhatsApp-shows-rea-6978d-an-optional-encoded-address/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pillars-WhatsApp-shows-rea-6978d-an-optional-encoded-address/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/pillars.spec.ts:26:1 › comparison has a caption and explicit row and column headers ─────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('table', { name: 'Public pathway comparison' }).locator('caption')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('table', { name: 'Public pathway comparison' }).locator('caption') with timeout 5000ms
+      - waiting for getByRole('table', { name: 'Public pathway comparison' }).locator('caption')
+
+
+      26 | test('comparison has a caption and explicit row and column headers',async({page})=>{
+      27 |  await page.goto('/en-IN/resources');await page.getByRole('button',{name:'Compare public pathways',exact:true}).click();
+    > 28 |  const table=page.getByRole('table',{name:'Public pathway comparison'});await expect(table.locator('caption')).toBeVisible();
+         |                                                                                                                ^
+      29 |  expect(await table.locator('thead th:not([scope=col])').count()).toBe(0);expect(await table.locator('tbody th:not([scope=row])').count()).toBe(0);
+      30 | });
+      31 | test('browser font preference at 200 percent still reflows the main journey',async({page})=>{
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/pillars.spec.ts:28:112
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pillars-comparison-has-a-c-07d32-icit-row-and-column-headers/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pillars-comparison-has-a-c-07d32-icit-row-and-column-headers/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pillars-comparison-has-a-c-07d32-icit-row-and-column-headers/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pillars-comparison-has-a-c-07d32-icit-row-and-column-headers/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) tests/pillars.spec.ts:31:1 › browser font preference at 200 percent still reflows the main journey 
+
+    Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 34.199999999999996
+    Received:    18
+
+      33 |  const before=await page.locator('.sprint2-intro').evaluate(e=>parseFloat(getComputedStyle(e).fontSize));
+      34 |  await page.addStyleTag({content:'html {font-size:200% !important}'});
+    > 35 |  const after=await page.locator('.sprint2-intro').evaluate(e=>parseFloat(getComputedStyle(e).fontSize));expect(after).toBeGreaterThanOrEqual(before*1.9);
+         |                                                                                                                       ^
+      36 |  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+      37 |  await page.getByRole('button',{name:'Find my next step',exact:true}).click();await expect(page.locator('main h1')).toBeVisible();
+      38 |  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/pillars.spec.ts:35:119
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pillars-browser-font-prefe-c17e5-ll-reflows-the-main-journey/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pillars-browser-font-prefe-c17e5-ll-reflows-the-main-journey/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pillars-browser-font-prefe-c17e5-ll-reflows-the-main-journey/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pillars-browser-font-prefe-c17e5-ll-reflows-the-main-journey/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) tests/pillars.spec.ts:40:1 › skip link and keyboard journey preserve visible focus without a mouse 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('link', { name: 'Skip to content', exact: true })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('link', { name: 'Skip to content', exact: true }) with timeout 5000ms
+      - waiting for getByRole('link', { name: 'Skip to content', exact: true })
+        14 × locator resolved to <a href="#main" class="skip-link">Skip to content</a>
+           - unexpected value "inactive"
+
+
+      39 | });
+      40 | test('skip link and keyboard journey preserve visible focus without a mouse',async({page})=>{
+    > 41 |  await page.goto('/en-IN/');await page.keyboard.press('Tab');await expect(page.getByRole('link',{name:'Skip to content',exact:true})).toBeFocused();await page.keyboard.press('Enter');await expect(page.locator('#main')).toBeFocused();
+         |                                                                                                                                       ^
+      42 |  await page.getByRole('button',{name:'Find my next step',exact:true}).focus();await page.keyboard.press('Enter');
+      43 |  await page.getByRole('button',{name:'Understand my options',exact:true}).focus();await page.keyboard.press('Enter');
+      44 |  await page.getByRole('button',{name:'18 or older',exact:true}).focus();await page.keyboard.press('Enter');
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/pillars.spec.ts:41:135
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pillars-skip-link-and-keyb-0b0db-sible-focus-without-a-mouse/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pillars-skip-link-and-keyb-0b0db-sible-focus-without-a-mouse/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pillars-skip-link-and-keyb-0b0db-sible-focus-without-a-mouse/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pillars-skip-link-and-keyb-0b0db-sible-focus-without-a-mouse/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) tests/pillars.spec.ts:48:1 › forced colors and reduced motion retain operable controls ────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Under 18', exact: true })
+
+
+      49 |  test.skip(browserName!=='chromium','Forced-colors emulation is asserted in Chromium only; not a physical assistive-technology result.');
+      50 |  await page.emulateMedia({forcedColors:'active',reducedMotion:'reduce'});await page.setViewportSize({width:390,height:844});await page.goto('/en-IN/');
+    > 51 |  await page.getByRole('button',{name:'Find my next step',exact:true}).click();await page.getByRole('button',{name:'Under 18',exact:true}).click();
+         |                                                                                                                                           ^
+      52 |  await expect(page.getByRole('heading',{name:'For someone under 18',exact:true})).toBeVisible();
+      53 |  const scan=await new AxeBuilder({page}).analyze();expect(scan.violations.filter(v=>['serious','critical'].includes(v.impact??''))).toEqual([]);
+      54 | });
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/pillars.spec.ts:51:139
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pillars-forced-colors-and--6367d-on-retain-operable-controls/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pillars-forced-colors-and--6367d-on-retain-operable-controls/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pillars-forced-colors-and--6367d-on-retain-operable-controls/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pillars-forced-colors-and--6367d-on-retain-operable-controls/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7 failed
+    tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone ──────────
+    tests/pillars.spec.ts:10:1 › public correction errors link back to the field and preserve entered public text 
+    tests/pillars.spec.ts:17:1 › WhatsApp shows readable public fields before an optional encoded address 
+    tests/pillars.spec.ts:26:1 › comparison has a caption and explicit row and column headers ──────
+    tests/pillars.spec.ts:31:1 › browser font preference at 200 percent still reflows the main journey 
+    tests/pillars.spec.ts:40:1 › skip link and keyboard journey preserve visible focus without a mouse 
+    tests/pillars.spec.ts:48:1 › forced colors and reduced motion retain operable controls ─────────

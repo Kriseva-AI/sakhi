@@ -38,6 +38,8 @@ make quality
 
 The GitHub Actions workflow runs both commands and retains evidence, but no remote workflow execution is claimed. Lockfiles and checked-in local fonts make dependency changes reviewable. Local passing scores do not prove low-end device performance or production capacity.
 
+Raw tool-output logs retain their original bytes. `.gitattributes` excludes only those evidence logs from Git whitespace formatting checks; source/documentation whitespace checks and all functional gates remain active. Release checksums identify the final measured artifacts.
+
 ## Human usability protocol, ready to run
 
 Recruit with a safeguarding-qualified researcher, including women with access needs and native-language participants. Participation, accommodations, breaks, withdrawal and any recording require explicit consent. Use fictional situations, avoid asking for personal experiences, and retain only consented nonsensitive research findings. Do not put participant identities or recordings in this public repository. No recruitment or sessions have taken place in this sprint.

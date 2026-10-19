@@ -1,0 +1,53 @@
+[WebServer] INFO:     Started server process [23958]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 7 tests using 1 worker
+
+(node:23959) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone (393ms)
+  ✓  2 [chromium] › tests/pillars.spec.ts:16:1 › public correction errors link back to the field and preserve entered public text (1.2s)
+  ✓  3 [chromium] › tests/pillars.spec.ts:43:1 › WhatsApp shows readable public fields before an optional encoded address (323ms)
+  ✓  4 [chromium] › tests/pillars.spec.ts:74:1 › comparison has a caption and explicit row and column headers (261ms)
+  ✘  5 [chromium] › tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey (237ms)
+(node:23975) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  6 [chromium] › tests/pillars.spec.ts:114:1 › skip link and keyboard journey preserve visible focus without a mouse (276ms)
+  ✓  7 [chromium] › tests/pillars.spec.ts:142:1 › forced colors and reduced motion retain operable controls (595ms)
+
+
+  1) [chromium] › tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      101 |       () => document.documentElement.scrollWidth <= innerWidth,
+      102 |     ),
+    > 103 |   ).toBe(true);
+          |     ^
+      104 |   await page
+      105 |     .getByRole("button", { name: "Find my next step", exact: true })
+      106 |     .click();
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/pillars.spec.ts:103:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pillars-browser-font-prefe-c17e5-ll-reflows-the-main-journey-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pillars-browser-font-prefe-c17e5-ll-reflows-the-main-journey-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pillars-browser-font-prefe-c17e5-ll-reflows-the-main-journey-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pillars-browser-font-prefe-c17e5-ll-reflows-the-main-journey-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey 
+  6 passed (4.4s)

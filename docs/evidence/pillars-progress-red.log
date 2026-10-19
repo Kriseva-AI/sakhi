@@ -1,0 +1,51 @@
+[WebServer] INFO:     Started server process [26320]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 1 test using 1 worker
+
+(node:26321) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/pillars.spec.ts:236:1 › progress is explicit and Back cancels an in-flight lookup (5.9s)
+
+
+  1) [chromium] › tests/pillars.spec.ts:236:1 › progress is explicit and Back cancels an in-flight lookup 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('status').filter({ hasText: 'Looking up public information' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('status').filter({ hasText: 'Looking up public information' }) with timeout 5000ms
+      - waiting for getByRole('status').filter({ hasText: 'Looking up public information' })
+
+
+      238 |  await page.goto('/en-IN/finder');await page.getByRole('button',{name:'Understand my options',exact:true}).click();await page.getByRole('button',{name:'18 or older',exact:true}).click();
+      239 |  await page.getByLabel('A few words, if you want').fill('SYNTHETIC fake account');await page.getByRole('button',{name:'Show my options',exact:true}).click();
+    > 240 |  await expect(page.getByRole('status').filter({hasText:'Looking up public information'})).toBeVisible();
+          |                                                                                           ^
+      241 |  await page.getByRole('button',{name:'Back',exact:true}).click();await expect(page.getByRole('heading',{name:'Is this for someone 18 or older?',exact:true})).toBeVisible();
+      242 |  await page.waitForTimeout(800);await expect(page).toHaveURL(/\/finder$/);await expect(page.getByRole('heading',{name:'Is this for someone 18 or older?',exact:true})).toBeVisible();
+      243 | });
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/pillars.spec.ts:240:91
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/pillars-progress-is-explic-0e46f-cancels-an-in-flight-lookup-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/pillars-progress-is-explic-0e46f-cancels-an-in-flight-lookup-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/pillars-progress-is-explic-0e46f-cancels-an-in-flight-lookup-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/pillars-progress-is-explic-0e46f-cancels-an-in-flight-lookup-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/pillars.spec.ts:236:1 › progress is explicit and Back cancels an in-flight lookup 

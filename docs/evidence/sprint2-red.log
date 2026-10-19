@@ -1,0 +1,82 @@
+[WebServer] INFO:     Started server process [72581]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 2 tests using 1 worker
+
+(node:72582) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/sprint2.spec.ts:4:1 › preparation and recovery contexts are distinct and do not collect a story (30.1s)
+(node:72593) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/sprint2.spec.ts:22:1 › map handoff omits origin and GPS and makes external disclosure explicit (30.1s)
+
+
+  1) tests/sprint2.spec.ts:4:1 › preparation and recovery contexts are distinct and do not collect a story 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('tab', { name: 'Before a concern', exact: true })
+
+
+      3 |
+      4 | test('preparation and recovery contexts are distinct and do not collect a story',async({page})=>{
+    > 5 |  await page.goto('/en-IN/');await page.getByRole('tab',{name:'Before a concern',exact:true}).click();
+        |                                                                                              ^
+      6 |  await expect(page.getByText('Build a little readiness, without sharing anything personal.')).toBeVisible();
+      7 |  await page.getByRole('tab',{name:'After an incident',exact:true}).click();
+      8 |  await expect(page.getByText('Explore support without committing to a complaint.')).toBeVisible();
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:5:94
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-preparation-and-re-7776f--and-do-not-collect-a-story/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-preparation-and-re-7776f--and-do-not-collect-a-story/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-preparation-and-re-7776f--and-do-not-collect-a-story/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-preparation-and-re-7776f--and-do-not-collect-a-story/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/sprint2.spec.ts:22:1 › map handoff omits origin and GPS and makes external disclosure explicit 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.selectOption: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByLabel('Choose a city or district')
+
+
+      21 | });
+      22 | test('map handoff omits origin and GPS and makes external disclosure explicit',async({page})=>{
+    > 23 |  await page.goto('/en-IN/nearby');await page.getByLabel('Choose a city or district').selectOption('Ahmedabad');
+         |                                                                                      ^
+      24 |  await page.getByRole('button',{name:'Preview map search',exact:true}).click();
+      25 |  const dialog=page.getByRole('dialog');await expect(dialog).toContainText('www.google.com');await expect(dialog).toContainText('Ahmedabad');
+      26 |  await expect(dialog).toContainText('Your origin and GPS are not included');
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:23:86
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-map-handoff-omits--5100f-xternal-disclosure-explicit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-map-handoff-omits--5100f-xternal-disclosure-explicit/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-map-handoff-omits--5100f-xternal-disclosure-explicit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-map-handoff-omits--5100f-xternal-disclosure-explicit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    tests/sprint2.spec.ts:4:1 › preparation and recovery contexts are distinct and do not collect a story 
+    tests/sprint2.spec.ts:22:1 › map handoff omits origin and GPS and makes external disclosure explicit 

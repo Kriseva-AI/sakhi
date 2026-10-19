@@ -15,3 +15,190 @@ INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
 7:01:09 PM [vite] (client) page reload src/Finder.tsx
 7:01:10 PM [vite] (client) page reload src/Finder.tsx
 7:02:42 PM [vite] (client) page reload src/routing.json
+10:21:56 PM [vite] (client) page reload src/Modal.tsx
+10:24:56 PM [vite] (client) page reload src/App.tsx
+10:27:58 PM [vite] (client) page reload src/App.tsx
+10:27:58 PM [vite] (client) page reload src/main.tsx
+10:27:58 PM [vite] (client) hmr update /src/styles.css
+10:27:59 PM [vite] (client) Pre-transform error: Failed to resolve import "./sprint2.css" from "apps/web/src/main.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/apps/web/src/main.tsx:6:7
+  5  |  import "./styles.css";
+  6  |  import "./brand-fonts.css";
+  7  |  import "./sprint2.css";
+     |          ^
+  8  |  import "./indic-fonts.css";
+  9  |  createRoot(document.getElementById("root")).render(
+10:27:59 PM [vite] Internal server error: Failed to resolve import "./sprint2.css" from "apps/web/src/main.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/apps/web/src/main.tsx:6:7
+  5  |  import "./styles.css";
+  6  |  import "./brand-fonts.css";
+  7  |  import "./sprint2.css";
+     |          ^
+  8  |  import "./indic-fonts.css";
+  9  |  createRoot(document.getElementById("root")).render(
+      at TransformPluginContext._formatLog (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:29250:43)
+      at TransformPluginContext.error (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:29247:14)
+      at normalizeUrl (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:27370:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:27428:32
+      at async Promise.all (index 6)
+      at async TransformPluginContext.transform (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:27396:4)
+      at async EnvironmentPluginContainer.transform (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:29048:14)
+      at async loadAndTransform (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:22914:26)
+      at async viteTransformMiddleware (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:24790:20)
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/en-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/hi-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/bn-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/mr-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/te-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/ta-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/gu-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/kn-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/ml-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/or-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/pa-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/as-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/ur-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/ne-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/kok-IN.json
+10:27:59 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/ks-Arab-IN.json
+10:27:59 PM [vite] (client) Pre-transform error: Failed to resolve import "./sprint2.css" from "apps/web/src/main.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/apps/web/src/main.tsx:6:7
+  5  |  import "./styles.css";
+  6  |  import "./brand-fonts.css";
+  7  |  import "./sprint2.css";
+     |          ^
+  8  |  import "./indic-fonts.css";
+  9  |  createRoot(document.getElementById("root")).render(
+10:27:59 PM [vite] Internal server error: Failed to resolve import "./sprint2.css" from "apps/web/src/main.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/apps/web/src/main.tsx:6:7
+  5  |  import "./styles.css";
+  6  |  import "./brand-fonts.css";
+  7  |  import "./sprint2.css";
+     |          ^
+  8  |  import "./indic-fonts.css";
+  9  |  createRoot(document.getElementById("root")).render(
+      at TransformPluginContext._formatLog (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:29250:43)
+      at TransformPluginContext.error (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:29247:14)
+      at normalizeUrl (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:27370:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:27428:32
+      at async Promise.all (index 6)
+      at async TransformPluginContext.transform (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:27396:4)
+      at async EnvironmentPluginContainer.transform (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:29048:14)
+      at async loadAndTransform (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:22914:26)
+      at async viteTransformMiddleware (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:24790:20)
+10:30:40 PM [vite] (client) page reload src/sprint2.css
+10:32:04 PM [vite] (client) page reload src/ResourceCard.tsx
+10:32:04 PM [vite] (client) page reload src/SakhiHome.tsx
+10:32:04 PM [vite] (client) page reload src/DataBoundary.tsx
+10:32:04 PM [vite] (client) page reload src/PublicPathways.tsx
+10:32:04 PM [vite] (client) page reload src/public-actions.ts
+10:32:04 PM [vite] (client) page reload src/PreparationLibrary.tsx
+10:32:04 PM [vite] (client) page reload index.html
+10:32:05 PM [vite] (client) page reload src/App.tsx
+10:32:05 PM [vite] (client) page reload src/Community.tsx
+10:32:05 PM [vite] (client) page reload src/DataBoundary.tsx
+10:32:05 PM [vite] (client) page reload src/LocalMapHandoff.tsx
+10:32:05 PM [vite] (client) page reload src/Modal.tsx
+10:32:05 PM [vite] (client) page reload src/PreparationLibrary.tsx
+10:32:05 PM [vite] (client) page reload src/PublicPathways.tsx
+10:32:05 PM [vite] (client) page reload src/ResourceCard.tsx
+10:32:05 PM [vite] (client) page reload src/ResourceCompare.tsx
+10:32:05 PM [vite] (client) page reload src/SakhiHome.tsx
+10:32:05 PM [vite] (client) page reload src/public-actions.ts
+10:32:05 PM [vite] (client) page reload src/tabs.ts
+10:32:05 PM [vite] (client) hmr update /src/brand-fonts.css
+10:32:05 PM [vite] (client) hmr update /src/sprint2.css
+10:32:43 PM [vite] (client) page reload src/PublicPathways.tsx
+10:32:43 PM [vite] (client) hmr update /src/sprint2.css
+10:33:37 PM [vite] (client) hmr update /src/sprint2.css
+10:33:37 PM [vite] (client) page reload src/PublicPathways.tsx
+10:33:37 PM [vite] (client) hmr update /src/sprint2.css
+10:33:38 PM [vite] (client) page reload src/routing.json
+10:34:30 PM [vite] (client) page reload src/App.tsx
+10:34:30 PM [vite] (client) hmr update /src/sprint2.css
+10:34:30 PM [vite] (client) page reload src/ResultGuide.tsx
+10:34:31 PM [vite] (client) page reload src/App.tsx
+10:34:31 PM [vite] (client) hmr update /src/sprint2.css
+10:36:19 PM [vite] (client) page reload src/SakhiHome.tsx
+10:36:19 PM [vite] (client) page reload src/App.tsx
+10:36:19 PM [vite] (client) page reload src/Finder.tsx
+10:36:19 PM [vite] (client) page reload src/SakhiHome.tsx
+10:36:19 PM [vite] (client) page reload src/App.tsx
+10:36:19 PM [vite] (client) page reload src/Finder.tsx
+10:37:43 PM [vite] (client) page reload src/App.tsx
+10:38:49 PM [vite] (client) page reload src/Maintenance.tsx
+10:38:49 PM [vite] (client) page reload src/App.tsx
+10:38:49 PM [vite] (client) page reload src/public-actions.ts
+10:38:49 PM [vite] (client) page reload src/Community.tsx
+10:38:49 PM [vite] (client) page reload src/ResourceCompare.tsx
+10:38:50 PM [vite] (client) hmr update /src/sprint2.css
+10:38:50 PM [vite] (client) page reload src/App.tsx
+10:38:50 PM [vite] (client) page reload src/Maintenance.tsx
+10:38:50 PM [vite] (client) page reload src/ResourceCompare.tsx
+10:38:50 PM [vite] (client) page reload src/Community.tsx
+10:38:50 PM [vite] (client) page reload src/public-actions.ts
+10:38:50 PM [vite] (client) hmr update /src/sprint2.css
+10:40:38 PM [vite] (client) page reload src/SakhiHome.tsx
+10:40:38 PM [vite] (client) page reload src/App.tsx
+10:40:38 PM [vite] (client) page reload src/public-actions.ts
+10:40:38 PM [vite] (client) page reload src/App.tsx
+10:40:38 PM [vite] (client) page reload src/SakhiHome.tsx
+10:41:21 PM [vite] (client) page reload src/App.tsx
+10:41:22 PM [vite] (client) page reload src/App.tsx
+10:41:23 PM [vite] (client) page reload src/routing.json
+10:43:34 PM [vite] (client) page reload src/SakhiHome.tsx
+10:43:34 PM [vite] (client) page reload src/public-actions.ts
+10:43:55 PM [vite] (client) page reload src/SakhiHome.tsx
+10:43:55 PM [vite] (client) page reload src/SakhiHome.tsx
+10:44:05 PM [vite] (client) page reload src/routing.json
+10:46:28 PM [vite] (client) page reload index.html
+10:46:28 PM [vite] (client) page reload src/routing.json
+10:46:50 PM [vite] (client) page reload src/routing.json
+10:50:43 PM [vite] (client) page reload src/Modal.tsx
+10:50:44 PM [vite] (client) page reload src/Modal.tsx
+10:50:45 PM [vite] (client) page reload src/routing.json
+11:34:28 PM [vite] (client) page reload src/App.tsx
+11:34:28 PM [vite] (client) page reload src/Finder.tsx
+11:34:28 PM [vite] (client) page reload src/Maintenance.tsx
+11:34:28 PM [vite] (client) page reload src/Modal.tsx
+11:34:28 PM [vite] (client) page reload src/ResourceCompare.tsx
+11:34:28 PM [vite] (client) page reload src/App.tsx
+11:34:28 PM [vite] (client) hmr update /src/sprint2.css
+11:35:02 PM [vite] (client) page reload src/Community.tsx
+11:35:02 PM [vite] (client) hmr update /src/sprint2.css
+11:35:03 PM [vite] (client) page reload src/App.tsx
+11:35:03 PM [vite] (client) page reload src/Community.tsx
+11:35:03 PM [vite] (client) page reload src/ErrorSummary.tsx
+11:35:03 PM [vite] (client) page reload src/SiteNavigation.tsx
+11:35:03 PM [vite] (client) page reload src/Finder.tsx
+11:35:03 PM [vite] (client) page reload src/Modal.tsx
+11:35:03 PM [vite] (client) page reload src/ResourceCompare.tsx
+11:35:03 PM [vite] (client) hmr update /src/sprint2.css
+11:36:47 PM [vite] (client) page reload index.html
+11:38:14 PM [vite] (client) page reload src/App.tsx
+11:38:14 PM [vite] (client) page reload src/Modal.tsx
+11:38:44 PM [vite] (client) page reload src/public-actions.ts
+11:38:45 PM [vite] (client) page reload src/App.tsx
+11:38:45 PM [vite] (client) page reload src/Modal.tsx
+11:38:45 PM [vite] (client) page reload src/public-actions.ts
+11:38:45 PM [vite] (client) page reload src/public-actions.ts
+11:39:32 PM [vite] (client) hmr update /src/sprint2.css
+11:39:32 PM [vite] (client) hmr update /src/sprint2.css
+11:41:23 PM [vite] (client) page reload src/ResourceCard.tsx
+11:41:23 PM [vite] (client) page reload src/PublicPathways.tsx
+11:41:23 PM [vite] (client) hmr update /src/sprint2.css
+11:41:23 PM [vite] (client) page reload src/ResourceCard.tsx
+11:41:23 PM [vite] (client) page reload src/PublicPathways.tsx
+11:41:23 PM [vite] (client) hmr update /src/sprint2.css
+11:45:50 PM [vite] (client) page reload src/Finder.tsx
+11:45:50 PM [vite] (client) page reload src/App.tsx
+11:45:51 PM [vite] (client) page reload src/Finder.tsx
+11:46:25 PM [vite] (client) page reload src/routing.json
+11:47:35 PM [vite] (client) page reload src/routing.json
+11:54:00 PM [vite] (client) page reload src/routing.json

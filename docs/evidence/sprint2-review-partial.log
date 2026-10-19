@@ -1,0 +1,301 @@
+[WebServer] INFO:     Started server process [97278]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 18 tests using 1 worker
+
+(node:97279) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e.spec.ts:314:1 › direct goal reaches public options in three selections (551ms)
+  ✘   2 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 320 (724ms)
+(node:97288) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 360 (218ms)
+  ✓   4 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 375 (210ms)
+  ✓   5 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 390 (224ms)
+  ✓   6 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 414 (207ms)
+  ✓   7 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 768 (214ms)
+  ✓   8 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1024 (220ms)
+  ✓   9 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1280 (239ms)
+  ✘  10 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1440 (698ms)
+(node:97303) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 tests/sprint2.spec.ts:167:3 › action desk Understand my options reaches options in three selections (323ms)
+  ✓  12 tests/sprint2.spec.ts:167:3 › action desk Explore reporting options reaches options in three selections (309ms)
+  ✓  13 tests/sprint2.spec.ts:167:3 › action desk Find support reaches options in three selections (310ms)
+  ✓  14 tests/sprint2.spec.ts:167:3 › action desk Help someone else reaches options in three selections (328ms)
+  ✓  15 tests/sprint2.spec.ts:190:1 › tabs support keyboard movement and one tab stop (284ms)
+  ✓  16 tests/sprint2.spec.ts:272:1 › fictional examples cannot use new downloads or external handoffs (433ms)
+  ✓  17 tests/sprint2.spec.ts:325:1 › review regression: synthetic maintainer download stays disabled (323ms)
+  ✓  18 tests/sprint2.spec.ts:342:1 › review regression: comparison can include every eligible public entry (285ms)
+
+
+  1) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 320 ────────────────────────────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -   1
+    + Received  + 100
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+    +     "help": "Elements must have their visible text as part of their accessible name",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright",
+    +     "id": "label-content-name-mismatch",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button aria-labelledby=\"desk-goal-understand\" aria-describedby=\"desk-goal-detail-understand\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "button[aria-labelledby=\"desk-goal-understand\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button aria-labelledby=\"desk-goal-report\" aria-describedby=\"desk-goal-detail-report\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "button[aria-labelledby=\"desk-goal-report\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button aria-labelledby=\"desk-goal-support\" aria-describedby=\"desk-goal-detail-support\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "button[aria-labelledby=\"desk-goal-support\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button aria-labelledby=\"desk-goal-friend\" aria-describedby=\"desk-goal-detail-friend\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "button[aria-labelledby=\"desk-goal-friend\"]",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.semantics",
+    +       "wcag21a",
+    +       "wcag253",
+    +       "EN-301-549",
+    +       "EN-9.2.5.3",
+    +       "RGAAv4",
+    +       "RGAA-6.1.5",
+    +     ],
+    +   },
+    + ]
+
+      154 |             ["critical", "serious"].includes(v.impact ?? ""),
+      155 |           ),
+    > 156 |         ).toEqual([]);
+          |           ^
+      157 |       }
+      158 |     });
+      159 |   }
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:156:11
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-320/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-320/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-320/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-320/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1440 ───────────────────────────────────────
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -   1
+    + Received  + 100
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+    +     "help": "Elements must have their visible text as part of their accessible name",
+    +     "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright",
+    +     "id": "label-content-name-mismatch",
+    +     "impact": "serious",
+    +     "nodes": Array [
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button aria-labelledby=\"desk-goal-understand\" aria-describedby=\"desk-goal-detail-understand\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "button[aria-labelledby=\"desk-goal-understand\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button aria-labelledby=\"desk-goal-report\" aria-describedby=\"desk-goal-detail-report\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "button[aria-labelledby=\"desk-goal-report\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button aria-labelledby=\"desk-goal-support\" aria-describedby=\"desk-goal-detail-support\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "button[aria-labelledby=\"desk-goal-support\"]",
+    +         ],
+    +       },
+    +       Object {
+    +         "all": Array [],
+    +         "any": Array [
+    +           Object {
+    +             "data": null,
+    +             "id": "label-content-name-mismatch",
+    +             "impact": "serious",
+    +             "message": "Text inside the element is not included in the accessible name",
+    +             "relatedNodes": Array [],
+    +           },
+    +         ],
+    +         "failureSummary": "Fix any of the following:
+    +   Text inside the element is not included in the accessible name",
+    +         "html": "<button aria-labelledby=\"desk-goal-friend\" aria-describedby=\"desk-goal-detail-friend\">",
+    +         "impact": "serious",
+    +         "none": Array [],
+    +         "target": Array [
+    +           "button[aria-labelledby=\"desk-goal-friend\"]",
+    +         ],
+    +       },
+    +     ],
+    +     "tags": Array [
+    +       "cat.semantics",
+    +       "wcag21a",
+    +       "wcag253",
+    +       "EN-301-549",
+    +       "EN-9.2.5.3",
+    +       "RGAAv4",
+    +       "RGAA-6.1.5",
+    +     ],
+    +   },
+    + ]
+
+      154 |             ["critical", "serious"].includes(v.impact ?? ""),
+      155 |           ),
+    > 156 |         ).toEqual([]);
+          |           ^
+      157 |       }
+      158 |     });
+      159 |   }
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/sprint2.spec.ts:156:11
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-1440/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sprint2-Sprint-2-home-reflow-1440/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/sprint2-Sprint-2-home-reflow-1440/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/sprint2-Sprint-2-home-reflow-1440/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 320 ─────────────────────────────────────────
+    tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1440 ────────────────────────────────────────
+  16 passed (7.9s)

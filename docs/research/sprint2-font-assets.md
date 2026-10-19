@@ -1,6 +1,6 @@
 # Sprint 2 self hosted script font assets
 
-Prepared: 2026-10-19. Scope: ten regular WOFF2 script subsets and their original OFL notices. All font packages are pinned to observed Fontsource version `5.3.0`. No npm dependency or lockfile was changed. The main implementation still needs to import the CSS and include these public assets in its versioned offline cache.
+Prepared: 2026-10-19. Scope: ten regular WOFF2 script subsets and their original OFL notices. All font packages are pinned to observed Fontsource version `5.3.0`. No npm dependency or lockfile was changed. This initial asset-task receipt is retained as provenance; integration and subsequent app checks are recorded at the end of this document.
 
 ## Selected assets
 
@@ -111,6 +111,12 @@ A fontTools 4.60.2 cmap inspection found the following seven probe codepoints in
 
 ## Remaining limits
 
-Native language, safeguarding and typography signoff remain pending for every locale. Physical Android/iOS rendering, browser zoom, screen-reader interaction, app-wide reflow, cold-font layout shift, font failure behavior, integrated offline loading and the final hashed cache require checks after integration. Latin fallback can vary by operating system. Single-weight synthesis is a payload tradeoff and may need true heavier faces if reviewed samples lose distinction. Local font files remove runtime font CDN requests; they do not hide browsing history, app installation or other device activity.
+Native language, safeguarding and typography signoff remain pending for every locale. At asset handoff, app-wide reflow, font failure, integrated offline loading and the hashed cache still required integration checks; the receipts below supersede that state. Physical Android/iOS rendering, real browser zoom and screen-reader interaction remain untested. Latin fallback can vary by operating system. Single-weight synthesis is a payload tradeoff and may need true heavier faces if reviewed samples lose distinction. Local font files remove runtime font CDN requests; they do not hide browsing history, app installation or other device activity.
 
 No claims of verified language quality, comprehensive Kashmiri coverage, accessibility conformance or integrated offline readiness are made by this asset receipt.
+
+## Integrated app receipt, 2026-10-19
+
+The main app now imports the script CSS and hashes all sixteen WOFF2 files into its public-only offline cache. The production PWA browser regression confirms sixteen cached WOFF2 assets, an offline reload, and local Hindi font availability. Integrated Urdu and other locale reflow/axe checks are in the final browser results; this does not supply native language or shaping review. Total Latin plus script WOFF2 payload is 466,188 bytes; the initial English page requests only the faces it uses. Public pack install may cache other script assets for later offline use. Screenshot and visual-network receipts are in docs/evidence. Physical device, native typography and assistive-technology limits remain open.
+
+The final three-pillar suite additionally passed 200% font sizing, text spacing and failed-font reflow in Chromium, Firefox and WebKit. Latest local mobile Lighthouse measured CLS 0 for the English home route. These finite checks do not establish native shaping quality or physical-device coverage.

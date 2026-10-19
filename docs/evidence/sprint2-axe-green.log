@@ -1,0 +1,20 @@
+[WebServer] INFO:     Started server process [2151]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 9 tests using 1 worker
+
+(node:2152) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 320 (815ms)
+  ✓  2 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 360 (209ms)
+  ✓  3 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 375 (208ms)
+  ✓  4 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 390 (208ms)
+  ✓  5 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 414 (190ms)
+  ✓  6 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 768 (194ms)
+  ✓  7 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1024 (204ms)
+  ✓  8 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1280 (214ms)
+  ✓  9 tests/sprint2.spec.ts:141:5 › Sprint 2 home reflow 1440 (603ms)
+
+  9 passed (3.8s)

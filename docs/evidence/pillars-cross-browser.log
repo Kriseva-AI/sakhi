@@ -1,0 +1,52 @@
+[WebServer] INFO:     Started server process [28212]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 36 tests using 1 worker
+
+(node:28216) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone (544ms)
+  ✓   2 [chromium] › tests/pillars.spec.ts:16:1 › public correction errors link back to the field and preserve entered public text (1.2s)
+  ✓   3 [chromium] › tests/pillars.spec.ts:43:1 › WhatsApp shows readable public fields before an optional encoded address (325ms)
+  ✓   4 [chromium] › tests/pillars.spec.ts:74:1 › comparison has a caption and explicit row and column headers (262ms)
+  ✓   5 [chromium] › tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey (275ms)
+  ✓   6 [chromium] › tests/pillars.spec.ts:114:1 › skip link and keyboard journey preserve visible focus without a mouse (249ms)
+  ✓   7 [chromium] › tests/pillars.spec.ts:148:1 › forced colors and reduced motion retain operable controls (615ms)
+  ✓   8 [chromium] › tests/pillars.spec.ts:177:1 › font download failure preserves readable reflow (244ms)
+  ✓   9 [chromium] › tests/pillars.spec.ts:193:1 › critical service eligibility limits remain visible before opening details (241ms)
+  ✓  10 [chromium] › tests/pillars.spec.ts:209:1 › text spacing preferences reflow without clipping primary controls (278ms)
+  ✓  11 [chromium] › tests/pillars.spec.ts:234:1 › progress is explicit and Back cancels an in-flight lookup (1.4s)
+  ✓  12 [chromium] › tests/pillars.spec.ts:277:1 › JavaScript failure retains the direct emergency fallback (91ms)
+(node:28451) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  13 [firefox] › tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone (939ms)
+  ✓  14 [firefox] › tests/pillars.spec.ts:16:1 › public correction errors link back to the field and preserve entered public text (475ms)
+  ✓  15 [firefox] › tests/pillars.spec.ts:43:1 › WhatsApp shows readable public fields before an optional encoded address (356ms)
+  ✓  16 [firefox] › tests/pillars.spec.ts:74:1 › comparison has a caption and explicit row and column headers (305ms)
+  ✓  17 [firefox] › tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey (328ms)
+  ✓  18 [firefox] › tests/pillars.spec.ts:114:1 › skip link and keyboard journey preserve visible focus without a mouse (316ms)
+  -  19 [firefox] › tests/pillars.spec.ts:148:1 › forced colors and reduced motion retain operable controls
+  ✓  20 [firefox] › tests/pillars.spec.ts:177:1 › font download failure preserves readable reflow (325ms)
+  ✓  21 [firefox] › tests/pillars.spec.ts:193:1 › critical service eligibility limits remain visible before opening details (281ms)
+  ✓  22 [firefox] › tests/pillars.spec.ts:209:1 › text spacing preferences reflow without clipping primary controls (775ms)
+  ✓  23 [firefox] › tests/pillars.spec.ts:234:1 › progress is explicit and Back cancels an in-flight lookup (1.3s)
+  ✓  24 [firefox] › tests/pillars.spec.ts:277:1 › JavaScript failure retains the direct emergency fallback (133ms)
+(node:28478) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  25 [webkit] › tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone (1.4s)
+  ✓  26 [webkit] › tests/pillars.spec.ts:16:1 › public correction errors link back to the field and preserve entered public text (638ms)
+  ✓  27 [webkit] › tests/pillars.spec.ts:43:1 › WhatsApp shows readable public fields before an optional encoded address (363ms)
+  ✓  28 [webkit] › tests/pillars.spec.ts:74:1 › comparison has a caption and explicit row and column headers (308ms)
+  ✓  29 [webkit] › tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey (338ms)
+  ✓  30 [webkit] › tests/pillars.spec.ts:114:1 › skip link and keyboard journey preserve visible focus without a mouse (338ms)
+  -  31 [webkit] › tests/pillars.spec.ts:148:1 › forced colors and reduced motion retain operable controls
+  ✓  32 [webkit] › tests/pillars.spec.ts:177:1 › font download failure preserves readable reflow (298ms)
+  ✓  33 [webkit] › tests/pillars.spec.ts:193:1 › critical service eligibility limits remain visible before opening details (247ms)
+  ✓  34 [webkit] › tests/pillars.spec.ts:209:1 › text spacing preferences reflow without clipping primary controls (362ms)
+  ✓  35 [webkit] › tests/pillars.spec.ts:234:1 › progress is explicit and Back cancels an in-flight lookup (1.3s)
+  ✓  36 [webkit] › tests/pillars.spec.ts:277:1 › JavaScript failure retains the direct emergency fallback (168ms)
+
+  2 skipped
+  34 passed (19.7s)
