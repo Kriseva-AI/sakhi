@@ -1,12 +1,12 @@
 {
   "measured": {
-    "performance": 96,
+    "performance": 97,
     "accessibility": 100,
     "best-practices": 100,
-    "lcp_ms": 2559.57315,
+    "lcp_ms": 2409.4947,
     "cls": 0,
     "tbt_ms": 0,
-    "page_bytes": 259445
+    "page_bytes": 236108
   },
   "failures": [],
   "passed": true,

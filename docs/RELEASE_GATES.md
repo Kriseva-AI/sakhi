@@ -1,11 +1,11 @@
 # Release gates
 
-Verdict: `internal_demo_only`, measured 2026-10-19. The Sprint 2 local engineering scope is implemented and verified. Public readiness remains gated by the human, source and operational evidence below. Passing automation does not authorize a user-facing verified release.
+Verdict: `internal_demo_only`, measured 2026-10-20. The Sprint 2 local engineering scope is implemented and verified. Public readiness remains gated by the human, source and operational evidence below. Passing automation does not authorize a user-facing verified release.
 
 | Gate | Actual state | Evidence or blocker |
 | --- | --- | --- |
 | Zero-key native setup and production build | Implemented and tested on this Mac | `make setup`, `make dev`, final `make verify` log |
-| Container build and local runtime | Rebuilt and healthy on loopback 8787 | `docs/evidence/docker-sprint2-final.log`; no public host |
+| Container build and local runtime | Rebuilt and healthy on loopback 8787 | `docs/evidence/docker-simple.log`; no public host |
 | Four anonymous goal journeys | Functional locally, three selections from direct goal | `sprint2.spec.ts`; synthetic screenshot and no-submission assertions |
 | Preventive and post-concern public support | Implemented as general source-linked information | X01-X14 inventory; qualified safeguarding review pending |
 | Immediate emergency / explicit minor handling | Tested before API and during API failure | Local/browser policy cases; finite phrases, actual contact reachability unverified |
@@ -17,7 +17,7 @@ Verdict: `internal_demo_only`, measured 2026-10-19. The Sprint 2 local engineeri
 | Accessibility engineering | Automated checks and targeted cross-browser contracts passed | Complete Chromium suite; 12 contracts in Firefox/WebKit; 2 unsupported forced-colors emulations skipped |
 | Usability mechanics and recovery | Goal, skip/back/cancel, error recovery and data preview tested | Browser evidence; no moderated participant sessions or measured comprehension |
 | Responsive UI/UX and typography | Actual screens inspected, nine widths and text preferences tested | Mobile/tablet/desktop/RTL screenshots; font failure, 200% font and text-spacing checks |
-| Performance regression budgets | Passed local mobile Lighthouse | 96/100/100; LCP 2.56s versus 3s regression budget; stricter 2.5s goal missed in this run |
+| Performance regression budgets | Passed local mobile Lighthouse | 97/100/100; LCP 2.41s; 3s regression budget and 2.5s product goal passed in this run |
 | Quality maintenance process | Implemented in code, CI configuration and docs | `make quality`, fail-closed budget tests, `QUALITY.md` state matrix and human protocol |
 | Physical accessibility and devices | Not completed | Low-end Android, VoiceOver/TalkBack/Windows AT, physical zoom/orientation and real installation required |
 | Physical Wi-Fi-off cold startup | Not completed | Browser-offline reload is narrower; follow company `00_BRAIN/playbooks/DEMO_GATE.md` |

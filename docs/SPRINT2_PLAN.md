@@ -89,3 +89,7 @@ The founder's explicit Sprint 2 instruction authorizes public preparation, compa
 ## Founder refinement: three permanent quality pillars
 
 Accessibility, usability and UI/UX are now equal release criteria. Study primary production guidance from GOV.UK, NHS, USWDS, Carbon and W3C APG. Adopt the evidence-backed interaction and governance patterns while retaining Kriseva branding. Concrete next changes: visible native-link navigation with logical DOM order; field-linked error summaries and recovery; progressive disclosure of encoded external addresses with readable public payloads always shown; semantic comparison headers; rem-based typography and large-font reflow; keyboard/forced-colors coverage; critical browser-engine checks; fail-on-regression performance budgets and a component lifecycle with explicit human testing gates. No new paid design/testing account or foreign service workflow is required. Representative disabled-user research and physical assistive technology remain required before public conformance claims.
+
+## Founder simplification, 2026-10-20
+
+The direct founder instruction supersedes the long landing and corporate palette with the short pink/black service entrance described in DESIGN_SIMPLIFICATION.md. Home and finder use compact chrome. Context/goal and source-rail exploration move to Prepare & learn; detailed data explanations remain at Privacy & trust. Safety, source, privacy, multilingual and human release gates are unchanged. Current measured execution is in RELEASE_REPORT.md.

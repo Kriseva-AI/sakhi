@@ -1,0 +1,44 @@
+[WebServer] INFO:     Started server process [64085]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 1 test using 1 worker
+
+(node:64086) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/simple-home.spec.ts:25:1 › pink and black theme continues from the landing to the finder (436ms)
+
+
+  1) [chromium] › tests/simple-home.spec.ts:25:1 › pink and black theme continues from the landing to the finder 
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 320
+    Received:   412.9375
+
+      48 |     "rgb(255, 244, 248)",
+      49 |   );
+    > 50 |   expect((await page.locator("main h1").boundingBox())!.y).toBeLessThan(320);
+         |                                                            ^
+      51 | });
+      52 |
+      53 | test("source exploration is available without overwhelming the opening", async ({
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/simple-home.spec.ts:50:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/simple-home-pink-and-black-d9937-m-the-landing-to-the-finder-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/simple-home-pink-and-black-d9937-m-the-landing-to-the-finder-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/simple-home-pink-and-black-d9937-m-the-landing-to-the-finder-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/simple-home-pink-and-black-d9937-m-the-landing-to-the-finder-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/simple-home.spec.ts:25:1 › pink and black theme continues from the landing to the finder 

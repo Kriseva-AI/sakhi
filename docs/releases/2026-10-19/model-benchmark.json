@@ -1,0 +1,163 @@
+{
+  "model": "google/embeddinggemma-2",
+  "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+  "dtype": "torch.float32",
+  "dimensions": 768,
+  "device": "CPU on macOS 24 GiB machine",
+  "load_ms": 1226.3034170027822,
+  "cache_bytes": 1525790864,
+  "query_rank_latency_ms": {
+    "p50": 27.725916472263634,
+    "p95": 45.375790912657976
+  },
+  "fixture_status": "Draft, in-sample, not expert reviewed. Small per-language samples. No real-world claim.",
+  "by_locale": {
+    "en-IN": {
+      "cases": 44,
+      "lexical_top3": 1,
+      "semantic_top3": 0.9090909090909091,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.6818181818181818,
+      "hybrid_top1": 0.7727272727272727
+    },
+    "hi-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 1,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 1,
+      "hybrid_top1": 1
+    },
+    "bn-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 0.75,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.75,
+      "hybrid_top1": 0.75
+    },
+    "mr-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 0.75,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.5,
+      "hybrid_top1": 0.5
+    },
+    "te-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 0.75,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.75,
+      "hybrid_top1": 0.75
+    },
+    "ta-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 0.75,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.75,
+      "hybrid_top1": 0.75
+    },
+    "gu-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 1,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.75,
+      "hybrid_top1": 0.75
+    },
+    "kn-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 0.75,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.75,
+      "hybrid_top1": 0.75
+    },
+    "ml-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 0.75,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.75,
+      "hybrid_top1": 0.75
+    },
+    "or-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 0.75,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.75,
+      "hybrid_top1": 0.75
+    },
+    "pa-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 0.75,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.5,
+      "hybrid_top1": 0.5
+    },
+    "as-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 0.75,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.5,
+      "hybrid_top1": 0.75
+    },
+    "ur-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 0.5,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.5,
+      "hybrid_top1": 0.75
+    },
+    "ne-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 0.75,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.5,
+      "hybrid_top1": 0.75
+    },
+    "kok-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 0.75,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.5,
+      "hybrid_top1": 0.75
+    },
+    "ks-Arab-IN": {
+      "cases": 4,
+      "lexical_top3": 1,
+      "semantic_top3": 0.5,
+      "hybrid_top3": 1,
+      "lexical_top1": 1,
+      "semantic_top1": 0.5,
+      "hybrid_top1": 0.75
+    }
+  },
+  "cases": 104,
+  "network_mode": "offline_cache_only",
+  "policy": "Runtime semantic ranking cannot expand the approved lexical candidate scope. No generated answers."
+}

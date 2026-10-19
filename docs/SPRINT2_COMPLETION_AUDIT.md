@@ -1,3 +1,5 @@
+Revision note, 2026-10-20: the founder subsequently requested a shorter pink/black opening and finder. [DESIGN_SIMPLIFICATION.md](DESIGN_SIMPLIFICATION.md) and the [latest release report](RELEASE_REPORT.md) record that change. The original sprint audit below is retained as dated history; no source or human release gate was waived.
+
 # Sprint 2 objective audit
 
 Audit date: 2026-10-19. This maps the founder's execution request, including the three-pillar refinement, to actual work. It does not reduce a mass-user ambition to a claim of existing safety readiness. The completed unit is the research, scoped local engineering sprint and truthful release assessment. Public operation has separate unmet human and operational gates.

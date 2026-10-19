@@ -1,0 +1,122 @@
+ Image sakhi-sakhi Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 524B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 878B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim-bookworm
+#3 ...
+
+#4 [internal] load metadata for ghcr.io/astral-sh/uv:0.11.6
+#4 DONE 0.7s
+
+#5 [internal] load metadata for docker.io/library/node:22-bookworm-slim
+#5 DONE 0.8s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim-bookworm
+#3 DONE 0.8s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 153B done
+#6 DONE 0.0s
+
+#7 [web 1/9] FROM docker.io/library/node:22-bookworm-slim@sha256:c3de60bf2f9dd0ac6370e6117950ff62d6e339527e7472301c9c78a017978392
+#7 DONE 0.0s
+
+#8 FROM ghcr.io/astral-sh/uv:0.11.6@sha256:b1e699368d24c57cda93c338a57a8c5a119009ba809305cc8e86986d4a006754
+#8 DONE 0.0s
+
+#9 [runtime  1/12] FROM docker.io/library/python:3.13-slim-bookworm@sha256:a1165e272e578941b84abc79e4ab38a0305cd12803a5c4247979ac7655f4d641
+#9 DONE 0.0s
+
+#10 [internal] load build context
+#10 transferring context: 51.73kB 0.0s done
+#10 DONE 0.0s
+
+#11 [web 4/9] RUN npm ci
+#11 CACHED
+
+#12 [web 3/9] COPY package.json package-lock.json ./
+#12 CACHED
+
+#13 [web 2/9] WORKDIR /app
+#13 CACHED
+
+#14 [web 5/9] COPY tsconfig.json ./
+#14 CACHED
+
+#15 [web 6/9] COPY apps ./apps
+#15 DONE 0.1s
+
+#16 [web 7/9] COPY packages ./packages
+#16 DONE 0.1s
+
+#17 [web 8/9] COPY data ./data
+#17 DONE 0.0s
+
+#18 [web 9/9] RUN npm run build
+#18 0.342 
+#18 0.342 > kriseva-sakhi@0.1.0 build
+#18 0.342 > tsc --noEmit && vite build --config apps/web/vite.config.ts
+#18 0.342 
+#18 1.647 vite v7.3.7 building client environment for production...
+#18 1.680 transforming...
+#18 2.593 ✓ 1783 modules transformed.
+#18 2.705 rendering chunks...
+#18 2.714 computing gzip size...
+#18 2.721 dist/index.html                   1.43 kB │ gzip:   0.71 kB
+#18 2.721 dist/assets/index-CXrg-ef0.css   65.53 kB │ gzip:  13.15 kB
+#18 2.722 dist/assets/index-B5wafYhq.js   460.70 kB │ gzip: 107.69 kB
+#18 2.722 ✓ built in 1.06s
+#18 DONE 2.8s
+
+#19 [runtime  4/12] COPY pyproject.toml uv.lock ./
+#19 CACHED
+
+#20 [runtime  5/12] RUN uv sync --frozen --no-dev
+#20 CACHED
+
+#21 [runtime  7/12] COPY planning ./planning
+#21 CACHED
+
+#22 [runtime  3/12] COPY --from=ghcr.io/astral-sh/uv:0.11.6 /uv /usr/local/bin/uv
+#22 CACHED
+
+#23 [runtime  8/12] COPY data ./data
+#23 CACHED
+
+#24 [runtime  2/12] WORKDIR /app
+#24 CACHED
+
+#25 [runtime  6/12] COPY services ./services
+#25 CACHED
+
+#26 [runtime  9/12] COPY scripts ./scripts
+#26 CACHED
+
+#27 [runtime 10/12] COPY --from=web /app/apps/web/dist ./apps/web/dist
+#27 DONE 0.1s
+
+#28 [runtime 11/12] RUN mkdir -p docs/evidence && PYTHONPATH=. uv run --frozen --no-dev python scripts/build_public.py --after-build
+#28 0.539 Generated immutable public cache cca2f74f01ab9efd, 36 assets. No API or query cache.
+#28 DONE 0.6s
+
+#29 [runtime 12/12] RUN useradd --create-home --uid 10001 sakhi && chown -R sakhi:sakhi /app
+#29 DONE 0.3s
+
+#30 exporting to image
+#30 exporting layers 0.1s done
+#30 writing image sha256:f5ab0eaace5c74c32111779925c4cd0f872fbfc67854d07a20bc711558c7d238 done
+#30 naming to docker.io/library/sakhi-sakhi done
+#30 DONE 0.1s
+
+#31 resolving provenance for metadata file
+#31 DONE 0.0s
+ Image sakhi-sakhi Built 
+ Container sakhi-sakhi-1 Recreate 
+ Container sakhi-sakhi-1 Recreated 
+ Container sakhi-sakhi-1 Starting 
+ Container sakhi-sakhi-1 Started 

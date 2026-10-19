@@ -1,9 +1,8 @@
 {
-  "date": "2026-10-19",
-  "code_commit": "fd659de",
-  "scope": "Owned loopback Docker production runtime compared to current public build manifest",
+  "date": "2026-10-20",
+  "code_commit": "e412dd1",
   "assets": 36,
-  "cache_version": "b6d1eca1c25eb191",
+  "cache_version": "cca2f74f01ab9efd",
   "all_assets_match": true,
   "health": {
     "status": "ok",
@@ -40,12 +39,12 @@
       "matches_local_public_build": true
     },
     {
-      "path": "/assets/index-0ZSU9WvT.js",
+      "path": "/assets/index-B5wafYhq.js",
       "status": 200,
       "matches_local_public_build": true
     },
     {
-      "path": "/assets/index-D7yFx5WE.css",
+      "path": "/assets/index-CXrg-ef0.css",
       "status": 200,
       "matches_local_public_build": true
     },

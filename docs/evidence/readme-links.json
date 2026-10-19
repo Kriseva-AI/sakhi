@@ -5,6 +5,7 @@
     "docs/FEATURES.md",
     "docs/ISSUE_BACKLOG.md",
     "docs/SPRINT2_FEATURES.md",
+    "docs/DESIGN_SIMPLIFICATION.md",
     "docs/SPRINT2_PLAN.md",
     "DESIGN.md",
     "docs/research/sprint2-services-competitors.md",
@@ -37,10 +38,10 @@
     "docs/RELEASE_GATES.md",
     "LICENSE",
     "docs/THIRD_PARTY_NOTICES.md",
-    "docs/evidence/sprint2-desktop-home.png",
-    "docs/evidence/sprint2-mobile-home.png",
-    "docs/evidence/sprint2-mobile-options.png",
-    "docs/evidence/sprint2-destination-preview.png"
+    "docs/evidence/simple-desktop-home.png",
+    "docs/evidence/simple-mobile-home.png",
+    "docs/evidence/simple-options.png",
+    "docs/evidence/simple-destination.png"
   ],
   "missing": [],
   "external_urls": [

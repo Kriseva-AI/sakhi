@@ -1,0 +1,14 @@
+[WebServer] INFO:     Started server process [53246]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 3 tests using 1 worker
+
+(node:53247) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/simple-home.spec.ts:3:1 › opening explains public support with short copy and a visible next step (340ms)
+  ✓  2 [chromium] › tests/simple-home.spec.ts:25:1 › pink and black theme continues from the landing to the finder (251ms)
+  ✓  3 [chromium] › tests/simple-home.spec.ts:51:1 › source exploration is available without overwhelming the opening (247ms)
+
+  3 passed (1.7s)

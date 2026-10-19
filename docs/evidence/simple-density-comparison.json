@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-20",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "limits": "Rendered density and geometry only; no participant comprehension or timing measurement.",
+  "previous": {
+    "main_words": 609,
+    "page_height": 6408,
+    "viewport_height": 844
+  },
+  "simplified": {
+    "main_words": 40,
+    "page_height": 844,
+    "viewport_height": 844
+  }
+}

@@ -1,6 +1,8 @@
-# Sprint 2 measured release report
+# Sakhi measured release report
 
-Date: **2026-10-19, Asia/Kolkata**. Verdict: **`internal_demo_only`**. The scoped local engineering sprint is implemented, running and verified. The portal is not approved for mass public use, and no safety outcome or operational institution integration is claimed. Accessibility, usability and UI/UX are permanent equal pillars, each with its own evidence and human gates.
+Date: **2026-10-20, Asia/Kolkata**. Verdict: **`internal_demo_only`**. The scoped local engineering sprint is implemented, running and verified. The portal is not approved for mass public use, and no safety outcome or operational institution integration is claimed. Accessibility, usability and UI/UX are permanent equal pillars, each with its own evidence and human gates.
+
+The founder requested a much simpler opening and an app-wide pink/black theme on October 20. Implementation commit `e412dd1` provides a 40-word main entrance, one primary next step, compact finder chrome and detailed learning/source exploration on its own destination. At 390x844 the English opening fits one viewport, versus the previous 6,408px page with 609 main words. This is a rendered-density measurement, not a three-second comprehension study. The previous complete measured report is preserved in [releases/SPRINT2_2026-10-19.md](releases/SPRINT2_2026-10-19.md), with dated evidence JSON beside it.
 
 ## 1. Repository and branch
 
@@ -51,9 +53,9 @@ The anonymous finder works through goal, optional age choice and concern/categor
 
 The [X01-X14 inventory](SPRINT2_FEATURES.md) records twelve new public interactions plus two strengthened foundations: before/now/after context, four-goal action desk, five-card preparation library, manually scrolling official pathways, selected service comparison, generic contact questions, public kit, interactive data boundary, coarse-city Maps search, public WhatsApp draft, reading comfort/local script fonts, expanded erase/cancellation, public correction proposal and community/public-benefit surface. These are useful product hypotheses, not proven unique inventions or measured life impact.
 
-Paper/navy/brass tokens and self-hosted Instrument Serif/IBM Plex follow the inspected Kriseva brand. Ten local Noto script subsets cover the current catalog glyphs; the codepoint check is not native-language or shaping approval. No advertising, payment funnel or private narrative database was added. Public-benefit intent does not assert registered nonprofit legal status.
+Pink/black tokens follow the founder's October 20 direction and supersede the prior corporate paper/navy/brass palette. Self-hosted Instrument Serif/IBM Plex typography remains. The home and finder share compact chrome; context/goal exploration and the official-source rail now live under Prepare & learn, while the data boundary remains under Privacy & trust. Ten local Noto script subsets cover the current catalog glyphs; the codepoint check is not native-language or shaping approval. No advertising, payment funnel or private narrative database was added. Public-benefit intent does not assert registered nonprofit legal status.
 
-Evidence: `tests/e2e.spec.ts`, `tests/offline.spec.ts`, `tests/sprint2.spec.ts`, `tests/pillars.spec.ts`, `tests/test_api.py`, unit tests and actual screenshots under `docs/evidence/`. [QUALITY.md](QUALITY.md) ties accessibility, task mechanics and visual states to their component contracts.
+Evidence: `tests/e2e.spec.ts`, `tests/offline.spec.ts`, `tests/sprint2.spec.ts`, `tests/pillars.spec.ts`, `tests/simple-home.spec.ts`, `tests/test_api.py`, unit tests and actual screenshots under `docs/evidence/`. [QUALITY.md](QUALITY.md) ties accessibility, task mechanics and visual states to their component contracts.
 
 ## 4. P1/P2 and unavailable capabilities
 
@@ -101,21 +103,21 @@ Every shell is structurally complete at 136 keys. Non-English shells contain 20 
 | kok-IN | 136/136 | 116 | Pending | 20 | 100% | 4 | 100% | 75.0% | 100% |
 | ks-Arab-IN | 136/136 | 116 | Pending | 20 | 100% | 4 | 100% | 50.0% | 100% |
 
-The 410 routing cases are authored/generated in-sample surface variants, not independent observations or expert labels. Default engine: SQLite FTS5/BM25 plus intact Indic word matching and deterministic policy. Latest route-evaluation p50 0.080ms, p95 0.096ms measures local engine evaluation, not network response or device performance.
+The 410 routing cases are authored/generated in-sample surface variants, not independent observations or expert labels. Default engine: SQLite FTS5/BM25 plus intact Indic word matching and deterministic policy. Latest route-evaluation p50 0.081ms, p95 0.106ms measures local engine evaluation, not network response or device performance.
 
 The 104-phrase optional encoder comparison is separate, in-sample and small: 44 English and 4 per other locale. Model load 1,226ms; query ranking p50 27.7ms, p95 45.4ms on the 24 GiB Mac. Pure semantic top-3 ranged 50-100% across locales. English semantic top-1 was 68.2% and hybrid top-1 77.3%, versus lexical top-1 100% on the authored sample. Several other top-1 samples also underperformed lexical. This is why lexical remains the default and optional embeddings cannot expand approved candidates or control emergencies. No production accuracy or multilingual quality claim follows. Full top-1/top-3 figures and fixture limits are in `evaluation.json` and `model-benchmark.json`. A held-out expert gold set is still required.
 
 ## 9. Accessibility, usability, UI/UX and performance
 
-Final local `make verify`: Ruff and structural checks pass; **35 Python, 17 unit and 167 browser tests passed**. Two forced-colors emulation cases are explicitly skipped on Firefox/WebKit; Chromium covers that assertion. Total scheduled browser cases: 169. One Starlette TestClient deprecation warning remains; no test failed. A dedicated three-pillar run passed 34 cases with the same 2 skips; actual Tab/Option-Tab traversal subsequently passed in all three engines and is included in the final full regression.
+Final local `make verify`: Ruff and structural checks pass; **35 Python, 17 unit and 170 browser tests passed**. Two forced-colors emulation cases are explicitly skipped on Firefox/WebKit; Chromium covers that assertion. Total scheduled browser cases: 172. One Starlette TestClient deprecation warning remains; no final test failed. The three-pillar contracts include actual Tab/Option-Tab traversal in all three engines. New acceptance checks cover short opening copy, visible primary action, a first finder question above 320px on a 390x844 view, consistent theme and relocation of source exploration. Initial RED runs and the first failed full pass are retained separately. A real forced-colors contrast issue was corrected with system colors; the old direct-goal test now follows its intentional learning-page location.
 
 Host/browser scope: macOS arm64, Playwright Chromium 156.0.8078.4, Firefox 157 and WebKit 27.2 engine builds. The complete browser suite is Chromium; Firefox/WebKit run 12 targeted interaction contracts each. Apple's default Mac WebKit link traversal uses Option-Tab, without modifying system settings. This is not physical Safari/iOS certification.
 
 Widths exercised: 320, 360, 375, 390, 414, 768, 1024, 1280 and 1440 CSS px. Axe scans cover the landing at all widths, key new surfaces at narrow/wide widths and selected Indic/RTL contexts. Tests cover large-text preference at 200%, text spacing, failed font loads, reduced motion, semantic navigation/table relationships, recoverable validation, modal focus/scroll/return, explicit loading and Back/clear cancellation. Eligibility and key limits remain visible before opening provenance. JavaScript-disabled fallback retains the direct emergency link.
 
-Production screenshots were inspected at desktop 1440, tablet 768 and mobile 390, including Urdu, error summary, destination preview and enlarged text. The capture run recorded 12 page/viewport combinations with HTTP 200, no document overflow, no outside-origin requests and no page errors. Additional synthetic journey and modal captures are included. These are screenshot/automation findings, not moderated user research. Physical Android, VoiceOver/TalkBack/Windows screen readers, real installation, physical zoom and cold Wi-Fi-off startup remain untested.
+Production screenshots were inspected at desktop 1440, tablet 768, mobile 390 and narrow 320 widths, including Urdu, finder, source result and destination preview. The reproducible capture run records 10 page/viewport combinations with HTTP 200, no document overflow, no outside-origin requests and no page errors, plus synthetic result and dialog images. At 320x640 and with review banners/large text, vertical scrolling remains necessary; content is not compressed to force a one-screen claim. These are screenshot/automation findings, not moderated user research. Physical Android, VoiceOver/TalkBack/Windows screen readers, real installation, physical zoom and cold Wi-Fi-off startup remain untested.
 
-Latest `make quality`, local production mobile simulation: **96 performance / 100 accessibility / 100 best practices**; FCP 1.9s, **LCP 2,559.6ms**, **CLS 0**, **TBT 0ms**, transferred page bytes **259,445**. Profile: 412x823/DPR 1.75, 150ms RTT, 1.6Mbps and 4x CPU slowdown. Every regression budget passed; the stricter 2.5s LCP product goal was missed by 59.6ms. Field INP is not measured. Earlier Sprint 1 score 99 and intermediate Sprint 2 scores 95/97 refer to different builds and are not substituted for this final result. Lab measurements vary and are not availability or accessibility certification.
+Latest `make quality`, local production mobile simulation: **97 performance / 100 accessibility / 100 best practices**; FCP 1.9s, **LCP 2,409.5ms**, **CLS 0**, **TBT 0ms**, transferred page bytes **236,108**. Profile: 412x823/DPR 1.75, 150ms RTT, 1.6Mbps and 4x CPU slowdown. All regression budgets passed. The separate 2.5s LCP product goal also passed in this run. Field INP is not measured. The earlier 2,559.6ms LCP/96 score belongs to the October 19 interface. The simplified normal-type headline no longer preloads the unused italic face; the asset remains available for other pages and in the public offline pack. Lab measurements vary and are not availability or accessibility certification.
 
 Bounded local Docker smoke probe: 240 synthetic requests, concurrency 10, zero failures, p50 7.94ms/p95 23.72ms. This short single-host observation is not internet-scale, endurance or operational reliability validation. The API was unchanged by the final interface refinements.
 
@@ -133,26 +135,22 @@ Residual risks: finite emergency/minor phrase matching, unreviewed multilingual/
 
 ## 11. Screenshots and navigation proof
 
-Actual production captures are under `docs/evidence/`:
+Actual current production captures are under `docs/evidence/`:
 
-- `sprint2-desktop-home.png`, `sprint2-mobile-home.png`, `sprint2-tablet-home.png` and full-page versions.
-- `sprint2-prepare.png`, `sprint2-mobile-prepare.png`, `sprint2-nearby.png`, `sprint2-community.png` and mobile equivalents.
-- `sprint2-mobile-options.png`: Home > Try a fictional example > cyber public alternatives, with outbound operations disabled.
-- `sprint2-destination-preview.png`: synthetic cyber entry > Preview official website, exact official host visible, no external continuation.
-- `sprint2-map-disclosure.png`: Clear session > Public places > Ahmedabad > Preview map search, no GPS or external request.
-- `sprint2-whatsapp-preview.png`: Prepare & learn > Preview WhatsApp public card, readable public fields and no send state.
-- `sprint2-error-recovery.png`: Community > synthetic invalid query URL > local error summary, field link and preserved public values.
-- `sprint2-urdu-home.png`, `sprint2-large-text.png` and `sprint2-large-text-viewport.png`: RTL and enlarged-text inspection.
+- `simple-desktop-home.png`, `simple-mobile-home.png`, `simple-narrow-home.png`, `simple-tablet-home.png` and `simple-urdu-home.png`.
+- `simple-finder.png`, `simple-prepare.png`, `simple-trust.png`, `simple-nearby.png` and `simple-community.png` show the theme across the working features.
+- `simple-options.png`: Home > Try a fictional example > public cyber alternatives, with real outbound actions disabled.
+- `simple-destination.png`: Synthetic result > Preview official website, showing the exact official host and disabled action state.
 
-`sprint2-visual-network.json`, `sprint2-capture.log`, `browser-results.json` and `verify-sprint2-final.log` provide navigation/check evidence. Capture script is reproducible and opens no external destination. One capture helper first used an outdated nav label; corrected to the actual visible label. Production CSP correctly blocked injected style tags; enlarged-text capture uses a browser-side CSS property without weakening production policy.
+`simple-visual-network.json`, `simple-capture.log`, `browser-results.json` and `verify-simple-final.log` provide current navigation/check evidence. `scripts/capture-simple.mjs` opens no external destination. `simple-density-comparison.json` compares the old Docker and new native opening at identical 390x844 geometry before replacing the old runtime: 609 to 40 main words; 6408 to 844 page pixels. The current production capture independently confirms the new density. Older `sprint2-*` screenshots and logs refer to the dated October 19 design. They are historical evidence, not current appearance. Source records, permissions and human review status have not been promoted by this design change.
 
 ## 12. Commits, files, review and deferred issues
 
-Confirmed local commits: `71544be` API/policy, `04eb8fa` Sprint 1 baseline, `953e969` research/plan, `337103e` Sprint 2 product experience and `fd659de` three-pillar contracts. Final documentation/evidence is committed separately. There are no PRs. The original Sprint 1 measured report is preserved under `docs/releases/SPRINT1_BASELINE.md`.
+Confirmed local commits: `71544be` API/policy, `04eb8fa` Sprint 1 baseline, `953e969` research/plan, `337103e` Sprint 2 product experience and `fd659de` three-pillar contracts, `d40dfac` October 19 evidence and `e412dd1` simplified pink/black experience. Final revision evidence is committed separately. There are no PRs. The original Sprint 1 measured report is preserved under `docs/releases/SPRINT1_BASELINE.md`.
 
-Main changed groups: React public journey/components and brand/script CSS; font assets/notices; public action contracts; API safety/telemetry regressions; browser/unit tests; public build/cache tooling; quality gate and CI; README/design/research/architecture/privacy/release docs. The full baseline-relative tracked inventory is `docs/evidence/sprint2-changes.txt`.
+Main changed groups: React public journey/components and brand/script CSS; font assets/notices; public action contracts; API safety/telemetry regressions; browser/unit tests; public build/cache tooling; quality gate and CI; README/design/research/architecture/privacy/release docs. The Sprint 2 baseline inventory is `docs/evidence/sprint2-changes.txt`; the October 20 revision inventory is `docs/evidence/simple-changes.txt`.
 
-Independent review initially found four material issues, fixed with RED/GREEN tests: synthetic maintenance download, fallback language metadata, comparison selection coverage and official PIB query syntax. Visual review found mobile modal autoscroll and fixed title focus. Three-pillar refinement added actionable errors, always-visible eligibility, larger-text fallback, actual Tab traversal and Back cancellation. The fresh independent review found no material regression. Its precise scope is in `docs/research/sprint2-independent-review.md`. Historical failed/partial run logs are retained and do not count as final success.
+Independent review initially found four material issues, fixed with RED/GREEN tests: synthetic maintenance download, fallback language metadata, comparison selection coverage and official PIB query syntax. Visual review found mobile modal autoscroll and fixed title focus. Three-pillar refinement added actionable errors, always-visible eligibility, larger-text fallback, actual Tab traversal and Back cancellation. The October 19 independent review found no material regression in its recorded scope. The October 20 interface revision received full automated regression and implementer visual review; no new independent human or agent signoff is claimed. The prior review's precise scope is in `docs/research/sprint2-independent-review.md`. Historical failed/partial run logs are retained and do not count as final success.
 
 Deferred work is recorded in `ISSUE_BACKLOG.md`, `FEATURES.json`, `ROADMAP.md` and `RELEASE_GATES.md`. The repo has no remote issue tracker. Future engineering cannot waive the required human evidence.
 

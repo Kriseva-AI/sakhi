@@ -1,0 +1,92 @@
+{
+  "seeds": {
+    "ingested": 211,
+    "reviewed_for_preview": 7,
+    "human_approved": 0,
+    "exposed": 7,
+    "duplicates": []
+  },
+  "pack_version": "2026-10-19.1",
+  "pack_sha256": "8317d31f1ab9e76e098940e19a3d171a50e0df6916de0613bb180b5f47acd4c8",
+  "osc": {
+    "reported_national": 991,
+    "report_date": "2026-08-05",
+    "data_through": "2026-06-30",
+    "individual_sourced": 0,
+    "independently_verified_contacts": 0,
+    "integrations": 0,
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2294887&lang=1&reg=1"
+  },
+  "release": "internal_demo_only",
+  "write_access": false,
+  "external_actions": false,
+  "private_vault": "not_ready",
+  "link_results": [
+    {
+      "id": "emergency",
+      "url": "https://112.gov.in/",
+      "checked_at": "2026-10-19T13:12:11.713305+00:00",
+      "human_verified": false,
+      "public_pack_modified": false,
+      "status": "network_error",
+      "error_type": "ConnectTimeout"
+    },
+    {
+      "id": "women",
+      "url": "https://wcd.gov.in/women/help",
+      "checked_at": "2026-10-19T13:12:27.799927+00:00",
+      "human_verified": false,
+      "public_pack_modified": false,
+      "status": "network_error",
+      "error_type": "ConnectError"
+    },
+    {
+      "id": "child",
+      "url": "https://www.spniwcd.wcd.gov.in/",
+      "checked_at": "2026-10-19T13:12:28.953435+00:00",
+      "human_verified": false,
+      "public_pack_modified": false,
+      "status": "network_error",
+      "error_type": "ConnectError"
+    },
+    {
+      "id": "legal",
+      "url": "https://nalsa.gov.in/womens-assistance/",
+      "checked_at": "2026-10-19T13:12:30.129280+00:00",
+      "human_verified": false,
+      "public_pack_modified": false,
+      "status": "reachable",
+      "http": 200,
+      "content_sha256": "490e4c540983cbe93066b483147140236c743d3f5086d7c544cfac18943ff18b"
+    },
+    {
+      "id": "cyber",
+      "url": "https://cybercrime.gov.in/",
+      "checked_at": "2026-10-19T13:12:32.723525+00:00",
+      "human_verified": false,
+      "public_pack_modified": false,
+      "status": "network_error",
+      "error_type": "ConnectError"
+    },
+    {
+      "id": "workplace",
+      "url": "https://shebox.wcd.gov.in/",
+      "checked_at": "2026-10-19T13:12:33.831650+00:00",
+      "human_verified": false,
+      "public_pack_modified": false,
+      "status": "reachable",
+      "http": 200,
+      "content_sha256": "1cd0c570cb66e83935091afdb9139f70518867067facc21560608ba155c8628f"
+    },
+    {
+      "id": "ncw",
+      "url": "https://ncwapps.nic.in/onlinecomplaintsv2/",
+      "checked_at": "2026-10-19T13:12:39.385679+00:00",
+      "human_verified": false,
+      "public_pack_modified": false,
+      "status": "reachable",
+      "http": 200,
+      "content_sha256": "d1f38442f7b6dcf6cd0d5243f71252f80df616cb03414e22b8eb1d2ff01b1826"
+    }
+  ]
+}

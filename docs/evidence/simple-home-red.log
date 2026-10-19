@@ -1,0 +1,139 @@
+[WebServer] INFO:     Started server process [51986]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 3 tests using 1 worker
+
+(node:51987) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/simple-home.spec.ts:3:1 › opening explains public support with short copy and a visible next step (5.4s)
+(node:51993) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [chromium] › tests/simple-home.spec.ts:15:1 › pink and black theme continues from the landing to the finder (5.3s)
+(node:52022) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 [chromium] › tests/simple-home.spec.ts:24:1 › source exploration is available without overwhelming the opening (5.3s)
+
+
+  1) [chromium] › tests/simple-home.spec.ts:3:1 › opening explains public support with short copy and a visible next step 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator: locator('main h1')
+    Expected pattern: /Support for women/
+    Received string:  "Your next step,on your terms."
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveText" locator('main h1') with timeout 5000ms
+      - waiting for locator('main h1')
+        14 × locator resolved to <h1 lang="en-IN" tabindex="-1">…</h1>
+           - unexpected value "Your next step,on your terms."
+
+
+      4 |   await page.setViewportSize({ width: 390, height: 844 });
+      5 |   await page.goto("/en-IN/");
+    > 6 |   await expect(page.locator("main h1")).toHaveText(/Support for women/);
+        |                                         ^
+      7 |   await expect(page.locator("main")).toContainText("public support in India");
+      8 |   const words = (await page.locator("main").innerText()).trim().split(/\s+/).length;
+      9 |   expect(words).toBeLessThanOrEqual(60);
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/simple-home.spec.ts:6:41
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/simple-home-opening-explai-10e57-opy-and-a-visible-next-step-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/simple-home-opening-explai-10e57-opy-and-a-visible-next-step-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/simple-home-opening-explai-10e57-opy-and-a-visible-next-step-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/simple-home-opening-explai-10e57-opy-and-a-visible-next-step-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests/simple-home.spec.ts:15:1 › pink and black theme continues from the landing to the finder 
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator:  locator('body')
+    Expected: "rgb(255, 244, 248)"
+    Received: "rgb(242, 239, 231)"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('body') with timeout 5000ms
+      - waiting for locator('body')
+        14 × locator resolved to <body>…</body>
+           - unexpected value "rgb(242, 239, 231)"
+
+
+      15 | test("pink and black theme continues from the landing to the finder", async ({ page }) => {
+      16 |   await page.goto("/en-IN/");
+    > 17 |   await expect(page.locator("body")).toHaveCSS("background-color", "rgb(255, 244, 248)");
+         |                                      ^
+      18 |   await expect(page.getByRole("button", { name: "Find my next step", exact: true })).toHaveCSS("background-color", "rgb(24, 18, 22)");
+      19 |   await page.getByRole("button", { name: "Find my next step", exact: true }).click();
+      20 |   await expect(page.getByRole("heading", { name: "What would you like to do?", exact: true })).toBeVisible();
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/simple-home.spec.ts:17:38
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/simple-home-pink-and-black-d9937-m-the-landing-to-the-finder-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/simple-home-pink-and-black-d9937-m-the-landing-to-the-finder-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/simple-home-pink-and-black-d9937-m-the-landing-to-the-finder-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/simple-home-pink-and-black-d9937-m-the-landing-to-the-finder-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests/simple-home.spec.ts:24:1 › source exploration is available without overwhelming the opening 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('tablist')
+    Expected: 0
+    Received: 2
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('tablist') with timeout 5000ms
+      - waiting for getByRole('tablist')
+        14 × locator resolved to 2 elements
+           - unexpected value "2"
+
+
+      24 | test("source exploration is available without overwhelming the opening", async ({ page }) => {
+      25 |   await page.goto("/en-IN/");
+    > 26 |   await expect(page.getByRole("tablist")).toHaveCount(0);
+         |                                           ^
+      27 |   await expect(page.locator(".pathway-rail")).toHaveCount(0);
+      28 |   await page.getByRole("link", { name: "Prepare & learn", exact: true }).click();
+      29 |   await expect(page.getByRole("tab", { name: "Before a concern", exact: true })).toBeVisible();
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/simple-home.spec.ts:26:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/simple-home-source-explora-af41f-ut-overwhelming-the-opening-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/simple-home-source-explora-af41f-ut-overwhelming-the-opening-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/simple-home-source-explora-af41f-ut-overwhelming-the-opening-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/simple-home-source-explora-af41f-ut-overwhelming-the-opening-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [chromium] › tests/simple-home.spec.ts:3:1 › opening explains public support with short copy and a visible next step 
+    [chromium] › tests/simple-home.spec.ts:15:1 › pink and black theme continues from the landing to the finder 
+    [chromium] › tests/simple-home.spec.ts:24:1 › source exploration is available without overwhelming the opening 

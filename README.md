@@ -15,7 +15,7 @@ A free public-benefit navigator for women in India: prepare beforehand, understa
 **Device safety:** someone with access to your device, browser history or backups may see your activity. Clearing Sakhi does not erase those copies or make browsing untraceable.
 
 <table>
-<tr><td width="70%"><img src="docs/evidence/sprint2-desktop-home.png" alt="Actual Sakhi desktop landing page with public support choices, anonymous entry and emergency information" /></td><td width="30%"><img src="docs/evidence/sprint2-mobile-home.png" alt="Actual mobile landing page at 390 CSS pixels" /></td></tr>
+<tr><td width="70%"><img src="docs/evidence/simple-desktop-home.png" alt="Actual Sakhi desktop landing page with public support choices, anonymous entry and emergency information" /></td><td width="30%"><img src="docs/evidence/simple-mobile-home.png" alt="Actual mobile landing page at 390 CSS pixels" /></td></tr>
 </table>
 
 ## Start locally
@@ -48,12 +48,12 @@ A GitHub remote has not been created. After publication, clone the actual reposi
 
 ## One real journey
 
-Choose **Understand my options → 18 or older → Online or digital concerns**, or enter the fictional sentence “Someone made an impersonation account of me.” Sakhi returns public cybercrime and legal-aid options with official source receipts. Preview the exact hostname, consider device privacy, then decide whether to open the website. No complaint or referral is submitted.
+Choose **Find my next step → Understand my options → 18 or older → Online or digital concerns**, or enter the fictional sentence “Someone made an impersonation account of me.” Sakhi returns public cybercrime and legal-aid options with official source receipts. Preview the exact hostname, consider device privacy, then decide whether to open the website. No complaint or referral is submitted.
 
 The landing-page **Try a fictional example** mode visibly disables calls, outbound links and sharing. It never simulates an acknowledgement. See the [60-second synthetic storyboard](docs/DEMO.md).
 
 <table>
-<tr><td width="50%"><img src="docs/evidence/sprint2-mobile-options.png" alt="Synthetic mobile cyber concern journey showing official public resources and no-action status" /></td><td width="50%"><img src="docs/evidence/sprint2-destination-preview.png" alt="Actual destination preview showing cybercrime.gov.in with external actions disabled in the fictional example" /></td></tr>
+<tr><td width="50%"><img src="docs/evidence/simple-options.png" alt="Synthetic mobile cyber concern journey showing official public resources and no-action status" /></td><td width="50%"><img src="docs/evidence/simple-destination.png" alt="Actual destination preview showing cybercrime.gov.in with external actions disabled in the fictional example" /></td></tr>
 </table>
 
 Illustrative before/after, with no measured time-saving claim:
@@ -89,9 +89,11 @@ All **68 candidate capabilities** have honest individual states in [FEATURES.jso
 
 ## Sprint 2 research and design
 
+The [October 20 simplification](docs/DESIGN_SIMPLIFICATION.md) supersedes the earlier long landing and corporate palette. Source, privacy and public-release gates remain unchanged.
+
 The [execution plan](docs/SPRINT2_PLAN.md), [design system](DESIGN.md), [service and eight-product comparison](docs/research/sprint2-services-competitors.md), [seventeen-repository review](docs/research/sprint2-open-source.md) and [Maps, messaging and crime-data research](docs/research/sprint2-maps-messaging-data.md) record sources, tradeoffs and gaps. These are evidence-informed hypotheses, not validated uniqueness or user-impact claims.
 
-The experience now covers before / concerning now / after, a public preparation library, manually scrolling official pathways, user-selected comparison, first-contact questions, public kit, data-boundary explorer, map and WhatsApp previews, comfortable reading and community corrections. It follows Kriseva paper/navy/brass with self-hosted Instrument Serif, IBM Plex and Noto. No government logo or partner endorsement is implied.
+The opening is a short pink-and-black entrance with one primary finder action. It has 40 main words and fits a 390x844 English viewport; three-to-four-second comprehension remains a research goal. The finder also uses compact chrome. Detailed exploration under Prepare & learn covers before / concerning now / after, a public preparation library, manually scrolling official pathways, user-selected comparison, first-contact questions, public kit, data-boundary explorer, map and WhatsApp previews, comfortable reading and community corrections. It follows the founder's October 20 pink/black direction with self-hosted Instrument Serif, IBM Plex and Noto. No government logo or partner endorsement is implied.
 
 Accessibility, usability and UI/UX are equal product pillars. The [quality contract and state-level evidence matrix](docs/QUALITY.md) turn lessons from GOV.UK, NHS, USWDS and Carbon into semantic controls, actionable errors, visible eligibility, cancellation, large-text reflow and repeatable regression budgets. The [primary-source study](docs/research/sprint2-three-pillars.md) records their published tools and production maintenance practices. No participant research or human assistive-technology signoff has been completed.
 
@@ -188,7 +190,7 @@ PYTHONPATH=. uv run --group embeddings python scripts/model_benchmark.py
 
 `make verify` runs Ruff, Python tests, browser-local tests, catalog/data/README checks, a production build, draft scenario evaluation and Playwright. It exits non-zero on failures. Chromium runs the complete browser suite; Firefox and WebKit run the three-pillar interaction contract. `make quality` serves its own local production build and fails on missing measurements or exceeded Lighthouse budgets. Application tests use only local/synthetic inputs and do not call real services. Link maintenance and model download are separate explicit online actions.
 
-Measured on 2026-10-19: **35 Python, 17 unit and 167 browser tests passed; 2 unsupported forced-colors emulation cases explicitly skipped.** Local Chromium lab Lighthouse: **96 performance / 100 accessibility / 100 best practices**, LCP 2.56s, CLS 0 and TBT 0ms. The 3s LCP regression budget passed; the stricter 2.5s product goal was missed by 0.06s in this run. Required widths 320, 360, 375, 390, 414, 768, 1024, 1280 and 1440 are exercised. Axe scans cover the landing at every width, other main surfaces at 320/1440 and selected Indic/RTL shells. Browser tests cover cancellation, session erase, minors, focus, stale packs, language switch, offline reload and no automatic external requests. All three engines passed the 200% font-preference, text-spacing and font-failure checks. 200%/400% viewport reflow equivalents use 640/320 CSS-pixel widths; physical zoom, TalkBack/VoiceOver and physical Android remain unverified.
+Measured on 2026-10-20: **35 Python, 17 unit and 170 browser tests passed; 2 unsupported forced-colors emulation cases explicitly skipped.** Local Chromium lab Lighthouse: **97 performance / 100 accessibility / 100 best practices**, LCP 2.41s, CLS 0 and TBT 0ms. The 3s LCP regression budget and stricter 2.5s product goal both passed in this run. Required widths 320, 360, 375, 390, 414, 768, 1024, 1280 and 1440 are exercised. Axe scans cover the landing at every width, other main surfaces at 320/1440 and selected Indic/RTL shells. Browser tests cover cancellation, session erase, minors, focus, stale packs, language switch, offline reload and no automatic external requests. All three engines passed the 200% font-preference, text-spacing and font-failure checks. 200%/400% viewport reflow equivalents use 640/320 CSS-pixel widths; physical zoom, TalkBack/VoiceOver and physical Android remain unverified.
 
 The **410 draft routing cases** are in-sample, include generated surface variants and have no expert labels. The **104 authored-phrase model comparison** is also small and in-sample. Passing these does not establish real-world accuracy or emergency detection reliability. Per-language scores, timing, known limits and test counts are in the [release report](docs/RELEASE_REPORT.md) and [evidence directory](docs/evidence).
 
