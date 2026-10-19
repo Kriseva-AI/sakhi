@@ -1,0 +1,64 @@
+[WebServer] INFO:     Started server process [21080]
+
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+
+[WebServer] (node:21103) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] INFO:     Started server process [21106]
+
+[WebServer] INFO:     Waiting for application startup.
+
+[WebServer] INFO:     Application startup complete.
+
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+
+Running 1 test using 1 worker
+
+(node:21107) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/1] [chromium] › tests/travel.spec.ts:488:1 › panning the map does not cancel an independent city-weather lookup
+  1) [chromium] › tests/travel.spec.ts:488:1 › panning the map does not cancel an independent city-weather lookup 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: 'Cancel lookup', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: 'Cancel lookup', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Cancel lookup', exact: true })
+
+
+      492 |  await expect(page.getByRole('button',{name:'Cancel lookup',exact:true})).toBeVisible();await page.getByRole('region',{name:/Interactive OpenStreetMap/}).focus();await page.keyboard.press('ArrowRight');
+      493 |  await expect(page.getByRole('button',{name:'Choose map centre as destination',exact:true})).toBeEnabled();
+    > 494 |  await expect(page.getByRole('button',{name:'Cancel lookup',exact:true})).toBeVisible();finish?.();await expect(page.locator('.weather-reading')).toContainText('29°');
+          |                                                                           ^
+      495 | });
+      496 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/travel.spec.ts:494:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/travel-panning-the-map-doe-41c9f-pendent-city-weather-lookup-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/travel-panning-the-map-doe-41c9f-pendent-city-weather-lookup-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/travel-panning-the-map-doe-41c9f-pendent-city-weather-lookup-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/travel-panning-the-map-doe-41c9f-pendent-city-weather-lookup-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  1 failed
+    [chromium] › tests/travel.spec.ts:488:1 › panning the map does not cancel an independent city-weather lookup 

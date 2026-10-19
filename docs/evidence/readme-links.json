@@ -1,5 +1,6 @@
 {
   "local_targets": [
+    "docs/LIVE_TRAVEL_STATUS.md",
     "docs/DEMO.md",
     "FEATURES.json",
     "docs/FEATURES.md",
@@ -38,8 +39,8 @@
     "docs/RELEASE_GATES.md",
     "LICENSE",
     "docs/THIRD_PARTY_NOTICES.md",
-    "docs/evidence/simple-desktop-home.png",
-    "docs/evidence/simple-mobile-home.png",
+    "docs/evidence/travel-home-desktop.png",
+    "docs/evidence/travel-home-mobile.png",
     "docs/evidence/simple-options.png",
     "docs/evidence/simple-destination.png"
   ],

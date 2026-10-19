@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-20",
+  "checks": [
+    {
+      "pair": "Ink on pink",
+      "foreground": "#181216",
+      "background": "#fff4f8",
+      "ratio": 17.19,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "pair": "Secondary text on pink",
+      "foreground": "#60505a",
+      "background": "#fff4f8",
+      "ratio": 7.0,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "pair": "Accent text on pink",
+      "foreground": "#9f1851",
+      "background": "#fff4f8",
+      "ratio": 7.18,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "pair": "Accent on supporting surface",
+      "foreground": "#9f1851",
+      "background": "#f9e0eb",
+      "ratio": 6.2,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "pair": "Primary button text",
+      "foreground": "#fffafd",
+      "background": "#181216",
+      "ratio": 17.89,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "pair": "Input boundary on white",
+      "foreground": "#60505a",
+      "background": "#ffffff",
+      "ratio": 7.52,
+      "minimum": 3,
+      "passed": true
+    },
+    {
+      "pair": "Focus on black",
+      "foreground": "#ffb6d3",
+      "background": "#181216",
+      "ratio": 11.33,
+      "minimum": 3,
+      "passed": true
+    }
+  ],
+  "limits": "Finite token-pair calculation, not full WCAG conformance or physical assistive-technology testing."
+}

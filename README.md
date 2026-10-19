@@ -15,8 +15,10 @@ A free public-benefit navigator for women in India: prepare beforehand, understa
 **Device safety:** someone with access to your device, browser history or backups may see your activity. Clearing Sakhi does not erase those copies or make browsing untraceable.
 
 <table>
-<tr><td width="70%"><img src="docs/evidence/simple-desktop-home.png" alt="Actual Sakhi desktop landing page with public support choices, anonymous entry and emergency information" /></td><td width="30%"><img src="docs/evidence/simple-mobile-home.png" alt="Actual mobile landing page at 390 CSS pixels" /></td></tr>
+<tr><td width="70%"><img src="docs/evidence/travel-home-desktop.png" alt="Actual Sakhi desktop landing page with public support choices, anonymous entry and emergency information" /></td><td width="30%"><img src="docs/evidence/travel-home-mobile.png" alt="Actual mobile landing page at 390 CSS pixels" /></td></tr>
 </table>
+
+The live travel revision adds a real map and public travel tools. Actual city, weather, walking and driving API requests succeeded; mapped-place discovery is currently blocked by the community endpoint returning503. No granular crime dataset or prediction has been validated. Read the [12-workstream status and exact launch blockers](docs/LIVE_TRAVEL_STATUS.md) before describing this as production ready.
 
 ## Start locally
 
@@ -46,6 +48,20 @@ Open **[http://127.0.0.1:5173/en-IN/](http://127.0.0.1:5173/en-IN/)**. Requireme
 
 A GitHub remote has not been created. After publication, clone the actual repository URL and run these commands. No placeholder repository, CI badge, public deployment or release tag is presented as real.
 
+## Travel tools
+
+Open **Public places**, choose a city and select **Load live map** after reading the provider disclosure. Pan to a public destination or request mapped places, then choose a route estimate. **Conditions** loads the city forecast and solar times; **My plan** holds a local checklist, public card, neutral check-in message preview and page-only reminder. Device-city suggestion is optional under **Find another city in India**. Only a known public city ID reaches the geocoder; raw GPS stays on the device. No public-data layer guarantees safety, opening hours or rescue.
+
+The city gazetteer has 3,783 records under CC BY 4.0; those are geographic points, not vetted facilities. No Google API account or key is configured. The Google search alternative remains available for 16 preset cities. Mass use needs owned/contracted providers and operational controls, not unlimited reliance on donated endpoints.
+
+Live probes are intentionally separate from regression tests:
+
+The script accepts only owned loopback ports 8787/8769. It never sends a real person, private address, alert or message.
+
+```sh
+PYTHONPATH=. uv run --frozen python scripts/travel_smoke.py --port 8787 --live-public-data
+```
+
 ## One real journey
 
 Choose **Find my next step → Understand my options → 18 or older → Online or digital concerns**, or enter the fictional sentence “Someone made an impersonation account of me.” Sakhi returns public cybercrime and legal-aid options with official source receipts. Preview the exact hostname, consider device privacy, then decide whether to open the website. No complaint or referral is submitted.
@@ -74,7 +90,10 @@ Illustrative before/after, with no measured time-saving claim:
 | Clear ephemeral session, pending-request cancellation, no sensitive persistence | Functional locally |
 | Public learning, generic questions and user-selected resource kit | Functional locally; source and safeguarding review pending |
 | Choose up to three services for channel/scope/source comparison | Functional locally |
-| Coarse-city Google Maps query and exact WhatsApp public-card draft | Functional locally; user-opened external services, no GPS or sent state |
+| Opt-in live OSM map, public city lookup, weather/daylight and walking/driving estimates | Actual map, city, weather and both route modes observed; see live API receipt |
+| Mapped public places and place details | Adapter/UI implemented; actual Overpass request 503. Live POI success is blocked, not simulated |
+| Local trip checklist, public card and foreground reminder | Functional local controls; no monitoring or automatic alert |
+| Public Maps/WhatsApp and neutral check-in drafts | User-opened external handoffs; recipient and Send remain external |
 | Interactive data boundary, reading comfort and structured local corrections | Functional locally; nothing automatically submitted |
 | Lite view and synthetic sandbox | Functional locally |
 | Hash-checked public-only PWA cache and offline reload | Browser tested; no live-service promise |
@@ -93,11 +112,11 @@ The [October 20 simplification](docs/DESIGN_SIMPLIFICATION.md) supersedes the ea
 
 The [execution plan](docs/SPRINT2_PLAN.md), [design system](DESIGN.md), [service and eight-product comparison](docs/research/sprint2-services-competitors.md), [seventeen-repository review](docs/research/sprint2-open-source.md) and [Maps, messaging and crime-data research](docs/research/sprint2-maps-messaging-data.md) record sources, tradeoffs and gaps. These are evidence-informed hypotheses, not validated uniqueness or user-impact claims.
 
-The opening is a short pink-and-black entrance with one primary finder action. It has 40 main words and fits a 390x844 English viewport; three-to-four-second comprehension remains a research goal. The finder also uses compact chrome. Detailed exploration under Prepare & learn covers before / concerning now / after, a public preparation library, manually scrolling official pathways, user-selected comparison, first-contact questions, public kit, data-boundary explorer, map and WhatsApp previews, comfortable reading and community corrections. It follows the founder's October 20 pink/black direction with self-hosted Instrument Serif, IBM Plex and Noto. No government logo or partner endorsement is implied.
+The opening is a short pink-and-black entrance with one primary finder action. It has 40 main words and fits a 390x844 English viewport; three-to-four-second comprehension remains a research goal. The finder also uses compact chrome. Detailed exploration under Prepare & learn covers before / concerning now / after, a public preparation library, manually scrolling official pathways, user-selected comparison, first-contact questions, public kit, data-boundary explorer, map and WhatsApp previews, comfortable reading and community corrections. It follows the founder's October 20 pink/black direction with a bold Manrope wordmark/headlines, IBM Plex reading text and Noto script fallbacks. No government logo or partner endorsement is implied.
 
 Accessibility, usability and UI/UX are equal product pillars. The [quality contract and state-level evidence matrix](docs/QUALITY.md) turn lessons from GOV.UK, NHS, USWDS and Carbon into semantic controls, actionable errors, visible eligibility, cancellation, large-text reflow and repeatable regression budgets. The [primary-source study](docs/research/sprint2-three-pillars.md) records their published tools and production maintenance practices. No participant research or human assistive-technology signoff has been completed.
 
-Maps URLs do not require a key, but map results are not vetted providers or safe routes. The WhatsApp card is a generic draft; the recipient and Send are chosen in WhatsApp. No personal narrative, GPS, authority alert or staffed helpdesk is supplied. Historical crime statistics cannot certify present safety, so no crime heatmap or prediction is fabricated. [Operational roadmap and gates](ROADMAP.md).
+Maps URLs do not require a key, but map results are not vetted providers or safe routes. The WhatsApp card is a generic draft; the recipient and Send are chosen in WhatsApp. No personal narrative or device position is sent to those services. Optional one-shot device-city suggestion stays local; no authority alert or staffed helpdesk is supplied. Historical crime statistics cannot certify present safety, so no crime heatmap or prediction is fabricated. [Operational roadmap and gates](ROADMAP.md).
 
 ## Public sources and directory coverage
 
@@ -190,7 +209,7 @@ PYTHONPATH=. uv run --group embeddings python scripts/model_benchmark.py
 
 `make verify` runs Ruff, Python tests, browser-local tests, catalog/data/README checks, a production build, draft scenario evaluation and Playwright. It exits non-zero on failures. Chromium runs the complete browser suite; Firefox and WebKit run the three-pillar interaction contract. `make quality` serves its own local production build and fails on missing measurements or exceeded Lighthouse budgets. Application tests use only local/synthetic inputs and do not call real services. Link maintenance and model download are separate explicit online actions.
 
-Measured on 2026-10-20: **35 Python, 17 unit and 170 browser tests passed; 2 unsupported forced-colors emulation cases explicitly skipped.** Local Chromium lab Lighthouse: **97 performance / 100 accessibility / 100 best practices**, LCP 2.41s, CLS 0 and TBT 0ms. The 3s LCP regression budget and stricter 2.5s product goal both passed in this run. Required widths 320, 360, 375, 390, 414, 768, 1024, 1280 and 1440 are exercised. Axe scans cover the landing at every width, other main surfaces at 320/1440 and selected Indic/RTL shells. Browser tests cover cancellation, session erase, minors, focus, stale packs, language switch, offline reload and no automatic external requests. All three engines passed the 200% font-preference, text-spacing and font-failure checks. 200%/400% viewport reflow equivalents use 640/320 CSS-pixel widths; physical zoom, TalkBack/VoiceOver and physical Android remain unverified.
+Measured on 2026-10-20: **53 Python, 20 unit and 239 browser tests passed; 2 unsupported forced-colors emulation cases explicitly skipped.** Local Chromium lab Lighthouse: **97 performance / 100 accessibility / 100 best practices**, LCP 2.32s, CLS 0 and TBT 0ms. The 3s LCP regression budget and stricter 2.5s product goal both passed in this run. Required widths 320, 360, 375, 390, 414, 768, 1024, 1280 and 1440 are exercised. Axe scans cover the landing at every width, other main surfaces at 320/1440 and selected Indic/RTL shells. Browser tests cover cancellation, session erase, minors, focus, stale packs, language switch, offline reload and no automatic external requests. All three engines passed the 200% font-preference, text-spacing and font-failure checks. 200%/400% viewport reflow equivalents use 640/320 CSS-pixel widths; physical zoom, TalkBack/VoiceOver and physical Android remain unverified.
 
 The **410 draft routing cases** are in-sample, include generated surface variants and have no expert labels. The **104 authored-phrase model comparison** is also small and in-sample. Passing these does not establish real-world accuracy or emergency detection reliability. Per-language scores, timing, known limits and test counts are in the [release report](docs/RELEASE_REPORT.md) and [evidence directory](docs/evidence).
 

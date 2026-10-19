@@ -548,6 +548,18 @@
       "dev": true
     },
     {
+      "name": "@types/geojson",
+      "version": "7946.0.16",
+      "license": "MIT",
+      "dev": true
+    },
+    {
+      "name": "@types/leaflet",
+      "version": "1.9.21",
+      "license": "MIT",
+      "dev": true
+    },
+    {
       "name": "@types/node",
       "version": "26.6.5",
       "license": "MIT",
@@ -900,6 +912,12 @@
       "version": "1.0.0",
       "license": "MIT",
       "dev": true
+    },
+    {
+      "name": "leaflet",
+      "version": "1.9.4",
+      "license": "BSD-2-Clause",
+      "dev": false
     },
     {
       "name": "legacy-javascript",
@@ -1358,11 +1376,6 @@
       "license_metadata": "BSD-3-Clause"
     },
     {
-      "name": "cloudpickle",
-      "version": "3.1.2",
-      "license_metadata": "BSD-3-Clause"
-    },
-    {
       "name": "cyclonedx-python-lib",
       "version": "11.12.0",
       "license_metadata": "Apache-2.0"
@@ -1383,19 +1396,9 @@
       "license_metadata": "MIT"
     },
     {
-      "name": "fsspec",
-      "version": "2026.9.0",
-      "license_metadata": "BSD-3-Clause"
-    },
-    {
       "name": "h11",
       "version": "0.16.0",
       "license_metadata": "MIT"
-    },
-    {
-      "name": "hf-xet",
-      "version": "1.7.0",
-      "license_metadata": "Apache-2.0"
     },
     {
       "name": "httpcore",
@@ -1403,24 +1406,9 @@
       "license_metadata": "BSD-3-Clause"
     },
     {
-      "name": "httpcore2",
-      "version": "2.14.0",
-      "license_metadata": "BSD-3-Clause"
-    },
-    {
       "name": "httpx",
       "version": "0.28.1",
       "license_metadata": "BSD-3-Clause"
-    },
-    {
-      "name": "httpx2",
-      "version": "2.14.0",
-      "license_metadata": "BSD-3-Clause"
-    },
-    {
-      "name": "huggingface_hub",
-      "version": "1.33.0",
-      "license_metadata": "Apache-2.0"
     },
     {
       "name": "idna",
@@ -1433,16 +1421,6 @@
       "license_metadata": "MIT"
     },
     {
-      "name": "Jinja2",
-      "version": "3.1.6",
-      "license_metadata": "not_recorded"
-    },
-    {
-      "name": "joblib",
-      "version": "1.6.0",
-      "license_metadata": "BSD-3-Clause"
-    },
-    {
       "name": "license-expression",
       "version": "30.4.4",
       "license_metadata": "Apache-2.0"
@@ -1453,39 +1431,14 @@
       "license_metadata": "not_recorded"
     },
     {
-      "name": "MarkupSafe",
-      "version": "3.0.4",
-      "license_metadata": "BSD-3-Clause"
-    },
-    {
       "name": "mdurl",
       "version": "0.1.2",
       "license_metadata": "not_recorded"
     },
     {
-      "name": "mpmath",
-      "version": "1.3.0",
-      "license_metadata": "BSD"
-    },
-    {
       "name": "msgpack",
       "version": "1.2.3",
       "license_metadata": "Apache-2.0"
-    },
-    {
-      "name": "narwhals",
-      "version": "2.27.1",
-      "license_metadata": "MIT"
-    },
-    {
-      "name": "networkx",
-      "version": "3.7",
-      "license_metadata": "BSD-3-Clause"
-    },
-    {
-      "name": "numpy",
-      "version": "2.5.4",
-      "license_metadata": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
     },
     {
       "name": "opentelemetry-api",
@@ -1501,11 +1454,6 @@
       "name": "packaging",
       "version": "26.3",
       "license_metadata": "Apache-2.0 OR BSD-2-Clause"
-    },
-    {
-      "name": "pillow",
-      "version": "12.3.0",
-      "license_metadata": "MIT-CMU"
     },
     {
       "name": "pip",
@@ -1568,16 +1516,6 @@
       "license_metadata": "MIT"
     },
     {
-      "name": "PyYAML",
-      "version": "6.0.3",
-      "license_metadata": "MIT"
-    },
-    {
-      "name": "regex",
-      "version": "2026.9.29",
-      "license_metadata": "Apache-2.0 AND CNRI-Python"
-    },
-    {
       "name": "requests",
       "version": "2.34.2",
       "license_metadata": "Apache-2.0"
@@ -1593,36 +1531,6 @@
       "license_metadata": "MIT"
     },
     {
-      "name": "safetensors",
-      "version": "0.8.0",
-      "license_metadata": "not_recorded"
-    },
-    {
-      "name": "scikit-learn",
-      "version": "1.9.1",
-      "license_metadata": "BSD-3-Clause"
-    },
-    {
-      "name": "scipy",
-      "version": "1.18.1",
-      "license_metadata": "Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers."
-    },
-    {
-      "name": "sentence-transformers",
-      "version": "6.1.0",
-      "license_metadata": "Apache-2.0"
-    },
-    {
-      "name": "setuptools",
-      "version": "84.0.0",
-      "license_metadata": "MIT"
-    },
-    {
-      "name": "shellingham",
-      "version": "1.5.4",
-      "license_metadata": "ISC License"
-    },
-    {
       "name": "sortedcontainers",
       "version": "2.4.0",
       "license_metadata": "Apache 2.0"
@@ -1633,21 +1541,6 @@
       "license_metadata": "BSD-3-Clause"
     },
     {
-      "name": "sympy",
-      "version": "1.14.0",
-      "license_metadata": "BSD"
-    },
-    {
-      "name": "threadpoolctl",
-      "version": "3.7.0",
-      "license_metadata": "BSD-3-Clause"
-    },
-    {
-      "name": "tokenizers",
-      "version": "0.23.3",
-      "license_metadata": "not_recorded"
-    },
-    {
       "name": "tomli",
       "version": "2.5.0",
       "license_metadata": "MIT"
@@ -1656,36 +1549,6 @@
       "name": "tomli_w",
       "version": "1.2.0",
       "license_metadata": "not_recorded"
-    },
-    {
-      "name": "torch",
-      "version": "2.14.1",
-      "license_metadata": "Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT"
-    },
-    {
-      "name": "torchvision",
-      "version": "0.29.1",
-      "license_metadata": "BSD"
-    },
-    {
-      "name": "tqdm",
-      "version": "4.70.1",
-      "license_metadata": "MPL-2.0 AND MIT"
-    },
-    {
-      "name": "transformers",
-      "version": "5.20.1",
-      "license_metadata": "Apache 2.0 License"
-    },
-    {
-      "name": "truststore",
-      "version": "0.10.5",
-      "license_metadata": "MIT"
-    },
-    {
-      "name": "typer",
-      "version": "0.27.3",
-      "license_metadata": "MIT"
     },
     {
       "name": "typing-inspection",

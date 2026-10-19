@@ -1,197 +1,229 @@
 {
   "date": "2026-10-20",
-  "code_commit": "e412dd1",
-  "assets": 36,
-  "cache_version": "cca2f74f01ab9efd",
-  "all_assets_match": true,
+  "code_commit": "88e7243a014d8c59701b70001fbff7fbae2ffefa",
+  "origin": "http://127.0.0.1:8787",
+  "cache_version": "b6ba9822f775c7b3",
   "health": {
     "status": "ok",
     "mode": "functional_local",
     "semantic_search": "disabled",
     "engine": "sqlite_fts5_bm25",
     "external_actions": false,
+    "external_data_lookups": "user_requested_public_travel",
+    "device_position": "local_city_suggestion_only",
     "storage": "public_index_in_memory"
   },
-  "checks": [
+  "headers": {
+    "cache-control": "no-store",
+    "referrer-policy": "no-referrer",
+    "permissions-policy": "camera=(), microphone=(), geolocation=(self), payment=()",
+    "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'"
+  },
+  "assets": [
     {
       "path": "/index.html",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/icon.svg",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/manifest.webmanifest",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/resource-pack.json",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/resource-pack.sha256",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
-      "path": "/assets/index-B5wafYhq.js",
+      "path": "/assets/index-0zoWgB-s.css",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
-      "path": "/assets/index-CXrg-ef0.css",
+      "path": "/assets/index-BMsqK90o.js",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
+    },
+    {
+      "path": "/assets/LiveMap-CzCjBPDz.js",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/assets/LiveMap-CIGW-MKW.css",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/fonts/OFL-Manrope.txt",
+      "status": 200,
+      "matches": true
     },
     {
       "path": "/fonts/OFL-IBM-Plex.txt",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/instrument-serif-latin-400-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/OFL-Instrument-Serif.txt",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/instrument-serif-latin-400-italic.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
+    },
+    {
+      "path": "/fonts/manrope-latin-wght-normal.woff2",
+      "status": 200,
+      "matches": true
     },
     {
       "path": "/fonts/ibm-plex-sans-latin-600-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/ibm-plex-mono-latin-400-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/ibm-plex-sans-latin-500-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/ibm-plex-sans-latin-400-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/manifest.json",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-telugu/OFL.txt",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-telugu/noto-sans-telugu-telugu-400-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-oriya/OFL.txt",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-oriya/noto-sans-oriya-oriya-400-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-bengali/noto-sans-bengali-bengali-400-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-bengali/OFL.txt",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-tamil/OFL.txt",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-tamil/noto-sans-tamil-tamil-400-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-gurmukhi/OFL.txt",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-gurmukhi/noto-sans-gurmukhi-gurmukhi-400-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-devanagari/OFL.txt",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-devanagari/noto-sans-devanagari-devanagari-400-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-naskh-arabic/OFL.txt",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-naskh-arabic/noto-naskh-arabic-arabic-400-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-kannada/noto-sans-kannada-kannada-400-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-kannada/OFL.txt",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-malayalam/noto-sans-malayalam-malayalam-400-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-malayalam/OFL.txt",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-gujarati/noto-sans-gujarati-gujarati-400-normal.woff2",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
     },
     {
       "path": "/fonts/indic/noto-sans-gujarati/OFL.txt",
       "status": 200,
-      "matches_local_public_build": true
+      "matches": true
+    },
+    {
+      "path": "/licenses/Leaflet-BSD-2-Clause.txt",
+      "status": 200,
+      "matches": true
     }
   ]
 }

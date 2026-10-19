@@ -1,0 +1,48 @@
+............FFF                                                          [100%]
+=================================== FAILURES ===================================
+__________________ test_weather_rejects_malformed_solar_times __________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10819a450>
+
+    def test_weather_rejects_malformed_solar_times(monkeypatch):
+        async def malformed(*args, **kwargs):
+            return {'current': {'time': '2026-10-20T12:00', 'temperature_2m': 20,
+                                'precipitation': 0, 'wind_speed_10m': 3, 'is_day': 1},
+                    'daily': {'time': ['2026-10-20'], 'sunrise': ['wrong'], 'sunset': ['wrong']},
+                    'hourly': {'time': ['wrong'] * 3, 'precipitation_probability': [0, 1, 2]}}
+        monkeypatch.setattr(explore.gateway, 'request', malformed)
+        result = client.post('/api/explore/weather', json={'lat': 19, 'lon': 73})
+>       assert result.status_code == 503
+E       assert 200 == 503
+E        +  where 200 = <Response [200 OK]>.status_code
+
+tests/test_explore.py:114: AssertionError
+______________ test_stamp_retains_original_cached_retrieval_time _______________
+
+    def test_stamp_retains_original_cached_retrieval_time():
+        data = {'_sakhi_retrieved_at': '2026-10-19T10:00:00+00:00'}
+>       assert explore.stamp('test', raw=data)['fetched_at'] == data['_sakhi_retrieved_at']
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: stamp() got an unexpected keyword argument 'raw'
+
+tests/test_explore.py:119: TypeError
+____ test_public_place_coordinates_are_not_rounded_to_a_different_entrance _____
+
+    def test_public_place_coordinates_are_not_rounded_to_a_different_entrance():
+        point = explore.Point(lat=19.076123, lon=72.878456)
+>       assert point.lon == 72.878456
+E       assert 72.878 == 72.878456
+E        +  where 72.878 = Point(lat=19.076, lon=72.878).lon
+
+tests/test_explore.py:124: AssertionError
+=============================== warnings summary ===============================
+.venv/lib/python3.13/site-packages/fastapi/testclient.py:1
+  /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_explore.py::test_weather_rejects_malformed_solar_times - as...
+FAILED tests/test_explore.py::test_stamp_retains_original_cached_retrieval_time
+FAILED tests/test_explore.py::test_public_place_coordinates_are_not_rounded_to_a_different_entrance
+3 failed, 12 passed, 1 warning in 0.18s

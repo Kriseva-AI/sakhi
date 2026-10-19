@@ -31,3 +31,7 @@ Required states: draft, reviewed, approved, send attempted, sent, delivered and 
 ## Gate 4: private workflows
 
 User-controlled summaries, reference tracking, evidence metadata, personal reminders and encrypted storage require a separate threat model, legal/safeguarding review, deletion/export design and security audit. No intimate media uploads, suspect scoring or AI-generated personalized escape, medical or legal instructions are introduced through a visual redesign. Open-source contribution does not bypass review of critical public information.
+
+## October 20 live-travel revision
+
+The handoff-only map described above is historical. A real opt-in OSM map, public-ID city lookup, place adapter, route and weather adapters, local planning/reminder and data-coverage panel are implemented. Actual provider outcomes and exact remaining blocks are in docs/LIVE_TRAVEL_STATUS.md. Community endpoint availability, independently vetted contacts, granular crime data and human release approvals remain unresolved. No mass-user or crime-prediction readiness is claimed.

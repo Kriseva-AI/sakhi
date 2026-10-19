@@ -1,0 +1,79 @@
+[WebServer] INFO:     Started server process [10812]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+[WebServer] (node:10835) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] INFO:     Started server process [10838]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 20 tests using 1 worker
+
+(node:10839) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/travel.spec.ts:87:1 › travel starts without outside requests, location prompts or provider calls (398ms)
+  ✓   2 [chromium] › tests/travel.spec.ts:110:1 › real map library loads only after consent and revocation removes it (632ms)
+  ✓   3 [chromium] › tests/travel.spec.ts:127:1 › places to selected source to walking and driving route works without claiming availability (579ms)
+  ✓   4 [chromium] › tests/travel.spec.ts:159:1 › empty records and provider failure have different states and clear old results (477ms)
+  ✓   5 [chromium] › tests/travel.spec.ts:186:1 › city search is submitted explicitly and changing city discards old results (398ms)
+  ✓   6 [chromium] › tests/travel.spec.ts:214:1 › weather and daylight show dated values and never a crime score (296ms)
+  ✓   7 [chromium] › tests/travel.spec.ts:240:1 › public trip export and neutral check-in preview do not expose coordinates or claim sending (366ms)
+  ✓   8 [chromium] › tests/travel.spec.ts:263:1 › page check-in handles elapsed time and cancels without notifying anyone (294ms)
+  ✓   9 [chromium] › tests/travel.spec.ts:286:1 › GPS stays local and resolves only to a supported city after user gesture (277ms)
+  ✓  10 [chromium] › tests/travel.spec.ts:313:1 › late API result cannot return after clear session (314ms)
+  ✘  11 [chromium] › tests/travel.spec.ts:337:1 › synthetic mode blocks live providers, GPS, share and downloads (5.3s)
+(node:10863) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  12 [chromium] › tests/travel.spec.ts:359:1 › data lens marks missing evidence instead of drawing unsafe or safe zones (281ms)
+  ✓  13 [chromium] › tests/travel.spec.ts:370:3 › travel interactions reflow and pass axe at 320 (775ms)
+  ✓  14 [chromium] › tests/travel.spec.ts:370:3 › travel interactions reflow and pass axe at 390 (664ms)
+  ✓  15 [chromium] › tests/travel.spec.ts:370:3 › travel interactions reflow and pass axe at 768 (660ms)
+  ✓  16 [chromium] › tests/travel.spec.ts:370:3 › travel interactions reflow and pass axe at 1440 (687ms)
+  ✓  17 [chromium] › tests/travel.spec.ts:393:1 › reminder persists between travel panels and ends on clear session (432ms)
+  ✓  18 [chromium] › tests/travel.spec.ts:415:1 › a failed tile request stays an error after the tile batch completes (1.1s)
+  ✓  19 [chromium] › tests/travel.spec.ts:427:1 › a public map point can be chosen with the keyboard and routed from the city centre (1.8s)
+  ✓  20 [chromium] › tests/travel.spec.ts:458:1 › the live-map choice is visible in the first mobile viewport (210ms)
+
+
+  1) [chromium] › tests/travel.spec.ts:337:1 › synthetic mode blocks live providers, GPS, share and downloads 
+
+    Error: expect(locator).toBeDisabled() failed
+
+    Locator: getByRole('button', { name: 'Suggest my city', exact: true })
+    Expected: disabled
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeDisabled" getByRole('button', { name: 'Suggest my city', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Suggest my city', exact: true })
+
+
+      346 |     await expect(
+      347 |       page.getByRole("button", { name: label, exact: true }),
+    > 348 |     ).toBeDisabled();
+          |       ^
+      349 |   await page.getByRole("button", { name: "My plan", exact: true }).click();
+      350 |   for (const label of [
+      351 |     "Save public travel card",
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/travel.spec.ts:348:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/travel-synthetic-mode-bloc-7a9b1-ers-GPS-share-and-downloads-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/travel-synthetic-mode-bloc-7a9b1-ers-GPS-share-and-downloads-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/travel-synthetic-mode-bloc-7a9b1-ers-GPS-share-and-downloads-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/travel-synthetic-mode-bloc-7a9b1-ers-GPS-share-and-downloads-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/travel.spec.ts:337:1 › synthetic mode blocks live providers, GPS, share and downloads 
+  19 passed (18.1s)

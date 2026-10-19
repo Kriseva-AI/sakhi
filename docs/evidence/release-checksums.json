@@ -1,18 +1,20 @@
 {
   "date": "2026-10-20",
-  "code_commit": "e412dd1",
+  "code_commit": "88e7243a014d8c59701b70001fbff7fbae2ffefa",
+  "scope": "Latest accepted deterministic gates, actual live observations and clearly dated retained model/source evidence. Live POI503 remains a blocker.",
   "sha256": {
-    "verify-simple-final.log": "bfc7d7a3f8bede0f596f4862ffffb0ed98412c37d3dfc517d098db758307cb11",
-    "browser-results.json": "506f06d42a69474dd70226676507d09c607aee882099f59600ab0c06e44e3a8b",
-    "quality-gate.json": "3eb77ed0ac7de024ca3bef6c96124aed87e613ae40d1a236c455082969a83ba0",
-    "lighthouse-mobile.json": "3e56e972309adf06053e0eef616c0918da5051231265944c80e92ba1da3bc4f6",
-    "production-provenance.json": "c94a5dacd73cfa12c4c18c72cb48c72f62c4a2768e6c680d1bf6f30cd36083d3",
-    "simple-visual-network.json": "5fa5602c1d818772120f7c55e12c64d4ab9c7dc62784bfd76f0eab691a7e7402",
-    "simple-density-comparison.json": "5b036461e447c9c9d70cccbe25f4eb2eb59f17bc1f0820e7e9a5872c653980b7",
-    "simple-finder-geometry.json": "14483b19f04d9e9b26352f2a59f85b6dd8dbad887d80255b356a04584ec50af4",
-    "simple-contrast.json": "ca85325e3de43e3c2628b99eaea4b1d037d11615e713f18adf91568555021c2a",
-    "browser-environment.json": "2d322e65877ee3f3462789e9ebe86baf13a6db4a634555b4846d31236088ee32",
+    "verify-travel-final.log": "e4fa1a13ac1a6eaab397da8c20423ea1f85b3ab7a1f32abbdf8802d2d9afc791",
+    "browser-results.json": "6eacf31d6f72eee3f387b5e37b7806be8023efdb1e2e7cabe87fa25ea72a5211",
+    "quality-gate.json": "cb14849c6ef83e03ebd1ec963634a93d780a7f015b3ed1102728e76d3caa423f",
+    "lighthouse-mobile.json": "0ab457b27457c3f9cf3bfb0295801cba2778a86422ad97bcd644d93c4709168c",
+    "production-provenance.json": "df9d49f8029402d10eeccf880fde911da5377d375c0e2aded49bad9ff8f5357c",
+    "travel-live-api.json": "b2a76b0d3956017a9b6227847792a300ef87b430b6a0b6dd5985873dbf879153",
+    "travel-live-tile-receipt.json": "54c80dd2308e204db897f5a6b8f07e92c5a3e59dd18ebbc8c4fc1e49f82b1e79",
+    "browser-environment.json": "13a0767748378f91e9faf9c2544b7e7b94e14503b65dbe84843988f1e22d2516",
+    "public-cache-manifest.json": "9e57998e4c21cce40302765acc08839216a273141dcde70d02a4b765b62271b9",
+    "resource-validation.json": "cd1827e7b6c165aa8a2ede24b935513086cbeb1d3ed90b79bb77554020205ab2",
     "model-benchmark.json": "39d4522a9b0cc461bea476cb529b0a38a69e827110c2e74e7a0352501f130fb8",
-    "resource-validation.json": "cd1827e7b6c165aa8a2ede24b935513086cbeb1d3ed90b79bb77554020205ab2"
+    "npm-audit.json": "1f5c33bdd915043ee331b4ff61b47bdf044f576cb8e7e56da45bfb0aff9b355f",
+    "pip-audit.json": "3e3bdfb8cac9bac956739442e834911b53dcf4f5f81cb51620f8ac62c57cce2c"
   }
 }

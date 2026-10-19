@@ -1,0 +1,109 @@
+
+Running 55 tests using 1 worker
+
+(node:84348) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone (461ms)
+  ✓   2 [chromium] › tests/pillars.spec.ts:16:1 › public correction errors link back to the field and preserve entered public text (1.2s)
+  ✓   3 [chromium] › tests/pillars.spec.ts:43:1 › WhatsApp shows readable public fields before an optional encoded address (325ms)
+  ✓   4 [chromium] › tests/pillars.spec.ts:74:1 › comparison has a caption and explicit row and column headers (258ms)
+  ✓   5 [chromium] › tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey (247ms)
+  ✓   6 [chromium] › tests/pillars.spec.ts:114:1 › skip link and keyboard journey preserve visible focus without a mouse (277ms)
+  ✓   7 [chromium] › tests/pillars.spec.ts:159:1 › forced colors and reduced motion retain operable controls (578ms)
+  ✓   8 [chromium] › tests/pillars.spec.ts:188:1 › font download failure preserves readable reflow (194ms)
+  ✓   9 [chromium] › tests/pillars.spec.ts:204:1 › critical service eligibility limits remain visible before opening details (229ms)
+  ✓  10 [chromium] › tests/pillars.spec.ts:220:1 › text spacing preferences reflow without clipping primary controls (285ms)
+  ✓  11 [chromium] › tests/pillars.spec.ts:245:1 › progress is explicit and Back cancels an in-flight lookup (1.4s)
+  ✓  12 [chromium] › tests/pillars.spec.ts:288:1 › JavaScript failure retains the direct emergency fallback (88ms)
+  ✓  13 [chromium] › tests/simple-home.spec.ts:3:1 › opening explains public support with short copy and a visible next step (196ms)
+  ✓  14 [chromium] › tests/simple-home.spec.ts:25:1 › pink and black theme continues from the landing to the finder (241ms)
+  ✓  15 [chromium] › tests/simple-home.spec.ts:53:1 › source exploration is available without overwhelming the opening (253ms)
+  ✓  16 [chromium] › tests/travel.spec.ts:87:1 › travel starts without outside requests, location prompts or provider calls (210ms)
+  ✘  17 [chromium] › tests/travel.spec.ts:110:1 › real map library loads only after consent and revocation removes it (5.3s)
+(node:84915) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  18 [chromium] › tests/travel.spec.ts:127:1 › places to selected source to walking and driving route works without claiming availability (653ms)
+  ✓  19 [chromium] › tests/travel.spec.ts:159:1 › empty records and provider failure have different states and clear old results (468ms)
+  ✓  20 [chromium] › tests/travel.spec.ts:186:1 › city search is submitted explicitly and changing city discards old results (502ms)
+  ✓  21 [chromium] › tests/travel.spec.ts:214:1 › weather and daylight show dated values and never a crime score (401ms)
+  ✓  22 [chromium] › tests/travel.spec.ts:240:1 › public trip export and neutral check-in preview do not expose coordinates or claim sending (368ms)
+  ✓  23 [chromium] › tests/travel.spec.ts:263:1 › page check-in handles elapsed time and cancels without notifying anyone (347ms)
+  ✓  24 [chromium] › tests/travel.spec.ts:286:1 › GPS stays local and resolves only to a supported city after user gesture (315ms)
+  ✓  25 [chromium] › tests/travel.spec.ts:312:1 › late API result cannot return after clear session (330ms)
+  ✓  26 [chromium] › tests/travel.spec.ts:336:1 › synthetic mode blocks live providers, GPS, share and downloads (344ms)
+  ✓  27 [chromium] › tests/travel.spec.ts:358:1 › data lens marks missing evidence instead of drawing unsafe or safe zones (236ms)
+  ✓  28 [chromium] › tests/travel.spec.ts:369:3 › travel interactions reflow and pass axe at 320 (690ms)
+  ✓  29 [chromium] › tests/travel.spec.ts:369:3 › travel interactions reflow and pass axe at 390 (645ms)
+  ✓  30 [chromium] › tests/travel.spec.ts:369:3 › travel interactions reflow and pass axe at 768 (712ms)
+  ✓  31 [chromium] › tests/travel.spec.ts:369:3 › travel interactions reflow and pass axe at 1440 (693ms)
+(node:84958) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  32 [firefox] › tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone (821ms)
+  ✓  33 [firefox] › tests/pillars.spec.ts:16:1 › public correction errors link back to the field and preserve entered public text (471ms)
+  ✓  34 [firefox] › tests/pillars.spec.ts:43:1 › WhatsApp shows readable public fields before an optional encoded address (372ms)
+  ✓  35 [firefox] › tests/pillars.spec.ts:74:1 › comparison has a caption and explicit row and column headers (314ms)
+  ✓  36 [firefox] › tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey (319ms)
+  ✓  37 [firefox] › tests/pillars.spec.ts:114:1 › skip link and keyboard journey preserve visible focus without a mouse (352ms)
+  -  38 [firefox] › tests/pillars.spec.ts:159:1 › forced colors and reduced motion retain operable controls
+  ✓  39 [firefox] › tests/pillars.spec.ts:188:1 › font download failure preserves readable reflow (284ms)
+  ✓  40 [firefox] › tests/pillars.spec.ts:204:1 › critical service eligibility limits remain visible before opening details (251ms)
+  ✓  41 [firefox] › tests/pillars.spec.ts:220:1 › text spacing preferences reflow without clipping primary controls (616ms)
+  ✓  42 [firefox] › tests/pillars.spec.ts:245:1 › progress is explicit and Back cancels an in-flight lookup (1.2s)
+  ✓  43 [firefox] › tests/pillars.spec.ts:288:1 › JavaScript failure retains the direct emergency fallback (152ms)
+(node:84980) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  44 [webkit] › tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone (558ms)
+  ✓  45 [webkit] › tests/pillars.spec.ts:16:1 › public correction errors link back to the field and preserve entered public text (638ms)
+  ✓  46 [webkit] › tests/pillars.spec.ts:43:1 › WhatsApp shows readable public fields before an optional encoded address (414ms)
+  ✓  47 [webkit] › tests/pillars.spec.ts:74:1 › comparison has a caption and explicit row and column headers (318ms)
+  ✓  48 [webkit] › tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey (425ms)
+  ✓  49 [webkit] › tests/pillars.spec.ts:114:1 › skip link and keyboard journey preserve visible focus without a mouse (512ms)
+  -  50 [webkit] › tests/pillars.spec.ts:159:1 › forced colors and reduced motion retain operable controls
+  ✓  51 [webkit] › tests/pillars.spec.ts:188:1 › font download failure preserves readable reflow (350ms)
+  ✓  52 [webkit] › tests/pillars.spec.ts:204:1 › critical service eligibility limits remain visible before opening details (323ms)
+  ✓  53 [webkit] › tests/pillars.spec.ts:220:1 › text spacing preferences reflow without clipping primary controls (302ms)
+  ✓  54 [webkit] › tests/pillars.spec.ts:245:1 › progress is explicit and Back cancels an in-flight lookup (1.2s)
+  ✓  55 [webkit] › tests/pillars.spec.ts:288:1 › JavaScript failure retains the direct emergency fallback (157ms)
+
+
+  1) [chromium] › tests/travel.spec.ts:110:1 › real map library loads only after consent and revocation removes it 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.leaflet-tile-loaded').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.leaflet-tile-loaded').first() with timeout 5000ms
+      - waiting for locator('.leaflet-tile-loaded').first()
+
+
+      116 |     .getByRole("button", { name: "Load live map", exact: true })
+      117 |     .click();
+    > 118 |   await expect(page.locator(".leaflet-tile-loaded").first()).toBeVisible();
+          |                                                              ^
+      119 |   await expect(page.locator(".leaflet-control-attribution")).toContainText(
+      120 |     "OpenStreetMap contributors",
+      121 |   );
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/travel.spec.ts:118:62
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/travel-real-map-library-lo-0cd24-t-and-revocation-removes-it-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/travel-real-map-library-lo-0cd24-t-and-revocation-removes-it-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/travel-real-map-library-lo-0cd24-t-and-revocation-removes-it-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/travel-real-map-library-lo-0cd24-t-and-revocation-removes-it-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/travel.spec.ts:110:1 › real map library loads only after consent and revocation removes it 
+  2 skipped
+  52 passed (31.6s)

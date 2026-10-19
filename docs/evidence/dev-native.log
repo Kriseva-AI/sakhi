@@ -232,3 +232,95 @@ INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
 12:46:49 AM [vite] (client) hmr update /src/simple.css
 12:46:51 AM [vite] (client) page reload src/routing.json
 12:48:10 AM [vite] (client) page reload src/routing.json
+1:46:09 AM [vite] (client) page reload src/App.tsx
+1:46:09 AM [vite] (client) page reload src/main.tsx
+1:46:09 AM [vite] (client) hmr update /src/styles.css
+1:46:09 AM [vite] (client) hmr update /src/brand-fonts.css
+1:46:09 AM [vite] (client) page reload index.html
+1:46:09 AM [vite] (client) Pre-transform error: Failed to resolve import "./travel/travel.css" from "apps/web/src/main.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/apps/web/src/main.tsx:9:7
+  8  |  import "./indic-fonts.css";
+  9  |  import "./simple.css";
+  10 |  import "./travel/travel.css";
+     |          ^
+  11 |  createRoot(document.getElementById("root")).render(
+  12 |    /* @__PURE__ */ jsxDEV(React.StrictMode, { children: /* @__PURE__ */ jsxDEV(App, {}, void 0, false, {
+1:46:09 AM [vite] Internal server error: Failed to resolve import "./travel/travel.css" from "apps/web/src/main.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/apps/web/src/main.tsx:9:7
+  8  |  import "./indic-fonts.css";
+  9  |  import "./simple.css";
+  10 |  import "./travel/travel.css";
+     |          ^
+  11 |  createRoot(document.getElementById("root")).render(
+  12 |    /* @__PURE__ */ jsxDEV(React.StrictMode, { children: /* @__PURE__ */ jsxDEV(App, {}, void 0, false, {
+      at TransformPluginContext._formatLog (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:29250:43)
+      at TransformPluginContext.error (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:29247:14)
+      at normalizeUrl (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:27370:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:27428:32
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:27396:4)
+      at async EnvironmentPluginContainer.transform (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:29048:14)
+      at async loadAndTransform (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:22914:26)
+      at async viteTransformMiddleware (file:///Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/vite/dist/node/chunks/config.js:24790:20)
+1:47:04 AM [vite] (client) page reload src/travel/travel.css
+1:47:52 AM [vite] (client) page reload src/travel/TravelWorkspace.tsx
+1:47:53 AM [vite] (client) page reload src/travel/Conditions.tsx
+1:47:53 AM [vite] (client) page reload src/travel/DataLens.tsx
+1:47:53 AM [vite] (client) hmr update /src/travel/travel.css
+1:47:53 AM [vite] (client) page reload src/travel/TravelWorkspace.tsx
+1:47:53 AM [vite] (client) page reload src/travel/TripPlan.tsx
+1:47:53 AM [vite] (client) page reload src/travel/types.ts
+1:47:53 AM [vite] (client) page reload src/App.tsx
+1:47:53 AM [vite] (client) page reload src/routing.json
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [45075]
+uv run --frozen python scripts/dev.py
+Sakhi public preview: http://127.0.0.1:5173/en-IN/
+
+> kriseva-sakhi@0.1.0 dev
+> vite --config apps/web/vite.config.ts --host 127.0.0.1
+
+INFO:     Started server process [83231]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+1:49:35 AM [vite] (client) Re-optimizing dependencies because lockfile has changed
+
+  VITE v7.3.7  ready in 142 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+1:50:21 AM [vite] (client) hmr update /src/travel/travel.css
+1:50:21 AM [vite] (client) page reload src/App.tsx
+1:50:21 AM [vite] (client) page reload src/travel/LiveMap.tsx
+1:50:21 AM [vite] (client) hmr update /src/travel/travel.css
+1:50:21 AM [vite] (client) page reload src/App.tsx
+1:50:29 AM [vite] Internal server error: Transform failed with 1 error:
+/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/apps/web/src/travel/LiveMap.tsx:50:4: ERROR: Unexpected ")"
+  Plugin: vite:esbuild
+  File: /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/apps/web/src/travel/LiveMap.tsx:50:4
+  
+  Unexpected ")"
+  48 |        failures++;
+  49 |        setStatus("Some map tiles are unavailable. The place list still works."),
+  50 |      );
+     |      ^
+  51 |      tile.addTo(instance);
+  52 |      layer.current = L.layerGroup().addTo(instance);
+  
+      at failureErrorWithLog (/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/esbuild/lib/main.js:1752:15)
+      at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/esbuild/lib/main.js:1019:50
+      at responseCallbacks.<computed> (/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/esbuild/lib/main.js:886:9)
+      at handleIncomingPacket (/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/esbuild/lib/main.js:941:12)
+      at Socket.readFromStdout (/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/node_modules/esbuild/lib/main.js:864:7)
+      at Socket.emit (node:events:509:20)
+      at addChunk (node:internal/streams/readable:564:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:515:3)
+      at Readable.push (node:internal/streams/readable:395:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+1:50:33 AM [vite] (client) page reload src/travel/LiveMap.tsx
+1:50:34 AM [vite] (client) page reload src/travel/LiveMap.tsx

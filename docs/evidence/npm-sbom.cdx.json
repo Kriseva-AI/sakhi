@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.5",
-  "serialNumber": "urn:uuid:d6f7fe6a-d623-4880-97b1-7aa17ac1c668",
+  "serialNumber": "urn:uuid:c38de0ec-7d39-4120-b41f-847bb7fdfca0",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-19T13:26:07.697Z",
+    "timestamp": "2026-10-19T23:25:56.020Z",
     "lifecycles": [
       {
         "phase": "build"
@@ -1591,6 +1591,90 @@
         {
           "alg": "SHA-512",
           "content": "1a174f832d5e978fc898fd395f4e54c38730dbf33ddc10949a712f599352b650b310a304e05924f98a680393a21cd426a12ec269f6fc5dadcfc9af26d50af37a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@types/geojson@7946.0.16",
+      "type": "library",
+      "name": "@types/geojson",
+      "version": "7946.0.16",
+      "scope": "required",
+      "description": "TypeScript definitions for geojson",
+      "purl": "pkg:npm/%40types/geojson@7946.0.16",
+      "properties": [
+        {
+          "name": "cdx:npm:package:development",
+          "value": "true"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/geojson/-/geojson-7946.0.16.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/geojson"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e82f27a96babde3f7c53afa55c37d351621f82f654f84ba6be91ca7188ee8ca1fbc286322e3dac5267dfd2d461aea33b068854c3b3f3dd90758e3da05bd16f9a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@types/leaflet@1.9.21",
+      "type": "library",
+      "name": "@types/leaflet",
+      "version": "1.9.21",
+      "scope": "required",
+      "description": "TypeScript definitions for leaflet",
+      "purl": "pkg:npm/%40types/leaflet@1.9.21",
+      "properties": [
+        {
+          "name": "cdx:npm:package:development",
+          "value": "true"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/leaflet/-/leaflet-1.9.21.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/leaflet"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4db01df4368f1929f3a7a42fb589e09ed31981c464fa280510bc11d8df7d5d99fb45751d2a0b17311fb6f1b50ed2b3ec5a9f0c22efdfe3b96e2c842e48b62fff"
         }
       ],
       "licenses": [
@@ -4032,6 +4116,43 @@
         {
           "license": {
             "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "leaflet@1.9.4",
+      "type": "library",
+      "name": "leaflet",
+      "version": "1.9.4",
+      "scope": "required",
+      "description": "JavaScript library for mobile-friendly interactive maps",
+      "purl": "pkg:npm/leaflet@1.9.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/leaflet/-/leaflet-1.9.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git://github.com/Leaflet/Leaflet.git"
+        },
+        {
+          "type": "website",
+          "url": "https://leafletjs.com/"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9f14b5ca7cc93a63a51e9fa22f71725aa2bcf46b4d2fc53caef94c3ac41d4d3b2cc59c025e1f0dd8d07718340e2fe611dd79d6c99031c108b15116fe140ef83c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
           }
         }
       ]
@@ -6862,11 +6983,13 @@
     {
       "ref": "kriseva-sakhi@0.1.0",
       "dependsOn": [
+        "leaflet@1.9.4",
         "lucide-react@0.577.0",
         "react@19.3.1",
         "react-dom@19.3.1",
         "@axe-core/playwright@4.14.0",
         "@playwright/test@1.64.1",
+        "@types/leaflet@1.9.21",
         "@types/react@19.3.0",
         "@types/react-dom@19.3.0",
         "lighthouse@13.5.0",
@@ -7144,6 +7267,16 @@
     {
       "ref": "@types/estree@1.0.9",
       "dependsOn": []
+    },
+    {
+      "ref": "@types/geojson@7946.0.16",
+      "dependsOn": []
+    },
+    {
+      "ref": "@types/leaflet@1.9.21",
+      "dependsOn": [
+        "@types/geojson@7946.0.16"
+      ]
     },
     {
       "ref": "@types/node@26.6.5",
@@ -7467,6 +7600,10 @@
     },
     {
       "ref": "json-schema-traverse@1.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "leaflet@1.9.4",
       "dependsOn": []
     },
     {

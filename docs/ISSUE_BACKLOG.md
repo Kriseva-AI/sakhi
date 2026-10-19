@@ -817,3 +817,12 @@ Safety: No personal persistence, no external actions, no fabricated contacts.
 Verification: make verify.
 
 Gate: Internal public preview only. Production human review remains open.
+
+## Live travel blockers, 2026-10-20
+
+- Shared Overpass endpoint returned 503. Choose owned/contracted POI/map/routing capacity, production provider configuration/shared quotas and prove discovery/failure recovery under load.
+- No verified lawfully usable granular Mumbai crime dataset, nighttime schema, denominator or validated risk model acquired. No named-offender layer.
+- Fresh independent review failed for workspace credit exhaustion; earlier review covers earlier code only.
+- No authorized/staffed recipient, police/ERSS agreement, business messaging account or real acknowledgement process. Drafts/page reminders do not satisfy those capabilities.
+- Physical GPS/OS behaviour, assistive technology maps, native-language/city comprehension and actual service contacts remain unverified.
+- Production source-data age limits must supplement receipt expiry. Independent facility verification, configured provider switching and incident/retention ownership remain required.

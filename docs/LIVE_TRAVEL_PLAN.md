@@ -29,14 +29,14 @@ These are implementation workstreams, not a claim of twelve independent innovati
 
 ## Concrete sequence
 
-- [ ] Record primary-source feasibility, reel search limits, provider policies and actual probes.
-- [ ] Write gateway tests for validation, rate limits, timeouts, malformed/oversized upstream data, strict hosts and sanitized failures. Implement providers and API contracts.
-- [ ] Implement consented map, city search, mapped places, route geometry and provider states. Test with deterministic provider fixtures; fixtures are explicitly labelled automated tests, not live verification.
-- [ ] Implement conditions, daylight, local plan/reminder/share, GPS-to-city and historical evidence panel. Test cancellation, revocation, date expiry, hidden tab, offline, synthetic mode and storage boundaries.
-- [ ] Apply bold identity across home and tools; retain <=60 opening words and primary CTA above fold at 390x844.
-- [ ] Run actual bounded public-city API smoke requests separately from offline deterministic tests. No real person, private address or transmission to authorities.
-- [ ] Run make verify and quality. Capture and inspect mobile/desktop production map/workspace states; fix observed issues.
-- [ ] Update design/privacy/threat/release documentation and 00_BRAIN receipt with actual counts and remaining public launch blockers.
+- [x] Record primary-source feasibility, reel search limits, provider policies and actual probes.
+- [x] Write gateway tests for validation, rate limits, timeouts, malformed/oversized upstream data, strict hosts and sanitized failures. Implement providers and API contracts.
+- [x] Implement consented map, city search, mapped places, route geometry and provider states. Test with deterministic provider fixtures; fixtures are explicitly labelled automated tests, not live verification.
+- [x] Implement conditions, daylight, local plan/reminder/share, GPS-to-city and historical evidence panel. Test cancellation, revocation, date expiry, hidden tab, offline, synthetic mode and storage boundaries.
+- [x] Apply bold identity across home and tools; retain <=60 opening words and primary CTA above fold at 390x844.
+- [x] Run actual bounded public-city API smoke requests separately from offline deterministic tests. No real person, private address or transmission to authorities.
+- [x] Run make verify and quality. Capture and inspect mobile/desktop production map/workspace states; fix observed issues.
+- [x] Update design/privacy/threat/release documentation and 00_BRAIN receipt with actual counts and remaining public launch blockers.
 
 ## Review focus
 
@@ -45,3 +45,7 @@ A successful HTTP response with missing fields is unavailable, never zero risk o
 ## Launch dependencies
 
 Community public APIs have limits and no application SLA. Mass use needs an owned/contracted tile, POI and routing service, capacity testing, quotas, monitoring and incident ownership. Google Maps/Places/Routes would require founder-owned project, restricted credentials and billing approval; none were inspected or created. Direct authority alerts need actual recipient agreement and receipt semantics. Granular crime zones need a licensed, current, geocoded dataset with denominators, timestamps and independent validation. Public offender profiling and person identification are not enabled by a social reel. Existing human safeguarding, language, contact, security, usability and physical-device release gates remain open.
+
+## Delivery ruling
+
+Implementation b06dff1 plus cancellation/consent fix88e7243. All listed engineering tasks ran; completing those tasks does not make the 12 proposed outcomes production ready. Live POI verification failed with 503 and no granular crime dataset was acquired. T03/T04 live-service acceptance and the requested T12 crime-zone outcome remain blocked. See LIVE_TRAVEL_STATUS.md. Fresh independent review was attempted but its agent failed for exhausted workspace credits. Source and human approvals remain open.

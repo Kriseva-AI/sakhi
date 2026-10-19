@@ -1,0 +1,64 @@
+[WebServer] INFO:     Started server process [23002]
+
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+
+[WebServer] (node:23027) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] INFO:     Started server process [23032]
+
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+
+Running 1 test using 1 worker
+
+(node:23033) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/1] [chromium] › tests/travel.spec.ts:525:1 › a device-city suggestion does not change a live map until explicitly accepted
+  1) [chromium] › tests/travel.spec.ts:525:1 › a device-city suggestion does not change a live map until explicitly accepted 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: 'Use Ahmedabad', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: 'Use Ahmedabad', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Use Ahmedabad', exact: true })
+
+
+      526 |  await fixtures(page);await context.grantPermissions(['geolocation']);await context.setGeolocation({latitude:23.023,longitude:72.571,accuracy:100});
+      527 |  await page.goto('/en-IN/nearby');await page.getByRole('button',{name:'Load live map',exact:true}).click();await expect(page.locator('.leaflet-tile-loaded').first()).toBeVisible();
+    > 528 |  await page.getByText('Find another city in India',{exact:true}).click();await page.getByRole('button',{name:'Suggest my city',exact:true}).click();await expect(page.getByRole('button',{name:'Use Ahmedabad',exact:true})).toBeVisible();
+          |                                                                                                                                                                                                                              ^
+      529 |  await expect(page.locator('.map-caption')).toContainText('Mumbai');await page.getByRole('button',{name:'Use Ahmedabad',exact:true}).click();await expect(page.locator('.map-caption')).toContainText('Ahmedabad');
+      530 | });
+      531 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/travel.spec.ts:528:222
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/travel-a-device-city-sugge-ef59b-p-until-explicitly-accepted-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/travel-a-device-city-sugge-ef59b-p-until-explicitly-accepted-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/travel-a-device-city-sugge-ef59b-p-until-explicitly-accepted-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/travel-a-device-city-sugge-ef59b-p-until-explicitly-accepted-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  1 failed
+    [chromium] › tests/travel.spec.ts:525:1 › a device-city suggestion does not change a live map until explicitly accepted 

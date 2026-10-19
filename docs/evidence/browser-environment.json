@@ -19,5 +19,15 @@
     "unexpected": 0,
     "flaky": 0
   },
-  "limits": "Engine builds on this Mac, not physical Safari/iOS/Android or assistive technology."
+  "limits": "Isolated Playwright engines on this Mac. No physical phone, Safari/iOS, GPS accuracy or screen-reader acceptance.",
+  "code_commit": "88e7243a014d8c59701b70001fbff7fbae2ffefa",
+  "latest_browser_stats": {
+    "startTime": "2026-10-19T23:43:31.328Z",
+    "duration": 106099.819,
+    "expected": 239,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "travel_cases_per_engine": 23
 }

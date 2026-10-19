@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-20",
+  "origin": "http://127.0.0.1:8787",
+  "pages": [
+    {
+      "name": "desktop-home",
+      "status": 200,
+      "width": 1440,
+      "documentWidth": 1440,
+      "height": 900,
+      "main_words": 40
+    },
+    {
+      "name": "mobile-home",
+      "status": 200,
+      "width": 390,
+      "documentWidth": 390,
+      "height": 844,
+      "main_words": 40
+    },
+    {
+      "name": "narrow-home",
+      "status": 200,
+      "width": 320,
+      "documentWidth": 320,
+      "height": 929,
+      "main_words": 40
+    },
+    {
+      "name": "tablet-home",
+      "status": 200,
+      "width": 768,
+      "documentWidth": 768,
+      "height": 1024,
+      "main_words": 40
+    },
+    {
+      "name": "urdu-home",
+      "status": 200,
+      "width": 390,
+      "documentWidth": 390,
+      "height": 1026,
+      "main_words": 43
+    },
+    {
+      "name": "finder",
+      "status": 200,
+      "width": 390,
+      "documentWidth": 390,
+      "height": 1484,
+      "main_words": 105
+    },
+    {
+      "name": "prepare",
+      "status": 200,
+      "width": 1440,
+      "documentWidth": 1440,
+      "height": 3463,
+      "main_words": 467
+    },
+    {
+      "name": "trust",
+      "status": 200,
+      "width": 390,
+      "documentWidth": 390,
+      "height": 4167,
+      "main_words": 425
+    },
+    {
+      "name": "nearby",
+      "status": 200,
+      "width": 390,
+      "documentWidth": 390,
+      "height": 2528,
+      "main_words": 211
+    },
+    {
+      "name": "community",
+      "status": 200,
+      "width": 1440,
+      "documentWidth": 1440,
+      "height": 1963,
+      "main_words": 281
+    }
+  ],
+  "outside": [],
+  "pageErrors": []
+}

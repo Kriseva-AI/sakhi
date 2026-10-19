@@ -1,0 +1,36 @@
+[WebServer] INFO:     Started server process [4062]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+[WebServer] (node:4266) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] INFO:     Started server process [4269]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 19 tests using 1 worker
+
+(node:4270) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/travel.spec.ts:87:1 › travel starts without outside requests, location prompts or provider calls (311ms)
+  ✓   2 [chromium] › tests/travel.spec.ts:110:1 › real map library loads only after consent and revocation removes it (1.2s)
+  ✓   3 [chromium] › tests/travel.spec.ts:127:1 › places to selected source to walking and driving route works without claiming availability (632ms)
+  ✓   4 [chromium] › tests/travel.spec.ts:159:1 › empty records and provider failure have different states and clear old results (471ms)
+  ✓   5 [chromium] › tests/travel.spec.ts:186:1 › city search is submitted explicitly and changing city discards old results (498ms)
+  ✓   6 [chromium] › tests/travel.spec.ts:214:1 › weather and daylight show dated values and never a crime score (390ms)
+  ✓   7 [chromium] › tests/travel.spec.ts:240:1 › public trip export and neutral check-in preview do not expose coordinates or claim sending (376ms)
+  ✓   8 [chromium] › tests/travel.spec.ts:263:1 › page check-in handles elapsed time and cancels without notifying anyone (314ms)
+  ✓   9 [chromium] › tests/travel.spec.ts:286:1 › GPS stays local and resolves only to a supported city after user gesture (244ms)
+  ✓  10 [chromium] › tests/travel.spec.ts:312:1 › late API result cannot return after clear session (328ms)
+  ✓  11 [chromium] › tests/travel.spec.ts:336:1 › synthetic mode blocks live providers, GPS, share and downloads (345ms)
+  ✓  12 [chromium] › tests/travel.spec.ts:358:1 › data lens marks missing evidence instead of drawing unsafe or safe zones (271ms)
+  ✓  13 [chromium] › tests/travel.spec.ts:369:3 › travel interactions reflow and pass axe at 320 (672ms)
+  ✓  14 [chromium] › tests/travel.spec.ts:369:3 › travel interactions reflow and pass axe at 390 (654ms)
+  ✓  15 [chromium] › tests/travel.spec.ts:369:3 › travel interactions reflow and pass axe at 768 (678ms)
+  ✓  16 [chromium] › tests/travel.spec.ts:369:3 › travel interactions reflow and pass axe at 1440 (698ms)
+  ✓  17 [chromium] › tests/travel.spec.ts:392:1 › reminder persists between travel panels and ends on clear session (431ms)
+  ✓  18 [chromium] › tests/travel.spec.ts:414:1 › a failed tile request stays an error after the tile batch completes (1.0s)
+  ✓  19 [chromium] › tests/travel.spec.ts:426:1 › a public map point can be chosen with the keyboard and routed from the city centre (1.8s)
+
+  19 passed (13.0s)

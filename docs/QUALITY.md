@@ -67,3 +67,7 @@ For source maintenance, follow `MAINTAINER.md`: source evidence, expiry, jurisdi
 Release notes must say what changed, which build was measured, which browser/device combinations were used, who performed human reviews and which evidence is missing. A high score in one pillar cannot waive a blocker in another.
 
 2026-10-20 interface revision: home and finder use compact headers with navigation in the footer. Short-copy/visible-action and first-question-position contracts are in simple-home.spec.ts. All three pillar contracts remain in the full browser suite. The source rail/context exploration moved to the learning page. Seven specified token pairs passed calculated contrast checks; this finite check is not a conformance certification.
+
+## Live travel acceptance, October 20
+
+Travel contract tests run in all three engines: consent/revoke and focus, default silence, public-ID city search, place success/empty/failure with explicitly fictional records, foot/car estimates, weather/daylight, public card/message preview, page deadline/resume/clear, locally resolved emulated GPS, late callbacks, synthetic restrictions, first-viewport map action and 320/390/768/1440 reflow/axe. These differ from the separate actual external smoke. Public POI availability failed; no fixture can accept that release dependency. Actual six-tile/four-successful-API responses are observations, not an SLA. Native-device/AT/usability/safeguarding/source/security gates remain required. Review-agent credits prevented the fresh independent review, recorded as an open gate.

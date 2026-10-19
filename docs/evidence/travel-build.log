@@ -1,0 +1,19 @@
+PYTHONPATH=. uv run --frozen python scripts/build_public.py
+npm run build
+
+> kriseva-sakhi@0.1.0 build
+> tsc --noEmit && vite build --config apps/web/vite.config.ts
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 1795 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     1.42 kB │ gzip:   0.72 kB
+dist/assets/LiveMap-CIGW-MKW.css   15.61 kB │ gzip:   6.46 kB
+dist/assets/index-DNQuKUXG.css     77.41 kB │ gzip:  15.40 kB
+dist/assets/LiveMap-CJUVvbel.js   151.54 kB │ gzip:  44.14 kB
+dist/assets/index-I9qtJIbs.js     487.96 kB │ gzip: 116.95 kB
+✓ built in 914ms
+PYTHONPATH=. uv run --frozen python scripts/build_public.py --after-build
+Generated immutable public cache dbe6b2c9eda08082, 40 assets. No API or query cache.

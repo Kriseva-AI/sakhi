@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-20",
+  "origin": "http://127.0.0.1:8787",
+  "scope": "Actual production UI; one public Mumbai map view, no automated tile panning/zooming or fixtures.",
+  "pages": [
+    {
+      "name": "home-mobile",
+      "status": 200,
+      "width": 390,
+      "documentWidth": 390,
+      "height": 844,
+      "main_words": 40,
+      "font": "Manrope, \"IBM Plex Sans\", sans-serif"
+    },
+    {
+      "name": "home-narrow",
+      "status": 200,
+      "width": 320,
+      "documentWidth": 320,
+      "height": 876,
+      "main_words": 40,
+      "font": "Manrope, \"IBM Plex Sans\", sans-serif"
+    },
+    {
+      "name": "home-desktop",
+      "status": 200,
+      "width": 1440,
+      "documentWidth": 1440,
+      "height": 900,
+      "main_words": 40,
+      "font": "Manrope, \"IBM Plex Sans\", sans-serif"
+    },
+    {
+      "name": "home-urdu",
+      "status": 200,
+      "width": 390,
+      "documentWidth": 390,
+      "height": 1054,
+      "main_words": 43,
+      "font": "\"Noto Naskh Arabic\", system-ui, sans-serif"
+    },
+    {
+      "name": "nearby-consent",
+      "status": 200,
+      "width": 390,
+      "documentWidth": 390,
+      "height": 1794,
+      "main_words": 157,
+      "font": "Manrope, \"IBM Plex Sans\", sans-serif"
+    },
+    {
+      "name": "nearby-desktop",
+      "status": 200,
+      "width": 1440,
+      "documentWidth": 1440,
+      "height": 1570,
+      "main_words": 180,
+      "font": "Manrope, \"IBM Plex Sans\", sans-serif"
+    },
+    {
+      "name": "finder",
+      "status": 200,
+      "width": 390,
+      "documentWidth": 390,
+      "height": 1568,
+      "main_words": 105,
+      "font": "Manrope, \"IBM Plex Sans\", sans-serif"
+    },
+    {
+      "name": "prepare",
+      "status": 200,
+      "width": 1440,
+      "documentWidth": 1440,
+      "height": 3534,
+      "main_words": 467,
+      "font": "Manrope, \"IBM Plex Sans\", sans-serif"
+    },
+    {
+      "name": "trust",
+      "status": 200,
+      "width": 390,
+      "documentWidth": 390,
+      "height": 4302,
+      "main_words": 425,
+      "font": "Manrope, \"IBM Plex Sans\", sans-serif"
+    }
+  ],
+  "tiles": [
+    {
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "status": 200,
+      "type": "image/png"
+    }
+  ],
+  "pageErrors": [],
+  "outsideBeforeConsent": [],
+  "tileState": "Map loaded. Place availability is unverified.",
+  "tileRefs": [
+    {
+      "referrerPolicy": "origin",
+      "crossOrigin": "anonymous",
+      "loaded": true
+    },
+    {
+      "referrerPolicy": "origin",
+      "crossOrigin": "anonymous",
+      "loaded": true
+    },
+    {
+      "referrerPolicy": "origin",
+      "crossOrigin": "anonymous",
+      "loaded": true
+    },
+    {
+      "referrerPolicy": "origin",
+      "crossOrigin": "anonymous",
+      "loaded": true
+    },
+    {
+      "referrerPolicy": "origin",
+      "crossOrigin": "anonymous",
+      "loaded": true
+    },
+    {
+      "referrerPolicy": "origin",
+      "crossOrigin": "anonymous",
+      "loaded": true
+    }
+  ],
+  "conditionsVisible": false
+}
