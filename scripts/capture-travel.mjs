@@ -72,27 +72,28 @@ try {
     .filter({ hasNotText: "Loading map tiles" })
     .waitFor({ timeout: 30000 });
   report.tileState = await p.locator(".map-load-status").innerText();
-  report.tileRefs = await p
-    .locator(".leaflet-tile")
-    .evaluateAll((images) =>
-      images.map((i) => ({
-        referrerPolicy: i.referrerPolicy,
-        crossOrigin: i.crossOrigin,
-        loaded: i.naturalWidth > 0,
-      })),
-    );
+  report.tileRefs = await p.locator(".leaflet-tile").evaluateAll((images) =>
+    images.map((i) => ({
+      referrerPolicy: i.referrerPolicy,
+      crossOrigin: i.crossOrigin,
+      loaded: i.naturalWidth > 0,
+    })),
+  );
   await p.screenshot({
     path: "docs/evidence/travel-live-map-mobile.png",
     fullPage: true,
   });
   await p.getByRole("button", { name: "Conditions", exact: true }).click();
-  await p.getByRole("button", { name: "Load conditions", exact: true }).click();
-  await p.waitForFunction(
-    () =>
-      !document.querySelector(".travel-content").getAttribute("aria-busy") ||
-      document.querySelector(".travel-content").getAttribute("aria-busy") ===
-        "false",
+  const conditionsResponse = p.waitForResponse(
+    (response) =>
+      response.url().endsWith("/api/explore/weather") &&
+      response.request().method() === "POST",
   );
+  await p.getByRole("button", { name: "Load conditions", exact: true }).click();
+  report.conditionsStatus = (await conditionsResponse).status();
+  await p
+    .locator(".weather-reading")
+    .waitFor({ state: "visible", timeout: 30000 });
   await p.screenshot({
     path: "docs/evidence/travel-live-conditions-mobile.png",
     fullPage: true,

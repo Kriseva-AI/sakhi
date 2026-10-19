@@ -34,6 +34,7 @@ export function TravelWorkspace({
 }) {
   const [area, setArea] = useState(""),
     [city, setCity] = useState<City>(CITIES[0]),
+    [suggestedCity, setSuggestedCity] = useState<City | null>(null),
     [query, setQuery] = useState(""),
     [cities, setCities] = useState<City[]>([]);
   const [mapOn, setMapOn] = useState(false),
@@ -100,6 +101,7 @@ export function TravelWorkspace({
   const chooseCity = (next: City) => {
     cancel();
     geo.current++;
+    setSuggestedCity(null);
     setCity(next);
     setArea(next.name);
     setCentre(next);
@@ -141,6 +143,7 @@ export function TravelWorkspace({
   };
   const locate = () => {
     if (demo || document.hidden) return;
+    setSuggestedCity(null);
     geo.current++;
     const id = geo.current;
     setNotice(
@@ -171,7 +174,7 @@ export function TravelWorkspace({
           );
           return;
         }
-        chooseCity(match);
+        setSuggestedCity(match);
         setNotice(
           `Suggested city: ${match.name}. Confirm it is right. Your device coordinates were not sent or saved.`,
         );
@@ -317,9 +320,11 @@ export function TravelWorkspace({
                 route={expire(route) ? null : route}
                 select={selectPlace}
                 move={(point) => {
-                  cancel();
-                  setCentre(point);
-                  setRoute(null);
+                  if (point.lat !== centre.lat || point.lon !== centre.lon) {
+                    if (busy === "places" || busy === "route") cancel();
+                    setCentre(point);
+                    setRoute(null);
+                  }
                 }}
               />
             </Suspense>
@@ -373,6 +378,36 @@ export function TravelWorkspace({
             <br />
             No person or authority is alerted.
           </span>
+          {suggestedCity && (
+            <div
+              className="suggested-city-choice"
+              role="group"
+              aria-label="Suggested city choice"
+            >
+              <p className="small-note">
+                {suggestedCity.name}, {suggestedCity.state}. Accepting changes
+                your selected public city and an enabled map. Your device
+                coordinates are not shared.
+              </p>
+              <button
+                className="button quiet"
+                onClick={() => chooseCity(suggestedCity)}
+              >
+                Use {suggestedCity.name}
+              </button>
+              <button
+                className="text-button"
+                onClick={() => {
+                  setSuggestedCity(null);
+                  setNotice(
+                    "Suggestion dismissed. Your selected city is unchanged.",
+                  );
+                }}
+              >
+                Dismiss suggestion
+              </button>
+            </div>
+          )}
         </div>
         <form
           onSubmit={(e) => {

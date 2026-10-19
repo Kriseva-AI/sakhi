@@ -484,3 +484,70 @@ test("map consent and revocation preserve keyboard focus", async ({ page }) => {
     page.getByRole("button", { name: "Load live map", exact: true }),
   ).toBeFocused();
 });
+
+test("panning the map does not cancel an independent city-weather lookup", async ({
+  page,
+}) => {
+  await fixtures(page);
+  let finish: (() => void) | undefined;
+  await page.route("**/api/explore/weather", async (r) => {
+    await new Promise<void>((resolve) => {
+      finish = resolve;
+    });
+    await r.fulfill({ json: weather }).catch(() => {});
+  });
+  await page.goto("/en-IN/nearby");
+  await page
+    .getByRole("button", { name: "Load live map", exact: true })
+    .click();
+  await page.getByRole("button", { name: "Conditions", exact: true }).click();
+  await page
+    .getByRole("button", { name: "Load conditions", exact: true })
+    .click();
+  await expect(
+    page.getByRole("button", { name: "Cancel lookup", exact: true }),
+  ).toBeVisible();
+  await page.getByRole("region", { name: /Interactive OpenStreetMap/ }).focus();
+  await page.keyboard.press("ArrowRight");
+  await expect(
+    page.getByRole("button", {
+      name: "Choose map centre as destination",
+      exact: true,
+    }),
+  ).toBeEnabled();
+  await expect(
+    page.getByRole("button", { name: "Cancel lookup", exact: true }),
+  ).toBeVisible();
+  finish?.();
+  await expect(page.locator(".weather-reading")).toContainText("29°");
+});
+
+test("a device-city suggestion does not change a live map until explicitly accepted", async ({
+  page,
+  context,
+}) => {
+  await fixtures(page);
+  await context.grantPermissions(["geolocation"]);
+  await context.setGeolocation({
+    latitude: 23.023,
+    longitude: 72.571,
+    accuracy: 100,
+  });
+  await page.goto("/en-IN/nearby");
+  await page
+    .getByRole("button", { name: "Load live map", exact: true })
+    .click();
+  await expect(page.locator(".leaflet-tile-loaded").first()).toBeVisible();
+  await page.getByText("Find another city in India", { exact: true }).click();
+  await page
+    .getByRole("button", { name: "Suggest my city", exact: true })
+    .click();
+  await expect(
+    page.getByRole("button", { name: "Use Ahmedabad", exact: true }),
+  ).toBeVisible();
+  await expect(page.locator(".map-caption")).toContainText("Mumbai");
+  await page
+    .getByRole("button", { name: "Use Ahmedabad", exact: true })
+    .click();
+  await expect(page.locator(".map-caption")).toContainText("Ahmedabad");
+});
