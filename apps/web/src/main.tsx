@@ -5,6 +5,7 @@ import "./styles.css";
 import "./brand-fonts.css";
 import "./sprint2.css";
 import "./indic-fonts.css";
+import "./simple.css";
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />

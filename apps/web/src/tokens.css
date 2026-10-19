@@ -1,14 +1,14 @@
 :root {
-  --paper: #f2efe7;
-  --card: #fbfaf6;
-  --ink: #1a2238;
-  --secondary: #4b5368;
-  --forest: #0a1f44;
-  --navy-hover: #1e3a6b;
-  --line: #d9d3c2;
-  --brass: #a87229;
-  --brass-text: #6e4a10;
-  --sunken: #eae6da;
+  --paper: #fff4f8;
+  --card: #fffafd;
+  --ink: #181216;
+  --secondary: #60505a;
+  --forest: #181216;
+  --navy-hover: #38232f;
+  --line: #d6bbc7;
+  --brass: #be286a;
+  --brass-text: #9f1851;
+  --sunken: #f9e0eb;
   --body: "IBM Plex Sans", system-ui, sans-serif;
   --display: "Instrument Serif", Georgia, serif;
   --mono: "IBM Plex Mono", monospace;

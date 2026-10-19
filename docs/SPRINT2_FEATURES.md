@@ -4,10 +4,10 @@ Local implementation, 2026-10-19. Twelve new public interactions plus two streng
 
 | ID | Working behavior | Evidence | Material limit |
 | --- | --- | --- | --- |
-| X01 | Before / concerning now / after context changes the starting explanation | sprint2.spec context and keyboard cases | No risk assessment or personal history |
-| X02 | Four existing goals now reach options in three selections and show distinct next-step guidance | Four action-desk cases; ResultGuide | Service availability is not confirmed |
+| X01 | Before / concerning now / after context changes the starting explanation under Prepare & learn | sprint2.spec context and keyboard cases | Moved off the opening on 2026-10-20; no risk assessment or personal history |
+| X02 | Four goals in the finder and learning action desk show distinct next-step guidance; direct learning goals reach options in three selections | Four action-desk cases; ResultGuide | Simplified home begins with one primary CTA; service availability is not confirmed |
 | X03 | Five source-linked public learning topics | Prepare-page and source preview cases | English, general guidance, human review pending |
-| X04 | User-scrollable official pathway rail with scope, freshness and destination preview | Rail, reflow, axe and expiry cases | Independent services, no endorsement or integration |
+| X04 | User-scrollable official pathway rail under Prepare & learn, with scope, freshness and destination preview | Rail, reflow, axe and expiry cases | Independent services, no endorsement or integration |
 | X05 | User selects up to three eligible services for scope/channel/date comparison | Comparison selection cases | Child and emergency fast lanes stay separate |
 | X06 | Visible generic first-contact questions, included in the kit | Public-kit unit checks; prepare screen | No clinical or personalized intervention guidance |
 | X07 | User-selected public TXT resource kit download | Kit generator and browser download cases | Files can remain in backups; no story or precise location |

@@ -119,7 +119,7 @@ export function App() {
     return () => window.removeEventListener("popstate", handler);
   }, []);
   useEffect(() => {
-    document.title = `Sakhi | ${page === "home" ? "Your next step, on your terms" : page === "finder" ? "Find support" : page === "resources" ? "Public options" : page === "trust" ? "Privacy & trust" : page === "prepare" ? "Prepare and learn" : page === "nearby" ? "Public map search" : page === "community" ? "Community contribution" : "Maintainer review"}`;
+    document.title = `Sakhi | ${page === "home" ? "Public support for women" : page === "finder" ? "Find support" : page === "resources" ? "Public options" : page === "trust" ? "Privacy & trust" : page === "prepare" ? "Prepare and learn" : page === "nearby" ? "Public map search" : page === "community" ? "Community contribution" : "Maintainer review"}`;
     if (
       lastFocusTarget.current.page !== page ||
       lastFocusTarget.current.result !== result
@@ -216,9 +216,10 @@ export function App() {
     go("home", true);
   }
   const safeT = (key: string) => getCatalog("en-IN").messages[key] || key;
+  const compactEntry = page === "home" || page === "finder";
   return (
     <div
-      className={`app ${lite ? "lite" : ""} ${comfortable ? "comfortable" : ""}`}
+      className={`app page-${page} ${compactEntry ? "compact-entry" : ""} ${lite ? "lite" : ""} ${comfortable ? "comfortable" : ""}`}
       onClickCapture={(event) => {
         if (event.target instanceof Element) {
           const control = event.target.closest("button,a");
@@ -298,35 +299,39 @@ export function App() {
             <span>{t("clear")}</span>
           </button>
         </div>
-        <SiteNavigation
-          locale={locale}
-          page={page}
-          t={t}
-          languageFor={languageFor}
-          go={go}
-          onResources={() => {
-            setResult(null);
-            setDemo(false);
-          }}
-        />
+        {!compactEntry && (
+          <SiteNavigation
+            locale={locale}
+            page={page}
+            t={t}
+            languageFor={languageFor}
+            go={go}
+            onResources={() => {
+              setResult(null);
+              setDemo(false);
+            }}
+          />
+        )}
       </header>
-      <div
-        className="preview-line"
-        role="region"
-        aria-label="Product status"
-        lang="en-IN"
-        dir="ltr"
-      >
-        <span>
-          <i />
-          {safeT("preview")}
-        </span>
-        <span>{safeT("noIntegrations")}</span>
-        <button onClick={() => setLite(!lite)} aria-pressed={lite}>
-          {safeT("lite")}
-          {lite ? " · on" : ""}
-        </button>
-      </div>
+      {!compactEntry && (
+        <div
+          className="preview-line"
+          role="region"
+          aria-label="Product status"
+          lang="en-IN"
+          dir="ltr"
+        >
+          <span>
+            <i />
+            {safeT("preview")}
+          </span>
+          <span>{safeT("noIntegrations")}</span>
+          <button onClick={() => setLite(!lite)} aria-pressed={lite}>
+            {safeT("lite")}
+            {lite ? " · on" : ""}
+          </button>
+        </div>
+      )}
       {demo && (
         <div className="demo-banner" lang="en-IN">
           <Sparkles size={17} />
@@ -348,8 +353,6 @@ export function App() {
             t={t}
             start={start}
             synthetic={synthetic}
-            open={setDestination}
-            go={go}
             languageFor={languageFor}
           />
         )}
@@ -359,7 +362,9 @@ export function App() {
             open={setDestination}
             demo={demo}
             notify={setNotice}
-            onFind={() => start()}
+            onFind={start}
+            t={t}
+            languageFor={languageFor}
           />
         )}
         {page === "nearby" && (
@@ -562,23 +567,43 @@ export function App() {
           </section>
         )}
       </main>
-      <footer lang="en-IN" dir="ltr">
-        <div>
-          <span className="footer-brand">
-            <Leaf size={18} />
-            sakhi
-          </span>
-          <p>{safeT("motto")}</p>
-        </div>
-        <div className="footer-right">
-          <p>{safeT("notService")}</p>
-          <p>{safeT("footer")}</p>
-          <button className="text-button" onClick={() => go("maintenance")}>
-            {safeT("maintenance")}
-            <ArrowUpRight size={14} />
-          </button>
-        </div>
-      </footer>
+      {compactEntry ? (
+        <footer className="simple-footer" lang="en-IN" dir="ltr">
+          <SiteNavigation
+            locale={locale}
+            page={page}
+            t={t}
+            languageFor={languageFor}
+            go={go}
+            onResources={() => {
+              setResult(null);
+              setDemo(false);
+            }}
+          />
+          <p>
+            <span className="preview-label">Internal preview</span> Public
+            information, not an emergency service.
+          </p>
+        </footer>
+      ) : (
+        <footer lang="en-IN" dir="ltr">
+          <div>
+            <span className="footer-brand">
+              <Leaf size={18} />
+              sakhi
+            </span>
+            <p>{safeT("motto")}</p>
+          </div>
+          <div className="footer-right">
+            <p>{safeT("notService")}</p>
+            <p>{safeT("footer")}</p>
+            <button className="text-button" onClick={() => go("maintenance")}>
+              {safeT("maintenance")}
+              <ArrowUpRight size={14} />
+            </button>
+          </div>
+        </footer>
+      )}
       {destination && (
         <OutboundModal
           returnFocus={lastInteraction.current}

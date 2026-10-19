@@ -4,7 +4,7 @@ import AxeBuilder from "@axe-core/playwright";
 test("preparation and recovery contexts are distinct and do not collect a story", async ({
   page,
 }) => {
-  await page.goto("/en-IN/");
+  await page.goto("/en-IN/prepare");
   await page
     .getByRole("tab", { name: "Before a concern", exact: true })
     .click();
@@ -24,7 +24,7 @@ test("preparation and recovery contexts are distinct and do not collect a story"
 test("official pathway rail opens an honest destination preview", async ({
   page,
 }) => {
-  await page.goto("/en-IN/");
+  await page.goto("/en-IN/prepare");
   await page
     .getByRole("button", {
       name: "NALSA · Public legal aid information",
@@ -167,7 +167,7 @@ for (const goal of [
   test(`action desk ${goal} reaches options in three selections`, async ({
     page,
   }) => {
-    await page.goto("/en-IN/");
+    await page.goto("/en-IN/prepare");
     await page
       .locator(".desk-goals")
       .getByRole("button", { name: new RegExp(goal) })
@@ -188,7 +188,7 @@ for (const goal of [
   });
 }
 test("tabs support keyboard movement and one tab stop", async ({ page }) => {
-  await page.goto("/en-IN/");
+  await page.goto("/en-IN/prepare");
   const first = page.getByRole("tab", {
     name: "Before a concern",
     exact: true,
@@ -303,7 +303,7 @@ test("overdue pathway checks are visible and do not become fresh claims", async 
   page,
 }) => {
   await page.clock.install({ time: new Date("2027-01-01T12:00:00Z") });
-  await page.goto("/en-IN/");
+  await page.goto("/en-IN/prepare");
   await expect(
     page.getByText("Review overdue 2026-11-18", { exact: false }).first(),
   ).toBeVisible();
@@ -406,12 +406,7 @@ test("English fallback sections keep English metadata inside Urdu shell", async 
   page,
 }) => {
   await page.goto("/ur-IN/");
-  for (const cls of [
-    "sprint2-hero",
-    "concern-index",
-    "preparedness-promo",
-    "community-promo",
-  ]) {
+  for (const cls of ["simple-home", "simple-footer"]) {
     await expect(page.locator(`.${cls}`)).toHaveAttribute("lang", "en-IN");
     await expect(page.locator(`.${cls}`)).toHaveAttribute("dir", "ltr");
   }

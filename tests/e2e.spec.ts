@@ -72,7 +72,7 @@ test("synthetic demo cannot open services and erase removes input", async ({
     .click();
   await expect(page.getByRole("status")).toContainText("Session cleared");
   await expect(
-    page.getByRole("heading", { name: /Your next step/ }),
+    page.getByRole("heading", { name: /Support for women/ }),
   ).toBeVisible();
 });
 
@@ -207,7 +207,7 @@ test("mid-session switch preserves only memory, browser back works, clear erases
     .click();
   await page.goBack();
   await expect(
-    page.getByRole("heading", { name: /Your next step/ }),
+    page.getByRole("heading", { name: /Support for women/ }),
   ).toBeVisible();
 });
 test("general help download excludes any story and keyboard escapes destination preview", async ({
@@ -282,7 +282,7 @@ test("clear invalidates a delayed navigation response", async ({ page }) => {
   release();
   await page.waitForTimeout(250);
   await expect(
-    page.getByRole("heading", { name: /Your next step/ }),
+    page.getByRole("heading", { name: /Support for women/ }),
   ).toBeVisible();
   expect(new URL(page.url()).pathname).toBe("/en-IN/");
 });
@@ -311,10 +311,10 @@ test("expired public pack retains honest general fallback links", async ({
   ).toBeVisible();
 });
 
-test("direct goal reaches public options in three selections", async ({
+test("direct preparation goal reaches public options in three selections", async ({
   page,
 }) => {
-  await page.goto("/en-IN/");
+  await page.goto("/en-IN/prepare");
   await page.getByRole("button", { name: /^Understand my options/ }).click();
   await page.getByRole("button", { name: "18 or older", exact: true }).click();
   await page

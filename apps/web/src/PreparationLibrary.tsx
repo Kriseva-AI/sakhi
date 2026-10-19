@@ -7,6 +7,9 @@ import {
   FileText,
 } from "lucide-react";
 import type { Destination } from "./Modal";
+import type { Category } from "../../../packages/contracts";
+import { SupportContexts } from "./SupportContexts";
+import { PublicPathways } from "./PublicPathways";
 import { pack, download } from "./local";
 import {
   buildPublicKit,
@@ -101,11 +104,15 @@ export function PreparationLibrary({
   demo = false,
   notify,
   onFind,
+  t,
+  languageFor,
 }: {
   open: (d: Destination) => void;
   demo?: boolean;
   notify: (s: string) => void;
-  onFind: () => void;
+  onFind: (category?: Category, goal?: string) => void;
+  t: (key: string) => string;
+  languageFor: (key: string) => string;
 }) {
   const [active, setActive] = useState("digital");
   const [selected, setSelected] = useState(["legal", "women"]);
@@ -184,7 +191,7 @@ export function PreparationLibrary({
               </button>
             </div>
           </div>
-          <button className="button primary" onClick={onFind}>
+          <button className="button primary" onClick={() => onFind()}>
             Find my next step
             <ArrowRight size={17} />
           </button>
@@ -264,6 +271,8 @@ export function PreparationLibrary({
           )}
         </div>
       </section>
+      <SupportContexts t={t} start={onFind} languageFor={languageFor} />
+      <PublicPathways open={open} />
     </section>
   );
 }
