@@ -69,7 +69,9 @@ self.addEventListener('fetch',event=>{
 });
 """.replace("VERSION", version).replace("MAPPING", json.dumps(mapping))
     (dist / "sw.js").write_text(worker)
-    (ROOT / "docs/evidence/public-cache-manifest.json").write_text(
+    evidence = ROOT / "docs/evidence/public-cache-manifest.json"
+    evidence.parent.mkdir(parents=True, exist_ok=True)
+    evidence.write_text(
         json.dumps({"version": version, "sha256": mapping}, indent=2) + "\n"
     )
     print(f"Generated immutable public cache {version}, {len(paths)} assets. No API or query cache.")
