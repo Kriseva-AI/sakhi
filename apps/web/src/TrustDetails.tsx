@@ -22,7 +22,7 @@ const DETAILS = [
   ],
   [
     "Languages and expert review",
-    "16 locale shells have complete structural keys. Draft navigation translations are marked beta. Safety/service content uses an explicit English fallback. All locales, including English, still need qualified language, domain and safeguarding review.",
+    "23 language shells have complete structural keys. Some navigation labels have draft translations. Page guidance, consent and service details use English. Structural keys are not translated or reviewed language coverage. All locales, including English, still need qualified language, domain and safeguarding review.",
   ],
   [
     "What works offline",

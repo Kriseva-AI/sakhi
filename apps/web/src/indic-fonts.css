@@ -127,6 +127,10 @@
 }
 
 :lang(hi),
+:lang(brx),
+:lang(doi),
+:lang(mai),
+:lang(sa),
 :lang(mr),
 :lang(ne),
 :lang(kok) {
@@ -212,6 +216,7 @@
 }
 
 :lang(ur),
+:lang(sd-Arab),
 :lang(ks-Arab) {
   --body: "Noto Naskh Arabic", system-ui, sans-serif;
   --display: "Noto Naskh Arabic", system-ui, sans-serif;
@@ -219,4 +224,38 @@
   line-height: 1.9;
   letter-spacing: normal;
   font-synthesis: weight;
+}
+
+@font-face {
+  font-family: "Noto Sans Meetei Mayek";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/indic/noto-sans-meetei-mayek/noto-sans-meetei-mayek-meetei-mayek-400-normal.woff2")
+    format("woff2");
+  unicode-range: U+200C-200D, U+25CC, U+AAE0-AAF6, U+ABC0-ABFF;
+}
+:lang(mni) {
+  --body: "Noto Sans Meetei Mayek", system-ui, sans-serif;
+  --display: "Noto Sans Meetei Mayek", system-ui, sans-serif;
+  font-family: var(--body);
+  line-height: 1.8;
+  letter-spacing: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans Ol Chiki";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/indic/noto-sans-ol-chiki/noto-sans-ol-chiki-ol-chiki-400-normal.woff2")
+    format("woff2");
+  unicode-range: U+1C50-1C7F, U+20B9;
+}
+:lang(sat) {
+  --body: "Noto Sans Ol Chiki", system-ui, sans-serif;
+  --display: "Noto Sans Ol Chiki", system-ui, sans-serif;
+  font-family: var(--body);
+  line-height: 1.8;
+  letter-spacing: normal;
 }

@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
 export const GOAL_GUIDES: Record<
   string,
   { label: string; title: string; steps: string[] }
@@ -41,21 +42,49 @@ export const GOAL_GUIDES: Record<
   },
 };
 export function ResultGuide({ goal }: { goal: string }) {
+  const [prepared, setPrepared] = useState<number[]>([]);
   const guide = GOAL_GUIDES[goal] ?? GOAL_GUIDES.understand;
   return (
     <aside className="result-guide" lang="en-IN" dir="ltr">
       <div>
         <span className="micro-label">YOUR CHOICE / {guide.label}</span>
         <h2>{guide.title}</h2>
+        <p>
+          You do not have to explain everything to take one useful step. These
+          are options for you to consider, at your pace.
+        </p>
+        <p role="status">
+          {prepared.length} of {guide.steps.length} preparation steps marked.
+          Nothing submitted or sent.
+        </p>
       </div>
       <ol>
-        {guide.steps.map((step) => (
+        {guide.steps.map((step, i) => (
           <li key={step}>
             <ArrowRight size={15} />
-            <span>{step}</span>
+            <label className="preparation-check">
+              <input
+                type="checkbox"
+                checked={prepared.includes(i)}
+                onChange={() =>
+                  setPrepared((values) =>
+                    values.includes(i)
+                      ? values.filter((value) => value !== i)
+                      : [...values, i],
+                  )
+                }
+              />
+              <span>{step}</span>
+            </label>
           </li>
         ))}
       </ol>
+      <p className="small-note">
+        Your checklist stays on this page and clears when you leave or clear the
+        session. It does not confirm eligibility, availability, a referral or a
+        complaint. If an option does not fit, compare another public service
+        below.
+      </p>
     </aside>
   );
 }

@@ -14,6 +14,7 @@ COPY --from=ghcr.io/astral-sh/uv:0.11.6 /uv /usr/local/bin/uv
 COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen --no-dev
 COPY services ./services
+COPY packages ./packages
 COPY planning ./planning
 COPY data ./data
 COPY scripts ./scripts

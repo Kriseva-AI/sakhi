@@ -34,6 +34,7 @@ import { ResultGuide } from "./ResultGuide";
 import { SupportGuide } from "./SupportGuide";
 import { JourneyCue } from "./JourneyCue";
 import { SiteNavigation } from "./SiteNavigation";
+import { LanguageStatus } from "./LanguageStatus";
 import { OutboundModal, type Destination } from "./Modal";
 import {
   publicFallback,
@@ -422,12 +423,7 @@ export function App() {
             {safeT("demoNotice")}
           </div>
         )}
-        {locale !== "en-IN" && (
-          <aside className="translation-banner" lang="en-IN" dir="ltr">
-            {safeT("translationNotice")}{" "}
-            <span lang={locale}>{catalog.name}</span>
-          </aside>
-        )}
+        {locale !== "en-IN" && <LanguageStatus catalog={catalog} />}
         <p role="status" className={notice ? "toast" : "sr-only"} lang="en-IN">
           {notice}
         </p>

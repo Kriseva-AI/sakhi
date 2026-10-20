@@ -41,7 +41,8 @@ def test_security_headers_disable_sensitive_permissions_and_caching():
     response = client.get("/api/health")
     assert response.headers["referrer-policy"] == "no-referrer"
     assert response.headers["cache-control"] == "no-store"
-    assert "microphone=()" in response.headers["permissions-policy"]
+    assert "microphone=(self)" in response.headers["permissions-policy"]
+    assert "media-src 'self' blob:" in response.headers["content-security-policy"]
     assert "frame-ancestors 'none'" in response.headers["content-security-policy"]
 
 

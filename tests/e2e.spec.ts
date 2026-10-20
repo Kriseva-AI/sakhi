@@ -151,6 +151,13 @@ for (const code of [
   "ne-IN",
   "kok-IN",
   "ks-Arab-IN",
+  "brx-IN",
+  "doi-IN",
+  "mai-IN",
+  "mni-Mtei-IN",
+  "sa-IN",
+  "sat-Olck-IN",
+  "sd-Arab-IN",
 ]) {
   test(`locale shell ${code} has explicit fallback and correct direction`, async ({
     page,
@@ -160,12 +167,10 @@ for (const code of [
     await expect(page.locator("html")).toHaveAttribute("lang", code);
     await expect(page.locator("html")).toHaveAttribute(
       "dir",
-      ["ur-IN", "ks-Arab-IN"].includes(code) ? "rtl" : "ltr",
+      ["ur-IN", "ks-Arab-IN", "sd-Arab-IN"].includes(code) ? "rtl" : "ltr",
     );
     if (code !== "en-IN")
-      await expect(
-        page.getByText(/Beta translation. Human language/),
-      ).toBeVisible();
+      await expect(page.locator(".language-status summary")).toBeVisible();
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,

@@ -15,7 +15,7 @@ def main():
         assert set(c["messages"]) == set(base["messages"])
         assert c["language_status"] == "review_pending" and c["human_review"] is None
         assert all(isinstance(v, str) and v.strip() for v in c["messages"].values())
-        assert c["dir"] == ("rtl" if code in ("ur-IN", "ks-Arab-IN") else "ltr")
+        assert c["dir"] == ("rtl" if code in ("ur-IN", "ks-Arab-IN", "sd-Arab-IN") else "ltr")
         rows.append(
             {
                 "locale": code,

@@ -11,6 +11,8 @@ import {
   BriefcaseBusiness,
 } from "lucide-react";
 import type { Category } from "../../../packages/contracts";
+import { AACBoard } from "./input/AACBoard";
+import { LocalMedia } from "./input/LocalMedia";
 export const topics: {
   category: Category;
   key: string;
@@ -85,6 +87,8 @@ export function Finder({
   const [text, setText] = useState("");
   const [scope, setScope] = useState("India");
   const [busy, setBusy] = useState(false);
+  const [inputMode, setInputMode] = useState<"symbols" | "media">();
+  const [adult, setAdult] = useState(false);
   const [error, setError] = useState("");
   const submission = useRef(0);
   const [category, setCategory] = useState<Category | undefined>(
@@ -126,6 +130,46 @@ export function Finder({
       <p className="muted" lang="en-IN">
         {t("textHint")}
       </p>
+      <div
+        className="input-methods"
+        lang="en-IN"
+        dir="ltr"
+        aria-label="Ways to communicate"
+      >
+        <button
+          type="button"
+          aria-expanded={inputMode === "symbols"}
+          onClick={() =>
+            setInputMode(inputMode === "symbols" ? undefined : "symbols")
+          }
+        >
+          Use symbols
+        </button>
+        <button
+          type="button"
+          aria-expanded={inputMode === "media"}
+          onClick={() =>
+            setInputMode(inputMode === "media" ? undefined : "media")
+          }
+        >
+          Add audio or video
+        </button>
+      </div>
+      {inputMode === "symbols" && (
+        <AACBoard
+          onClose={() => setInputMode(undefined)}
+          onConfirm={(choice) => {
+            setCategory(choice);
+            setGoal("understand");
+            setText("");
+            setInputMode(undefined);
+            setStep(adult ? 2 : 1);
+          }}
+        />
+      )}
+      {inputMode === "media" && (
+        <LocalMedia adult={adult} onClose={() => setInputMode(undefined)} />
+      )}
       {busy && (
         <p role="status" lang="en-IN">
           Looking up public information. You can go back or clear the session to
@@ -152,19 +196,35 @@ export function Finder({
       )}
       {step === 1 && (
         <div className="choices">
-          <button className="choice" onClick={() => setStep(2)}>
+          <button
+            className="choice"
+            onClick={() => {
+              setAdult(true);
+              setStep(2);
+            }}
+          >
             {t("adult")}
             <ArrowRight size={18} />
           </button>
           <button
             className="choice"
             disabled={busy}
-            onClick={() => finish(true)}
+            onClick={() => {
+              setInputMode(undefined);
+              setAdult(false);
+              void finish(true);
+            }}
           >
             {t("minor")}
             <ArrowRight size={18} />
           </button>
-          <button className="text-button" onClick={() => setStep(2)}>
+          <button
+            className="text-button"
+            onClick={() => {
+              setAdult(false);
+              setStep(2);
+            }}
+          >
             {t("skipAge")}
           </button>
         </div>
@@ -251,6 +311,8 @@ export function Finder({
             cancel();
             setBusy(false);
             setError("");
+            setAdult(false);
+            setInputMode(undefined);
             setStep(step - 1);
           }}
         >

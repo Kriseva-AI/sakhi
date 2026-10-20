@@ -1,0 +1,396 @@
+{
+  "version": "2026-10-21.1",
+  "languages": [
+    {
+      "locale": "as-IN",
+      "language": "Assamese",
+      "name": "অসমীয়া",
+      "script": "Bengali-Assamese",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "bn-IN",
+      "language": "Bengali",
+      "name": "বাংলা",
+      "script": "Bengali-Assamese",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "brx-IN",
+      "language": "Bodo",
+      "name": "बड़ो",
+      "script": "Devanagari",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "unavailable",
+        "text": "unavailable",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "doi-IN",
+      "language": "Dogri",
+      "name": "डोगरी",
+      "script": "Devanagari",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "unavailable",
+        "text": "unavailable",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "gu-IN",
+      "language": "Gujarati",
+      "name": "ગુજરાતી",
+      "script": "Gujarati",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "hi-IN",
+      "language": "Hindi",
+      "name": "हिन्दी",
+      "script": "Devanagari",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "kn-IN",
+      "language": "Kannada",
+      "name": "ಕನ್ನಡ",
+      "script": "Kannada",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "ks-Arab-IN",
+      "language": "Kashmiri",
+      "name": "کٲشُر",
+      "script": "Perso-Arabic",
+      "dir": "rtl",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "kok-IN",
+      "language": "Konkani",
+      "name": "कोंकणी",
+      "script": "Devanagari",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "mai-IN",
+      "language": "Maithili",
+      "name": "मैथिली",
+      "script": "Devanagari",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "unavailable",
+        "text": "unavailable",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "ml-IN",
+      "language": "Malayalam",
+      "name": "മലയാളം",
+      "script": "Malayalam",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "mni-Mtei-IN",
+      "language": "Manipuri",
+      "name": "ꯃꯤꯇꯩꯂꯣꯟ",
+      "script": "Meetei Mayek",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "unavailable",
+        "text": "unavailable",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "mr-IN",
+      "language": "Marathi",
+      "name": "मराठी",
+      "script": "Devanagari",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "ne-IN",
+      "language": "Nepali",
+      "name": "नेपाली",
+      "script": "Devanagari",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "or-IN",
+      "language": "Odia",
+      "name": "ଓଡ଼ିଆ",
+      "script": "Odia",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "pa-IN",
+      "language": "Punjabi",
+      "name": "ਪੰਜਾਬੀ",
+      "script": "Gurmukhi",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "sa-IN",
+      "language": "Sanskrit",
+      "name": "संस्कृतम्",
+      "script": "Devanagari",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "unavailable",
+        "text": "unavailable",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "sat-Olck-IN",
+      "language": "Santali",
+      "name": "ᱥᱟᱱᱛᱟᱲᱤ",
+      "script": "Ol Chiki",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "unavailable",
+        "text": "unavailable",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "sd-Arab-IN",
+      "language": "Sindhi",
+      "name": "سنڌي",
+      "script": "Perso-Arabic",
+      "dir": "rtl",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "unavailable",
+        "text": "unavailable",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "ta-IN",
+      "language": "Tamil",
+      "name": "தமிழ்",
+      "script": "Tamil",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "te-IN",
+      "language": "Telugu",
+      "name": "తెలుగు",
+      "script": "Telugu",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "ur-IN",
+      "language": "Urdu",
+      "name": "اردو",
+      "script": "Perso-Arabic",
+      "dir": "rtl",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    },
+    {
+      "locale": "en-IN",
+      "language": "English",
+      "name": "English",
+      "script": "Latin",
+      "dir": "ltr",
+      "status": "review_pending",
+      "human_review": null,
+      "modes": {
+        "interface": "review_pending",
+        "text": "draft",
+        "listening": "unavailable",
+        "asr": "unavailable",
+        "video_interpretation": "unavailable",
+        "aac": "review_pending"
+      }
+    }
+  ]
+}

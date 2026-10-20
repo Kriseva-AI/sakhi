@@ -7,7 +7,7 @@ export interface Catalog {
   fallback_keys: string[];
   messages: Record<string, string>;
 }
-const files = import.meta.glob("../../../packages/i18n/*.json", {
+const files = import.meta.glob("../../../packages/i18n/*-IN.json", {
   eager: true,
   import: "default",
 });

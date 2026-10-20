@@ -13,7 +13,7 @@ const states = [
     label: "Inside Sakhi",
     icon: MonitorSmartphone,
     title: "Only your language preference is saved.",
-    body: "Choices, words, recipient details and optional position readings stay in temporary app memory. If you ask for a pathway, this local server processes the words without saving or logging them. A language choice is saved only when you explicitly change it. No account, evidence upload or cloud model is needed.",
+    body: "Choices, words, recipient details, optional position readings and audio/video previews stay in temporary app memory. Media is not uploaded or interpreted; previews clear on cover, background, leaving the page or after five minutes. If you ask for a pathway, the Sakhi server processes your short text without saving or logging it. A language choice is saved only when you explicitly change it. No account or cloud model is needed.",
     fields: [
       "Browser: temporary choices",
       "Local server: public-resource lookup",

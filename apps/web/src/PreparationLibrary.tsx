@@ -24,7 +24,7 @@ export const PREPARATION_GUIDES = [
     intro:
       "A device can reveal more than the words you type. Public information is available without sharing a story.",
     points: [
-      "No image uploads or microphone access. Location tools are optional. A chosen position is shared only after a separate recipient and content approval.",
+      "Optional audio, video and voice-note previews stay in temporary browser memory. They are not uploaded or interpreted. Location sharing needs a separate recipient and content approval.",
       "Someone who can see your screen, history or backups may still see your activity.",
       "Specialist technology-safety guidance can help explain device risks. Personalized safety planning belongs with qualified support.",
     ],
@@ -130,9 +130,9 @@ export function PreparationLibrary({
       </div>
       <div className="page-intro">
         <h1 tabIndex={-1}>
-          A little readiness.
+          Prepare for your next step.
           <br />
-          <em>More room to choose.</em>
+          <em>At your pace.</em>
         </h1>
         <p>
           Before something happens, when something feels off, or after an

@@ -1,43 +1,14 @@
+# Canonical public language registry. Approval is tracked separately from key presence.
+import json
+from pathlib import Path
 from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-LOCALES = (
-    "en-IN",
-    "hi-IN",
-    "bn-IN",
-    "mr-IN",
-    "te-IN",
-    "ta-IN",
-    "gu-IN",
-    "kn-IN",
-    "ml-IN",
-    "or-IN",
-    "pa-IN",
-    "as-IN",
-    "ur-IN",
-    "ne-IN",
-    "kok-IN",
-    "ks-Arab-IN",
-)
-Locale = Literal[
-    "en-IN",
-    "hi-IN",
-    "bn-IN",
-    "mr-IN",
-    "te-IN",
-    "ta-IN",
-    "gu-IN",
-    "kn-IN",
-    "ml-IN",
-    "or-IN",
-    "pa-IN",
-    "as-IN",
-    "ur-IN",
-    "ne-IN",
-    "kok-IN",
-    "ks-Arab-IN",
-]
+LOCALES = tuple(row["locale"] for row in json.loads(
+    (Path(__file__).resolve().parents[2] / "packages/i18n/locales.json").read_text()
+)["languages"])
+Locale = Literal[*LOCALES]
 Category = Literal["cyber", "home", "workplace", "legal", "friend", "unsure"]
 
 

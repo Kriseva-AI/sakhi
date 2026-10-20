@@ -37,7 +37,9 @@ test("production PWA reloads offline and caches only hashed public assets", asyn
     return result;
   });
   expect(urls.length).toBeGreaterThan(0);
-  expect(urls.filter((u) => u.endsWith(".woff2"))).toHaveLength(17);
+  expect(urls.filter((u) => u.endsWith(".woff2"))).toHaveLength(19);
+  expect(urls.some((u) => u.includes("noto-sans-meetei-mayek/"))).toBe(true);
+  expect(urls.some((u) => u.includes("noto-sans-ol-chiki/"))).toBe(true);
   expect(
     urls.some(
       (u) =>
