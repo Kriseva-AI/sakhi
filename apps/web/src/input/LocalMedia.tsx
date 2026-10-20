@@ -1,10 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Mic, Square, Trash2 } from "lucide-react";
 
 const AUDIO_LIMIT = 10 * 1024 * 1024;
 const VIDEO_LIMIT = 20 * 1024 * 1024;
 const MAX_RECORD_MS = 120_000;
 type Preview = { url: string; kind: "audio" | "video"; recorded: boolean };
+
+function stopPlayback(media: HTMLMediaElement | null) {
+  if (!media) return;
+  media.pause();
+  media.removeAttribute("src");
+  media.load();
+}
 
 /** Acquisition and playback only. There is deliberately no upload/ASR endpoint. */
 export function LocalMedia({
@@ -24,6 +31,15 @@ export function LocalMedia({
   const chunks = useRef<Blob[]>([]);
   const bytes = useRef(0);
   const url = useRef<string | null>(null);
+  const player = useRef<HTMLMediaElement | null>(null);
+  const bindPlayer = useCallback((node: HTMLMediaElement | null) => {
+    if (player.current !== node) stopPlayback(player.current);
+    player.current = node;
+    // React's development ref replay performs cleanup then setup on the same
+    // element. Restore only the currently active local preview, never a revoked one.
+    if (node && url.current && node.getAttribute("src") !== url.current)
+      node.src = url.current;
+  }, []);
   const stopTimer = useRef<ReturnType<typeof setTimeout> | undefined>(
     undefined,
   );
@@ -49,6 +65,7 @@ export function LocalMedia({
     bytes.current = 0;
     if (url.current) URL.revokeObjectURL(url.current);
     url.current = null;
+    stopPlayback(player.current);
     if (input.current) input.current.value = "";
     setPreview(undefined);
     setRecording(false);
@@ -202,6 +219,7 @@ export function LocalMedia({
   }
 
   function checkDuration(media: HTMLMediaElement, kind: "audio" | "video") {
+    if (media.src !== url.current) return;
     clearTimeout(playbackTimer.current);
     // Recorder time/byte bounds are enforced during acquisition. Streamed
     // WebM may report Infinity; file metadata rules cannot validate that stream.
@@ -297,6 +315,7 @@ export function LocalMedia({
             <div className="media-preview">
               {preview.kind === "video" ? (
                 <video
+                  ref={bindPlayer}
                   key={preview.url}
                   src={preview.url}
                   controls
@@ -306,7 +325,8 @@ export function LocalMedia({
                   onLoadedMetadata={(e) =>
                     checkDuration(e.currentTarget, "video")
                   }
-                  onError={() =>
+                  onError={(event) =>
+                    event.currentTarget.src === url.current &&
                     discard(
                       "Video format could not play. Try another format, text or symbols.",
                     )
@@ -314,6 +334,7 @@ export function LocalMedia({
                 />
               ) : (
                 <audio
+                  ref={bindPlayer}
                   key={preview.url}
                   src={preview.url}
                   controls
@@ -321,7 +342,8 @@ export function LocalMedia({
                   onLoadedMetadata={(e) =>
                     checkDuration(e.currentTarget, "audio")
                   }
-                  onError={() =>
+                  onError={(event) =>
+                    event.currentTarget.src === url.current &&
                     discard(
                       "Audio format could not play. Try another format, text or symbols.",
                     )

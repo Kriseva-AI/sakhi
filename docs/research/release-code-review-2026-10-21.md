@@ -22,3 +22,9 @@ No other substantiated Critical, Important or Minor findings were reported. Verd
 ## Executor disposition
 
 The stale-response finding is accepted as Important and enters the single correction pass. All declined processing paths remain unavailable. Native/physical/language/hosting/provider/public-launch claims remain gated. The author must finish and record fresh full verification after the correction; reviewer reasoning does not replace those results. See the release report for the final evidence.
+
+## Additional author playback check
+
+An actual loopback probe used one second of generated solid-colour video and synthetic silence. Video loaded muted. Immediately after Hide, a retained audio element initially reported paused=false; after400ms Chromium reported paused=true, so continued playback was not established. The confirmed cleanup gap was a retained media source. The browser regression failed on source cleanup.
+
+The correction now synchronously pauses/unloads the current player and clears its source on explicit discard and ref removal. Only an active URL can be restored during React development ref replay, and stale metadata/errors cannot repopulate state. The first correction exposed a StrictMode ref-replay issue, which was corrected before acceptance. The full focused media suite then passed19 cases with2 explicitly skipped non-Chromium native-capture cases across Chromium, Firefox and WebKit. This is an author correction, not a second independent review or physical playback certification.

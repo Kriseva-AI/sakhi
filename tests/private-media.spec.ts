@@ -10,10 +10,11 @@ async function adultMedia(page: import("@playwright/test").Page) {
     .getByRole("button", { name: "Add audio or video", exact: true })
     .click();
 }
-function wav() {
-  const buffer = Buffer.alloc(8044);
+function wav(seconds = 0.5) {
+  const bytes = Math.round(seconds * 16000);
+  const buffer = Buffer.alloc(bytes + 44);
   buffer.write("RIFF");
-  buffer.writeUInt32LE(8036, 4);
+  buffer.writeUInt32LE(bytes + 36, 4);
   buffer.write("WAVEfmt ", 8);
   buffer.writeUInt32LE(16, 16);
   buffer.writeUInt16LE(1, 20);
@@ -23,7 +24,7 @@ function wav() {
   buffer.writeUInt16LE(2, 32);
   buffer.writeUInt16LE(16, 34);
   buffer.write("data", 36);
-  buffer.writeUInt32LE(8000, 40);
+  buffer.writeUInt32LE(bytes, 40);
   return buffer;
 }
 test("age gate prevents media acquisition for unspecified age", async ({
@@ -205,4 +206,31 @@ test("a bounded synthetic voice note remains playable with streamed duration met
   } finally {
     await browser.close();
   }
+});
+
+test("Hide stops decoded audio playback, including a retained media element", async ({
+  page,
+}) => {
+  await adultMedia(page);
+  await page
+    .getByLabel("Choose an existing audio or video file")
+    .setInputFiles({
+      name: "synthetic-silence.wav",
+      mimeType: "audio/wav",
+      buffer: wav(10),
+    });
+  await page.locator("audio").evaluate(async (audio) => {
+    (window as any).heldAudio = audio;
+    await audio.play();
+  });
+  expect(await page.evaluate(() => (window as any).heldAudio.paused)).toBe(
+    false,
+  );
+  await page.getByRole("button", { name: "Hide page", exact: true }).click();
+  await expect
+    .poll(() => page.evaluate(() => (window as any).heldAudio.paused))
+    .toBe(true);
+  expect(
+    await page.evaluate(() => (window as any).heldAudio.getAttribute("src")),
+  ).toBe(null);
 });
