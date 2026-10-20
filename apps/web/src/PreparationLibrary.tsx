@@ -24,7 +24,7 @@ export const PREPARATION_GUIDES = [
     intro:
       "A device can reveal more than the words you type. Public information is available without sharing a story.",
     points: [
-      "Sakhi does not request images, access your microphone or use your location.",
+      "No image uploads or microphone access. Location tools are optional. A chosen position is shared only after a separate recipient and content approval.",
       "Someone who can see your screen, history or backups may still see your activity.",
       "Specialist technology-safety guidance can help explain device risks. Personalized safety planning belongs with qualified support.",
     ],

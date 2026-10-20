@@ -130,26 +130,46 @@ export async function lookup<T>(
   body: unknown,
   signal: AbortSignal,
 ): Promise<T> {
-  const response = await fetch(`/api/explore/${path}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-    signal,
-    credentials: "omit",
-    cache: "no-store",
-  });
-  if (!response.ok) {
-    if (response.status === 429)
+  const request = new AbortController();
+  let timedOut = false;
+  const cancel = () => request.abort();
+  signal.addEventListener("abort", cancel, { once: true });
+  if (signal.aborted) request.abort();
+  const timer = setTimeout(() => {
+    timedOut = true;
+    request.abort();
+  }, 12_000);
+  try {
+    const response = await fetch(`/api/explore/${path}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+      signal: request.signal,
+      credentials: "omit",
+      cache: "no-store",
+    });
+    if (!response.ok) {
+      if (response.status === 429)
+        throw new Error(
+          "Please wait a few seconds. This preview has a shared provider limit.",
+        );
+      if (response.status === 422)
+        throw new Error(
+          "Use a public city name or an area within India. No address or personal details.",
+        );
       throw new Error(
-        "Please wait a few seconds. This preview has a shared provider limit.",
+        "The public provider is unavailable. Try later or use the Google Maps alternative.",
       );
-    if (response.status === 422)
+    }
+    return await response.json();
+  } catch (error) {
+    if (timedOut)
       throw new Error(
-        "Use a public city name or an area within India. No address or personal details.",
+        "Lookup timed out. Try again later or preview the alternative map search. No place or service availability was confirmed.",
       );
-    throw new Error(
-      "The public provider is unavailable. Try later or use the Google Maps alternative.",
-    );
+    throw error;
+  } finally {
+    clearTimeout(timer);
+    signal.removeEventListener("abort", cancel);
   }
-  return response.json();
 }

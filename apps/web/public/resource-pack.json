@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-19.1",
+  "version": "2026-10-20.1",
   "review_level": "agent_source_check_only",
   "human_approved": false,
   "resources": [
@@ -52,8 +52,8 @@
       "limitations": "The official page excludes West Bengal. Local availability and referral acceptance are not checked by Sakhi."
     },
     {
-      "checked_at": "2026-10-19",
-      "expires_at": "2026-11-18",
+      "checked_at": "2026-10-20",
+      "expires_at": "2026-11-19",
       "verification_method": "Agent inspected official public source or official index; human verification pending. No service was contacted.",
       "review_status": "source_checked_preview_only",
       "jurisdiction": "India",
@@ -64,9 +64,9 @@
       "status": "verified_public_link",
       "id": "child",
       "title": "Child Helpline",
-      "summary": "1098 is the Child Helpline listed by the Ministry. Adult Sakhi workflows stop here.",
-      "url": "https://www.spniwcd.wcd.gov.in/",
-      "source_url": "https://www.spniwcd.wcd.gov.in/",
+      "summary": "1098 is the Child Helpline listed by the Ministry. Read its scope before deciding to call.",
+      "url": "https://wcd.gov.in/child/child-helpline",
+      "source_url": "https://wcd.gov.in/child/child-helpline",
       "authority": "Ministry of Women and Child Development",
       "categories": [
         "child"

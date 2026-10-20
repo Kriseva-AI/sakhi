@@ -1,0 +1,31 @@
+{
+  "version": "2026-10-20.1",
+  "checked_at": "2026-10-20",
+  "expires_at": "2026-11-19",
+  "review_level": "agent_source_check_only",
+  "human_approved": false,
+  "resources": {
+    "young": {
+      "title": "Take It Down",
+      "url": "https://takeitdown.ncmec.org/faq/",
+      "publisher": "NCMEC",
+      "seed_id": "SRC-112",
+      "access": "public_information_user_directed_handoff",
+      "integration": "none",
+      "jurisdiction": "Provider describes international access; India reporting alternatives remain separate",
+      "eligibility": "Image made under 18, even if adult now. File already held; participating-platform limits apply.",
+      "fallback": "Indian cybercrime portal and Child Helpline 1098 for a child; emergency 112 for immediate danger"
+    },
+    "adult": {
+      "title": "StopNCII",
+      "url": "https://stopncii.org/",
+      "publisher": "SWGfL / Revenge Porn Helpline",
+      "seed_id": "SRC-110",
+      "access": "public_information_user_directed_handoff",
+      "integration": "none",
+      "jurisdiction": "Provider scope must be checked; Indian legal/reporting alternatives remain separate",
+      "eligibility": "Person depicted; adult now and when image made; already holds intimate image. Current provider criteria apply.",
+      "fallback": "Indian cybercrime portal or legal-aid information; emergency 112 for immediate danger"
+    }
+  }
+}

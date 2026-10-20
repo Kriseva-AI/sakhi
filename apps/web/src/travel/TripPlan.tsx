@@ -3,6 +3,7 @@ import { Check, Download, MessageCircle, Timer } from "lucide-react";
 import type { Destination } from "../Modal";
 import type { City, Place, Route } from "./types";
 import { publicTrip } from "./types";
+import { LovedOneUpdate } from "./LovedOneUpdate";
 const CHECKS = [
   "Choose a public meeting point",
   "Check transport with the operator",
@@ -119,6 +120,7 @@ export function TripPlan({
           Downloaded to your device. Clear session cannot delete the file.
         </p>
       )}
+      <LovedOneUpdate open={open} demo={demo} />
       <div className="checkin-box">
         <h3>
           <Timer size={20} /> A reminder for me

@@ -63,6 +63,9 @@ export function TravelWorkspace({
     [error, setError] = useState(""),
     [notice, setNotice] = useState(""),
     [now, setNow] = useState(Date.now());
+  useEffect(() => {
+    window.dispatchEvent(new Event("sakhi:travel-tool-change"));
+  }, [tab]);
   const attempt = useRef(0),
     abort = useRef<AbortController | null>(null),
     alive = useRef(true),
@@ -82,6 +85,13 @@ export function TravelWorkspace({
       if (document.hidden) geo.current++;
     };
     document.addEventListener("visibilitychange", tick);
+    const cover = () => {
+      geo.current++;
+      cancel();
+      setSuggestedCity(null);
+      setNotice("Pending lookups cancelled when the page was covered.");
+    };
+    window.addEventListener("sakhi:cover", cover);
     const timer = setInterval(() => setNow(Date.now()), 30_000);
     return () => {
       alive.current = false;
@@ -90,6 +100,7 @@ export function TravelWorkspace({
       abort.current?.abort();
       clearInterval(timer);
       document.removeEventListener("visibilitychange", tick);
+      window.removeEventListener("sakhi:cover", cover);
     };
   }, []);
   const resetPlace = () => {
@@ -546,6 +557,36 @@ export function TravelWorkspace({
                 Search this area
                 <MapPin size={17} />
               </button>
+              <div className="provider-recovery">
+                <strong>Need another way to find a place?</strong>
+                <p>
+                  Try a public city search in Google Maps. Listings, opening
+                  hours and service availability still need checking. No device
+                  position is included.
+                </p>
+                <button
+                  className="button quiet"
+                  disabled={
+                    demo ||
+                    !PUBLIC_AREAS.includes(
+                      city.name as (typeof PUBLIC_AREAS)[number],
+                    )
+                  }
+                  onClick={() => open(buildPublicMap(city.name, kind))}
+                >
+                  Preview alternative map search
+                  <ArrowUpRight size={16} />
+                </button>
+                {!PUBLIC_AREAS.includes(
+                  city.name as (typeof PUBLIC_AREAS)[number],
+                ) && (
+                  <p>
+                    For this city, use the public map manually or choose one of
+                    the 16 preset cities. This alternative does not verify any
+                    provider.
+                  </p>
+                )}
+              </div>
               {places && (
                 <>
                   <p className="lookup-receipt">

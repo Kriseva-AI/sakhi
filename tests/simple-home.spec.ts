@@ -39,7 +39,7 @@ test("pink and black theme continues from the landing to the finder", async ({
     .click();
   await expect(
     page.getByRole("heading", {
-      name: "What would you like to do?",
+      name: "Choose your next step.",
       exact: true,
     }),
   ).toBeVisible();

@@ -20,8 +20,8 @@
     {
       "id": "child",
       "name": "Child Helpline",
-      "description": "1098 is the Child Helpline listed by the Ministry. Adult Sakhi workflows stop here.",
-      "url": "https://www.spniwcd.wcd.gov.in/",
+      "description": "1098 is the Child Helpline listed by the Ministry. Read its scope before deciding to call.",
+      "url": "https://wcd.gov.in/child/child-helpline",
       "organization_id": "Ministry of Women and Child Development",
       "status": "preview_information_only"
     },

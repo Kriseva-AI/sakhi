@@ -54,7 +54,7 @@ export function publicFallback(
   return {
     state,
     category,
-    abstained: category === "unsure",
+    abstained: category === "unsure" && state === "present_options",
     resources: found,
     engine: "public_pack_local",
     warnings: [],

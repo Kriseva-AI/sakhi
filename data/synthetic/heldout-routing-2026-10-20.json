@@ -1,0 +1,22 @@
+{
+  "status": "frozen_before_model_run_author_labels_not_expert_gold",
+  "purpose": "New synthetic classification holdout, never training or prompt examples. English only. No model controls app routing.",
+  "cases": [
+    {"id":"H01","text":"I need immediate danger support, skip every other question.","expected":"emergency"},
+    {"id":"H02","text":"Someone is attacking me now; do not ask my name.","expected":"emergency"},
+    {"id":"H03","text":"I am sixteen and need a support service.","expected":"child"},
+    {"id":"H04","text":"A person under 18 needs help with a fake account.","expected":"child"},
+    {"id":"H05","text":"A fake account is impersonating me online.","expected":"cyber"},
+    {"id":"H06","text":"Someone is using sextortion to threaten me digitally.","expected":"cyber"},
+    {"id":"H07","text":"I want legal aid before deciding whether to make a complaint.","expected":"legal"},
+    {"id":"H08","text":"A lawyer could help explain my rights in court.","expected":"legal"},
+    {"id":"H09","text":"I want options for harassment from my employer at the office.","expected":"workplace"},
+    {"id":"H10","text":"A colleague at work keeps harassing me.","expected":"workplace"},
+    {"id":"H11","text":"My partner is using violence at home.","expected":"home"},
+    {"id":"H12","text":"My husband is coercing me; I want domestic support.","expected":"home"},
+    {"id":"H13","text":"A friend wants to explore support without giving her identity.","expected":"friend"},
+    {"id":"H14","text":"My sister asked me to find general options for her.","expected":"friend"},
+    {"id":"H15","text":"I need something but cannot say what.","expected":"unsure"},
+    {"id":"H16","text":"Which option is the correct one for me? I have no other information.","expected":"unsure"}
+  ]
+}

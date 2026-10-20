@@ -22,6 +22,8 @@ export const PLACE_KINDS = {
   legal: "District Legal Services Authority",
   police: "police station",
   hospital: "government hospital",
+  pharmacy: "pharmacy",
+  transport: "railway station",
 } as const;
 export function buildPublicMap(
   area: string,

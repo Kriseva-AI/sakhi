@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { catalogs } from "./locale";
 import { pack, download } from "./local";
+import supportGuides from "../../../data/public-seeds/support-guides.json";
 interface Metrics {
   seeds: {
     ingested: number;
@@ -53,6 +54,11 @@ export function Maintenance({ demo = false }: { demo?: boolean }) {
       </div>
       <h2>One Stop Centre coverage</h2>
       <p>
+        The counts above cover the 7 directory records. Two additional
+        image-abuse guide sources are shown conditionally: 9 distinct support
+        entry points in total, all with human approval pending.
+      </p>
+      <p>
         991 operational centres were reported on August 5, 2026, covering data
         through June 30, 2026. This is a historical aggregate.
       </p>
@@ -102,6 +108,22 @@ export function Maintenance({ demo = false }: { demo?: boolean }) {
         </table>
       </div>
       <h2>Language review</h2>
+      <details>
+        <summary>Additional source review queue</summary>
+        <p>
+          Guide version {supportGuides.version}. Checked{" "}
+          {supportGuides.checked_at}; review by {supportGuides.expires_at}.
+          Public references, no service integration or human signoff.
+        </p>
+        {Object.values(supportGuides.resources).map((r) => (
+          <p key={r.seed_id}>
+            <strong>
+              {r.title} ({r.seed_id})
+            </strong>
+            : {r.publisher}. {r.eligibility} Alternative: {r.fallback}.
+          </p>
+        ))}
+      </details>
       <div
         className="table-wrap"
         tabIndex={0}

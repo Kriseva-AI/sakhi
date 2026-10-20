@@ -7,6 +7,7 @@ import "./sprint2.css";
 import "./indic-fonts.css";
 import "./simple.css";
 import "./travel/travel.css";
+import "./recovery.css";
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />

@@ -6,6 +6,7 @@ export interface Destination {
   kind?: "public_link" | "map" | "whatsapp";
   fields?: { label: string; value: string }[];
   disclosure?: string;
+  onOpen?: () => void;
 }
 export function OutboundModal({
   destination,
@@ -100,7 +101,10 @@ export function OutboundModal({
             rel="noopener noreferrer"
             onClick={(e) => {
               if (!checked) e.preventDefault();
-              else close();
+              else {
+                destination.onOpen?.();
+                close();
+              }
             }}
           >
             {t("continue")}

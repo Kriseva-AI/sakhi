@@ -73,6 +73,17 @@ def test_read_only_maintenance_counts_keep_discovery_separate():
     assert data["osc"]["integrations"] == 0
 
 
+def test_navigation_budget_never_blocks_emergency_or_child_fallback(monkeypatch):
+    import services.api.main as module
+
+    monkeypatch.setattr(module, "navigation_budget", lambda: False, raising=False)
+    limited = navigate(category="cyber")
+    assert limited.status_code == 429
+    assert limited.headers["Retry-After"] == "60"
+    assert navigate(text="attacking me now").json()["state"] == "urgent_redirect"
+    assert navigate(under18=True).json()["state"] == "minor_redirect"
+
+
 def test_common_explicit_minor_age_constructions_stop_adult_routes():
     for text in [
         "I am a 15 year old and need legal help",

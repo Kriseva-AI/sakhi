@@ -32,6 +32,9 @@ def main():
         == (ROOT / "apps/web/public/resource-pack.sha256").read_text().strip()
     )
     assert len(seed_registry()) == 211
+    guides = json.loads((ROOT / "data/public-seeds/support-guides.json").read_text())
+    assert len(guides["resources"]) == 2 and guides["human_approved"] is False
+    assert {r["seed_id"] for r in guides["resources"].values()} == {"SRC-110", "SRC-112"}
     # Only scan project-owned source and docs, never environments, caches or dependencies.
     for folder in ["services", "scripts", "apps/web/src", "docs"]:
         for path in (ROOT / folder).rglob("*"):

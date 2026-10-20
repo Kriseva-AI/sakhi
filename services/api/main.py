@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
@@ -9,6 +9,7 @@ from starlette.middleware.gzip import GZipMiddleware
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from .explore import router as explore_router
+from .limits import LocalBudget
 from .registry import ROOT, maintenance, resources
 from .retrieval import retriever
 from .runtime import optional_rank, semantic_status
@@ -28,6 +29,7 @@ app = FastAPI(
     },
 )
 app.include_router(explore_router)
+navigation_budget = LocalBudget()
 
 app.add_middleware(
     TrustedHostMiddleware,
@@ -76,6 +78,16 @@ def health():
 
 
 @app.post("/api/navigate", response_model=NavigateResponse)
+def navigate_http(payload: NavigateRequest):
+    if safety_route(payload.text, payload.urgency, payload.under18) is None and not navigation_budget():
+        raise HTTPException(
+            429,
+            "Local lookup limit reached. The public help pack remains available.",
+            headers={"Retry-After": "60"},
+        )
+    return navigate(payload)
+
+
 def navigate(payload: NavigateRequest):
     state = safety_route(payload.text, payload.urgency, payload.under18)
     warnings = [
