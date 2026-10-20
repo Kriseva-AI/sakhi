@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, chromium } from "@playwright/test";
 
 async function adultMedia(page: import("@playwright/test").Page) {
   await page.goto("/en-IN/finder");
@@ -147,47 +147,62 @@ test("invalid file has a recovery path and the original filename is not exposed"
 });
 
 test("a bounded synthetic voice note remains playable with streamed duration metadata", async ({
-  page,
   browserName,
 }) => {
   test.skip(
     browserName !== "chromium",
-    "Real synthetic MediaRecorder capture is exercised in Chromium; physical codecs are a separate gate.",
+    "Synthetic native capture uses Chromium's fake media driver; physical codecs are a separate gate.",
   );
-  await page.addInitScript(() =>
-    Object.defineProperty(navigator, "mediaDevices", {
-      value: {
-        getUserMedia: async () => {
-          const audio = new AudioContext();
-          const oscillator = audio.createOscillator();
-          const target = audio.createMediaStreamDestination();
-          oscillator.connect(target);
-          oscillator.start();
-          return target.stream;
-        },
-      },
-      configurable: true,
-    }),
-  );
-  await adultMedia(page);
-  await page
-    .getByRole("button", { name: "Record a voice note", exact: true })
-    .click();
-  await expect(
-    page.getByRole("button", { name: "Stop recording", exact: true }),
-  ).toBeVisible();
-  // Let the synthetic recorder emit its first250ms chunk before stopping.
-  await page.waitForTimeout(400);
-  await page
-    .getByRole("button", { name: "Stop recording", exact: true })
-    .click();
-  await expect(page.locator("audio")).toBeVisible();
-  await page.locator("audio").evaluate((audio) => {
-    Object.defineProperty(audio, "duration", {
-      value: Infinity,
-      configurable: true,
-    });
-    audio.dispatchEvent(new Event("loadedmetadata"));
+  const browser = await chromium.launch({
+    args: [
+      "--use-fake-device-for-media-stream",
+      "--use-fake-ui-for-media-stream",
+    ],
   });
-  await expect(page.locator("audio")).toBeVisible();
+  const context = await browser.newContext({
+    baseURL: "http://127.0.0.1:5173",
+    permissions: ["microphone"],
+  });
+  const page = await context.newPage();
+  try {
+    await page.addInitScript(() => {
+      const NativeRecorder = MediaRecorder;
+      (window as any).MediaRecorder = class extends NativeRecorder {
+        constructor(stream: MediaStream, options?: MediaRecorderOptions) {
+          super(stream, options);
+          this.addEventListener("dataavailable", (event) => {
+            (window as any).syntheticCapturedBytes =
+              ((window as any).syntheticCapturedBytes || 0) + event.data.size;
+          });
+        }
+      };
+    });
+    await adultMedia(page);
+    await page
+      .getByRole("button", { name: "Record a voice note", exact: true })
+      .click();
+    await expect(
+      page.getByRole("button", { name: "Stop recording", exact: true }),
+    ).toBeVisible();
+    await expect
+      .poll(
+        () => page.evaluate(() => (window as any).syntheticCapturedBytes || 0),
+        { timeout: 15000 },
+      )
+      .toBeGreaterThan(0);
+    await page
+      .getByRole("button", { name: "Stop recording", exact: true })
+      .click();
+    await expect(page.locator("audio")).toBeVisible();
+    await page.locator("audio").evaluate((audio) => {
+      Object.defineProperty(audio, "duration", {
+        value: Infinity,
+        configurable: true,
+      });
+      audio.dispatchEvent(new Event("loadedmetadata"));
+    });
+    await expect(page.locator("audio")).toBeVisible();
+  } finally {
+    await browser.close();
+  }
 });
