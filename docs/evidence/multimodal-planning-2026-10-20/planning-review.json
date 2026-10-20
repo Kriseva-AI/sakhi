@@ -1,0 +1,19 @@
+{
+  "scope": "Planning artifact self-review and existing baseline regression. Proposed features not implemented.",
+  "documents_checked": [
+    "docs/research/multimodal-care-2026-10-20.md",
+    "docs/superpowers/specs/2026-10-20-sakhi-care-multimodal-design.md",
+    "docs/superpowers/plans/2026-10-20-sakhi-care-multimodal.md",
+    "docs/launch/INSTAGRAM_LAUNCH_PLAN_2026-10-20.md"
+  ],
+  "tasks": 12,
+  "languages": 23,
+  "new_languages_absent": 7,
+  "human_approvals": 0,
+  "open_launch_gates": 12,
+  "local_links": "passed",
+  "authored_punctuation": "passed",
+  "interface_review": "confirmed input,approval revision,purpose,capability/source boundaries defined; long transcript and privacy-copy migration covered",
+  "existing_baseline_make_verify": "passed",
+  "new_features_verified": false
+}

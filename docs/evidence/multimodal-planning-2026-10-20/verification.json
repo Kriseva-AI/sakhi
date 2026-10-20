@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-10-20T09:33:54.509560+00:00",
+  "completed_at_utc": "2026-10-20T09:36:33.902428+00:00",
+  "command": "make verify",
+  "exit_code": 0,
+  "scope": "Current baseline plus planning documents; does not test or implement the proposed media/AAC/23-language features. Prior accepted release artifacts preserved byte-for-byte.",
+  "captured_generated_artifacts": [
+    "pytest.xml",
+    "browser-results.json",
+    "evaluation.json",
+    "structural-validation.json",
+    "readme-links.json",
+    "public-cache-manifest.json"
+  ]
+}

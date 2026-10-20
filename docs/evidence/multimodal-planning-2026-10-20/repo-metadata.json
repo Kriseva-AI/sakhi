@@ -1,0 +1,78 @@
+{
+  "checked_at_utc": "2026-10-20T09:22:49.545136+00:00",
+  "scope": "Public repository metadata only. No weights/dependencies/download execution. Candidate status, not adoption or audit.",
+  "repos": [
+    {
+      "full_name": "AI4Bharat/IndicTrans2",
+      "html_url": "https://github.com/AI4Bharat/IndicTrans2",
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "pushed_at": "2025-10-03T07:05:20Z",
+      "updated_at": "2026-10-19T20:06:20Z",
+      "license_spdx": "MIT",
+      "head_sha": "4f08e39cc6bf13cd62e2445dc725f22bff1a9219",
+      "head_committed_at": "2025-10-03T07:05:19Z"
+    },
+    {
+      "full_name": "ggml-org/whisper.cpp",
+      "html_url": "https://github.com/ggml-org/whisper.cpp",
+      "archived": false,
+      "disabled": false,
+      "default_branch": "master",
+      "pushed_at": "2026-10-19T14:14:00Z",
+      "updated_at": "2026-10-20T08:36:36Z",
+      "license_spdx": "MIT",
+      "head_sha": "231638a0717b7822784297e5980965ffcec05810",
+      "head_committed_at": "2026-10-19T14:14:00Z"
+    },
+    {
+      "full_name": "huggingface/transformers.js",
+      "html_url": "https://github.com/huggingface/transformers.js",
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "pushed_at": "2026-10-15T06:39:00Z",
+      "updated_at": "2026-10-20T05:29:44Z",
+      "license_spdx": "Apache-2.0",
+      "head_sha": "511bb61a7c46b73e33f1af3fb308fbd1afe98c02",
+      "head_committed_at": "2026-10-06T16:32:20Z"
+    },
+    {
+      "full_name": "tesseract-ocr/tesseract",
+      "html_url": "https://github.com/tesseract-ocr/tesseract",
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "pushed_at": "2026-10-19T18:24:42Z",
+      "updated_at": "2026-10-20T08:55:31Z",
+      "license_spdx": "Apache-2.0",
+      "head_sha": "99b8aa6cbc4dcff88abf8837dd7a3b785fdddffe",
+      "head_committed_at": "2026-10-19T18:24:42Z"
+    },
+    {
+      "full_name": "ffmpegwasm/ffmpeg.wasm",
+      "html_url": "https://github.com/ffmpegwasm/ffmpeg.wasm",
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "pushed_at": "2026-09-29T21:30:20Z",
+      "updated_at": "2026-10-20T05:24:52Z",
+      "license_spdx": "MIT",
+      "head_sha": "f876f907c7e9b9bf51d4ed0b913a855a63ae63fc",
+      "head_committed_at": "2025-09-17T00:49:07Z"
+    },
+    {
+      "full_name": "Bodhan-AI/bodhan-model-info",
+      "html_url": "https://github.com/Bodhan-AI/bodhan-model-info",
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "pushed_at": "2026-09-07T08:26:23Z",
+      "updated_at": "2026-10-18T05:39:52Z",
+      "license_spdx": null,
+      "head_sha": "35a3b9943967a241fad7c290b930aa0fffd3fb29",
+      "head_committed_at": "2026-09-07T08:26:17Z"
+    }
+  ]
+}

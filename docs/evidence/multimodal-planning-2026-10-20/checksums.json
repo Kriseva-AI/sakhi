@@ -1,0 +1,23 @@
+{
+  "scope": "Planning documents and actual baseline evidence; not a product-release manifest",
+  "sha256": {
+    "docs/research/multimodal-care-2026-10-20.md": "381c9dba60160a6d547ba12fe18c97f73b4bfb8783480fe195df7f0c159c0f24",
+    "docs/superpowers/specs/2026-10-20-sakhi-care-multimodal-design.md": "3b59463be387db9350bd615f012b5e381c7e7904a5f523aa7f1912e739803b54",
+    "docs/superpowers/plans/2026-10-20-sakhi-care-multimodal.md": "238ed97b871d7f8df53427be8473f0203c0efd20737fcb8f822e60d518d64a5f",
+    "docs/launch/INSTAGRAM_LAUNCH_PLAN_2026-10-20.md": "2bae3319a9bf7616df01c7175ae23ee4c0ea0b81fd526633e205c8b3c1f9a525",
+    "docs/evidence/multimodal-planning-2026-10-20/repo-metadata.json": "ff7d16b52cc00a93bb09996b7280c16b43e4dc1faa20f1903a9eb3982849fa04",
+    "docs/evidence/multimodal-planning-2026-10-20/public-cache-manifest.json": "32395062ef65c5dd6aa84bc255aebc567be20faae38d435d0667ccedd46dcd43",
+    "docs/evidence/multimodal-planning-2026-10-20/scope.json": "4a9fbc5d814f7b2f96b1266019be066912c144fc79768b5f19dac1907cff0ae2",
+    "docs/evidence/multimodal-planning-2026-10-20/planning-review.json": "875a0d5b72dc8fa1d100dcc21898ae1a39f27d44032834b6dde9b611c8370e1b",
+    "docs/evidence/multimodal-planning-2026-10-20/verify-planning.log": "12e728bd1f5ebd30020c96cb35a617a87a6d3654564aa691b3b9abcab1acf6b1",
+    "docs/evidence/multimodal-planning-2026-10-20/structural-validation.json": "2ec83a5b955e964fcf883e2607c0412323f7475eb49b81d58c3d89bce32c85c8",
+    "docs/evidence/multimodal-planning-2026-10-20/browser-results.json": "0e808d3a70d04ad652e7e56b95bb2941d425305ed87be9f5ebe0dfe9960d0c6d",
+    "docs/evidence/multimodal-planning-2026-10-20/pytest.xml": "3158db7c2bfeb84fb958208308f31bb84332f27a16b5e991b721a5cae4d6021f",
+    "docs/evidence/multimodal-planning-2026-10-20/verification.json": "5fd5b0e0414f87c99a40bed6aacc4165f6eecf0dd3df8f0afce4baed361d64c0",
+    "docs/evidence/multimodal-planning-2026-10-20/readme-links.json": "16723114e831ccea948b5ff194823f87d515149c1e298cd4700b97ceabcbf375",
+    "docs/evidence/multimodal-planning-2026-10-20/public-evaluation.json": "f9d43c1bf55c64faed00c90bab69fa0b56d50e0735fdd369bc526b68329920d7",
+    "docs/evidence/multimodal-planning-2026-10-20/evaluation.json": "f9d43c1bf55c64faed00c90bab69fa0b56d50e0735fdd369bc526b68329920d7",
+    "docs/evidence/multimodal-planning-2026-10-20/language-modality-baseline.csv": "cc3db045e96fa33b2cfd6d9db75a947303928c0ad382c0e9806902e7c0493db5",
+    "docs/evidence/multimodal-planning-2026-10-20/launch-gates.csv": "90f8d0c9d949d1f93ab3463a3b2ff7ee1ae2bfcecf2e92ca805233bc526f965f"
+  }
+}

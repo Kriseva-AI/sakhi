@@ -1,0 +1,145 @@
+{
+  "fixture_status": "draft_not_expert_labeled",
+  "surface_variations_not_independent": true,
+  "baseline": "SQLite FTS5 BM25 with deterministic safety rules",
+  "engine": "lexical",
+  "semantic_comparison": "separate optional model benchmark; not used in this baseline",
+  "hardware": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+  "cases": 410,
+  "by_locale": {
+    "en-IN": {
+      "cases": 110,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.10909090909090909,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "hi-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "bn-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "mr-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "te-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "ta-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "gu-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "kn-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "ml-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "or-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "pa-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "as-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "ur-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "ne-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "kok-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    },
+    "ks-Arab-IN": {
+      "cases": 20,
+      "accuracy": 1,
+      "top3_relevance": 1,
+      "abstention_rate": 0.1,
+      "in_scope_recall": 1.0,
+      "emergency_recall": 1.0
+    }
+  },
+  "latency_ms": {
+    "p50": 0.07835449650883675,
+    "p95": 0.08766702376306057
+  },
+  "critical_emergency_failures": 0,
+  "failures": []
+}

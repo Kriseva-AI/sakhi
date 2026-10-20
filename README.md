@@ -20,6 +20,8 @@ A free public-benefit navigator for women in India: prepare beforehand, understa
 
 The recovery revision adds child/online-abuse next steps, discreet cover, consented recipient drafts and foreground location assistance. Actual public city, weather and route requests succeeded; nearby discovery still returned 503. No granular crime prediction or institutional integration has been validated. Read the [blocker register](docs/BLOCKERS_2026-10-20.md), [20-priority audit](docs/PRIORITY_AUDIT_2026-10-20.md) and [measured release report](docs/RELEASE_REPORT.md). Public launch gates remain open.
 
+The next build has an [execution-ready care/multimodal plan](docs/superpowers/plans/2026-10-20-sakhi-care-multimodal.md), [23-language design](docs/superpowers/specs/2026-10-20-sakhi-care-multimodal-design.md) and [Instagram launch brief](docs/launch/INSTAGRAM_LAUNCH_PLAN_2026-10-20.md). These are planned changes. New media/AAC capabilities and full23-language support are not implemented or approved.
+
 ## Start locally
 
 From this checkout, Docker is the shortest path:
