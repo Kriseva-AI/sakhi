@@ -1,0 +1,10 @@
+.git
+.venv
+.env*
+node_modules
+test-results
+playwright-report
+.superpowers
+models/cache
+docs/evidence
+planning/NEXT_CHAT_MASTER_PROMPT_2026-10-20.md

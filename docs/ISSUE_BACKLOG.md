@@ -826,3 +826,7 @@ Gate: Internal public preview only. Production human review remains open.
 - No authorized/staffed recipient, police/ERSS agreement, business messaging account or real acknowledgement process. Drafts/page reminders do not satisfy those capabilities.
 - Physical GPS/OS behaviour, assistive technology maps, native-language/city comprehension and actual service contacts remain unverified.
 - Production source-data age limits must supplement receipt expiry. Independent facility verification, configured provider switching and incident/retention ownership remain required.
+
+## October21 contribution slices
+
+The current source adds23 selectable targets, local symbol confirmation, adult-only temporary voice/audio/video preview and preparation progress. Complete translation, approval receipts, owned private-processing worker, evaluated ASR/video scope, ISL research, physical accessibility, live-provider capacity and human service review remain separate tasks. Use the care/multimodal plan's acceptance criteria; do not mark its12 tasks complete from this smaller implementation slice. Public issues may contain only public-source or synthetic examples.

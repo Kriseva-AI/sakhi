@@ -64,3 +64,11 @@ Sensitive modal destinations have an approval generation, expiry, visibility inv
 Browser public-data lookups have a cancellable 12-second deadline with category-specific manual search alternatives. The server retains its 25-second bounded provider request. General navigation has a locked timestamp-only process budget of 120/minute; urgent/minor policy bypasses this budget. No IP or narrative is retained by it. Production ingress/capacity/incident ownership remains an external gate.
 
 The frozen English holdout compares local routing with two already installed models outside runtime. No general model was promoted, downloaded at startup or allowed to replace emergency policy. All nine routes use three contextual cues and progressive detail, documented in the final production capture receipt. Source code f1fcdfb is the final measured implementation.
+
+## Local input and language targets, October21
+
+The canonical23-language registry feeds the API language enum; frontend types, catalogues and API targets are checked for consistency. Seven added targets remain entirely English fallback. Structural availability never grants translation/ASR approval. The AST localisation inventory records source literals for future classification and review.
+
+AACBoard uses native labelled symbol buttons and local confirmation before advancing the ordinary age/scope journey. LocalMedia accepts one adult-only in-memory preview or explicit microphone recording. Generation guards discard late permission results; cover/background/exit/clear stop tracks and revoke Blob URLs. File byte/duration checks, recording byte/time caps, a playback deadline and five-minute expiry bound local acquisition. No media worker, upload, remote speech service, transcription, video interpretation or caregiver connection exists. Source files are outside app erasure control. The browser's native decoder handles playback. Synthetic MediaRecorder tests do not replace physical codec/privacy/accessibility acceptance.
+
+ResultGuide's preparation checklist records only in-page progress and never promotes that to submission or provider acknowledgement. The deployment target serves the same FastAPI application and public assets; exact hosting metadata supplies permitted hosts. Per-process budgets remain an internal-preview control, not distributed ingress protection.

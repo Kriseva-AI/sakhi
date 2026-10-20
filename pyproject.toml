@@ -19,6 +19,13 @@ embeddings = [
 pythonpath = ["."]
 testpaths = ["tests"]
 
+# Protected review only. Authentication and release approval are hosting gates.
+[tool.vercel]
+entrypoint = "services.api.main:app"
+
+[tool.vercel.fastapi.static]
+cdn = false
+
 [tool.ruff]
 line-length = 110
 

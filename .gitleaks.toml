@@ -1,0 +1,11 @@
+[extend]
+useDefault = true
+
+# Generated release manifests contain SHA256 values keyed by paths such as api.
+# Do not allow secrets in arbitrary evidence or in other files.
+[[allowlists]]
+description = "SHA256 values in generated release checksum manifests"
+condition = "AND"
+paths = ['''^docs/(evidence/(continuation/)?|releases/pre-recovery-2026-10-20/)release-checksums\.json$''']
+regexTarget = "secret"
+regexes = ['''^[a-f0-9]{64}$''']
