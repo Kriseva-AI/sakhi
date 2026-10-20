@@ -1,0 +1,228 @@
+[WebServer] INFO:     Started server process [1607]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+[WebServer] (node:1630) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] INFO:     Started server process [1635]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 1 test using 1 worker
+
+(node:1636) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/quick-exit.spec.ts:4:1 › quick exit covers the screen before external navigation (5.3s)
+
+
+  1) [chromium] › tests/quick-exit.spec.ts:4:1 › quick exit covers the screen before external navigation 
+
+    Error: expect(received).toContain(expected) // indexOf
+
+    Expected substring: "Notes"
+    Received string:    "Skip to content
+    In immediate danger?
+    Call 112
+    Sakhi cannot dispatch help.
+    sakhi.
+    BY KRISEVA
+    Hide
+    Aa
+    Language
+    অসমীয়া
+    বাংলা
+    English
+    ગુજરાતી
+    हिन्दी
+    ಕನ್ನಡ
+    कोंकणी
+    کٲشُر
+    മലയാളം
+    मराठी
+    नेपाली
+    ଓଡ଼ିଆ
+    ਪੰਜਾਬੀ
+    தமிழ்
+    తెలుగు
+    اردو
+    Clear session
+    Prepare & learn
+    Public resources
+    Privacy & trust
+    Public places
+    Community
+    Internal preview
+    No institutional integrations
+    Lite view·
+    01
+    Check scope
+    02
+    Prepare
+    03
+    You decide
+    Explore another concern
+    INFORMATION, THEN YOUR CHOICE
+    Public resource directory·
+    Only the curated preview pack appears here. Discovery leads are kept separate. Sources were checked by an agent, with human verification still pending.·
+    Compare public pathways
+    Public source checked
+    India
+    Emergency assistance·
+    112 is the official emergency response number in India. Calling requires your own phone connection.·
+    112.gov.in
+    Checked 2026-10-19 · review by 2026-11-18
+    Human verification pending
+    Scope and eligibility·
+    Anyone seeking emergency assistance in India.·
+    What to know·
+    Sakhi cannot dispatch help or know whether a call connects.·
+    Open official website
+    Call
+    112
+    Source receipt
+    Download general help card
+    This download contains public resource information only. It creates a file on your device.
+    Public source checked
+    India
+    Women Helpline and One Stop Centres·
+    181 provides information and support, including connection to One Stop Centres.·
+    wcd.gov.in
+    Checked 2026-10-19 · review by 2026-11-18
+    Human verification pending
+    Scope and eligibility·
+    Women seeking support or someone calling on their behalf.·
+    What to know·
+    The official page excludes West Bengal. Local availability and referral acceptance are not checked by Sakhi.·
+    Open official website
+    Call
+    181
+    Source receipt
+    Download general help card
+    This download contains public resource information only. It creates a file on your device.
+    Public source checked
+    India
+    Child Helpline·
+    1098 is the Child Helpline listed by the Ministry. Read its scope before deciding to call.·
+    wcd.gov.in
+    Checked 2026-10-20 · review by 2026-11-19
+    Human verification pending
+    Scope and eligibility·
+    For concerns involving someone under 18.·
+    What to know·
+    Sakhi does not handle child-protection cases, evidence or intimate images.·
+    Open official website
+    Call
+    1098
+    Source receipt
+    Download general help card
+    This download contains public resource information only. It creates a file on your device.
+    Public source checked
+    India
+    Legal aid options·
+    NALSA provides information on assistance for women and routes to legal services authorities.·
+    nalsa.gov.in
+    Checked 2026-10-19 · review by 2026-11-18
+    Human verification pending
+    Scope and eligibility·
+    Read the official page for eligibility and how to approach an authority.·
+    What to know·
+    Eligibility and individual legal advice must be confirmed with the authority.·
+    Open official website
+    Source receipt
+    Download general help card
+    This download contains public resource information only. It creates a file on your device.
+    Public source checked
+    India
+    Report a cyber concern·
+    The National Cyber Crime Reporting Portal is the official online entry point for cybercrime complaints.·
+    cybercrime.gov.in
+    Checked 2026-10-19 · review by 2026-11-18
+    Human verification pending
+    Scope and eligibility·
+    For cybercrime concerns. The official portal determines the applicable reporting route.·
+    What to know·
+    Authentication and complaint requirements belong to the portal. No complaint is filed here. Direct availability is not guaranteed.·
+    Open official website
+    Source receipt
+    Download general help card
+    This download contains public resource information only. It creates a file on your device.
+    Public source checked
+    India
+    Workplace harassment options·
+    SHe-Box is an official entry point for complaints of sexual harassment at the workplace.·
+    shebox.wcd.gov.in
+    Checked 2026-10-19 · review by 2026-11-18
+    Human verification pending
+    Scope and eligibility·
+    Workplace scope only. Campus concerns may need a different institutional route; legal aid is an alternative.·
+    What to know·
+    Official reference checked. Direct portal fetch returned 403; live availability and acceptance are unverified.·
+    Open official website
+    Source receipt
+    Download general help card
+    This download contains public resource information only. It creates a file on your device.
+    Public source checked
+    India
+    National Commission for Women·
+    The NCW official portal provides complaint registration and registered complaint status access.·
+    ncwapps.nic.in
+    Checked 2026-10-19 · review by 2026-11-18
+    Human verification pending
+    Scope and eligibility·
+    Check the official complaint instructions for scope.·
+    What to know·
+    User completes any registration, CAPTCHA and submission on the official site. Sakhi receives no acknowledgement.·
+    Open official website
+    Source receipt
+    Download general help card
+    This download contains public resource information only. It creates a file on your device.·
+    Semantic search disabled. Local keyword retrieval is available. Agent source check only. No human signoff or live availability check.·
+    A note about your device·
+    Someone with access to your device, browser history or backups may see your activity. Clearing this session does not erase history, screenshots or external copies. Use a device you trust if that is possible.·
+    sakhi
+    .·
+    Sakhi handles the complexity. You stay in control.·
+    Sakhi is a support navigator, not an emergency response, counselling or legal services provider. It has no government affiliation.·
+    Built by Kriseva AI. Public sources are independent services, not partners.·
+    Maintainer review
+    Hide page
+    Quick exit to Google
+    You are in control of this next step·
+    Emergency assistance·
+    Destination
+    112.gov.in
+    https://112.gov.in/·
+    No story or form data will be sent by Sakhi. The external website has its own privacy and account requirements. It may see your IP address and browser information.·
+    Someone with access to your device, browser history or backups may see your activity. Clearing this session does not erase history, screenshots or external copies. Use a device you trust if that is possible.·
+    I have considered who can see this device and its browsing history.
+    Open this website
+    Stay in Sakhi"
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      11 |   await page.getByRole('button',{name:'Open official website'}).first().click();
+      12 |   await page.getByRole('dialog').getByRole('button',{name:'Quick exit to Google',exact:true}).click({noWaitAfter:true});
+    > 13 |   await expect.poll(()=>page.evaluate(()=>(window as any).__exitScreen)).toContain('Notes');
+         |                                                                          ^
+      14 | });
+      15 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/quick-exit.spec.ts:13:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/quick-exit-quick-exit-cove-f59ad--before-external-navigation-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/quick-exit-quick-exit-cove-f59ad--before-external-navigation-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/quick-exit-quick-exit-cove-f59ad--before-external-navigation-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/quick-exit-quick-exit-cove-f59ad--before-external-navigation-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/quick-exit.spec.ts:4:1 › quick exit covers the screen before external navigation 

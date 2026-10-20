@@ -1,0 +1,25 @@
+{
+  "seeds": {
+    "ingested": 211,
+    "reviewed_for_preview": 7,
+    "human_approved": 0,
+    "exposed": 7,
+    "duplicates": []
+  },
+  "pack_version": "2026-10-20.1",
+  "pack_sha256": "5c41834d2c45d4858bb7b34420f6d229064fabea5ad2723279abd7adc9d9bc69",
+  "osc": {
+    "reported_national": 991,
+    "report_date": "2026-08-05",
+    "data_through": "2026-06-30",
+    "individual_sourced": 0,
+    "independently_verified_contacts": 0,
+    "integrations": 0,
+    "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2294887&lang=1&reg=1"
+  },
+  "release": "internal_demo_only",
+  "write_access": false,
+  "external_actions": false,
+  "private_vault": "not_ready",
+  "link_results": "not_run_offline_validation_only"
+}

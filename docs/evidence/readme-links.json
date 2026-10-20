@@ -1,6 +1,8 @@
 {
   "local_targets": [
-    "docs/LIVE_TRAVEL_STATUS.md",
+    "docs/BLOCKERS_2026-10-20.md",
+    "docs/PRIORITY_AUDIT_2026-10-20.md",
+    "docs/RELEASE_REPORT.md",
     "docs/DEMO.md",
     "FEATURES.json",
     "docs/FEATURES.md",
@@ -17,6 +19,8 @@
     "ROADMAP.md",
     "data/public-seeds/resources.json",
     "docs/evidence/resource-validation.json",
+    "docs/releases/pre-recovery-2026-10-20/resource-validation.json",
+    "data/public-seeds/support-guides.json",
     "docs/DATA_PROVENANCE.md",
     "docs/MAINTAINER.md",
     "data/public-seeds/osc-registry.json",
@@ -39,8 +43,8 @@
     "docs/RELEASE_GATES.md",
     "LICENSE",
     "docs/THIRD_PARTY_NOTICES.md",
-    "docs/evidence/travel-home-desktop.png",
-    "docs/evidence/travel-home-mobile.png",
+    "docs/evidence/continuation/desktop-home-viewport.png",
+    "docs/evidence/continuation/mobile-home-viewport.png",
     "docs/evidence/simple-options.png",
     "docs/evidence/simple-destination.png"
   ],

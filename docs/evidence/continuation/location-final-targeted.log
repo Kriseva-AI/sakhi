@@ -1,0 +1,15 @@
+[WebServer] INFO:     Started server process [79840]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 4 tests using 1 worker
+
+(node:79842) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/location-sharing.spec.ts:23:1 › local live position needs a separate pick and recipient preview before sharing (1.4s)
+  ✓  2 [chromium] › tests/location-sharing.spec.ts:75:1 › cover stops local live position and ignores a late reading (378ms)
+  ✓  3 [chromium] › tests/location-sharing.spec.ts:93:1 › revoke update stops a running watch and late callback cannot repopulate it (293ms)
+  ✓  4 [chromium] › tests/location-sharing.spec.ts:110:1 › stale local reading disappears instead of appearing live (295ms)
+
+  4 passed (3.1s)

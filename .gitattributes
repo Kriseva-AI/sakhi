@@ -1,3 +1,4 @@
 # Preserve raw tool-output evidence, including its original trailing whitespace.
 # Source and documentation retain normal Git whitespace checks.
 docs/evidence/*.log -whitespace
+docs/evidence/continuation/*.log -whitespace

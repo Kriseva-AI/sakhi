@@ -15,10 +15,10 @@ A free public-benefit navigator for women in India: prepare beforehand, understa
 **Device safety:** someone with access to your device, browser history or backups may see your activity. Clearing Sakhi does not erase those copies or make browsing untraceable.
 
 <table>
-<tr><td width="70%"><img src="docs/evidence/travel-home-desktop.png" alt="Actual Sakhi desktop landing page with public support choices, anonymous entry and emergency information" /></td><td width="30%"><img src="docs/evidence/travel-home-mobile.png" alt="Actual mobile landing page at 390 CSS pixels" /></td></tr>
+<tr><td width="70%"><img src="docs/evidence/continuation/desktop-home-viewport.png" alt="Actual Sakhi desktop landing page with public support choices, anonymous entry and emergency information" /></td><td width="30%"><img src="docs/evidence/continuation/mobile-home-viewport.png" alt="Actual mobile landing page at 390 CSS pixels" /></td></tr>
 </table>
 
-The live travel revision adds a real map and public travel tools. Actual city, weather, walking and driving API requests succeeded; mapped-place discovery is currently blocked by the community endpoint returning503. No granular crime dataset or prediction has been validated. Read the [12-workstream status and exact launch blockers](docs/LIVE_TRAVEL_STATUS.md) before describing this as production ready.
+The recovery revision adds child/online-abuse next steps, discreet cover, consented recipient drafts and foreground location assistance. Actual public city, weather and route requests succeeded; nearby discovery still returned 503. No granular crime prediction or institutional integration has been validated. Read the [blocker register](docs/BLOCKERS_2026-10-20.md), [20-priority audit](docs/PRIORITY_AUDIT_2026-10-20.md) and [measured release report](docs/RELEASE_REPORT.md). Public launch gates remain open.
 
 ## Start locally
 
@@ -50,7 +50,9 @@ A GitHub remote has not been created. After publication, clone the actual reposi
 
 ## Travel tools
 
-Open **Public places**, choose a city and select **Load live map** after reading the provider disclosure. Pan to a public destination or request mapped places, then choose a route estimate. **Conditions** loads the city forecast and solar times; **My plan** holds a local checklist, public card, neutral check-in message preview and page-only reminder. Device-city suggestion is optional under **Find another city in India**. Only a known public city ID reaches the geocoder; raw GPS stays on the device. No public-data layer guarantees safety, opening hours or rescue.
+Open **Public places**, choose a city and select **Load live map** after reading the provider disclosure. Pan to a public destination or request mapped places, then choose a route estimate. **Conditions** loads the city forecast and solar times; **My plan** holds a local checklist, public card, neutral check-in message preview and page-only reminder. Device-city suggestion is optional under **Find another city in India**. Only a known public city ID reaches the geocoder. Foreground device position stays local unless a one-time snapshot is separately selected and approved for a chosen recipient. No public-data layer guarantees safety, opening hours or rescue.
+
+Under **My plan**, choose a recipient and neutral update, optionally choose a one-time location snapshot, then review the exact recipient/content and device checkpoint before opening WhatsApp. Location permission alone never authorizes sharing. Send stays in WhatsApp; opening, user-reported sent/replied and unobserved delivery remain separate. Sakhi can explain native live-location sharing but cannot start or monitor it. Cover/background/expiry/revoke clear the relevant local position and consent.
 
 The city gazetteer has 3,783 records under CC BY 4.0; those are geographic points, not vetted facilities. No Google API account or key is configured. The Google search alternative remains available for 16 preset cities. Mass use needs owned/contracted providers and operational controls, not unlimited reliance on donated endpoints.
 
@@ -64,7 +66,7 @@ PYTHONPATH=. uv run --frozen python scripts/travel_smoke.py --port 8787 --live-p
 
 ## One real journey
 
-Choose **Find my next step → Understand my options → 18 or older → Online or digital concerns**, or enter the fictional sentence “Someone made an impersonation account of me.” Sakhi returns public cybercrime and legal-aid options with official source receipts. Preview the exact hostname, consider device privacy, then decide whether to open the website. No complaint or referral is submitted.
+Choose **Find my next step → Understand my options → 18 or older → Online or digital concerns**, or enter the fictional sentence “Someone made an impersonation account of me.” Sakhi clarifies accounts/threats versus intimate images. For image concerns it asks the relevant image-creation age and shows conditional Take It Down or StopNCII information with Indian alternatives; unknown age never implies eligibility. Under-18 users get the child path before API/text intake. No image is collected. Public cybercrime and legal-aid options retain official source receipts. Preview the exact hostname, consider device privacy, then decide whether to open the website. No complaint or referral is submitted.
 
 The landing-page **Try a fictional example** mode visibly disables calls, outbound links and sharing. It never simulates an acknowledgement. See the [60-second synthetic storyboard](docs/DEMO.md).
 
@@ -84,16 +86,16 @@ Illustrative before/after, with no measured time-saving claim:
 | Capability | Actual state |
 | --- | --- |
 | Anonymous guided discovery and three-selection route from a direct goal | Functional locally |
-| Immediate 112 CTA, explicit minor stop and general uncertainty fallback | Functional locally; finite phrase rules have limits |
+| Static 112 before JavaScript, local minor/urgent path, conditional child/cyber guidance | Functional locally; finite rules and source checks need human review |
 | Local SQLite FTS5 BM25 plus intact Indic word matching | Functional without models |
 | Source dates, expiry warnings, coarse jurisdiction and official hostname preview | Functional locally; 181 West Bengal exception preserved |
-| Clear ephemeral session, pending-request cancellation, no sensitive persistence | Functional locally |
+| Neutral cover, honest quick exit, clear session, cancellation and no sensitive persistence | Functional locally; cannot erase browser/OS/external traces |
 | Public learning, generic questions and user-selected resource kit | Functional locally; source and safeguarding review pending |
 | Choose up to three services for channel/scope/source comparison | Functional locally |
 | Opt-in live OSM map, public city lookup, weather/daylight and walking/driving estimates | Actual map, city, weather and both route modes observed; see live API receipt |
 | Mapped public places and place details | Adapter/UI implemented; actual Overpass request 503. Live POI success is blocked, not simulated |
 | Local trip checklist, public card and foreground reminder | Functional local controls; no monitoring or automatic alert |
-| Public Maps/WhatsApp and neutral check-in drafts | User-opened external handoffs; recipient and Send remain external |
+| Public Maps/WhatsApp plus chosen-recipient neutral update and optional one-time position | Exact preview and separate consent; Send/delivery unobserved, user reports labelled |
 | Interactive data boundary, reading comfort and structured local corrections | Functional locally; nothing automatically submitted |
 | Lite view and synthetic sandbox | Functional locally |
 | Hash-checked public-only PWA cache and offline reload | Browser tested; no live-service promise |
@@ -101,7 +103,7 @@ Illustrative before/after, with no measured time-saving claim:
 | Read-only source/locale/evaluation console and 211-lead ingestion | Functional locally; no private interactions shown |
 | Optional EmbeddingGemma 2 ranking | Actual local execution measured; disabled by default |
 | Expert bystander advice and fully reviewed multilingual guidance | Review blocked |
-| Private vault, personal drafts, timelines, uploads, voice and reminders | Not available; P1 deferred |
+| Private vault, personal case drafts/timelines, uploads, voice and background reminders | Not available; generic preparation and foreground page reminder are separate |
 | Provider handoffs, OSC appointment automation, submissions and acknowledgement tracking | Not available; partner authorization required |
 
 All **68 candidate capabilities** have honest individual states in [FEATURES.json](FEATURES.json) and [the feature inventory](docs/FEATURES.md). This is not a claim that all 68 work. [Issue bodies](docs/ISSUE_BACKLOG.md) are prepared locally; no remote Issues exist. Original priorities are preserved. The founder-requested Sprint 2 public-only extensions are individually implemented or partial, while human P0 release gates remain open. Private workflows and institutional adapters stay disabled. See [the 14-interaction Sprint 2 inventory](docs/SPRINT2_FEATURES.md).
@@ -112,19 +114,19 @@ The [October 20 simplification](docs/DESIGN_SIMPLIFICATION.md) supersedes the ea
 
 The [execution plan](docs/SPRINT2_PLAN.md), [design system](DESIGN.md), [service and eight-product comparison](docs/research/sprint2-services-competitors.md), [seventeen-repository review](docs/research/sprint2-open-source.md) and [Maps, messaging and crime-data research](docs/research/sprint2-maps-messaging-data.md) record sources, tradeoffs and gaps. These are evidence-informed hypotheses, not validated uniqueness or user-impact claims.
 
-The opening is a short pink-and-black entrance with one primary finder action. It has 40 main words and fits a 390x844 English viewport; three-to-four-second comprehension remains a research goal. The finder also uses compact chrome. Detailed exploration under Prepare & learn covers before / concerning now / after, a public preparation library, manually scrolling official pathways, user-selected comparison, first-contact questions, public kit, data-boundary explorer, map and WhatsApp previews, comfortable reading and community corrections. It follows the founder's October 20 pink/black direction with a bold Manrope wordmark/headlines, IBM Plex reading text and Noto script fallbacks. No government logo or partner endorsement is implied.
+The opening is a short pink-and-black entrance with one primary finder action. Three contextual visual cues explain choose, prepare and decide. Four-second comprehension remains a research goal. The finder also uses compact chrome. Detailed exploration under Prepare & learn covers before / concerning now / after, a public preparation library, manually scrolling official pathways, user-selected comparison, first-contact questions, public kit, data-boundary explorer, map and WhatsApp previews, comfortable reading and community corrections. It follows the founder's October 20 pink/black direction with a bold Manrope wordmark/headlines, IBM Plex reading text and Noto script fallbacks. No government logo or partner endorsement is implied.
 
 Accessibility, usability and UI/UX are equal product pillars. The [quality contract and state-level evidence matrix](docs/QUALITY.md) turn lessons from GOV.UK, NHS, USWDS and Carbon into semantic controls, actionable errors, visible eligibility, cancellation, large-text reflow and repeatable regression budgets. The [primary-source study](docs/research/sprint2-three-pillars.md) records their published tools and production maintenance practices. No participant research or human assistive-technology signoff has been completed.
 
-Maps URLs do not require a key, but map results are not vetted providers or safe routes. The WhatsApp card is a generic draft; the recipient and Send are chosen in WhatsApp. No personal narrative or device position is sent to those services. Optional one-shot device-city suggestion stays local; no authority alert or staffed helpdesk is supplied. Historical crime statistics cannot certify present safety, so no crime heatmap or prediction is fabricated. [Operational roadmap and gates](ROADMAP.md).
+Maps URLs do not require a key, but map results are not vetted providers or safe routes. The public WhatsApp card stays generic. The separate loved-one update holds a user-entered recipient and fixed neutral text in memory; an optional one-time snapshot reaches WhatsApp only after separate selection and recipient/content approval. No private narrative is included. Optional city suggestion stays local; no authority alert or staffed helpdesk is supplied. Historical crime statistics cannot certify present safety, so no crime heatmap or prediction is fabricated. [Operational roadmap and gates](ROADMAP.md).
 
 ## Public sources and directory coverage
 
 Five learning cards linked to four public source pages are counted separately from directory entries. They carry general information and pending-review labels.
 
-**211 discovery leads ingested · 7 agent-reviewed and curated for this preview · 0 human production approvals · 7 exposed public entry points.** Leads are not APIs. Public reading, service cost, open-source licensing and permission to integrate are separate facts.
+**211 discovery leads · 7 source-reviewed directory preview records + 2 conditional image-guide references · 9 distinct support references in scope · 0 human production approvals.** Leads are not APIs. Public reading, service cost, open-source licensing and permission to integrate are separate facts.
 
-The curated pack contains official emergency, women/child helpline, NALSA, cybercrime, SHe-Box and NCW entry points. Each has exact provenance, scope, check date, expiry and limitations. Some direct fetches failed or differed between tools; a source check does not establish live availability. [Inspect the canonical pack](data/public-seeds/resources.json) and [link-health observations](docs/evidence/resource-validation.json). Source review date: **2026-10-19**. Specialized recommendations expire; generic official entry points retain explicit stale warnings as a fallback.
+The curated pack contains official emergency, women/child helpline, NALSA, cybercrime, SHe-Box and NCW entry points. Each has exact provenance, scope, check date, expiry and limitations. Some direct fetches failed or differed between tools; a source check does not establish live availability. [Inspect the canonical pack](data/public-seeds/resources.json) and [current offline validation](docs/evidence/resource-validation.json) and [dated historical link observations](docs/releases/pre-recovery-2026-10-20/resource-validation.json). Source review dates: **October 19 for six directory entries; October 20 for Child Helpline and the two supplemental guide references**. Supplemental sources are versioned in [support-guides.json](data/public-seeds/support-guides.json). Specialized recommendations expire; generic official entry points retain explicit stale warnings as a fallback.
 
 **OSC coverage:** the [August 5, 2026 government report](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2294887&lang=1&reg=1) reported 991 operational centres using data through June 30, 2026. Sakhi holds **0 individually sourced centre records, 0 independently verified centre contacts and 0 authorized provider integrations**. It does not fabricate 991 entries or claim access to a national provider API.
 
@@ -190,7 +192,7 @@ flowchart LR
   D[211 discovery leads] --> M[Read-only maintenance console]
 ```
 
-No private-user datastore or institutional connector exists. Request text stays out of URLs, logs, caches and persistent storage. Only the non-sensitive locale preference is saved. Strict schemas, confidential validation errors, trusted hosts, CSP, no-referrer, disabled device sensors and disabled framework telemetry are implemented. Clearing state cancels pending navigation so a delayed response cannot restore it. External websites and device/OS copies remain outside Sakhi's control.
+No private-user datastore or institutional connector exists. Request text stays out of URLs, logs, caches and persistent storage. Only an explicitly chosen language preference can persist, with a remove control. Recipient/position fields stay in page memory until an explicit external handoff. Strict schemas, confidential validation errors, trusted hosts, CSP, no-referrer, opt-in local geolocation and denied camera/microphone/payment are implemented. Clearing state cancels pending navigation so a delayed response cannot restore it. External websites and device/OS copies remain outside Sakhi's control.
 
 See [architecture](docs/ARCHITECTURE.md), [ADRs](docs/ADRs/001-local-architecture.md), [OpenAPI](packages/contracts/openapi.json), [API guide](docs/API.md), [privacy](docs/PRIVACY.md), [safety](docs/SAFETY.md), [threat model](docs/THREAT_MODEL.md) and [responsible-use terms](docs/TERMS.md).
 
@@ -207,11 +209,11 @@ PYTHONPATH=. uv run python scripts/resources.py validate --online
 PYTHONPATH=. uv run --group embeddings python scripts/model_benchmark.py
 ```
 
-`make verify` runs Ruff, Python tests, browser-local tests, catalog/data/README checks, a production build, draft scenario evaluation and Playwright. It exits non-zero on failures. Chromium runs the complete browser suite; Firefox and WebKit run the three-pillar interaction contract. `make quality` serves its own local production build and fails on missing measurements or exceeded Lighthouse budgets. Application tests use only local/synthetic inputs and do not call real services. Link maintenance and model download are separate explicit online actions.
+`make verify` runs Ruff, Python tests, browser-local tests, catalog/data/README checks, a production build, draft scenario evaluation and Playwright. It exits non-zero on failures. Chromium runs the complete browser suite; Firefox and WebKit run pillar, travel, recovery and location contracts. `make quality` serves its own local production build and fails on missing measurements or exceeded Lighthouse budgets. Application tests use only local/synthetic inputs and do not call real services. Link maintenance and model download are separate explicit online actions.
 
-Measured on 2026-10-20: **53 Python, 20 unit and 239 browser tests passed; 2 unsupported forced-colors emulation cases explicitly skipped.** Local Chromium lab Lighthouse: **97 performance / 100 accessibility / 100 best practices**, LCP 2.32s, CLS 0 and TBT 0ms. The 3s LCP regression budget and stricter 2.5s product goal both passed in this run. Required widths 320, 360, 375, 390, 414, 768, 1024, 1280 and 1440 are exercised. Axe scans cover the landing at every width, other main surfaces at 320/1440 and selected Indic/RTL shells. Browser tests cover cancellation, session erase, minors, focus, stale packs, language switch, offline reload and no automatic external requests. All three engines passed the 200% font-preference, text-spacing and font-failure checks. 200%/400% viewport reflow equivalents use 640/320 CSS-pixel widths; physical zoom, TalkBack/VoiceOver and physical Android remain unverified.
+Measured on 2026-10-20: **54 Python, 20 unit and 315 browser tests passed; 2 unsupported forced-colors emulation cases explicitly skipped.** Local Chromium lab Lighthouse: **97 performance / 100 accessibility / 100 best practices**, LCP 2.560s, CLS 0 and TBT 0ms. The 3s LCP regression budget passed; the separate 2.5s product goal was missed by 60.3ms. Required widths 320, 360, 375, 390, 414, 768, 1024, 1280 and 1440 are exercised. Axe scans cover the landing at every width, other main surfaces at 320/1440 and selected Indic/RTL shells. Browser tests cover cancellation, session erase, minors, focus, stale packs, language switch, offline reload and no automatic external requests. All three engines passed the 200% font-preference, text-spacing and font-failure checks. 200%/400% viewport reflow equivalents use 640/320 CSS-pixel widths; physical zoom, TalkBack/VoiceOver and physical Android remain unverified.
 
-The **410 draft routing cases** are in-sample, include generated surface variants and have no expert labels. The **104 authored-phrase model comparison** is also small and in-sample. Passing these does not establish real-world accuracy or emergency detection reliability. Per-language scores, timing, known limits and test counts are in the [release report](docs/RELEASE_REPORT.md) and [evidence directory](docs/evidence).
+The **410 draft routing cases** are in-sample, include generated surface variants and have no expert labels. The **104 authored-phrase model comparison** is also small and in-sample. A new frozen 16-case English author-labelled holdout scored local16/16, Gemma13/16 and Qwen14/16. Neither model was promoted. These small comparisons do not establish reasoning quality, real-world accuracy or emergency detection reliability. Per-language scores, timing, known limits and test counts are in the [release report](docs/RELEASE_REPORT.md) and [evidence directory](docs/evidence).
 
 No physical Wi-Fi-off cold-start test was performed. Browser offline reload is a narrower observation. Offline resources cannot promise phone connectivity, current service availability or official submissions. Chromium installability diagnostics reported no errors; physical installation is not claimed.
 
@@ -234,4 +236,4 @@ Good first contributions: an independently reviewed source, native-language revi
 
 Project code: [Apache-2.0](LICENSE). Dependencies, OFL font assets, public sources and the optional model retain their own terms. [Notices and license-review limits](docs/THIRD_PARTY_NOTICES.md). Source links and OSS acknowledgements do not imply endorsement.
 
-_Last resource review: 2026-10-19. Local preview only. No public release tag or hosted crisis service._
+_Source receipts: 2026-10-19 and 2026-10-20, scoped per record. Local preview only. No public release tag or hosted crisis service._

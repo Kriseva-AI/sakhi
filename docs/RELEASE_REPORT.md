@@ -1,65 +1,96 @@
 # Sakhi measured release report
 
-Date: 2026-10-20, Asia/Kolkata. Verdict: **internal_demo_only**. The live-travel revision adds real public-data integrations and a bold pink/black identity. It does not fulfill the requested promise of 10 to 15 flawless production features: live nearby-place availability and granular crime evidence are material external blockers. The [12-workstream status](LIVE_TRAVEL_STATUS.md) separates UI contracts from actual provider outcomes and human approvals.
+2026-10-20, Asia/Kolkata. Verdict: **internal_demo_only**. P0 engineering recovery is implemented and the accepted local gates pass. Public launch remains blocked by human source/safeguarding/language reviews, physical accessibility/offline acceptance, security/operations ownership and reliable provider capacity. Nearby discovery still returned an actual 503. No fixture is used to close an external dependency.
 
-The old leaf/serif wordmark is replaced with sakhi. in Manrope. The English opening remains40 main words and844px tall at390x844; a tested mobile map action now appears in the first viewport. Detail stays at the relevant choice. No three-second comprehension, crime prediction, safety outcome, partnership or mass-scale readiness is claimed. The previous report and12 checksum-verified artifacts are preserved in [the simplified release archive](releases/simple-2026-10-20/RELEASE_REPORT.md).
+The opening has one primary action, concrete finder choices, bold pink/black typography and three contextual visual cues on every page. All nine pages were captured and visually inspected at mobile and desktop sizes. Four-second comprehension is a research target, not an observed result. The original report is preserved in [the pre-recovery archive](releases/pre-recovery-2026-10-20/RELEASE_REPORT.md).
 
-## 1. Repository, branch and authority
+## 1. Repository, authority and release scope
 
-Local standalone repository:/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi, branch build/sakhi-sprint2. No GitHub remote, PR, public tag, hosted deployment or remote CI execution was created. Actual implementation/evidence commits are recorded in evidence/release-checksums.json and Git history. Project code is Apache-2.0; libraries, fonts, geographic data and optional model retain their own licenses.
+Repository: `/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi`, branch `build/sakhi-sprint2`. Baseline `fc74056`; recovery commits `d440ef4`, `4dd9129`, `f1fcdfb`. The final documentation/evidence commit follows these in local history. No remote, PR, public tag, hosted deployment or remote CI run was created. Code is Apache-2.0; dependencies, fonts, geographic data and optional model weights retain their own terms.
 
-Original supplied planning files remain under planning/. Previously missing companions were recovered with labels, not described as originals. The founder's later explicit requests authorize optional live public maps/APIs and local city suggestion. They do not approve personal alerts, recipient relationships, offender profiling or waive original human P0 gates.
+Root/product instructions, company state, master prompt, all referenced planning companions, 211 catalog rows and existing progress/live/release evidence were read before implementation. Baseline services and broken paths were reproduced before changes. [Blocker register](BLOCKERS_2026-10-20.md), [execution plan](CONTINUATION_PLAN_2026-10-20.md), [ordered 20-priority audit](PRIORITY_AUDIT_2026-10-20.md), [official-source/tool research](research/p0-recovery-2026-10-20.md).
 
-## 2. Reproducible setup and checks
+The request authorizes local engineering, optional foreground location and consented user-opened recipient drafts. Location permission alone authorizes no transmission. It does not authorize automatic alerts, private-story transmission, institutional relationships or waive human release gates. The user's untracked next-chat prompt remains untouched.
+
+## 2. Reproducible setup and accepted checks
 
 ```sh
 cd /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi
 make setup
 make dev
-# Alternative production container, bound to loopback 8787:
+# Alternative production preview, bound to loopback 8787:
 docker compose up --build
 make verify
 make quality
-# Explicit live public-data smoke, separate from deterministic tests:
+# Explicit actual public Mumbai probes, separate from fixture tests:
 PYTHONPATH=. uv run --frozen python scripts/travel_smoke.py --port 8787 --live-public-data
+# Actual UI captures, no position or message:
+node scripts/capture-recovery.mjs
 ```
 
-Native5173/API8765 and Docker8787 were executed on this Mac. The launcher refuses occupied listeners; no unrelated product listener was replaced. Docker is non-root, read-only, loopback-only with bounded tmpfs and dropped capabilities. No key or automatic model download is required. Host:macOS arm64, Node25.9.0, uv0.11.6, Python3.13.13. Linux browser setup may need npx playwright install --with-deps chromium firefox webkit; Windows native execution and remote CI remain unobserved.
+Native setup/dev and Docker were run on this Mac. The final container was rebuilt from `f1fcdfb`, is healthy on [127.0.0.1:8787](http://127.0.0.1:8787/en-IN/), and all 41 runtime assets match the final public manifest. [Production provenance](evidence/continuation/production-provenance.json). Docker is non-root, read-only, loopback-only with bounded tmpfs and dropped capabilities. Only owned Sakhi processes were managed; other product/demo listeners were left running.
 
-Optional local encoder setup remains explicit: make model, then the documented runtime flag. Its retained benchmark is historical, not rerun for a CSS/map change. Gazetteer refresh is an explicit maintainer action using scripts/import_travel_cities.py --download; setup/startup/tests never download it.
+Host: macOS arm64, Node 25.9.0, uv 0.11.6, Python 3.13.13, 24 GiB RAM. Linux contributor CI and native Windows execution remain unobserved. Core startup needs no credentials/model download. Optional encoder download and gazetteer refresh remain explicit maintainer actions, not startup operations.
 
-## 3. Working support and travel scope
+Accepted final source gate: [verify-final-accepted.log](evidence/continuation/verify-final-accepted.log). Accepted final production performance: [quality-final.log](evidence/continuation/quality-final.log). Docker rebuild: [docker-final-accepted.log](evidence/continuation/docker-final-accepted.log). Intermediate failed/red runs are diagnostic history and are not passing evidence.
 
-The original anonymous support journey, four goals, deterministic emergency/minor paths, reviewed-source previews, abstention, source expiry, English fallback, comparison, public kit, community proposal, Clear session and public-only offline shell still pass regression. Initial emergency access does not wait for any map/API.
+## 3. Working P0 journeys and actual states
 
-TravelWorkspace replaces the rendered mock map. Implemented controls include consent/revoke, real OSM map and accessible list, local city matching and public-ID API lookup, four-category POI adapter, public map-point choice, foot/car route geometry, weather/daylight, local checklist/card, page reminder and neutral WhatsApp draft. Actual production probes returned200 for city, weather, walking and driving, but503 for mapped police discovery. Real tiles and weather rendered in the production browser. The [feature matrix](LIVE_TRAVEL_STATUS.md) identifies which claims have live evidence and which only have fixtures or no data.
+| Journey | Delivered behavior | Evidence and limits |
+| --- | --- | --- |
+| Immediate help | Static HTML 112 before application JavaScript; deterministic urgent/minor path before API; emergency path bypasses general navigation budget | JavaScript disabled, bundle blocked, network failure and API policy tests; no real call was placed |
+| Under 18 | Specific MWCD Child Helpline source, optional online concern clarification and age-appropriate conditional image guidance; no adult intake, image upload or private text | Local/browser tests; human safeguarding review pending |
+| Online abuse | Accounts/threats versus intimate images; relevant image-creation age clarification; Take It Down / StopNCII eligibility kept conditional, including declined age; India cybercrime/child/legal alternatives | Official sources dated October 20, November 19 review deadline; no eligibility or takedown outcome invented |
+| Discreet use | Local Notes cover, neutral title, accessible Hide/exit inside dialogs; quick exit clears synchronously before navigation | Cover, modal, stale callbacks and cancelled-navigation-boundary tests; browser history/monitoring cannot be erased |
+| Prepare a loved-one update | Memory-only chosen recipient and fixed neutral message; exact preview, consent and device checkpoint; user opens WhatsApp and decides Send there | Draft, opening requested, sent/user reported, delivered unobserved and acknowledgement/user reported stay distinct; no actual message sent |
+| Foreground location | Explicit local reading with accuracy/time; separate one-time snapshot selection; no automatic recenter/share; stale/poor readings rejected within documented bounds | Emulated permission, expiry, late callback, background/cover/tool-change/unmount/revoke tests; no physical GPS acquired |
+| Meaningful live sharing alternative | Provider-sourced native WhatsApp recipient/duration/Send/Stop guidance and call/check-in fallback | Sakhi neither starts nor monitors native live sharing; a snapshot link is never called a live stream |
+| Nearby recovery | 12-second cancellable browser wait, visible category-specific manual Maps search preview and public-point routes | Failure/retry/cancel tests; actual POI provider still unavailable |
+| Progress/privacy | Anonymous reversible steps, temporary checklist and page reminder; explicit language persistence/removal; no startup storage write | Clear/reload/cancellation/storage tests; no account, case vault or background service |
 
-## 4. P1/P2, incomplete requirements and unavailable capabilities
+Real map/city/weather/foot/car adapters remain optional. The latest production probe used public Mumbai coordinates only:
 
-Original inventory remains68 records:27 P0/35 P1/6 P2, with its prior engineering classifications unchanged by these additional T01-T12 workstreams. Page-only reminders are distinct from private case/deadline automation. The original inventory is not a count of production approvals.
+| Endpoint | HTTP | Elapsed |
+| --- | --- | --- |
+| City | 200 | 683 ms |
+| Weather | 200 | 574 ms |
+| Police places | **503** | **22,363 ms** |
+| Walking route | 200 | 635 ms |
+| Driving route | 200 | 653 ms |
 
-Nearby POI success is unverified because the shared provider is unavailable. Crime zones, nighttime risk scores and named-offender profiles are unavailable because no usable validated granular dataset or model was acquired. Public historical counts were not disaggregated into invented neighbourhoods. The reel was researched as inspiration; no reproducible source code/data or independent accuracy validation was found in the bounded search.
+[Raw final live API evidence](evidence/continuation/live-api-final.json). The browser stops waiting sooner than the bounded server provider deadline. Successful individual calls do not establish capacity, contact accuracy, opening hours, safety or an SLA. Actual tile/browser-weather evidence from the preceding travel revision is retained separately and is not relabelled as a new observation.
 
-Private vaults, uploads, personal case timelines, voice, individualized safety/legal advice, staffed WhatsApp helpdesk, background monitoring, automatic alerts, appointments, complaints, recipient confirmations and institutional connectors remain unavailable. A prepared draft or map opening never becomes sent/delivered/dispatched. See [release gates](RELEASE_GATES.md) and [research](research/live-travel-2026-10-20.md).
+## 4. Incomplete P0 gates and P1/P2 work
 
-## 5. Directory coverage, four separate counts
+The original 68-feature inventory remains 27 P0 / 35 P1 / 6 P2 candidate records, not 68 working or approved features. Additional recovery work does not reclassify those priorities. [Release gates](RELEASE_GATES.md) and the ordered audit distinguish implementation from human/operational acceptance.
+
+OPEN: reliable owned/contracted map/POI/routing capacity, source/contact verification, all language and safeguarding reviews, physical AT/phone/zoom/installation/cold Wi-Fi-off acceptance, consented comprehension studies, independent security/hosting review and named incident/source/operations owners. Working alternatives are national official entry points, manual Maps search after preview, public preparation, local drafts and controlled review.
+
+Unavailable: private document/case vaults, uploads, personal legal drafts/timelines, voice, individualized safety/legal advice, automatic monitoring/background reminders, staffed helpdesk, provider appointments, complaints/referrals, delivery receipts and institutional dispatch. Generic preparation/checklists are usable; they do not imply a private document workflow.
+
+Granular crime zones, offender profiles and safe-route guarantees remain unavailable. No validated lawful granular dataset or independent missingness/bias validation exists. Historical aggregates cannot establish neighbourhood safety. No staffing, agreements or institutional endpoints were fabricated.
+
+## 5. Directory and supplemental coverage
 
 | Count | Actual |
 | --- | --- |
-| Ingested discovery leads |211 |
-| Agent-reviewed preview entries |7 |
-| Human production approvals |0 |
-| Exposed public entry points |7 |
+| Ingested discovery leads | 211 |
+| Source-reviewed directory preview entries | 7 |
+| Additional conditional image-guide references | 2 |
+| Distinct exposed support references in scope | 9, of which 7 are directory entries |
+| Human production approvals | 0 |
 
-Five learning cards/four source pages remain separate. The new 3,783 GeoNames geographic points are not facilities or service coverage. No live mapped place from the failed API probe is counted as a verified contact. Source checks remain October 19 with November18 expiry; UI work does not renew them. The181 West Bengal exception remains online and offline.
+The child directory source was refreshed October 20, expires November 19. The other six directory receipts remain October 19 with November 18 expiry; UI changes do not renew them. The two supplemental sources are versioned separately in `data/public-seeds/support-guides.json`, checked October 20 with November 19 review deadlines. The maintenance top-line API metrics cover the seven directory records and explain the two additions separately. HTTP/source inspection does not establish live service acceptance. The 181 West Bengal exception remains online/offline.
 
-## 6. OSC coverage, four separate counts
+Five learning cards/four general source pages are separate educational references. The 3,783 GeoNames geographic points are not verified facilities. No failed POI response is counted as a contact.
 
-The [PIB August5,2026 publication](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2294887&lang=1&reg=1) reports991 operational centres using data through June30,2026. Sakhi has0 individually sourced centres,0 independently verified centre contacts and0 authorized partner integrations. No991-record directory, national crime feed or agency connection was fabricated.
+## 6. OSC coverage
 
-## 7 and 8. Language and retrieval
+The [PIB August 5, 2026 publication](https://www.pib.gov.in/PressReleasePage.aspx?PRID=2294887&lang=1&reg=1) reported 991 operational centres using data through June 30, 2026. Sakhi holds **0 individually sourced centre records, 0 independently verified centre contacts and 0 authorized institutional integrations**. No 991-entry directory or national API connection was invented.
 
-All16 shells have136 keys; each non-English shell has20 draft navigation translations and116 explicit English fallbacks. New travel text is explicitly English and outside those key counts. All locales, including English, still require qualified native/domain/safeguarding review. Route-evaluation cases and the optional encoder measurements remain in-sample evidence, not production accuracy.
+## 7. Language status
+
+All 16 shells have 136 keys. Each non-English shell has 20 draft navigation translations and 116 explicit English fallbacks. New preparation, travel, recovery and supplemental guide text is English and outside that key count. Every locale, including English, needs qualified native/domain/safeguarding signoff. Glyph/RTL checks are not language quality approval.
 
 | Locale | Keys | English fallback keys | Human review | Draft routing cases | Lexical route agreement | Model phrases | Model lexical top-3 | Semantic top-3 | Restricted hybrid top-3 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -80,44 +111,65 @@ All16 shells have136 keys; each non-English shell has20 draft navigation transla
 | kok-IN | 136/136 | 116 | Pending | 20 | 100% | 4 | 100% | 75.0% | 100% |
 | ks-Arab-IN | 136/136 | 116 | Pending | 20 | 100% | 4 | 100% | 50.0% | 100% |
 
-The 410 routing cases are authored/generated in-sample surface variants, not independent observations or expert labels. Default engine: SQLite FTS5/BM25 plus intact Indic word matching and deterministic policy. The current make verify re-executes the 410 in-sample route checks; it does not replace held-out multilingual evaluation.
+The table's model figures are retained October 19 in-sample encoder evidence, not rerun or promoted by this continuation. They are not multilingual production accuracy.
 
-The retained October 19 optional encoder comparison is separate, in-sample and small: 44 English and 4 per other locale. Model load 1,226ms; query ranking p50 27.7ms, p95 45.4ms on the 24 GiB Mac. Pure semantic top-3 ranged 50-100% across locales. English semantic top-1 was 68.2% and hybrid top-1 77.3%, versus lexical top-1 100% on the authored sample. Several other top-1 samples also underperformed lexical. This is why lexical remains the default and optional embeddings cannot expand approved candidates or control emergencies. No production accuracy or multilingual quality claim follows. Full top-1/top-3 figures and fixture limits are in `evaluation.json` and `model-benchmark.json`. A held-out expert gold set is still required.
+## 8. Held-out model comparison and retrieval
 
-## 9. Accessibility, usability, UI/UX and performance
+Default remains deterministic emergency safeguards plus local SQLite FTS5/BM25 and intact Indic word matching. The full gate reran the 410 authored/generated in-sample routing variants. A separate frozen 16-case English author-labelled holdout was evaluated without subsequent tuning on already installed local Ollama models:
 
-Final make verify: Ruff/structural/readme/build/evaluation gates passed,53 Python tests,20 Vitest checks and239 Playwright cases passed, with2 explicitly unsupported forced-colors emulations skipped.241 browser cases were scheduled. Chromium runs the complete suite; Firefox/WebKit each run 12 interaction contracts plus 23 travel cases. Engines:Chromium156.0.8078.4, Firefox157, WebKit27.2. This is not physical Safari/iOS or AT acceptance.
+| Candidate | Route agreement | Median request time |
+| --- | --- | --- |
+| Deterministic/local default | 16/16 | 0 ms, rounded |
+| gemma3:4b | 13/16 | 431 ms |
+| qwen3.5:9b-q4_K_M | 14/16 | 491.5 ms |
 
-Checks cover nine required widths, selected RTL/Indic shells, keyboard traversal/focus, semantic structure, font failure,200% font preference/text spacing, reduced/forced-colour states, empty/error/malformed/stale data, consent/revocation, public-point keyboard routing, GPS staying local, cancellation/late results, timer resume/reset, synthetic blocking and public-only offline reload. Source contracts have explicit bounds, timeout, host, redirect and response-size tests. No actual participant comprehension or safety outcome was measured.
+[Raw holdout cases, hashes, errors and timing](evidence/continuation/heldout-models.json); `scripts/heldout_reasoning.py`. No download/startup/cloud request was needed. This small classification comparison is not general reasoning quality, expert gold, bias validation or multilingual acceptance. Neither generative model was added to runtime. Optional historical EmbeddingGemma ranking remains disabled by default, restricted to lexical candidates and unable to control emergency policy or invent services. [Historical encoder results](evidence/model-benchmark.json).
 
-Latest measured quality:97 performance/100 accessibility/100 best practices, LCP2322.0ms, CLS0, TBT0ms,236808 transferred bytes. Profile:local production mobile412x823/DPR1.75,150ms RTT,1.6Mbps,4x CPU. Both3s regression and2.5s product LCP goals passed in that run. This run includes the final map-cancellation and explicit city-consent fixes. Lab scores are not field INP, availability or accessibility certification. Physical phones, VoiceOver/TalkBack/Windows AT, actual zoom/orientation, cold Wi-Fi-off and installation remain open.
+## 9. Accessibility, UI/UX and performance
 
-## 10. Security and privacy
+Final `make verify`: **54 Python, 20 Vitest and 315 browser tests passed; 2 unsupported forced-colors emulation cases skipped**, 317 browser cases scheduled, zero unexpected/flaky cases. Ruff, structural checks, README links, build and 410 in-sample evaluation passed. One existing Starlette/httpx deprecation warning remains. [Raw browser results](evidence/continuation/browser-results-final.json).
 
-No user account, people database, narrative persistence, analytics, microphone or cloud generation. Only sakhi.locale persists in localStorage. Core narratives use strict same-origin POST processing with sanitized validation and disabled telemetry/access logging. App/API no-store, no-referrer, trusted hosts, self-only scripts/connect and frame denial remain. Same-origin geolocation is now permitted only for explicit one-shot local city suggestion; camera/microphone/payment remain denied. Only OSM tile images are allowlisted externally and use origin-only referrers/anonymous CORS.
+Chromium runs the complete suite; Firefox/WebKit run pillar, travel, recovery and location contracts. The quick-exit navigation-boundary diagnostic is Chromium-specific. Nine required widths, selected Indic/RTL shells, keyboard/focus, axe, text spacing, font failure, 200% font preference, reduced/forced-colour states, offline reload, stale packs, cancellation and no automatic external requests are covered. Permission/expiry/background tests use emulated public positions. None is physical Safari/iOS/AT certification.
 
-Known public city IDs, public map centres/points and selected data fields reach named providers only after their relevant actions. Raw GPS is never serialized. Upstream strings stay text, missing fields stay unknown, errors are sanitized, caching preserves retrieval time, and25-second/1.5 MB/host/quota bounds are enforced. The service worker hashes public assets but excludes API/query/runtime/user data and all external tiles. It has no independent publisher-signing root. Downloads, browser/OS copies and provider logs remain outside app erasure. [Privacy](PRIVACY.md) and [threat model](THREAT_MODEL.md) give exact flows/limits.
+Latest `make quality`: **97 performance / 100 accessibility / 100 best practices; LCP 2560.3 ms, CLS 0, TBT 0 ms, 261,345 transferred bytes**. Local production Lighthouse profile: 412x823/DPR 1.75, 150 ms RTT, 1.6 Mbps, 4x CPU. The 3000 ms regression budget passed. The separate 2500 ms LCP product goal was missed by 60.3 ms; no rerun was used to select a better score. Lab scores are not field INP, provider availability, low-end phone or human accessibility acceptance.
 
-Fresh npm audit found0 known vulnerabilities; Python audit and locked dependency inventory are retained with dated artifacts. This is not legal redistribution clearance or an independent penetration test. Model weights remain ignored/outside Docker. Residual risks include abusive devices/operators, unreviewed content/contacts, finite safety phrases, model/route/map inaccuracies, public data tampering, provider outages/logging and future hosting controls. No real call, message, complaint, referral, authority alert or account change occurred.
+## 10. Privacy, abuse prevention and security
 
-## 11. Actual screenshots and navigation
+No accounts, narrative persistence, analytics, cloud generation, contact import, microphone or private database. Only an explicitly selected language preference can persist, and its removal survives reload. Recipient/position/draft fields stay in page memory. Clear, cover, background, expiry and route/tool exit revoke relevant state. The sensitive destination checks its current generation and expiry again at activation, including auxiliary/context actions.
 
-Current captures:travel-home-mobile/home-desktop/home-narrow/home-urdu, travel-nearby-consent/nearby-desktop/live-map-mobile, travel-live-conditions-mobile, travel-plan-mobile, travel-checkin-preview, travel-data-mobile, travel-finder/prepare/trust under docs/evidence/. These are real production UI, not mockups or fictional POI records. No private story or device position was captured.
+Location acquisition is separate from selecting a one-time snapshot, separate from approving a recipient/content preview, and separate from opening another app. Once explicitly opened, WhatsApp receives the selected phone, fixed message and any approved snapshot; browser/OS/provider copies are outside Sakhi erasure. Native live sharing must be stopped in that app. An opening request is not confirmation that an app launched, Send occurred or a message arrived.
 
-The production capture records9 page/view combinations with HTTP200, no document overflow, no pre-consent outside requests and no page errors, plus an actual public Mumbai map view and weather. Six tile requests returned200. The live API file separately records four200 responses and one503. Regression tests use labelled fictional fixtures and do not count as live availability. scripts/capture-travel.mjs and scripts/travel_smoke.py are reproducible explicit network actions. Earlier simple-/sprint2- images belong to historical revisions.
+Same-origin POST narratives use strict schemas, sanitized errors and no access logging. General navigation has a process-local 120/minute budget storing timestamps only; deterministic urgent/minor paths bypass it. Public gateway bounds remain fixed hosts, four categories, size/redirect/quota restrictions and 25-second server deadlines. Browser recovery uses a 12-second cancellable wait. Shared ingress, capacity and abuse controls are still required before hosting.
 
-## 12. Changed files, commits, review and defects
+The hash-checked offline cache excludes APIs, queries, private fields and external tiles. It has no independent publisher-signing root. Static emergency HTML survives a blocked bundle, but a new unvisited device still needs the application/contact information to have loaded. Finite safety phrases cannot reliably detect every emergency. Approximate position bounds are not an exact jurisdiction polygon. External maps/routes do not guarantee safety.
 
-Plan commit4c4b9cf precedes implementation. Changes cover the travel React modules/CSS, wordmark/fonts/icon/tokens, strict API gateway, public city data/provenance, Leaflet dependency/license, public cache generation, tests across three engines, live smoke/capture tools, notices, docs and release evidence. Exact implementation commit and artifact hashes are in evidence/release-checksums.json; no PR exists. Historical reports/evidence are preserved.
+Dependency audit artifacts from the preceding travel revision remain dated observations; no dependency was added in this recovery. They were not rerun as independent security approval. A fresh bounded independent code review did occur and found two defects, corrected as described below. Security/content/AT approval and incident staffing remain OPEN. No credentials were opened, and no real call, message, complaint, private narrative or device position was transmitted.
 
-Observed/fixed issues include serif CSS precedence, narrow mobile navigation height, map entrance scrolling, consent/revoke focus loss, tile errors becoming false success, stale cache time, malformed solar fields, facility coordinate rounding, late request results, internal-panel reminder resets and the crosshair's canvas anchor. RED logs are historical failures; final gates are separate. The fresh independent review agent failed due exhausted workspace credits, so no new independent signoff is claimed. The old independent review covers an earlier revision only. Remaining defects/dependencies are in LIVE_TRAVEL_STATUS.md and ISSUE_BACKLOG.md.
+## 11. Final actual screenshots and navigation
 
-## 13. Required accounts, permissions and operations
+[Production visual receipt](evidence/continuation/production-visual.json): **18 page/viewport pairs**, nine routes at 390x844 and 1440x1000, HTTP 200 throughout, zero document overflow, page errors or pre-consent external requests. Both viewport and full-page images are stored under `evidence/continuation/`; every page was visually inspected. Earlier screenshots remain historical.
 
-Core internal preview requires no account/key. Mass travel usage needs owned/contracted map/POI/routing capacity, current terms, restrictions/quotas, budget, ingress/security/capacity tests, privacy review and incident ownership. Google APIs would require a founder-owned project, appropriate API enablement, restricted credentials and billing review; none was accessed. Community hosting is not an unlimited or safety-critical backend.
+- [Mobile opening](evidence/continuation/mobile-home-viewport.png), [desktop opening](evidence/continuation/desktop-home-viewport.png).
+- [Child/image pathway](evidence/continuation/child-image-pathway.png): Finder > Understand my options > Under 18 > Online abuse or images > Intimate images or threats to share.
+- [Recipient preparation](evidence/continuation/update-empty.png): Public places > My plan. No contact/GPS was entered for production captures.
+- [Native live-location instructions](evidence/continuation/native-live-location.png), [neutral cover](evidence/continuation/neutral-cover.png), [expanded device/privacy limits](evidence/continuation/trust-exit-expanded.png).
 
-An actual WhatsApp helpdesk or trusted-contact escalation requires eligible accounts/channels, recipient consent/authorization, staffing, per-action approval, reliable transport and real receipt/failure semantics. Police/ERSS/OSC/NCW/SHe-Box/NGO integrations additionally require actual written agreements and approved authenticated endpoints. No such relationship is inferred. Private storage, voice/BHASHINI/models and legal/medical workflows retain their separate design, license, retention and human-quality gates. Crime visualization needs lawfully usable granular source data and independent reconciliation/validation, not generated risk scores. Public GitHub/deployment/CI remains a separate release decision after the gates.
+The capture helper was corrected after element crops included the sticky emergency bar over cropped content; final journey captures use actual full-page framing. This was capture framing, not a hidden UI or source change. Real source contacts, participant data, private addresses and transmission were not used.
 
-## 14. Verdict
+## 12. Defects, review and traceable changes
 
-**internal_demo_only**. Real plumbing and independently runnable local tests are delivered. The production promise requested by the founder remains incomplete because the POI source is unavailable, crime-zone evidence is absent and human/operational/security gates remain open. The current preview is for controlled review, not dependable rescue or validated mass-user safety infrastructure. No simulated integration is presented as functional.
+Baseline broken journeys and root causes were recorded first in the blocker register. Fixed: child dead end and wrong uncertainty banner, generic cyber pathway, absent discreet controls, unspecific recipient draft, unbounded browser wait, sensitive copied-preview expiry, modal Hide obstruction, blocked-bundle emergency absence and removed language preference being recreated. Tests exercised failure/permission/late-callback states as well as success.
+
+The [fresh independent review](research/p0-independent-review-2026-10-20.md) reproduced P1 stale sensitive preview and P2 modal cover obstruction. [Resolution evidence](REVIEW_RESOLUTION_2026-10-20.md) records the single author correction pass and full subsequent gate. The original report is retained. No second reviewer signoff or independent security certification is claimed. Earlier review-credit exhaustion is historical, superseded only for this bounded code review.
+
+Intermediate test mistakes are recorded: obsolete selectors, concurrent Playwright runners competing for their shared trace directory, and a stalled navigation inspection. Corrected final verification ran alone and passed. Those failures are not included in accepted pass counts. Exact code/evidence hashes and changed paths are in [release checksums](evidence/release-checksums.json).
+
+## 13. Founder/external dependencies
+
+Appoint qualified source, safeguarding, language, privacy/security and operations owners with a real private disclosure route. Obtain consented usability/physical accessibility/offline acceptance and independent security/hosting review. Select owned/contracted map/POI/routing capacity with terms, budget, quotas, ingress controls, load tests and incident ownership before mass use. No account, billing or credential action was taken.
+
+Staffed WhatsApp, alerts, appointments and authority handoffs require eligible channels, specific recipient consent/authorization, trained staffing, reliable receipt/failure semantics and actual written institutional agreements. None exists on disk. Crime-risk work requires lawful granular data plus reconciliation, bias/missingness and independent validation. Community contributions are prepared public proposals until governed review/publication; there is no live moderation/submission backend or public repository yet.
+
+## 14. Release verdict
+
+**internal_demo_only.** Engineering recovery and measured local acceptance are delivered. Human/external P0 release gates remain OPEN with working alternatives. This preview is suitable for controlled review. It is not launch-ready, a dependable rescue service or validated safety infrastructure.

@@ -1,0 +1,165 @@
+[WebServer] INFO:     Started server process [69999]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+[WebServer] (node:70022) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] INFO:     Started server process [70205]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 4 tests using 1 worker
+
+(node:70206) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/recovery.spec.ts:186:1 › recipient draft is local, previewed exactly and never becomes delivery (7.1s)
+(node:70320) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [chromium] › tests/recovery.spec.ts:209:1 › live-location companion requires separate consent and explains stop/last location (7.1s)
+(node:70329) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 [chromium] › tests/recovery.spec.ts:218:1 › edited recipient revokes the old draft approval (7.1s)
+(node:70334) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 [chromium] › tests/recovery.spec.ts:227:1 › unresponsive provider reaches a bounded recovery state (5.4s)
+
+
+  1) [chromium] › tests/recovery.spec.ts:186:1 › recipient draft is local, previewed exactly and never becomes delivery 
+
+    Test timeout of 7000ms exceeded.
+
+    Error: locator.click: Test timeout of 7000ms exceeded.
+    Call log:
+      - waiting for getByRole('tab', { name: 'My plan', exact: true })
+
+
+      187 |   const external:string[]=[];
+      188 |   page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:5173'))external.push(r.url())});
+    > 189 |   await page.goto('/en-IN/nearby');await page.getByRole('tab',{name:'My plan',exact:true}).click();
+          |                                                                                            ^
+      190 |   await page.getByLabel('Recipient label', {exact:true}).fill('Example contact');
+      191 |   await page.getByLabel('WhatsApp number with country code', {exact:true}).fill('15555550123');
+      192 |   await page.getByRole('button',{name:'Preview this update',exact:true}).click();
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:189:92
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-recipient-draft-i-73117--and-never-becomes-delivery-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-recipient-draft-i-73117--and-never-becomes-delivery-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-recipient-draft-i-73117--and-never-becomes-delivery-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-recipient-draft-i-73117--and-never-becomes-delivery-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests/recovery.spec.ts:209:1 › live-location companion requires separate consent and explains stop/last location 
+
+    Test timeout of 7000ms exceeded.
+
+    Error: locator.click: Test timeout of 7000ms exceeded.
+    Call log:
+      - waiting for getByRole('tab', { name: 'My plan', exact: true })
+
+
+      208 |
+      209 | test('live-location companion requires separate consent and explains stop/last location',async({page})=>{
+    > 210 |   await page.goto('/en-IN/nearby');await page.getByRole('tab',{name:'My plan',exact:true}).click();
+          |                                                                                            ^
+      211 |   await page.getByRole('button',{name:'Help me share live location',exact:true}).click();
+      212 |   await expect(page.locator('.live-location-guide')).toContainText('Location permission does not authorize sharing');
+      213 |   await expect(page.locator('.live-location-guide')).toContainText('Stop sharing');
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:210:92
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-live-location-com-90f97-explains-stop-last-location-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-live-location-com-90f97-explains-stop-last-location-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-live-location-com-90f97-explains-stop-last-location-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-live-location-com-90f97-explains-stop-last-location-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests/recovery.spec.ts:218:1 › edited recipient revokes the old draft approval ───
+
+    Test timeout of 7000ms exceeded.
+
+    Error: locator.click: Test timeout of 7000ms exceeded.
+    Call log:
+      - waiting for getByRole('tab', { name: 'My plan', exact: true })
+
+
+      217 |
+      218 | test('edited recipient revokes the old draft approval',async({page})=>{
+    > 219 |   await page.goto('/en-IN/nearby');await page.getByRole('tab',{name:'My plan',exact:true}).click();
+          |                                                                                            ^
+      220 |   await page.getByLabel('Recipient label', {exact:true}).fill('Example contact');
+      221 |   await page.getByLabel('WhatsApp number with country code', {exact:true}).fill('15555550123');
+      222 |   const consent=page.getByLabel('I chose this recipient and want to prepare this exact update.');
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:219:92
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-edited-recipient-revokes-the-old-draft-approval-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-edited-recipient-revokes-the-old-draft-approval-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-edited-recipient-revokes-the-old-draft-approval-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-edited-recipient-revokes-the-old-draft-approval-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › tests/recovery.spec.ts:227:1 › unresponsive provider reaches a bounded recovery state 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "timed out"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 5000ms
+      - waiting for getByRole('alert')
+
+
+      230 |   await page.getByRole('button',{name:'Search this area',exact:true}).click();
+      231 |   await page.clock.fastForward(12500);
+    > 232 |   await expect(page.getByRole('alert')).toContainText('timed out');
+          |                                         ^
+      233 |   await expect(page.getByRole('button',{name:'Search this area',exact:true})).toBeEnabled();
+      234 |   await expect(page.getByRole('button',{name:'Preview alternative map search',exact:true})).toBeVisible();
+      235 | });
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:232:41
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-unresponsive-prov-fac3a-es-a-bounded-recovery-state-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-unresponsive-prov-fac3a-es-a-bounded-recovery-state-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-unresponsive-prov-fac3a-es-a-bounded-recovery-state-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-unresponsive-prov-fac3a-es-a-bounded-recovery-state-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    [chromium] › tests/recovery.spec.ts:186:1 › recipient draft is local, previewed exactly and never becomes delivery 
+    [chromium] › tests/recovery.spec.ts:209:1 › live-location companion requires separate consent and explains stop/last location 
+    [chromium] › tests/recovery.spec.ts:218:1 › edited recipient revokes the old draft approval ────
+    [chromium] › tests/recovery.spec.ts:227:1 › unresponsive provider reaches a bounded recovery state 

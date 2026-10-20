@@ -1,0 +1,90 @@
+[WebServer] INFO:     Started server process [77105]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+[WebServer] (node:77128) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] INFO:     Started server process [77158]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 2 tests using 1 worker
+
+(node:77345) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/location-sharing.spec.ts:8:1 › local live position needs a separate pick and recipient preview before sharing (6.1s)
+(node:77350) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [chromium] › tests/location-sharing.spec.ts:28:1 › cover stops local live position and ignores a late reading (6.1s)
+
+
+  1) [chromium] › tests/location-sharing.spec.ts:8:1 › local live position needs a separate pick and recipient preview before sharing 
+
+    Test timeout of 6000ms exceeded.
+
+    Error: locator.click: Test timeout of 6000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Start local location view', exact: true })
+
+
+      4 |   await page.addInitScript(()=>Object.defineProperty(navigator,'geolocation',{value:{watchPosition:(success:unknown)=>{(window as any).__watch=success;return 42},clearWatch:()=>{(window as any).__stopped=true}}}));
+      5 |   await page.goto('/en-IN/nearby');await page.getByRole('button',{name:'My plan',exact:true}).click();
+    > 6 |   await page.getByRole('button',{name:'Start local location view',exact:true}).click();
+        |                                                                                ^
+      7 | }
+      8 | test('local live position needs a separate pick and recipient preview before sharing',async({page})=>{
+      9 |   const outside:string[]=[];page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:5173'))outside.push(r.url())});
+        at localWatch (/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/location-sharing.spec.ts:6:80)
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/location-sharing.spec.ts:10:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/location-sharing-local-liv-dd4f6-ient-preview-before-sharing-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/location-sharing-local-liv-dd4f6-ient-preview-before-sharing-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/location-sharing-local-liv-dd4f6-ient-preview-before-sharing-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/location-sharing-local-liv-dd4f6-ient-preview-before-sharing-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests/location-sharing.spec.ts:28:1 › cover stops local live position and ignores a late reading 
+
+    Test timeout of 6000ms exceeded.
+
+    Error: locator.click: Test timeout of 6000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Start local location view', exact: true })
+
+
+      4 |   await page.addInitScript(()=>Object.defineProperty(navigator,'geolocation',{value:{watchPosition:(success:unknown)=>{(window as any).__watch=success;return 42},clearWatch:()=>{(window as any).__stopped=true}}}));
+      5 |   await page.goto('/en-IN/nearby');await page.getByRole('button',{name:'My plan',exact:true}).click();
+    > 6 |   await page.getByRole('button',{name:'Start local location view',exact:true}).click();
+        |                                                                                ^
+      7 | }
+      8 | test('local live position needs a separate pick and recipient preview before sharing',async({page})=>{
+      9 |   const outside:string[]=[];page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:5173'))outside.push(r.url())});
+        at localWatch (/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/location-sharing.spec.ts:6:80)
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/location-sharing.spec.ts:29:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/location-sharing-cover-sto-bb5a3--and-ignores-a-late-reading-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/location-sharing-cover-sto-bb5a3--and-ignores-a-late-reading-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/location-sharing-cover-sto-bb5a3--and-ignores-a-late-reading-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/location-sharing-cover-sto-bb5a3--and-ignores-a-late-reading-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [chromium] › tests/location-sharing.spec.ts:8:1 › local live position needs a separate pick and recipient preview before sharing 
+    [chromium] › tests/location-sharing.spec.ts:28:1 › cover stops local live position and ignores a late reading 

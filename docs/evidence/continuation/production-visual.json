@@ -1,0 +1,228 @@
+{
+  "origin": "http://127.0.0.1:8787",
+  "captured_at": "2026-10-20T08:25:08.032Z",
+  "pages": [
+    {
+      "path": "home",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http": 200,
+      "heading": "Support for women.\nOne clear next step.",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "finder",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http": 200,
+      "heading": "Choose your next step.",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "resources",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http": 200,
+      "heading": "Public resource directory",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "prepare",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http": 200,
+      "heading": "A little readiness.\nMore room to choose.",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "nearby",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http": 200,
+      "heading": "Know your options.\nBefore you go.",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "trust",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http": 200,
+      "heading": "A private starting point, with clear limits",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "community",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http": 200,
+      "heading": "For the community. By the community.",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "maintenance",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http": 200,
+      "heading": "Trust is a process.",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "components",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http": 200,
+      "heading": "Public interface components",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "home",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "http": 200,
+      "heading": "Support for women.\nOne clear next step.",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "finder",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "http": 200,
+      "heading": "Choose your next step.",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "resources",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "http": 200,
+      "heading": "Public resource directory",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "prepare",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "http": 200,
+      "heading": "A little readiness.\nMore room to choose.",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "nearby",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "http": 200,
+      "heading": "Know your options.\nBefore you go.",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "trust",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "http": 200,
+      "heading": "A private starting point, with clear limits",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "community",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "http": 200,
+      "heading": "For the community. By the community.",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "maintenance",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "http": 200,
+      "heading": "Trust is a process.",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    },
+    {
+      "path": "components",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "http": 200,
+      "heading": "Public interface components",
+      "overflow": false,
+      "outside": [],
+      "errors": []
+    }
+  ],
+  "journeys": [
+    "Under18 -> online images -> conditional Take It Down + India alternatives, no API/intake",
+    "Empty recipient preparation + native live-location guidance, no GPS or transmission",
+    "Device limitations -> neutral cover -> no external exit"
+  ],
+  "scope": "Actual UI; synthetic choices only. No private story, contact or device position captured. No external action."
+}

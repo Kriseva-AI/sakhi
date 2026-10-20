@@ -1,0 +1,46 @@
+[WebServer] INFO:     Started server process [89342]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 1 test using 1 worker
+
+(node:89343) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/recovery.spec.ts:350:1 › discreet cover remains reachable inside an outbound modal (7.1s)
+
+
+  1) [chromium] › tests/recovery.spec.ts:350:1 › discreet cover remains reachable inside an outbound modal 
+
+    Test timeout of 7000ms exceeded.
+
+    Error: locator.click: Test timeout of 7000ms exceeded.
+    Call log:
+      - waiting for getByRole('dialog').getByRole('button', { name: 'Hide page', exact: true })
+
+
+      350 | test('discreet cover remains reachable inside an outbound modal', async({page})=>{
+      351 |   await page.goto('/en-IN/resources');await page.getByRole('button',{name:'Open official website'}).first().click();
+    > 352 |   await page.getByRole('dialog').getByRole('button',{name:'Hide page',exact:true}).click();
+          |                                                                                    ^
+      353 |   await expect(page.getByRole('heading',{name:'Notes',exact:true})).toBeVisible();
+      354 |   await page.getByRole('button',{name:'Return to page',exact:true}).click();
+      355 |   await expect(page.getByRole('dialog')).toHaveCount(0);
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:352:84
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-discreet-cover-re-d810a-le-inside-an-outbound-modal-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-discreet-cover-re-d810a-le-inside-an-outbound-modal-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-discreet-cover-re-d810a-le-inside-an-outbound-modal-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-discreet-cover-re-d810a-le-inside-an-outbound-modal-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/recovery.spec.ts:350:1 › discreet cover remains reachable inside an outbound modal 

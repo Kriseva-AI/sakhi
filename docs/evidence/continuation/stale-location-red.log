@@ -1,0 +1,53 @@
+[WebServer] INFO:     Started server process [79074]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 1 test using 1 worker
+
+(node:79075) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/location-sharing.spec.ts:100:1 › stale local reading disappears instead of appearing live (5.4s)
+
+
+  1) [chromium] › tests/location-sharing.spec.ts:100:1 › stale local reading disappears instead of appearing live 
+
+    Error: expect(locator).not.toContainText(expected) failed
+
+    Locator: locator('.local-position')
+    Expected substring: not "19.073000"
+    Received string: "Live location on this pageOptional foreground reading. Your browser or OS may use its own location services. Sakhi keeps the reading in page memory. It does not move the public map or send it to a person. Closing, hiding or leaving this tool stops it.Local reading updated. Nothing shared.Stop and clear local locationLocal position19.073000, 72.883000Accuracy estimate20 mReading time20/10/2026, 1:11:22 pmUse this one-time position in my updateLocation permission does not authorize sharing. Choose a one-time position separately, then review recipient and content. This is not a background tracker or emergency service."
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "not toContainText" locator('.local-position') with timeout 5000ms
+      - waiting for locator('.local-position')
+        14 × locator resolved to <div class="local-position">…</div>
+           - unexpected value "Live location on this pageOptional foreground reading. Your browser or OS may use its own location services. Sakhi keeps the reading in page memory. It does not move the public map or send it to a person. Closing, hiding or leaving this tool stops it.Local reading updated. Nothing shared.Stop and clear local locationLocal position19.073000, 72.883000Accuracy estimate20 mReading time20/10/2026, 1:11:22 pmUse this one-time position in my updateLocation permission does not authorize sharing. Choose a one-time position separately, then review recipient and content. This is not a background tracker or emergency service."
+
+
+      102 |   await page.evaluate(()=>(window as any).__watch({coords:{latitude:19.073,longitude:72.883,accuracy:20},timestamp:Date.now()}));
+      103 |   await page.clock.fastForward(121000);
+    > 104 |   await expect(page.locator('.local-position')).not.toContainText('19.073000');
+          |                                                     ^
+      105 |   await expect(page.locator('.local-position')).toContainText('Reading expired');
+      106 | });
+      107 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/location-sharing.spec.ts:104:53
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/location-sharing-stale-loc-e4251-s-instead-of-appearing-live-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/location-sharing-stale-loc-e4251-s-instead-of-appearing-live-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/location-sharing-stale-loc-e4251-s-instead-of-appearing-live-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/location-sharing-stale-loc-e4251-s-instead-of-appearing-live-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/location-sharing.spec.ts:100:1 › stale local reading disappears instead of appearing live 

@@ -1,0 +1,61 @@
+uv run --frozen python scripts/dev.py
+Sakhi public preview: http://127.0.0.1:5173/en-IN/
+
+> kriseva-sakhi@0.1.0 dev
+> vite --config apps/web/vite.config.ts --host 127.0.0.1
+
+INFO:     Started server process [78055]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+
+  VITE v7.3.7  ready in 82 ms
+
+  ➜  Local:   http://127.0.0.1:5173/
+1:12:47 PM [vite] (client) page reload src/travel/LocalPosition.tsx
+1:12:47 PM [vite] (client) page reload src/PreparationLibrary.tsx
+1:12:47 PM [vite] (client) hmr update /src/recovery.css
+1:12:47 PM [vite] (client) page reload src/App.tsx
+1:12:47 PM [vite] (client) page reload src/App.tsx
+1:12:47 PM [vite] (client) page reload src/travel/LocalPosition.tsx
+1:12:47 PM [vite] (client) hmr update /src/recovery.css
+1:13:26 PM [vite] (client) page reload src/routing.json
+1:15:43 PM [vite] (client) page reload src/SupportGuide.tsx
+1:15:43 PM [vite] (client) page reload src/Maintenance.tsx
+1:15:44 PM [vite] (client) page reload src/Maintenance.tsx
+1:15:44 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/data/public-seeds/support-guides.json
+1:16:41 PM [vite] (client) page reload src/Maintenance.tsx
+1:16:41 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/data/public-seeds/support-guides.json
+1:23:06 PM [vite] (client) page reload src/Modal.tsx
+1:23:06 PM [vite] (client) page reload src/travel/LovedOneUpdate.tsx
+1:23:06 PM [vite] (client) page reload src/Modal.tsx
+1:23:07 PM [vite] (client) page reload src/travel/LovedOneUpdate.tsx
+1:23:30 PM [vite] (client) page reload src/App.tsx
+1:23:30 PM [vite] (client) hmr update /src/recovery.css
+1:23:31 PM [vite] (client) hmr update /src/recovery.css
+1:24:03 PM [vite] (client) hmr update /src/recovery.css
+1:24:04 PM [vite] (client) hmr update /src/recovery.css
+1:24:41 PM [vite] (client) page reload src/App.tsx
+1:26:23 PM [vite] (client) page reload src/App.tsx
+1:26:25 PM [vite] (client) page reload src/routing.json
+1:27:33 PM [vite] (client) page reload src/DataBoundary.tsx
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/en-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/or-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/gu-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/ta-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/bn-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/ne-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/kok-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/ks-Arab-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/pa-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/te-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/mr-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/ml-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/kn-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/as-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/hi-IN.json
+1:27:34 PM [vite] (client) page reload /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/packages/i18n/ur-IN.json
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [78055]

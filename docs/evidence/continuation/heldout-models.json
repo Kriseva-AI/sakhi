@@ -1,0 +1,413 @@
+{
+  "observed_at": "2026-10-20T07:29:15.883840+00:00",
+  "fixture_sha256": "d8bf0dc2c745ff282702746db796e87ac24cf8dbae1fc16ffcf90969f3e3cecc",
+  "prompt_sha256": "2c5db57205aa07bb749dbb196e5341f5ab9248f311c6014aeda03e41da25eb79",
+  "limits": "English author-labelled synthetic holdout. Not expert gold, reasoning quality, native-language or production validation. No tuning after results. Local templates and emergency safeguards unchanged.",
+  "runs": [
+    {
+      "model": "deterministic_local",
+      "cases": [
+        {
+          "id": "H01",
+          "expected": "emergency",
+          "actual": "emergency",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H02",
+          "expected": "emergency",
+          "actual": "emergency",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H03",
+          "expected": "child",
+          "actual": "child",
+          "correct": true,
+          "elapsed_ms": 1,
+          "error": null
+        },
+        {
+          "id": "H04",
+          "expected": "child",
+          "actual": "child",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H05",
+          "expected": "cyber",
+          "actual": "cyber",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H06",
+          "expected": "cyber",
+          "actual": "cyber",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H07",
+          "expected": "legal",
+          "actual": "legal",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H08",
+          "expected": "legal",
+          "actual": "legal",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H09",
+          "expected": "workplace",
+          "actual": "workplace",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H10",
+          "expected": "workplace",
+          "actual": "workplace",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H11",
+          "expected": "home",
+          "actual": "home",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H12",
+          "expected": "home",
+          "actual": "home",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H13",
+          "expected": "friend",
+          "actual": "friend",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H14",
+          "expected": "friend",
+          "actual": "friend",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H15",
+          "expected": "unsure",
+          "actual": "unsure",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        },
+        {
+          "id": "H16",
+          "expected": "unsure",
+          "actual": "unsure",
+          "correct": true,
+          "elapsed_ms": 0,
+          "error": null
+        }
+      ],
+      "correct": 16,
+      "status": "observed"
+    },
+    {
+      "model": "gemma3:4b",
+      "cases": [
+        {
+          "id": "H01",
+          "expected": "emergency",
+          "actual": "emergency",
+          "correct": true,
+          "elapsed_ms": 4157,
+          "error": null
+        },
+        {
+          "id": "H02",
+          "expected": "emergency",
+          "actual": "emergency",
+          "correct": true,
+          "elapsed_ms": 398,
+          "error": null
+        },
+        {
+          "id": "H03",
+          "expected": "child",
+          "actual": "child",
+          "correct": true,
+          "elapsed_ms": 398,
+          "error": null
+        },
+        {
+          "id": "H04",
+          "expected": "child",
+          "actual": "child",
+          "correct": true,
+          "elapsed_ms": 401,
+          "error": null
+        },
+        {
+          "id": "H05",
+          "expected": "cyber",
+          "actual": "cyber",
+          "correct": true,
+          "elapsed_ms": 375,
+          "error": null
+        },
+        {
+          "id": "H06",
+          "expected": "cyber",
+          "actual": "cyber",
+          "correct": true,
+          "elapsed_ms": 402,
+          "error": null
+        },
+        {
+          "id": "H07",
+          "expected": "legal",
+          "actual": "legal",
+          "correct": true,
+          "elapsed_ms": 380,
+          "error": null
+        },
+        {
+          "id": "H08",
+          "expected": "legal",
+          "actual": "legal",
+          "correct": true,
+          "elapsed_ms": 420,
+          "error": null
+        },
+        {
+          "id": "H09",
+          "expected": "workplace",
+          "actual": "cyber",
+          "correct": false,
+          "elapsed_ms": 455,
+          "error": null
+        },
+        {
+          "id": "H10",
+          "expected": "workplace",
+          "actual": "workplace",
+          "correct": true,
+          "elapsed_ms": 438,
+          "error": null
+        },
+        {
+          "id": "H11",
+          "expected": "home",
+          "actual": "home",
+          "correct": true,
+          "elapsed_ms": 427,
+          "error": null
+        },
+        {
+          "id": "H12",
+          "expected": "home",
+          "actual": "friend",
+          "correct": false,
+          "elapsed_ms": 451,
+          "error": null
+        },
+        {
+          "id": "H13",
+          "expected": "friend",
+          "actual": "friend",
+          "correct": true,
+          "elapsed_ms": 435,
+          "error": null
+        },
+        {
+          "id": "H14",
+          "expected": "friend",
+          "actual": "unsure",
+          "correct": false,
+          "elapsed_ms": 492,
+          "error": null
+        },
+        {
+          "id": "H15",
+          "expected": "unsure",
+          "actual": "unsure",
+          "correct": true,
+          "elapsed_ms": 486,
+          "error": null
+        },
+        {
+          "id": "H16",
+          "expected": "unsure",
+          "actual": "unsure",
+          "correct": true,
+          "elapsed_ms": 485,
+          "error": null
+        }
+      ],
+      "correct": 13,
+      "status": "observed"
+    },
+    {
+      "model": "qwen3.5:9b-q4_K_M",
+      "cases": [
+        {
+          "id": "H01",
+          "expected": "emergency",
+          "actual": "emergency",
+          "correct": true,
+          "elapsed_ms": 5482,
+          "error": null
+        },
+        {
+          "id": "H02",
+          "expected": "emergency",
+          "actual": "emergency",
+          "correct": true,
+          "elapsed_ms": 495,
+          "error": null
+        },
+        {
+          "id": "H03",
+          "expected": "child",
+          "actual": "child",
+          "correct": true,
+          "elapsed_ms": 488,
+          "error": null
+        },
+        {
+          "id": "H04",
+          "expected": "child",
+          "actual": "child",
+          "correct": true,
+          "elapsed_ms": 482,
+          "error": null
+        },
+        {
+          "id": "H05",
+          "expected": "cyber",
+          "actual": "cyber",
+          "correct": true,
+          "elapsed_ms": 524,
+          "error": null
+        },
+        {
+          "id": "H06",
+          "expected": "cyber",
+          "actual": "legal",
+          "correct": false,
+          "elapsed_ms": 472,
+          "error": null
+        },
+        {
+          "id": "H07",
+          "expected": "legal",
+          "actual": "legal",
+          "correct": true,
+          "elapsed_ms": 472,
+          "error": null
+        },
+        {
+          "id": "H08",
+          "expected": "legal",
+          "actual": "legal",
+          "correct": true,
+          "elapsed_ms": 469,
+          "error": null
+        },
+        {
+          "id": "H09",
+          "expected": "workplace",
+          "actual": "workplace",
+          "correct": true,
+          "elapsed_ms": 525,
+          "error": null
+        },
+        {
+          "id": "H10",
+          "expected": "workplace",
+          "actual": "workplace",
+          "correct": true,
+          "elapsed_ms": 528,
+          "error": null
+        },
+        {
+          "id": "H11",
+          "expected": "home",
+          "actual": "home",
+          "correct": true,
+          "elapsed_ms": 480,
+          "error": null
+        },
+        {
+          "id": "H12",
+          "expected": "home",
+          "actual": "home",
+          "correct": true,
+          "elapsed_ms": 483,
+          "error": null
+        },
+        {
+          "id": "H13",
+          "expected": "friend",
+          "actual": "friend",
+          "correct": true,
+          "elapsed_ms": 477,
+          "error": null
+        },
+        {
+          "id": "H14",
+          "expected": "friend",
+          "actual": "unsure",
+          "correct": false,
+          "elapsed_ms": 527,
+          "error": null
+        },
+        {
+          "id": "H15",
+          "expected": "unsure",
+          "actual": "unsure",
+          "correct": true,
+          "elapsed_ms": 525,
+          "error": null
+        },
+        {
+          "id": "H16",
+          "expected": "unsure",
+          "actual": "unsure",
+          "correct": true,
+          "elapsed_ms": 541,
+          "error": null
+        }
+      ],
+      "correct": 14,
+      "status": "observed"
+    }
+  ]
+}

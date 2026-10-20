@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-20",
+  "code_commit": "88e7243a014d8c59701b70001fbff7fbae2ffefa",
+  "scope": "Latest accepted deterministic gates, actual live observations and clearly dated retained model/source evidence. Live POI503 remains a blocker.",
+  "sha256": {
+    "verify-travel-final.log": "e4fa1a13ac1a6eaab397da8c20423ea1f85b3ab7a1f32abbdf8802d2d9afc791",
+    "browser-results.json": "6eacf31d6f72eee3f387b5e37b7806be8023efdb1e2e7cabe87fa25ea72a5211",
+    "quality-gate.json": "cb14849c6ef83e03ebd1ec963634a93d780a7f015b3ed1102728e76d3caa423f",
+    "lighthouse-mobile.json": "0ab457b27457c3f9cf3bfb0295801cba2778a86422ad97bcd644d93c4709168c",
+    "production-provenance.json": "df9d49f8029402d10eeccf880fde911da5377d375c0e2aded49bad9ff8f5357c",
+    "travel-live-api.json": "b2a76b0d3956017a9b6227847792a300ef87b430b6a0b6dd5985873dbf879153",
+    "travel-live-tile-receipt.json": "54c80dd2308e204db897f5a6b8f07e92c5a3e59dd18ebbc8c4fc1e49f82b1e79",
+    "browser-environment.json": "13a0767748378f91e9faf9c2544b7e7b94e14503b65dbe84843988f1e22d2516",
+    "public-cache-manifest.json": "9e57998e4c21cce40302765acc08839216a273141dcde70d02a4b765b62271b9",
+    "resource-validation.json": "cd1827e7b6c165aa8a2ede24b935513086cbeb1d3ed90b79bb77554020205ab2",
+    "model-benchmark.json": "39d4522a9b0cc461bea476cb529b0a38a69e827110c2e74e7a0352501f130fb8",
+    "npm-audit.json": "1f5c33bdd915043ee331b4ff61b47bdf044f576cb8e7e56da45bfb0aff9b355f",
+    "pip-audit.json": "3e3bdfb8cac9bac956739442e834911b53dcf4f5f81cb51620f8ac62c57cce2c"
+  }
+}

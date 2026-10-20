@@ -1,0 +1,5 @@
+{"endpoint": "cities", "mode": null, "status": 200, "elapsed_ms": 683}
+{"endpoint": "weather", "mode": null, "status": 200, "elapsed_ms": 574}
+{"endpoint": "places", "mode": null, "status": 503, "elapsed_ms": 22363}
+{"endpoint": "route", "mode": "foot", "status": 200, "elapsed_ms": 635}
+{"endpoint": "route", "mode": "car", "status": 200, "elapsed_ms": 653}

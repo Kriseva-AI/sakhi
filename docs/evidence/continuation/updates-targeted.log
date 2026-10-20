@@ -1,0 +1,11 @@
+
+Running 4 tests using 1 worker
+
+(node:72820) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/recovery.spec.ts:186:1 › recipient draft is local, previewed exactly and never becomes delivery (435ms)
+  ✓  2 [chromium] › tests/recovery.spec.ts:240:1 › live-location companion requires separate consent and explains stop/last location (276ms)
+  ✓  3 [chromium] › tests/recovery.spec.ts:262:1 › edited recipient revokes the old draft approval (308ms)
+  ✓  4 [chromium] › tests/recovery.spec.ts:281:1 › unresponsive provider reaches a bounded recovery state (313ms)
+
+  4 passed (1.7s)

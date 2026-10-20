@@ -1,0 +1,19 @@
+[WebServer] INFO:     Started server process [95938]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+[WebServer] (node:95961) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] INFO:     Started server process [95964]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 2 tests using 1 worker
+
+(node:95968) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tests/recovery.spec.ts:371:1 › removing a saved language choice does not restore it on reload (445ms)
+  ✓  2 [chromium] › tests/recovery.spec.ts:397:1 › emergency access survives a blocked application bundle with JavaScript enabled (74ms)
+
+  2 passed (2.1s)

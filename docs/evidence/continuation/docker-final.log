@@ -1,0 +1,133 @@
+ Image sakhi-sakhi Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 524B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 878B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim-bookworm
+#3 ...
+
+#4 [internal] load metadata for ghcr.io/astral-sh/uv:0.11.6
+#4 DONE 0.9s
+
+#5 [internal] load metadata for docker.io/library/node:22-bookworm-slim
+#5 ...
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim-bookworm
+#3 DONE 1.3s
+
+#5 [internal] load metadata for docker.io/library/node:22-bookworm-slim
+#5 DONE 1.7s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 153B done
+#6 DONE 0.0s
+
+#7 FROM ghcr.io/astral-sh/uv:0.11.6@sha256:b1e699368d24c57cda93c338a57a8c5a119009ba809305cc8e86986d4a006754
+#7 DONE 0.0s
+
+#8 [runtime  1/12] FROM docker.io/library/python:3.13-slim-bookworm@sha256:a1165e272e578941b84abc79e4ab38a0305cd12803a5c4247979ac7655f4d641
+#8 DONE 0.0s
+
+#9 [web 1/9] FROM docker.io/library/node:22-bookworm-slim@sha256:c3de60bf2f9dd0ac6370e6117950ff62d6e339527e7472301c9c78a017978392
+#9 DONE 0.0s
+
+#10 [internal] load build context
+#10 transferring context: 281.77kB 0.0s done
+#10 DONE 0.0s
+
+#11 [web 4/9] RUN npm ci
+#11 CACHED
+
+#12 [web 2/9] WORKDIR /app
+#12 CACHED
+
+#13 [web 3/9] COPY package.json package-lock.json ./
+#13 CACHED
+
+#14 [web 5/9] COPY tsconfig.json ./
+#14 CACHED
+
+#15 [runtime  2/12] WORKDIR /app
+#15 CACHED
+
+#16 [runtime  3/12] COPY --from=ghcr.io/astral-sh/uv:0.11.6 /uv /usr/local/bin/uv
+#16 CACHED
+
+#17 [runtime  4/12] COPY pyproject.toml uv.lock ./
+#17 CACHED
+
+#18 [runtime  5/12] RUN uv sync --frozen --no-dev
+#18 CACHED
+
+#19 [web 6/9] COPY apps ./apps
+#19 DONE 0.1s
+
+#20 [runtime  6/12] COPY services ./services
+#20 DONE 0.1s
+
+#21 [runtime  7/12] COPY planning ./planning
+#21 DONE 0.1s
+
+#22 [web 7/9] COPY packages ./packages
+#22 DONE 0.1s
+
+#23 [runtime  8/12] COPY data ./data
+#23 DONE 0.1s
+
+#24 [web 8/9] COPY data ./data
+#24 DONE 0.1s
+
+#25 [runtime  9/12] COPY scripts ./scripts
+#25 DONE 0.1s
+
+#26 [web 9/9] RUN npm run build
+#26 0.316 
+#26 0.316 > kriseva-sakhi@0.1.0 build
+#26 0.316 > tsc --noEmit && vite build --config apps/web/vite.config.ts
+#26 0.316 
+#26 3.172 vite v7.3.7 building client environment for production...
+#26 3.222 transforming...
+#26 4.829 ✓ 1802 modules transformed.
+#26 4.974 rendering chunks...
+#26 5.054 computing gzip size...
+#26 5.073 dist/index.html                     1.87 kB │ gzip:   0.82 kB
+#26 5.073 dist/assets/LiveMap-CIGW-MKW.css   15.61 kB │ gzip:   6.46 kB
+#26 5.074 dist/assets/index-CWcvpoY5.css     85.65 kB │ gzip:  16.87 kB
+#26 5.074 dist/assets/LiveMap-magISYN7.js   151.54 kB │ gzip:  44.22 kB
+#26 5.074 dist/assets/index-Ct_xLJj5.js     515.40 kB │ gzip: 125.24 kB
+#26 5.074 
+#26 5.074 (!) Some chunks are larger than 500 kB after minification. Consider:
+#26 5.074 - Using dynamic import() to code-split the application
+#26 5.074 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+#26 5.074 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+#26 5.075 ✓ built in 1.88s
+#26 DONE 5.1s
+
+#27 [runtime 10/12] COPY --from=web /app/apps/web/dist ./apps/web/dist
+#27 DONE 0.1s
+
+#28 [runtime 11/12] RUN mkdir -p docs/evidence && PYTHONPATH=. uv run --frozen --no-dev python scripts/build_public.py --after-build
+#28 0.745 Generated immutable public cache cc277bb3b4244b1d, 41 assets. No API or query cache.
+#28 DONE 0.8s
+
+#29 [runtime 12/12] RUN useradd --create-home --uid 10001 sakhi && chown -R sakhi:sakhi /app
+#29 DONE 0.3s
+
+#30 exporting to image
+#30 exporting layers 0.1s done
+#30 writing image sha256:4c9d80b977e043c762fdc82debf69390f31334fff022c2bc0adbf639ba7f308a
+#30 writing image sha256:4c9d80b977e043c762fdc82debf69390f31334fff022c2bc0adbf639ba7f308a done
+#30 naming to docker.io/library/sakhi-sakhi done
+#30 DONE 0.2s
+
+#31 resolving provenance for metadata file
+#31 DONE 0.0s
+ Image sakhi-sakhi Built 
+ Container sakhi-sakhi-1 Recreate 
+ Container sakhi-sakhi-1 Recreated 
+ Container sakhi-sakhi-1 Starting 
+ Container sakhi-sakhi-1 Started 

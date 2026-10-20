@@ -1,0 +1,44 @@
+[WebServer] INFO:     Started server process [559]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+[WebServer] (node:642) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] INFO:     Started server process [871]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 1 test using 1 worker
+
+(node:876) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/quick-exit.spec.ts:4:1 › quick exit covers the page before a stalled destination responds (40.1s)
+
+
+  1) [chromium] › tests/quick-exit.spec.ts:4:1 › quick exit covers the page before a stalled destination responds 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: cdpSession.detach: Target page, context or browser has been closed
+
+      14 |     expect(result.result.value).toContain('Notes');
+      15 |     expect(result.result.value).not.toContain('Support for women');
+    > 16 |   } finally {resume();await cdp.detach();}
+         |                                 ^
+      17 | });
+      18 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/quick-exit.spec.ts:16:33
+
+    Error Context: test-results/quick-exit-quick-exit-cove-bc4b8-talled-destination-responds-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/quick-exit-quick-exit-cove-bc4b8-talled-destination-responds-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/quick-exit-quick-exit-cove-bc4b8-talled-destination-responds-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/quick-exit.spec.ts:4:1 › quick exit covers the page before a stalled destination responds 

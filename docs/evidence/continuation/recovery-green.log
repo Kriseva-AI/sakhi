@@ -1,0 +1,130 @@
+[WebServer] INFO:     Started server process [71508]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+[WebServer] (node:71534) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] INFO:     Started server process [71537]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 10 tests using 1 worker
+
+(node:71538) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/recovery.spec.ts:11:1 › child pathway has a specific online alternative without adult disclosure or API (608ms)
+  ✓   2 [chromium] › tests/recovery.spec.ts:51:1 › unknown image age never implies adult eligibility and offline alternatives remain (414ms)
+  ✓   3 [chromium] › tests/recovery.spec.ts:85:1 › adult image made under18 gets the underage-image service (378ms)
+  ✓   4 [chromium] › tests/recovery.spec.ts:113:1 › discreet cover restores locally and clear removes the held page (311ms)
+  ✓   5 [chromium] › tests/recovery.spec.ts:133:1 › nearby failure has immediate specific recovery outside collapsed details (380ms)
+  ✓   6 [chromium] › tests/recovery.spec.ts:154:1 › every page has two contextual visual cues without serious axe violations (3.2s)
+  ✘   7 [chromium] › tests/recovery.spec.ts:186:1 › recipient draft is local, previewed exactly and never becomes delivery (30.1s)
+(node:71567) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   8 [chromium] › tests/recovery.spec.ts:238:1 › live-location companion requires separate consent and explains stop/last location (30.1s)
+(node:72592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 [chromium] › tests/recovery.spec.ts:260:1 › edited recipient revokes the old draft approval (30.0s)
+(node:73150) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [chromium] › tests/recovery.spec.ts:279:1 › unresponsive provider reaches a bounded recovery state (321ms)
+
+
+  1) [chromium] › tests/recovery.spec.ts:186:1 › recipient draft is local, previewed exactly and never becomes delivery 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('tab', { name: 'My plan', exact: true })
+
+
+      192 |   });
+      193 |   await page.goto("/en-IN/nearby");
+    > 194 |   await page.getByRole("tab", { name: "My plan", exact: true }).click();
+          |                                                                 ^
+      195 |   await page
+      196 |     .getByLabel("Recipient label", { exact: true })
+      197 |     .fill("Example contact");
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:194:65
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-recipient-draft-i-73117--and-never-becomes-delivery-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-recipient-draft-i-73117--and-never-becomes-delivery-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-recipient-draft-i-73117--and-never-becomes-delivery-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-recipient-draft-i-73117--and-never-becomes-delivery-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests/recovery.spec.ts:238:1 › live-location companion requires separate consent and explains stop/last location 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('tab', { name: 'My plan', exact: true })
+
+
+      240 | }) => {
+      241 |   await page.goto("/en-IN/nearby");
+    > 242 |   await page.getByRole("tab", { name: "My plan", exact: true }).click();
+          |                                                                 ^
+      243 |   await page
+      244 |     .getByRole("button", { name: "Help me share live location", exact: true })
+      245 |     .click();
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:242:65
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-live-location-com-90f97-explains-stop-last-location-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-live-location-com-90f97-explains-stop-last-location-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-live-location-com-90f97-explains-stop-last-location-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-live-location-com-90f97-explains-stop-last-location-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests/recovery.spec.ts:260:1 › edited recipient revokes the old draft approval ───
+
+    Test timeout of 30000ms exceeded.
+
+    Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, copyfile '/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/test-results/.playwright-artifacts-2/traces/ef78f3da5c9c24fceacf-43b6f5b98dd576bb1d2d-recording1.network' -> '/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/test-results/.playwright-artifacts-2/traces/ef78f3da5c9c24fceacf-43b6f5b98dd576bb1d2d-recording1-pwnetcopy-1.network'
+
+    Error: browserContext._wrapApiCall: ENOENT: no such file or directory, open '/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/test-results/.playwright-artifacts-2/traces/ef78f3da5c9c24fceacf-43b6f5b98dd576bb1d2d.trace'
+
+    Error: locator.click: Test ended.
+    Call log:
+      - waiting for getByRole('tab', { name: 'My plan', exact: true })
+
+
+      260 | });
+      261 |
+    > 262 | test("edited recipient revokes the old draft approval", async ({ page }) => {
+          |                                                                 ^
+      263 |   await page.goto("/en-IN/nearby");
+      264 |   await page.getByRole("button", { name: "My plan", exact: true }).click();
+      265 |   await page
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:262:65
+
+    Error: ENOENT: no such file or directory, open '/Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/test-results/.playwright-artifacts-2/b0124ba5f8ad85a9a91a11582d7001b4.zip'
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-edited-recipient-revokes-the-old-draft-approval-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [chromium] › tests/recovery.spec.ts:186:1 › recipient draft is local, previewed exactly and never becomes delivery 
+    [chromium] › tests/recovery.spec.ts:238:1 › live-location companion requires separate consent and explains stop/last location 
+    [chromium] › tests/recovery.spec.ts:260:1 › edited recipient revokes the old draft approval ────
+  7 passed (1.6m)

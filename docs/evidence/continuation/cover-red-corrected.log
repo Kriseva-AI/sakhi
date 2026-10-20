@@ -1,0 +1,58 @@
+[WebServer] INFO:     Started server process [74108]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+[WebServer] (node:74132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] INFO:     Started server process [74136]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 1 test using 1 worker
+
+(node:74137) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/recovery.spec.ts:309:1 › cover invalidates a late device location suggestion (5.4s)
+
+
+  1) [chromium] › tests/recovery.spec.ts:309:1 › cover invalidates a late device location suggestion 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('button', { name: 'Use Delhi', exact: true })
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('button', { name: 'Use Delhi', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Use Delhi', exact: true })
+        14 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      315 |   await page.evaluate(()=>{(window as any).__geoCallback({coords:{latitude:28.614,longitude:77.209,accuracy:25}})});
+      316 |   await page.getByRole('button',{name:'Return to page',exact:true}).click();
+    > 317 |   await expect(page.getByRole('button',{name:'Use Delhi',exact:true})).toHaveCount(0);
+          |                                                                        ^
+      318 | });
+      319 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:317:72
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-cover-invalidates-a-late-device-location-suggestion-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-cover-invalidates-a-late-device-location-suggestion-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-cover-invalidates-a-late-device-location-suggestion-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-cover-invalidates-a-late-device-location-suggestion-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/recovery.spec.ts:309:1 › cover invalidates a late device location suggestion 

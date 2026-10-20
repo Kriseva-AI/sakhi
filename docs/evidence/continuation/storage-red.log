@@ -1,0 +1,42 @@
+[WebServer] INFO:     Started server process [90846]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 1 test using 1 worker
+
+(node:90847) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/recovery.spec.ts:371:1 › removing a saved language choice does not restore it on reload (428ms)
+
+
+  1) [chromium] › tests/recovery.spec.ts:371:1 › removing a saved language choice does not restore it on reload 
+
+    Error: expect(received).toBeNull()
+
+    Received: "hi-IN"
+
+      374 |   await page.getByText('Storage controls and public corrections',{exact:true}).click();await page.getByRole('button',{name:'Remove saved language preference',exact:true}).click();
+      375 |   expect(await page.evaluate(()=>localStorage.getItem('sakhi.locale'))).toBeNull();await page.reload();
+    > 376 |   expect(await page.evaluate(()=>localStorage.getItem('sakhi.locale'))).toBeNull();
+          |                                                                         ^
+      377 | });
+      378 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:376:73
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-removing-a-saved--09b51-es-not-restore-it-on-reload-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-removing-a-saved--09b51-es-not-restore-it-on-reload-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-removing-a-saved--09b51-es-not-restore-it-on-reload-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-removing-a-saved--09b51-es-not-restore-it-on-reload-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/recovery.spec.ts:371:1 › removing a saved language choice does not restore it on reload 

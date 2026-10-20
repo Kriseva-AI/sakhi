@@ -1,0 +1,29 @@
+[WebServer] INFO:     Started server process [74429]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+[WebServer] (node:74632) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] INFO:     Started server process [74635]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 12 tests using 1 worker
+
+(node:74641) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/recovery.spec.ts:11:1 › child pathway has a specific online alternative without adult disclosure or API (409ms)
+  ✓   2 [chromium] › tests/recovery.spec.ts:51:1 › unknown image age never implies adult eligibility and offline alternatives remain (385ms)
+  ✓   3 [chromium] › tests/recovery.spec.ts:85:1 › adult image made under18 gets the underage-image service (361ms)
+  ✓   4 [chromium] › tests/recovery.spec.ts:113:1 › discreet cover restores locally and clear removes the held page (310ms)
+  ✓   5 [chromium] › tests/recovery.spec.ts:133:1 › nearby failure has immediate specific recovery outside collapsed details (410ms)
+  ✓   6 [chromium] › tests/recovery.spec.ts:154:1 › every page has two contextual visual cues without serious axe violations (3.0s)
+  ✓   7 [chromium] › tests/recovery.spec.ts:186:1 › recipient draft is local, previewed exactly and never becomes delivery (425ms)
+  ✓   8 [chromium] › tests/recovery.spec.ts:240:1 › live-location companion requires separate consent and explains stop/last location (280ms)
+  ✓   9 [chromium] › tests/recovery.spec.ts:262:1 › edited recipient revokes the old draft approval (290ms)
+  ✓  10 [chromium] › tests/recovery.spec.ts:281:1 › unresponsive provider reaches a bounded recovery state (293ms)
+  ✓  11 [chromium] › tests/recovery.spec.ts:303:1 › guide choices move keyboard focus to the next question (292ms)
+  ✓  12 [chromium] › tests/recovery.spec.ts:318:1 › cover invalidates a late device location suggestion (327ms)
+
+  12 passed (8.3s)

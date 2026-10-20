@@ -1,0 +1,95 @@
+[WebServer] INFO:     Started server process [73273]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+[WebServer] (node:73296) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] INFO:     Started server process [73309]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 2 tests using 1 worker
+
+(node:73673) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/recovery.spec.ts:303:1 › guide choices move keyboard focus to the next question (5.3s)
+(node:73678) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [chromium] › tests/recovery.spec.ts:309:1 › cover invalidates a late device location suggestion (8.1s)
+
+
+  1) [chromium] › tests/recovery.spec.ts:303:1 › guide choices move keyboard focus to the next question 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('heading', { name: 'Which next step would help?', exact: true })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('heading', { name: 'Which next step would help?', exact: true }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Which next step would help?', exact: true })
+        14 × locator resolved to <h3>Which next step would help?</h3>
+           - unexpected value "inactive"
+
+
+      304 |   await minor(page);
+      305 |   await page.getByRole('button',{name:'Online abuse or images',exact:true}).click();
+    > 306 |   await expect(page.getByRole('heading',{name:'Which next step would help?',exact:true})).toBeFocused();
+          |                                                                                           ^
+      307 | });
+      308 |
+      309 | test('cover invalidates a late device location suggestion',async({page})=>{
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:306:91
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-guide-choices-mov-5ebf2--focus-to-the-next-question-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-guide-choices-mov-5ebf2--focus-to-the-next-question-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-guide-choices-mov-5ebf2--focus-to-the-next-question-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-guide-choices-mov-5ebf2--focus-to-the-next-question-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests/recovery.spec.ts:309:1 › cover invalidates a late device location suggestion 
+
+    Test timeout of 8000ms exceeded.
+
+    Error: locator.click: Test timeout of 8000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Suggest my city on this device', exact: true })
+
+
+      311 |   await page.goto('/en-IN/nearby');
+      312 |   await page.getByText('Find another city in India',{exact:true}).click();
+    > 313 |   await page.getByRole('button',{name:'Suggest my city on this device',exact:true}).click();
+          |                                                                                     ^
+      314 |   await page.getByRole('button',{name:'Hide page',exact:true}).click();
+      315 |   await page.evaluate(()=>{(window as any).__geoCallback({coords:{latitude:28.614,longitude:77.209,accuracy:25}})});
+      316 |   await page.getByRole('button',{name:'Return to page',exact:true}).click();
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:313:85
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-cover-invalidates-a-late-device-location-suggestion-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-cover-invalidates-a-late-device-location-suggestion-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-cover-invalidates-a-late-device-location-suggestion-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-cover-invalidates-a-late-device-location-suggestion-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [chromium] › tests/recovery.spec.ts:303:1 › guide choices move keyboard focus to the next question 
+    [chromium] › tests/recovery.spec.ts:309:1 › cover invalidates a late device location suggestion 

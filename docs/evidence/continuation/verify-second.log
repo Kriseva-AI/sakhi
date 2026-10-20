@@ -1,0 +1,389 @@
+uv run --frozen ruff check services scripts tests models
+All checks passed!
+uv run --frozen pytest -q --junitxml=docs/evidence/pytest.xml
+......................................................                   [100%]
+=============================== warnings summary ===============================
+.venv/lib/python3.13/site-packages/fastapi/testclient.py:1
+  /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+54 passed, 1 warning in 0.20s
+npm test
+
+> kriseva-sakhi@0.1.0 test
+> vitest run
+
+
+ RUN  v4.1.12 /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi
+
+
+ Test Files  4 passed (4)
+      Tests  20 passed (20)
+   Start at  13:13:26
+   Duration  132ms (transform 73ms, setup 0ms, import 107ms, tests 17ms, environment 0ms)
+
+PYTHONPATH=. uv run --frozen python scripts/validate_project.py
+16 locale shells, 136 keys each, 68 features, 211 leads; structural validation passed.
+PYTHONPATH=. uv run --frozen python scripts/check_readme_links.py
+README: 43 local targets exist, 5 external URLs have valid syntax.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make build
+PYTHONPATH=. uv run --frozen python scripts/build_public.py
+npm run build
+
+> kriseva-sakhi@0.1.0 build
+> tsc --noEmit && vite build --config apps/web/vite.config.ts
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 1801 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     1.42 kB │ gzip:   0.72 kB
+dist/assets/LiveMap-CIGW-MKW.css   15.61 kB │ gzip:   6.46 kB
+dist/assets/index-vWHUqk5P.css     84.78 kB │ gzip:  16.79 kB
+dist/assets/LiveMap-BlBCMLX4.js   151.54 kB │ gzip:  44.14 kB
+dist/assets/index-DbRANtL7.js     512.41 kB │ gzip: 124.04 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 931ms
+PYTHONPATH=. uv run --frozen python scripts/build_public.py --after-build
+Generated immutable public cache 0ee1c3e4dcf6c606, 41 assets. No API or query cache.
+/Applications/Xcode.app/Contents/Developer/usr/bin/make evaluate
+PYTHONPATH=. uv run --frozen python scripts/evaluate.py
+{
+  "cases": 410,
+  "emergency_failures": 0,
+  "mismatches": 0,
+  "latency_ms": {
+    "p50": 0.08491589687764645,
+    "p95": 0.09695906192064285
+  },
+  "by_locale": {
+    "en-IN": 1,
+    "hi-IN": 1,
+    "bn-IN": 1,
+    "mr-IN": 1,
+    "te-IN": 1,
+    "ta-IN": 1,
+    "gu-IN": 1,
+    "kn-IN": 1,
+    "ml-IN": 1,
+    "or-IN": 1,
+    "pa-IN": 1,
+    "as-IN": 1,
+    "ur-IN": 1,
+    "ne-IN": 1,
+    "kok-IN": 1,
+    "ks-Arab-IN": 1
+  }
+}
+npx playwright test
+[WebServer] INFO:     Started server process [80287]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 289 tests using 1 worker
+
+(node:80289) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    1 [chromium] › tests/e2e.spec.ts:4:1 › anonymous cyber journey, exact destination preview and cancel sends nothing (748ms)
+  ✓    2 [chromium] › tests/e2e.spec.ts:41:1 › emergency is available before API and in airplane mode (242ms)
+  ✓    3 [chromium] › tests/e2e.spec.ts:53:1 › synthetic demo cannot open services and erase removes input (360ms)
+  ✓    4 [chromium] › tests/e2e.spec.ts:79:1 › minor receives child route rather than adult results (260ms)
+  ✓    5 [chromium] › tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 320 (431ms)
+  ✓    6 [chromium] › tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 360 (425ms)
+  ✓    7 [chromium] › tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 375 (435ms)
+  ✓    8 [chromium] › tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 390 (425ms)
+  ✓    9 [chromium] › tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 414 (414ms)
+  ✓   10 [chromium] › tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 768 (411ms)
+  ✓   11 [chromium] › tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 1024 (432ms)
+  ✓   12 [chromium] › tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 1280 (412ms)
+  ✓   13 [chromium] › tests/e2e.spec.ts:96:3 › no overflow and no serious axe violations at 1440 (414ms)
+  ✓   14 [chromium] › tests/e2e.spec.ts:117:5 › finder reflows at 320 (410ms)
+  ✓   15 [chromium] › tests/e2e.spec.ts:117:5 › finder reflows at 360 (209ms)
+  ✓   16 [chromium] › tests/e2e.spec.ts:117:5 › finder reflows at 375 (176ms)
+  ✓   17 [chromium] › tests/e2e.spec.ts:117:5 › finder reflows at 390 (206ms)
+  ✓   18 [chromium] › tests/e2e.spec.ts:117:5 › finder reflows at 414 (210ms)
+  ✓   19 [chromium] › tests/e2e.spec.ts:117:5 › finder reflows at 768 (180ms)
+  ✓   20 [chromium] › tests/e2e.spec.ts:117:5 › finder reflows at 1024 (216ms)
+  ✓   21 [chromium] › tests/e2e.spec.ts:117:5 › finder reflows at 1280 (202ms)
+  ✓   22 [chromium] › tests/e2e.spec.ts:117:5 › finder reflows at 1440 (433ms)
+  ✓   23 [chromium] › tests/e2e.spec.ts:117:5 › resources reflows at 320 (532ms)
+  ✓   24 [chromium] › tests/e2e.spec.ts:117:5 › resources reflows at 360 (205ms)
+  ✓   25 [chromium] › tests/e2e.spec.ts:117:5 › resources reflows at 375 (226ms)
+  ✓   26 [chromium] › tests/e2e.spec.ts:117:5 › resources reflows at 390 (205ms)
+  ✓   27 [chromium] › tests/e2e.spec.ts:117:5 › resources reflows at 414 (224ms)
+  ✓   28 [chromium] › tests/e2e.spec.ts:117:5 › resources reflows at 768 (209ms)
+  ✓   29 [chromium] › tests/e2e.spec.ts:117:5 › resources reflows at 1024 (197ms)
+  ✓   30 [chromium] › tests/e2e.spec.ts:117:5 › resources reflows at 1280 (199ms)
+  ✓   31 [chromium] › tests/e2e.spec.ts:117:5 › resources reflows at 1440 (531ms)
+  ✓   32 [chromium] › tests/e2e.spec.ts:117:5 › trust reflows at 320 (455ms)
+  ✓   33 [chromium] › tests/e2e.spec.ts:117:5 › trust reflows at 360 (188ms)
+  ✓   34 [chromium] › tests/e2e.spec.ts:117:5 › trust reflows at 375 (207ms)
+  ✓   35 [chromium] › tests/e2e.spec.ts:117:5 › trust reflows at 390 (207ms)
+  ✓   36 [chromium] › tests/e2e.spec.ts:117:5 › trust reflows at 414 (191ms)
+  ✓   37 [chromium] › tests/e2e.spec.ts:117:5 › trust reflows at 768 (217ms)
+  ✓   38 [chromium] › tests/e2e.spec.ts:117:5 › trust reflows at 1024 (230ms)
+  ✓   39 [chromium] › tests/e2e.spec.ts:117:5 › trust reflows at 1280 (199ms)
+  ✓   40 [chromium] › tests/e2e.spec.ts:117:5 › trust reflows at 1440 (499ms)
+  ✓   41 [chromium] › tests/e2e.spec.ts:117:5 › maintenance reflows at 320 (540ms)
+  ✓   42 [chromium] › tests/e2e.spec.ts:117:5 › maintenance reflows at 360 (193ms)
+  ✓   43 [chromium] › tests/e2e.spec.ts:117:5 › maintenance reflows at 375 (194ms)
+  ✓   44 [chromium] › tests/e2e.spec.ts:117:5 › maintenance reflows at 390 (189ms)
+  ✓   45 [chromium] › tests/e2e.spec.ts:117:5 › maintenance reflows at 414 (206ms)
+  ✓   46 [chromium] › tests/e2e.spec.ts:117:5 › maintenance reflows at 768 (195ms)
+  ✓   47 [chromium] › tests/e2e.spec.ts:117:5 › maintenance reflows at 1024 (211ms)
+  ✓   48 [chromium] › tests/e2e.spec.ts:117:5 › maintenance reflows at 1280 (212ms)
+  ✓   49 [chromium] › tests/e2e.spec.ts:117:5 › maintenance reflows at 1440 (569ms)
+  ✓   50 [chromium] › tests/e2e.spec.ts:155:3 › locale shell en-IN has explicit fallback and correct direction (176ms)
+  ✓   51 [chromium] › tests/e2e.spec.ts:155:3 › locale shell hi-IN has explicit fallback and correct direction (446ms)
+  ✓   52 [chromium] › tests/e2e.spec.ts:155:3 › locale shell bn-IN has explicit fallback and correct direction (223ms)
+  ✓   53 [chromium] › tests/e2e.spec.ts:155:3 › locale shell mr-IN has explicit fallback and correct direction (207ms)
+  ✓   54 [chromium] › tests/e2e.spec.ts:155:3 › locale shell te-IN has explicit fallback and correct direction (212ms)
+  ✓   55 [chromium] › tests/e2e.spec.ts:155:3 › locale shell ta-IN has explicit fallback and correct direction (222ms)
+  ✓   56 [chromium] › tests/e2e.spec.ts:155:3 › locale shell gu-IN has explicit fallback and correct direction (207ms)
+  ✓   57 [chromium] › tests/e2e.spec.ts:155:3 › locale shell kn-IN has explicit fallback and correct direction (210ms)
+  ✓   58 [chromium] › tests/e2e.spec.ts:155:3 › locale shell ml-IN has explicit fallback and correct direction (223ms)
+  ✓   59 [chromium] › tests/e2e.spec.ts:155:3 › locale shell or-IN has explicit fallback and correct direction (207ms)
+  ✓   60 [chromium] › tests/e2e.spec.ts:155:3 › locale shell pa-IN has explicit fallback and correct direction (192ms)
+  ✓   61 [chromium] › tests/e2e.spec.ts:155:3 › locale shell as-IN has explicit fallback and correct direction (222ms)
+  ✓   62 [chromium] › tests/e2e.spec.ts:155:3 › locale shell ur-IN has explicit fallback and correct direction (429ms)
+  ✓   63 [chromium] › tests/e2e.spec.ts:155:3 › locale shell ne-IN has explicit fallback and correct direction (227ms)
+  ✓   64 [chromium] › tests/e2e.spec.ts:155:3 › locale shell kok-IN has explicit fallback and correct direction (220ms)
+  ✓   65 [chromium] › tests/e2e.spec.ts:155:3 › locale shell ks-Arab-IN has explicit fallback and correct direction (438ms)
+  ✓   66 [chromium] › tests/e2e.spec.ts:184:1 › mid-session switch preserves only memory, browser back works, clear erases narrative (1.4s)
+  ✓   67 [chromium] › tests/e2e.spec.ts:213:1 › general help download excludes any story and keyboard escapes destination preview (327ms)
+  ✓   68 [chromium] › tests/e2e.spec.ts:232:1 › 200 and 400 percent reflow equivalents at 640 and 320 CSS pixels (206ms)
+  ✓   69 [chromium] › tests/e2e.spec.ts:247:1 › clear invalidates a delayed navigation response (835ms)
+  ✓   70 [chromium] › tests/e2e.spec.ts:289:1 › step change focuses and announces the next question (245ms)
+  ✓   71 [chromium] › tests/e2e.spec.ts:300:1 › expired public pack retains honest general fallback links (213ms)
+  ✓   72 [chromium] › tests/e2e.spec.ts:314:1 › direct preparation goal reaches public options in three selections (324ms)
+  ✓   73 [chromium] › tests/location-sharing.spec.ts:23:1 › local live position needs a separate pick and recipient preview before sharing (1.4s)
+  ✓   74 [chromium] › tests/location-sharing.spec.ts:75:1 › cover stops local live position and ignores a late reading (345ms)
+  ✓   75 [chromium] › tests/location-sharing.spec.ts:93:1 › revoke update stops a running watch and late callback cannot repopulate it (296ms)
+  ✓   76 [chromium] › tests/location-sharing.spec.ts:110:1 › stale local reading disappears instead of appearing live (297ms)
+  ✓   77 [chromium] › tests/offline.spec.ts:2:1 › production PWA reloads offline and caches only hashed public assets (764ms)
+  ✓   78 [chromium] › tests/offline.spec.ts:70:1 › production headers restrict sensors to explicit same-origin location and forbid external scripts (20ms)
+  ✓   79 [chromium] › tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone (343ms)
+  ✓   80 [chromium] › tests/pillars.spec.ts:16:1 › public correction errors link back to the field and preserve entered public text (1.2s)
+  ✓   81 [chromium] › tests/pillars.spec.ts:43:1 › WhatsApp shows readable public fields before an optional encoded address (319ms)
+  ✓   82 [chromium] › tests/pillars.spec.ts:74:1 › comparison has a caption and explicit row and column headers (295ms)
+  ✓   83 [chromium] › tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey (264ms)
+  ✓   84 [chromium] › tests/pillars.spec.ts:114:1 › skip link and keyboard journey preserve visible focus without a mouse (278ms)
+  ✓   85 [chromium] › tests/pillars.spec.ts:159:1 › forced colors and reduced motion retain operable controls (595ms)
+  ✓   86 [chromium] › tests/pillars.spec.ts:188:1 › font download failure preserves readable reflow (209ms)
+  ✓   87 [chromium] › tests/pillars.spec.ts:204:1 › critical service eligibility limits remain visible before opening details (210ms)
+  ✓   88 [chromium] › tests/pillars.spec.ts:220:1 › text spacing preferences reflow without clipping primary controls (258ms)
+  ✓   89 [chromium] › tests/pillars.spec.ts:245:1 › progress is explicit and Back cancels an in-flight lookup (1.4s)
+  ✓   90 [chromium] › tests/pillars.spec.ts:288:1 › JavaScript failure retains the direct emergency fallback (76ms)
+  ✓   91 [chromium] › tests/recovery.spec.ts:11:1 › child pathway has a specific online alternative without adult disclosure or API (402ms)
+  ✓   92 [chromium] › tests/recovery.spec.ts:51:1 › unknown image age never implies adult eligibility and offline alternatives remain (397ms)
+  ✓   93 [chromium] › tests/recovery.spec.ts:85:1 › adult image made under18 gets the underage-image service (380ms)
+  ✓   94 [chromium] › tests/recovery.spec.ts:113:1 › discreet cover restores locally and clear removes the held page (311ms)
+  ✓   95 [chromium] › tests/recovery.spec.ts:133:1 › nearby failure has immediate specific recovery outside collapsed details (394ms)
+  ✓   96 [chromium] › tests/recovery.spec.ts:154:1 › every page has two contextual visual cues without serious axe violations (3.0s)
+  ✓   97 [chromium] › tests/recovery.spec.ts:186:1 › recipient draft is local, previewed exactly and never becomes delivery (796ms)
+  ✓   98 [chromium] › tests/recovery.spec.ts:240:1 › live-location companion requires separate consent and explains stop/last location (272ms)
+  ✓   99 [chromium] › tests/recovery.spec.ts:262:1 › edited recipient revokes the old draft approval (311ms)
+  ✓  100 [chromium] › tests/recovery.spec.ts:281:1 › unresponsive provider reaches a bounded recovery state (313ms)
+  ✓  101 [chromium] › tests/recovery.spec.ts:303:1 › guide choices move keyboard focus to the next question (298ms)
+  ✓  102 [chromium] › tests/recovery.spec.ts:318:1 › cover invalidates a late device location suggestion (349ms)
+  ✓  103 [chromium] › tests/simple-home.spec.ts:3:1 › opening explains public support with short copy and a visible next step (187ms)
+  ✓  104 [chromium] › tests/simple-home.spec.ts:25:1 › pink and black theme continues from the landing to the finder (237ms)
+  ✓  105 [chromium] › tests/simple-home.spec.ts:53:1 › source exploration is available without overwhelming the opening (260ms)
+  ✓  106 [chromium] › tests/sprint2.spec.ts:4:1 › preparation and recovery contexts are distinct and do not collect a story (276ms)
+  ✓  107 [chromium] › tests/sprint2.spec.ts:24:1 › official pathway rail opens an honest destination preview (284ms)
+  ✓  108 [chromium] › tests/sprint2.spec.ts:37:1 › prepare page has a public checklist and a generic kit download (262ms)
+  ✓  109 [chromium] › tests/sprint2.spec.ts:58:1 › map handoff omits origin and GPS and makes external disclosure explicit (328ms)
+  ✓  110 [chromium] › tests/sprint2.spec.ts:74:1 › WhatsApp prepares only a public card and does not claim a message was sent (313ms)
+  ✓  111 [chromium] › tests/sprint2.spec.ts:94:1 › comparison explains different channel choices (281ms)
+  ✓  112 [chromium] › tests/sprint2.spec.ts:106:1 › data boundary and reading comfort are visible and ephemeral (258ms)
+  ✓  113 [chromium] › tests/sprint2.spec.ts:120:1 › community proposal is local and never submits a case (1.2s)
+  ✓  114 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 home reflow 320 (408ms)
+  ✓  115 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 home reflow 360 (189ms)
+  ✓  116 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 home reflow 375 (206ms)
+  ✓  117 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 home reflow 390 (176ms)
+  ✓  118 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 home reflow 414 (206ms)
+  ✓  119 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 home reflow 768 (195ms)
+  ✓  120 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 home reflow 1024 (200ms)
+  ✓  121 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 home reflow 1280 (210ms)
+  ✓  122 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 home reflow 1440 (424ms)
+  ✓  123 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 prepare reflow 320 (606ms)
+  ✓  124 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 prepare reflow 360 (242ms)
+  ✓  125 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 prepare reflow 375 (211ms)
+  ✓  126 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 prepare reflow 390 (208ms)
+  ✓  127 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 prepare reflow 414 (222ms)
+  ✓  128 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 prepare reflow 768 (230ms)
+  ✓  129 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 prepare reflow 1024 (232ms)
+  ✓  130 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 prepare reflow 1280 (231ms)
+  ✓  131 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 prepare reflow 1440 (586ms)
+  ✓  132 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 nearby reflow 320 (481ms)
+  ✓  133 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 nearby reflow 360 (206ms)
+  ✓  134 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 nearby reflow 375 (190ms)
+  ✓  135 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 nearby reflow 390 (208ms)
+  ✓  136 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 nearby reflow 414 (190ms)
+  ✓  137 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 nearby reflow 768 (228ms)
+  ✓  138 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 nearby reflow 1024 (195ms)
+  ✓  139 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 nearby reflow 1280 (212ms)
+  ✓  140 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 nearby reflow 1440 (480ms)
+  ✓  141 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 community reflow 320 (455ms)
+  ✓  142 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 community reflow 360 (206ms)
+  ✓  143 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 community reflow 375 (208ms)
+  ✓  144 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 community reflow 390 (205ms)
+  ✓  145 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 community reflow 414 (209ms)
+  ✓  146 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 community reflow 768 (218ms)
+  ✓  147 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 community reflow 1024 (214ms)
+  ✓  148 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 community reflow 1280 (196ms)
+  ✓  149 [chromium] › tests/sprint2.spec.ts:142:5 › Sprint 2 community reflow 1440 (464ms)
+  ✓  150 [chromium] › tests/sprint2.spec.ts:168:3 › action desk Understand my options reaches options in three selections (325ms)
+  ✓  151 [chromium] › tests/sprint2.spec.ts:168:3 › action desk Explore reporting options reaches options in three selections (326ms)
+  ✓  152 [chromium] › tests/sprint2.spec.ts:168:3 › action desk Find support reaches options in three selections (342ms)
+  ✓  153 [chromium] › tests/sprint2.spec.ts:168:3 › action desk Help someone else reaches options in three selections (324ms)
+  ✓  154 [chromium] › tests/sprint2.spec.ts:191:1 › tabs support keyboard movement and one tab stop (312ms)
+  ✓  155 [chromium] › tests/sprint2.spec.ts:213:1 › new screens never request GPS, microphone or notification permission (461ms)
+  ✓  156 [chromium] › tests/sprint2.spec.ts:244:1 › clear session discards contribution and coarse map choices (1.4s)
+  ✓  157 [chromium] › tests/sprint2.spec.ts:269:1 › fictional examples cannot use new downloads or external handoffs (468ms)
+  ✓  158 [chromium] › tests/sprint2.spec.ts:304:1 › overdue pathway checks are visible and do not become fresh claims (229ms)
+  ✓  159 [chromium] › tests/sprint2.spec.ts:321:1 › review regression: synthetic maintainer download stays disabled (290ms)
+  ✓  160 [chromium] › tests/sprint2.spec.ts:338:1 › review regression: comparison can include every eligible public entry (251ms)
+  ✓  161 [chromium] › tests/sprint2.spec.ts:350:1 › comparison selection includes workplace and NCW when chosen (363ms)
+  ✓  162 [chromium] › tests/sprint2.spec.ts:389:1 › correction proposal accepts an actual public PIB article query (1.1s)
+  ✓  163 [chromium] › tests/sprint2.spec.ts:407:1 › English fallback sections keep English metadata inside Urdu shell (209ms)
+  ✓  164 [chromium] › tests/sprint2.spec.ts:421:1 › long destination preview begins at its title before the consent checkpoint (310ms)
+  ✓  165 [chromium] › tests/travel.spec.ts:87:1 › travel starts without outside requests, location prompts or provider calls (194ms)
+  ✓  166 [chromium] › tests/travel.spec.ts:110:1 › real map library loads only after consent and revocation removes it (1.2s)
+  ✓  167 [chromium] › tests/travel.spec.ts:127:1 › places to selected source to walking and driving route works without claiming availability (648ms)
+  ✓  168 [chromium] › tests/travel.spec.ts:159:1 › empty records and provider failure have different states and clear old results (478ms)
+  ✓  169 [chromium] › tests/travel.spec.ts:186:1 › city search is submitted explicitly and changing city discards old results (381ms)
+  ✓  170 [chromium] › tests/travel.spec.ts:214:1 › weather and daylight show dated values and never a crime score (311ms)
+  ✓  171 [chromium] › tests/travel.spec.ts:240:1 › public trip export and neutral check-in preview do not expose coordinates or claim sending (399ms)
+  ✓  172 [chromium] › tests/travel.spec.ts:263:1 › page check-in handles elapsed time and cancels without notifying anyone (360ms)
+  ✓  173 [chromium] › tests/travel.spec.ts:286:1 › GPS stays local and resolves only to a supported city after user gesture (316ms)
+  ✓  174 [chromium] › tests/travel.spec.ts:313:1 › late API result cannot return after clear session (313ms)
+  ✓  175 [chromium] › tests/travel.spec.ts:337:1 › synthetic mode blocks live providers, GPS, share and downloads (365ms)
+  ✓  176 [chromium] › tests/travel.spec.ts:360:1 › data lens marks missing evidence instead of drawing unsafe or safe zones (261ms)
+  ✓  177 [chromium] › tests/travel.spec.ts:371:3 › travel interactions reflow and pass axe at 320 (666ms)
+  ✓  178 [chromium] › tests/travel.spec.ts:371:3 › travel interactions reflow and pass axe at 390 (667ms)
+  ✓  179 [chromium] › tests/travel.spec.ts:371:3 › travel interactions reflow and pass axe at 768 (725ms)
+  ✓  180 [chromium] › tests/travel.spec.ts:371:3 › travel interactions reflow and pass axe at 1440 (767ms)
+  ✓  181 [chromium] › tests/travel.spec.ts:394:1 › reminder persists between travel panels and ends on clear session (482ms)
+  ✓  182 [chromium] › tests/travel.spec.ts:416:1 › a failed tile request stays an error after the tile batch completes (579ms)
+  ✓  183 [chromium] › tests/travel.spec.ts:428:1 › a public map point can be chosen with the keyboard and routed from the city centre (2.3s)
+  ✓  184 [chromium] › tests/travel.spec.ts:459:1 › the live-map choice is visible in the first mobile viewport (208ms)
+  ✓  185 [chromium] › tests/travel.spec.ts:473:1 › map consent and revocation preserve keyboard focus (278ms)
+  ✓  186 [chromium] › tests/travel.spec.ts:488:1 › panning the map does not cancel an independent city-weather lookup (663ms)
+  ✓  187 [chromium] › tests/travel.spec.ts:525:1 › a device-city suggestion does not change a live map until explicitly accepted (1.2s)
+(node:80912) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  188 [firefox] › tests/location-sharing.spec.ts:23:1 › local live position needs a separate pick and recipient preview before sharing (1.0s)
+  ✓  189 [firefox] › tests/location-sharing.spec.ts:75:1 › cover stops local live position and ignores a late reading (456ms)
+  ✓  190 [firefox] › tests/location-sharing.spec.ts:93:1 › revoke update stops a running watch and late callback cannot repopulate it (372ms)
+  ✓  191 [firefox] › tests/location-sharing.spec.ts:110:1 › stale local reading disappears instead of appearing live (339ms)
+  ✓  192 [firefox] › tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone (376ms)
+  ✓  193 [firefox] › tests/pillars.spec.ts:16:1 › public correction errors link back to the field and preserve entered public text (348ms)
+  ✓  194 [firefox] › tests/pillars.spec.ts:43:1 › WhatsApp shows readable public fields before an optional encoded address (381ms)
+  ✓  195 [firefox] › tests/pillars.spec.ts:74:1 › comparison has a caption and explicit row and column headers (292ms)
+  ✓  196 [firefox] › tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey (364ms)
+  ✓  197 [firefox] › tests/pillars.spec.ts:114:1 › skip link and keyboard journey preserve visible focus without a mouse (543ms)
+  -  198 [firefox] › tests/pillars.spec.ts:159:1 › forced colors and reduced motion retain operable controls
+  ✓  199 [firefox] › tests/pillars.spec.ts:188:1 › font download failure preserves readable reflow (249ms)
+  ✓  200 [firefox] › tests/pillars.spec.ts:204:1 › critical service eligibility limits remain visible before opening details (217ms)
+  ✓  201 [firefox] › tests/pillars.spec.ts:220:1 › text spacing preferences reflow without clipping primary controls (281ms)
+  ✓  202 [firefox] › tests/pillars.spec.ts:245:1 › progress is explicit and Back cancels an in-flight lookup (1.2s)
+  ✓  203 [firefox] › tests/pillars.spec.ts:288:1 › JavaScript failure retains the direct emergency fallback (136ms)
+  ✓  204 [firefox] › tests/recovery.spec.ts:11:1 › child pathway has a specific online alternative without adult disclosure or API (503ms)
+  ✓  205 [firefox] › tests/recovery.spec.ts:51:1 › unknown image age never implies adult eligibility and offline alternatives remain (485ms)
+  ✓  206 [firefox] › tests/recovery.spec.ts:85:1 › adult image made under18 gets the underage-image service (543ms)
+  ✓  207 [firefox] › tests/recovery.spec.ts:113:1 › discreet cover restores locally and clear removes the held page (773ms)
+  ✓  208 [firefox] › tests/recovery.spec.ts:133:1 › nearby failure has immediate specific recovery outside collapsed details (380ms)
+  ✓  209 [firefox] › tests/recovery.spec.ts:154:1 › every page has two contextual visual cues without serious axe violations (5.1s)
+  ✓  210 [firefox] › tests/recovery.spec.ts:186:1 › recipient draft is local, previewed exactly and never becomes delivery (743ms)
+  ✓  211 [firefox] › tests/recovery.spec.ts:240:1 › live-location companion requires separate consent and explains stop/last location (451ms)
+  ✓  212 [firefox] › tests/recovery.spec.ts:262:1 › edited recipient revokes the old draft approval (458ms)
+  ✓  213 [firefox] › tests/recovery.spec.ts:281:1 › unresponsive provider reaches a bounded recovery state (346ms)
+  ✓  214 [firefox] › tests/recovery.spec.ts:303:1 › guide choices move keyboard focus to the next question (404ms)
+  ✓  215 [firefox] › tests/recovery.spec.ts:318:1 › cover invalidates a late device location suggestion (533ms)
+  ✓  216 [firefox] › tests/travel.spec.ts:87:1 › travel starts without outside requests, location prompts or provider calls (250ms)
+  ✓  217 [firefox] › tests/travel.spec.ts:110:1 › real map library loads only after consent and revocation removes it (1.3s)
+  ✓  218 [firefox] › tests/travel.spec.ts:127:1 › places to selected source to walking and driving route works without claiming availability (595ms)
+  ✓  219 [firefox] › tests/travel.spec.ts:159:1 › empty records and provider failure have different states and clear old results (418ms)
+  ✓  220 [firefox] › tests/travel.spec.ts:186:1 › city search is submitted explicitly and changing city discards old results (490ms)
+  ✓  221 [firefox] › tests/travel.spec.ts:214:1 › weather and daylight show dated values and never a crime score (414ms)
+  ✓  222 [firefox] › tests/travel.spec.ts:240:1 › public trip export and neutral check-in preview do not expose coordinates or claim sending (518ms)
+  ✓  223 [firefox] › tests/travel.spec.ts:263:1 › page check-in handles elapsed time and cancels without notifying anyone (499ms)
+  ✓  224 [firefox] › tests/travel.spec.ts:286:1 › GPS stays local and resolves only to a supported city after user gesture (407ms)
+  ✓  225 [firefox] › tests/travel.spec.ts:313:1 › late API result cannot return after clear session (455ms)
+  ✓  226 [firefox] › tests/travel.spec.ts:337:1 › synthetic mode blocks live providers, GPS, share and downloads (532ms)
+  ✓  227 [firefox] › tests/travel.spec.ts:360:1 › data lens marks missing evidence instead of drawing unsafe or safe zones (735ms)
+  ✓  228 [firefox] › tests/travel.spec.ts:371:3 › travel interactions reflow and pass axe at 320 (927ms)
+  ✓  229 [firefox] › tests/travel.spec.ts:371:3 › travel interactions reflow and pass axe at 390 (979ms)
+  ✓  230 [firefox] › tests/travel.spec.ts:371:3 › travel interactions reflow and pass axe at 768 (1.0s)
+  ✓  231 [firefox] › tests/travel.spec.ts:371:3 › travel interactions reflow and pass axe at 1440 (1.2s)
+  ✓  232 [firefox] › tests/travel.spec.ts:394:1 › reminder persists between travel panels and ends on clear session (719ms)
+  ✓  233 [firefox] › tests/travel.spec.ts:416:1 › a failed tile request stays an error after the tile batch completes (659ms)
+  ✓  234 [firefox] › tests/travel.spec.ts:428:1 › a public map point can be chosen with the keyboard and routed from the city centre (1.6s)
+  ✓  235 [firefox] › tests/travel.spec.ts:459:1 › the live-map choice is visible in the first mobile viewport (276ms)
+  ✓  236 [firefox] › tests/travel.spec.ts:473:1 › map consent and revocation preserve keyboard focus (364ms)
+  ✓  237 [firefox] › tests/travel.spec.ts:488:1 › panning the map does not cancel an independent city-weather lookup (1.2s)
+  ✓  238 [firefox] › tests/travel.spec.ts:525:1 › a device-city suggestion does not change a live map until explicitly accepted (854ms)
+(node:81418) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  239 [webkit] › tests/location-sharing.spec.ts:23:1 › local live position needs a separate pick and recipient preview before sharing (1.1s)
+  ✓  240 [webkit] › tests/location-sharing.spec.ts:75:1 › cover stops local live position and ignores a late reading (563ms)
+  ✓  241 [webkit] › tests/location-sharing.spec.ts:93:1 › revoke update stops a running watch and late callback cannot repopulate it (487ms)
+  ✓  242 [webkit] › tests/location-sharing.spec.ts:110:1 › stale local reading disappears instead of appearing live (438ms)
+  ✓  243 [webkit] › tests/pillars.spec.ts:4:1 › all main destinations are visible links on a narrow phone (449ms)
+  ✓  244 [webkit] › tests/pillars.spec.ts:16:1 › public correction errors link back to the field and preserve entered public text (1.4s)
+  ✓  245 [webkit] › tests/pillars.spec.ts:43:1 › WhatsApp shows readable public fields before an optional encoded address (393ms)
+  ✓  246 [webkit] › tests/pillars.spec.ts:74:1 › comparison has a caption and explicit row and column headers (298ms)
+  ✓  247 [webkit] › tests/pillars.spec.ts:86:1 › browser font preference at 200 percent still reflows the main journey (327ms)
+  ✓  248 [webkit] › tests/pillars.spec.ts:114:1 › skip link and keyboard journey preserve visible focus without a mouse (393ms)
+  -  249 [webkit] › tests/pillars.spec.ts:159:1 › forced colors and reduced motion retain operable controls
+  ✓  250 [webkit] › tests/pillars.spec.ts:188:1 › font download failure preserves readable reflow (382ms)
+  ✓  251 [webkit] › tests/pillars.spec.ts:204:1 › critical service eligibility limits remain visible before opening details (447ms)
+  ✓  252 [webkit] › tests/pillars.spec.ts:220:1 › text spacing preferences reflow without clipping primary controls (553ms)
+  ✓  253 [webkit] › tests/pillars.spec.ts:245:1 › progress is explicit and Back cancels an in-flight lookup (1.5s)
+  ✓  254 [webkit] › tests/pillars.spec.ts:288:1 › JavaScript failure retains the direct emergency fallback (166ms)
+  ✓  255 [webkit] › tests/recovery.spec.ts:11:1 › child pathway has a specific online alternative without adult disclosure or API (518ms)
+  ✓  256 [webkit] › tests/recovery.spec.ts:51:1 › unknown image age never implies adult eligibility and offline alternatives remain (495ms)
+  ✓  257 [webkit] › tests/recovery.spec.ts:85:1 › adult image made under18 gets the underage-image service (512ms)
+  ✓  258 [webkit] › tests/recovery.spec.ts:113:1 › discreet cover restores locally and clear removes the held page (463ms)
+  ✓  259 [webkit] › tests/recovery.spec.ts:133:1 › nearby failure has immediate specific recovery outside collapsed details (498ms)
+  ✓  260 [webkit] › tests/recovery.spec.ts:154:1 › every page has two contextual visual cues without serious axe violations (6.7s)
+  ✓  261 [webkit] › tests/recovery.spec.ts:186:1 › recipient draft is local, previewed exactly and never becomes delivery (668ms)
+  ✓  262 [webkit] › tests/recovery.spec.ts:240:1 › live-location companion requires separate consent and explains stop/last location (472ms)
+  ✓  263 [webkit] › tests/recovery.spec.ts:262:1 › edited recipient revokes the old draft approval (457ms)
+  ✓  264 [webkit] › tests/recovery.spec.ts:281:1 › unresponsive provider reaches a bounded recovery state (444ms)
+  ✓  265 [webkit] › tests/recovery.spec.ts:303:1 › guide choices move keyboard focus to the next question (503ms)
+  ✓  266 [webkit] › tests/recovery.spec.ts:318:1 › cover invalidates a late device location suggestion (558ms)
+  ✓  267 [webkit] › tests/travel.spec.ts:87:1 › travel starts without outside requests, location prompts or provider calls (385ms)
+  ✓  268 [webkit] › tests/travel.spec.ts:110:1 › real map library loads only after consent and revocation removes it (848ms)
+  ✓  269 [webkit] › tests/travel.spec.ts:127:1 › places to selected source to walking and driving route works without claiming availability (639ms)
+  ✓  270 [webkit] › tests/travel.spec.ts:159:1 › empty records and provider failure have different states and clear old results (553ms)
+  ✓  271 [webkit] › tests/travel.spec.ts:186:1 › city search is submitted explicitly and changing city discards old results (783ms)
+  ✓  272 [webkit] › tests/travel.spec.ts:214:1 › weather and daylight show dated values and never a crime score (1.3s)
+  ✓  273 [webkit] › tests/travel.spec.ts:240:1 › public trip export and neutral check-in preview do not expose coordinates or claim sending (1.1s)
+  ✓  274 [webkit] › tests/travel.spec.ts:263:1 › page check-in handles elapsed time and cancels without notifying anyone (1.0s)
+  ✓  275 [webkit] › tests/travel.spec.ts:286:1 › GPS stays local and resolves only to a supported city after user gesture (734ms)
+  ✓  276 [webkit] › tests/travel.spec.ts:313:1 › late API result cannot return after clear session (823ms)
+  ✓  277 [webkit] › tests/travel.spec.ts:337:1 › synthetic mode blocks live providers, GPS, share and downloads (1.1s)
+  ✓  278 [webkit] › tests/travel.spec.ts:360:1 › data lens marks missing evidence instead of drawing unsafe or safe zones (908ms)
+  ✓  279 [webkit] › tests/travel.spec.ts:371:3 › travel interactions reflow and pass axe at 320 (1.7s)
+  ✓  280 [webkit] › tests/travel.spec.ts:371:3 › travel interactions reflow and pass axe at 390 (1.5s)
+  ✓  281 [webkit] › tests/travel.spec.ts:371:3 › travel interactions reflow and pass axe at 768 (1.8s)
+  ✓  282 [webkit] › tests/travel.spec.ts:371:3 › travel interactions reflow and pass axe at 1440 (1.9s)
+  ✓  283 [webkit] › tests/travel.spec.ts:394:1 › reminder persists between travel panels and ends on clear session (1.1s)
+  ✓  284 [webkit] › tests/travel.spec.ts:416:1 › a failed tile request stays an error after the tile batch completes (976ms)
+  ✓  285 [webkit] › tests/travel.spec.ts:428:1 › a public map point can be chosen with the keyboard and routed from the city centre (1.9s)
+  ✓  286 [webkit] › tests/travel.spec.ts:459:1 › the live-map choice is visible in the first mobile viewport (290ms)
+  ✓  287 [webkit] › tests/travel.spec.ts:473:1 › map consent and revocation preserve keyboard focus (384ms)
+  ✓  288 [webkit] › tests/travel.spec.ts:488:1 › panning the map does not cancel an independent city-weather lookup (778ms)
+  ✓  289 [webkit] › tests/travel.spec.ts:525:1 › a device-city suggestion does not change a live map until explicitly accepted (950ms)
+
+  2 skipped
+  287 passed (2.6m)

@@ -1,0 +1,172 @@
+[WebServer] INFO:     Started server process [68831]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+[WebServer] (node:68856) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] INFO:     Started server process [68859]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 6 tests using 1 worker
+
+(node:68860) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/recovery.spec.ts:9:1 › child pathway has a specific online alternative without adult disclosure or API (5.5s)
+(node:68867) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [chromium] › tests/recovery.spec.ts:26:1 › unknown image age never implies adult eligibility and offline alternatives remain (30.1s)
+(node:68912) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 [chromium] › tests/recovery.spec.ts:39:1 › adult image made under18 gets the underage-image service (30.1s)
+(node:68938) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [chromium] › tests/recovery.spec.ts:50:1 › discreet cover restores locally and clear removes the held page (17.9s)
+  ✘  5 [chromium] › tests/recovery.spec.ts:62:1 › nearby failure has immediate specific recovery outside collapsed details (30.1s)
+(node:69498) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  6 [chromium] › tests/recovery.spec.ts:72:1 › every page has two contextual visual cues without serious axe violations (3.2s)
+
+
+  1) [chromium] › tests/recovery.spec.ts:9:1 › child pathway has a specific online alternative without adult disclosure or API 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByText('We could not identify a specific pathway.')
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByText('We could not identify a specific pathway.') with timeout 5000ms
+      - waiting for getByText('We could not identify a specific pathway.')
+        14 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      12 |   await minor(page);
+      13 |   await expect(page.getByRole('heading',{name:'Child Helpline',exact:true})).toBeVisible();
+    > 14 |   await expect(page.getByText('We could not identify a specific pathway.')).toHaveCount(0);
+         |                                                                             ^
+      15 |   await page.getByRole('button',{name:'Online abuse or images',exact:true}).click();
+      16 |   await page.getByRole('button',{name:'Intimate images or threats to share',exact:true}).click();
+      17 |   await expect(page.getByRole('button',{name:'Preview Take It Down',exact:true})).toBeVisible();
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:14:77
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-child-pathway-has-6785b-out-adult-disclosure-or-API-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-child-pathway-has-6785b-out-adult-disclosure-or-API-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-child-pathway-has-6785b-out-adult-disclosure-or-API-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-child-pathway-has-6785b-out-adult-disclosure-or-API-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests/recovery.spec.ts:26:1 › unknown image age never implies adult eligibility and offline alternatives remain 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Intimate images or threats to share', exact: true })
+
+
+      30 |   await page.getByRole('button',{name:'Prefer not to say',exact:true}).click();
+      31 |   await page.getByRole('button',{name:'Online or digital concerns',exact:true}).click();
+    > 32 |   await page.getByRole('button',{name:'Intimate images or threats to share',exact:true}).click();
+         |                                                                                          ^
+      33 |   await page.getByRole('button',{name:'Not sure / prefer not to say',exact:true}).click();
+      34 |   await expect(page.locator('.support-guide')).toContainText('Eligibility is not established');
+      35 |   await expect(page.getByRole('button',{name:'Preview StopNCII',exact:true})).toHaveCount(0);
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:32:90
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-unknown-image-age-5dc85-offline-alternatives-remain-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-unknown-image-age-5dc85-offline-alternatives-remain-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-unknown-image-age-5dc85-offline-alternatives-remain-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-unknown-image-age-5dc85-offline-alternatives-remain-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests/recovery.spec.ts:39:1 › adult image made under18 gets the underage-image service 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Intimate images or threats to share', exact: true })
+
+
+      42 |   await page.getByRole('button',{name:'18 or older',exact:true}).click();
+      43 |   await page.getByRole('button',{name:'Online or digital concerns',exact:true}).click();
+    > 44 |   await page.getByRole('button',{name:'Intimate images or threats to share',exact:true}).click();
+         |                                                                                          ^
+      45 |   await page.getByRole('button',{name:'Under 18 when it was made',exact:true}).click();
+      46 |   await expect(page.getByRole('button',{name:'Preview Take It Down',exact:true})).toBeVisible();
+      47 |   await expect(page.getByRole('button',{name:'Preview StopNCII',exact:true})).toHaveCount(0);
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:44:90
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-adult-image-made--3f0c0--the-underage-image-service-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-adult-image-made--3f0c0--the-underage-image-service-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-adult-image-made--3f0c0--the-underage-image-service-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-adult-image-made--3f0c0--the-underage-image-service-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › tests/recovery.spec.ts:62:1 › nearby failure has immediate specific recovery outside collapsed details 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Preview alternative map search', exact: true })
+
+
+      65 |   await page.getByRole('button',{name:'Search this area',exact:true}).click();
+      66 |   await expect(page.getByRole('alert')).toContainText('unavailable');
+    > 67 |   await page.getByRole('button',{name:'Preview alternative map search',exact:true}).click();
+         |                                                                                     ^
+      68 |   await expect(page.getByRole('dialog')).toContainText('google.com');
+      69 |   await expect(page.getByRole('dialog')).toContainText('Mumbai');
+      70 | });
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:67:85
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-nearby-failure-ha-73c6c-y-outside-collapsed-details-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-nearby-failure-ha-73c6c-y-outside-collapsed-details-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-nearby-failure-ha-73c6c-y-outside-collapsed-details-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-nearby-failure-ha-73c6c-y-outside-collapsed-details-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    [chromium] › tests/recovery.spec.ts:9:1 › child pathway has a specific online alternative without adult disclosure or API 
+    [chromium] › tests/recovery.spec.ts:26:1 › unknown image age never implies adult eligibility and offline alternatives remain 
+    [chromium] › tests/recovery.spec.ts:39:1 › adult image made under18 gets the underage-image service 
+    [chromium] › tests/recovery.spec.ts:62:1 › nearby failure has immediate specific recovery outside collapsed details 
+  2 passed (2.0m)

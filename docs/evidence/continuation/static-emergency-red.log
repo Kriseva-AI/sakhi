@@ -1,0 +1,56 @@
+[WebServer] INFO:     Started server process [95279]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+[WebServer] (node:95302) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] INFO:     Started server process [95341]
+[WebServer] INFO:     Waiting for application startup.
+[WebServer] INFO:     Application startup complete.
+[WebServer] INFO:     Uvicorn running on http://127.0.0.1:8767 (Press CTRL+C to quit)
+
+Running 1 test using 1 worker
+
+(node:95486) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › tests/recovery.spec.ts:397:1 › emergency access survives a blocked application bundle with JavaScript enabled (5.1s)
+
+
+  1) [chromium] › tests/recovery.spec.ts:397:1 › emergency access survives a blocked application bundle with JavaScript enabled 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: getByRole('link', { name: 'Call 112', exact: true })
+    Expected: "tel:112"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" getByRole('link', { name: 'Call 112', exact: true }) with timeout 5000ms
+      - waiting for getByRole('link', { name: 'Call 112', exact: true })
+
+
+      398 |   await page.route('**/src/main.tsx',route=>route.abort());
+      399 |   await page.goto('/en-IN/');
+    > 400 |   await expect(page.getByRole('link',{name:'Call 112',exact:true})).toHaveAttribute('href','tel:112');
+          |                                                                     ^
+      401 | });
+      402 |
+        at /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/tests/recovery.spec.ts:400:69
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/recovery-emergency-access--ca73e-dle-with-JavaScript-enabled-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/recovery-emergency-access--ca73e-dle-with-JavaScript-enabled-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/recovery-emergency-access--ca73e-dle-with-JavaScript-enabled-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/recovery-emergency-access--ca73e-dle-with-JavaScript-enabled-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/recovery.spec.ts:397:1 › emergency access survives a blocked application bundle with JavaScript enabled 

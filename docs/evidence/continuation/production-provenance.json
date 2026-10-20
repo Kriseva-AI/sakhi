@@ -1,0 +1,267 @@
+{
+  "observed_at_utc": "2026-10-20T08:24:59.725167+00:00",
+  "origin": "http://127.0.0.1:8787",
+  "implementation_commit": "f1fcdfb0ec482f74cd6f8cd6e4dfa15f8e782c8d",
+  "manifest_version": "ff97a038f9b4f3d1",
+  "asset_count": 41,
+  "all_match": true,
+  "health": {
+    "status": "ok",
+    "mode": "functional_local",
+    "semantic_search": "disabled",
+    "engine": "sqlite_fts5_bm25",
+    "external_actions": false,
+    "external_data_lookups": "user_requested_public_travel",
+    "device_position": "browser_only_city_suggestion_and_optional_foreground_view",
+    "position_sharing": "separate_user_approved_recipient_handoff_only",
+    "storage": "public_index_in_memory"
+  },
+  "assets": [
+    {
+      "path": "/index.html",
+      "status": 200,
+      "sha256": "8ac8f5e3095c18a4b22d8f19b3ed21c287edb3ca8ba40244a1f078cc9465afef",
+      "matches": true
+    },
+    {
+      "path": "/icon.svg",
+      "status": 200,
+      "sha256": "edeb3dfb13e8da9ea15e6f7d269fabef92b78a934296153ac7f4bb5ae4a12b37",
+      "matches": true
+    },
+    {
+      "path": "/manifest.webmanifest",
+      "status": 200,
+      "sha256": "c3936f8ea6aae42581c059172bb66f59b55e90a38b7c3da56f451ab5b4b2462b",
+      "matches": true
+    },
+    {
+      "path": "/resource-pack.json",
+      "status": 200,
+      "sha256": "5c41834d2c45d4858bb7b34420f6d229064fabea5ad2723279abd7adc9d9bc69",
+      "matches": true
+    },
+    {
+      "path": "/resource-pack.sha256",
+      "status": 200,
+      "sha256": "48a3408c6b7964e47b282ac86128b79513a80d220ebf9cc4e8a141cc408c3d12",
+      "matches": true
+    },
+    {
+      "path": "/assets/LiveMap-Ca6OZM2J.js",
+      "status": 200,
+      "sha256": "16f005880b690545f0d8e3a0b16e3ec0591a2fb2d388d89672f6d91b6c9ed5af",
+      "matches": true
+    },
+    {
+      "path": "/assets/index-Ck1-LMSW.js",
+      "status": 200,
+      "sha256": "100e9f776a4f92eae55f3425489961242a8bf76f43be58c18a9fce9e04feb092",
+      "matches": true
+    },
+    {
+      "path": "/assets/LiveMap-CIGW-MKW.css",
+      "status": 200,
+      "sha256": "fcd9fbeec3e87013f776847f0e76395d4d7eba07d982964933a41bd07503e6fe",
+      "matches": true
+    },
+    {
+      "path": "/assets/index-CWcvpoY5.css",
+      "status": 200,
+      "sha256": "844e2565d699cef4eff6341c00745511ee7d1517ad0963591b26bbb099c8927c",
+      "matches": true
+    },
+    {
+      "path": "/fonts/OFL-Manrope.txt",
+      "status": 200,
+      "sha256": "d826ab6583b12c26807d8716a545bdbbb672df04f48608a364ba9efdbe501c30",
+      "matches": true
+    },
+    {
+      "path": "/fonts/OFL-IBM-Plex.txt",
+      "status": 200,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "matches": true
+    },
+    {
+      "path": "/fonts/instrument-serif-latin-400-normal.woff2",
+      "status": 200,
+      "sha256": "5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31",
+      "matches": true
+    },
+    {
+      "path": "/fonts/OFL-Instrument-Serif.txt",
+      "status": 200,
+      "sha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521",
+      "matches": true
+    },
+    {
+      "path": "/fonts/instrument-serif-latin-400-italic.woff2",
+      "status": 200,
+      "sha256": "5a51946dfffa82972bc98745359c46761515641fda557c25116459a9f83da4a7",
+      "matches": true
+    },
+    {
+      "path": "/fonts/manrope-latin-wght-normal.woff2",
+      "status": 200,
+      "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+      "matches": true
+    },
+    {
+      "path": "/fonts/ibm-plex-sans-latin-600-normal.woff2",
+      "status": 200,
+      "sha256": "8960851d691c054ed38e259bdcf1a6190d157b4203ed5bb32c632a863fb8ec2f",
+      "matches": true
+    },
+    {
+      "path": "/fonts/ibm-plex-mono-latin-400-normal.woff2",
+      "status": 200,
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+      "matches": true
+    },
+    {
+      "path": "/fonts/ibm-plex-sans-latin-500-normal.woff2",
+      "status": 200,
+      "sha256": "0717336fb31fcdcde4b8deb3675bb4a0f7f6d484864afcd6751ac29975962203",
+      "matches": true
+    },
+    {
+      "path": "/fonts/ibm-plex-sans-latin-400-normal.woff2",
+      "status": 200,
+      "sha256": "3b646991d30055a93a4ecc499713d4347953a74a947ecab435ab72070cbdab0e",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/manifest.json",
+      "status": 200,
+      "sha256": "0a2df0d366d12efa6c87dad7cdecea64a9be171a04fcea69f94a472c10d3e344",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-telugu/OFL.txt",
+      "status": 200,
+      "sha256": "eacb6e3b470b5894f81fa7091663983068a391ad1741f868e70b131051ad48ea",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-telugu/noto-sans-telugu-telugu-400-normal.woff2",
+      "status": 200,
+      "sha256": "98b86e85da4f346bad6585b1e8b695696e38d002ed0e874da26c762f488f3d57",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-oriya/OFL.txt",
+      "status": 200,
+      "sha256": "939d6db1ffc18f9c6bfd51e7dd660772cd1244a2e96a183b8f1eec72cedb05a8",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-oriya/noto-sans-oriya-oriya-400-normal.woff2",
+      "status": 200,
+      "sha256": "7a8423c635edff22719ec5ec3e49cb2e9dfa048011b1b1f7b2295b15beac57b9",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-bengali/noto-sans-bengali-bengali-400-normal.woff2",
+      "status": 200,
+      "sha256": "adb805ae2eb639cc5d7276ee0e3798a8092fbfe02a6e5a0e19d82587680b528c",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-bengali/OFL.txt",
+      "status": 200,
+      "sha256": "c0d17a4a6f928d78749dbebfa9d2953b6086c2a1f64cdd1e450cc77fb8199b32",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-tamil/OFL.txt",
+      "status": 200,
+      "sha256": "8127ad10afbdf273676361de0b3a486e1c30ac5711458309b2cbb51a4a7ea8cb",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-tamil/noto-sans-tamil-tamil-400-normal.woff2",
+      "status": 200,
+      "sha256": "6b240e875a16a2e0c1c918f9927531c3bf27874768bdaef9f204da88270275c8",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-gurmukhi/OFL.txt",
+      "status": 200,
+      "sha256": "f8712907be9e05ad0461ea8af2417851ffc0da41c40ec623052883ea84c4a2c9",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-gurmukhi/noto-sans-gurmukhi-gurmukhi-400-normal.woff2",
+      "status": 200,
+      "sha256": "a66c5f026e9dec312d62e65328b0522efd0235e10f1b36a72e5b803f459f56d2",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-devanagari/OFL.txt",
+      "status": 200,
+      "sha256": "79c44862256af9a67fc23df7c45ae289e730c7f6d4f8fb8ef593bd3c314b6d6d",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-devanagari/noto-sans-devanagari-devanagari-400-normal.woff2",
+      "status": 200,
+      "sha256": "f86f14cbd1004f5795689ee9cc70d5d87d915f5135b30283525c1c7b8f0eb192",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-naskh-arabic/OFL.txt",
+      "status": 200,
+      "sha256": "91053c23e8a0fe5fc9b5fdbe5ff74ceffd66f6f996c123f1a6ca4c23487c1fff",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-naskh-arabic/noto-naskh-arabic-arabic-400-normal.woff2",
+      "status": 200,
+      "sha256": "9cc2d2e90f7b51904468558b4ed529de8a8206497c8edb5e33122bd077e0158c",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-kannada/noto-sans-kannada-kannada-400-normal.woff2",
+      "status": 200,
+      "sha256": "34bf66abc80e683d140f2109f703a546662f932a285ee4ef69cf4462e6df34dd",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-kannada/OFL.txt",
+      "status": 200,
+      "sha256": "9c599f3447330d7339871ffeb177d9f4c87a5bf4ead932b8705ae055990adf96",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-malayalam/noto-sans-malayalam-malayalam-400-normal.woff2",
+      "status": 200,
+      "sha256": "4b0f383b9ebf2e7ecc82a06dc5e40efec4bd6d7a4f1a090652028ab856412dfe",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-malayalam/OFL.txt",
+      "status": 200,
+      "sha256": "29b7a0d250007948e23d1d2c734fdcf0bf6c3e278c98d6ad2c7c6bb9fedbd11c",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-gujarati/noto-sans-gujarati-gujarati-400-normal.woff2",
+      "status": 200,
+      "sha256": "6490241c73f384a2462c13ce37381aa836c59a3e5b303d21a39eb52ed4d9a1d7",
+      "matches": true
+    },
+    {
+      "path": "/fonts/indic/noto-sans-gujarati/OFL.txt",
+      "status": 200,
+      "sha256": "b31f1c1cece80ac67ece3e29678436faead9924b08674cd17e4447b2d64e2a00",
+      "matches": true
+    },
+    {
+      "path": "/licenses/Leaflet-BSD-2-Clause.txt",
+      "status": 200,
+      "sha256": "bbc959aaef7488b38942e7f05cfd1244351f8bce54261951ea17dd7cf60f894b",
+      "matches": true
+    }
+  ]
+}

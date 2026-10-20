@@ -1,0 +1,25 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______ test_navigation_budget_never_blocks_emergency_or_child_fallback ________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10bf6cc30>
+
+    def test_navigation_budget_never_blocks_emergency_or_child_fallback(monkeypatch):
+        import services.api.main as module
+    
+        monkeypatch.setattr(module, "navigation_budget", lambda: False, raising=False)
+        limited = navigate(category="cyber")
+>       assert limited.status_code == 429
+E       assert 200 == 429
+E        +  where 200 = <Response [200 OK]>.status_code
+
+tests/test_api.py:81: AssertionError
+=============================== warnings summary ===============================
+.venv/lib/python3.13/site-packages/fastapi/testclient.py:1
+  /Users/aloo/KRISEVA_AI/01_PRODUCTS/sakhi/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_api.py::test_navigation_budget_never_blocks_emergency_or_child_fallback
+1 failed, 12 deselected, 1 warning in 0.12s
