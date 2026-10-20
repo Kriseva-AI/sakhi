@@ -72,7 +72,8 @@ def health():
         "engine": "sqlite_fts5_bm25",
         "external_actions": False,
         "external_data_lookups": "user_requested_public_travel",
-        "device_position": "local_city_suggestion_only",
+        "device_position": "browser_only_city_suggestion_and_optional_foreground_view",
+        "position_sharing": "separate_user_approved_recipient_handoff_only",
         "storage": "public_index_in_memory",
     }
 

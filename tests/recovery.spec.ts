@@ -346,3 +346,60 @@ test("cover invalidates a late device location suggestion", async ({
     page.getByRole("button", { name: "Use Delhi", exact: true }),
   ).toHaveCount(0);
 });
+
+test("discreet cover remains reachable inside an outbound modal", async ({
+  page,
+}) => {
+  await page.goto("/en-IN/resources");
+  await page
+    .getByRole("button", { name: "Open official website" })
+    .first()
+    .click();
+  await page
+    .getByRole("dialog")
+    .getByRole("button", { name: "Hide page", exact: true })
+    .click();
+  await expect(
+    page.getByRole("heading", { name: "Notes", exact: true }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "Return to page", exact: true })
+    .click();
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+});
+
+test("removing a saved language choice does not restore it on reload", async ({
+  page,
+}) => {
+  await page.goto("/en-IN/trust");
+  await page.getByLabel("Language", { exact: true }).selectOption("hi-IN");
+  expect(await page.evaluate(() => localStorage.getItem("sakhi.locale"))).toBe(
+    "hi-IN",
+  );
+  await page
+    .getByText("Storage controls and public corrections", { exact: true })
+    .click();
+  await page
+    .getByRole("button", {
+      name: "Remove saved language preference",
+      exact: true,
+    })
+    .click();
+  expect(
+    await page.evaluate(() => localStorage.getItem("sakhi.locale")),
+  ).toBeNull();
+  await page.reload();
+  expect(
+    await page.evaluate(() => localStorage.getItem("sakhi.locale")),
+  ).toBeNull();
+});
+
+test("emergency access survives a blocked application bundle with JavaScript enabled", async ({
+  page,
+}) => {
+  await page.route("**/src/main.tsx", (route) => route.abort());
+  await page.goto("/en-IN/");
+  await expect(
+    page.getByRole("link", { name: "Call 112", exact: true }),
+  ).toHaveAttribute("href", "tel:112");
+});

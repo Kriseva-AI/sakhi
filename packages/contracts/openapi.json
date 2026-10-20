@@ -6,6 +6,162 @@
     "version": "0.1.0"
   },
   "paths": {
+    "/api/explore/cities": {
+      "post": {
+        "tags": [
+          "Opt-in public travel preview"
+        ],
+        "summary": "Cities",
+        "operationId": "cities_api_explore_cities_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CityRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/explore/places": {
+      "post": {
+        "tags": [
+          "Opt-in public travel preview"
+        ],
+        "summary": "Places",
+        "operationId": "places_api_explore_places_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlaceRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/explore/weather": {
+      "post": {
+        "tags": [
+          "Opt-in public travel preview"
+        ],
+        "summary": "Weather",
+        "operationId": "weather_api_explore_weather_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Point"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/explore/route": {
+      "post": {
+        "tags": [
+          "Opt-in public travel preview"
+        ],
+        "summary": "Route",
+        "operationId": "route_api_explore_route_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RouteRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/health": {
       "get": {
         "summary": "Health",
@@ -24,8 +180,8 @@
     },
     "/api/navigate": {
       "post": {
-        "summary": "Navigate",
-        "operationId": "navigate_api_navigate_post",
+        "summary": "Navigate Http",
+        "operationId": "navigate_http_api_navigate_post",
         "requestBody": {
           "content": {
             "application/json": {
@@ -79,6 +235,22 @@
   },
   "components": {
     "schemas": {
+      "CityRequest": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 40,
+            "minLength": 2,
+            "title": "Name"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "CityRequest"
+      },
       "HTTPValidationError": {
         "properties": {
           "detail": {
@@ -243,6 +415,63 @@
         ],
         "title": "NavigateResponse"
       },
+      "PlaceRequest": {
+        "properties": {
+          "lat": {
+            "type": "number",
+            "maximum": 37.5,
+            "minimum": 6.0,
+            "title": "Lat"
+          },
+          "lon": {
+            "type": "number",
+            "maximum": 98.0,
+            "minimum": 68.0,
+            "title": "Lon"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "police",
+              "hospital",
+              "pharmacy",
+              "transport"
+            ],
+            "title": "Kind"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "lat",
+          "lon",
+          "kind"
+        ],
+        "title": "PlaceRequest"
+      },
+      "Point": {
+        "properties": {
+          "lat": {
+            "type": "number",
+            "maximum": 37.5,
+            "minimum": 6.0,
+            "title": "Lat"
+          },
+          "lon": {
+            "type": "number",
+            "maximum": 98.0,
+            "minimum": 68.0,
+            "title": "Lon"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "lat",
+          "lon"
+        ],
+        "title": "Point"
+      },
       "Resource": {
         "properties": {
           "id": {
@@ -355,6 +584,32 @@
           "limitations"
         ],
         "title": "Resource"
+      },
+      "RouteRequest": {
+        "properties": {
+          "start": {
+            "$ref": "#/components/schemas/Point"
+          },
+          "end": {
+            "$ref": "#/components/schemas/Point"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "foot",
+              "car"
+            ],
+            "title": "Mode"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "start",
+          "end",
+          "mode"
+        ],
+        "title": "RouteRequest"
       },
       "ValidationError": {
         "properties": {

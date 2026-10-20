@@ -292,7 +292,7 @@ test("JavaScript failure retains the direct emergency fallback", async ({
   const page = await context.newPage();
   await page.goto("http://127.0.0.1:5173/en-IN/");
   await expect(
-    page.getByRole("link", { name: "call 112", exact: true }),
+    page.getByRole("link", { name: "Call 112", exact: true }),
   ).toHaveAttribute("href", "tel:112");
   await expect(
     page.getByRole("heading", { name: "Sakhi public support navigator" }),

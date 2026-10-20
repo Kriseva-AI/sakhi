@@ -306,9 +306,7 @@ test("GPS stays local and resolves only to a supported city after user gesture",
     page.getByRole("status").filter({ hasText: "Suggested city: Mumbai" }),
   ).toBeVisible();
   expect(requests).toEqual([]);
-  expect(await page.evaluate(() => Object.keys(localStorage))).toEqual([
-    "sakhi.locale",
-  ]);
+  expect(await page.evaluate(() => Object.keys(localStorage))).toEqual([]);
 });
 test("late API result cannot return after clear session", async ({ page }) => {
   let finish: (() => void) | undefined;

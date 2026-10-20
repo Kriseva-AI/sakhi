@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { flushSync } from "react-dom";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -70,7 +71,7 @@ export function App() {
   const [comfortable, setComfortable] = useState(false);
   const [session, setSession] = useState(0);
   const [covered, setCovered] = useState(false);
-  const rememberLocale = useRef(true);
+  const rememberLocale = useRef(false);
   const coverTrigger = useRef<HTMLElement | null>(null);
   const pendingRequest = useRef<AbortController | null>(null);
   const requestGeneration = useRef(0);
@@ -224,6 +225,21 @@ export function App() {
     setNotice(t("cleared"));
     go("home", true);
   }
+  function coverPage(trigger: HTMLElement | null = lastInteraction.current) {
+    coverTrigger.current = trigger;
+    invalidateRequest();
+    setDestination(null);
+    window.dispatchEvent(new Event("sakhi:cover"));
+    setCovered(true);
+  }
+  function quickExit() {
+    flushSync(() => {
+      clearSession();
+      setCovered(true);
+    });
+    document.title = "Notes";
+    window.location.replace("https://www.google.com/");
+  }
   const safeT = (key: string) => getCatalog("en-IN").messages[key] || key;
   const compactEntry =
     page === "home" || page === "finder" || page === "nearby";
@@ -257,9 +273,9 @@ export function App() {
           </button>
           <button
             className="text-button"
+            disabled={demo}
             onClick={() => {
-              clearSession();
-              window.location.replace("https://www.google.com/");
+              quickExit();
             }}
           >
             Quick exit to Google
@@ -325,11 +341,7 @@ export function App() {
               aria-label="Hide page"
               title="Cover this page. History and monitoring traces remain."
               onClick={(event) => {
-                coverTrigger.current = event.currentTarget;
-                invalidateRequest();
-                setDestination(null);
-                window.dispatchEvent(new Event("sakhi:cover"));
-                setCovered(true);
+                coverPage(event.currentTarget);
               }}
             >
               <EyeOff size={18} />
@@ -647,6 +659,8 @@ export function App() {
         )}
         {destination && (
           <OutboundModal
+            hide={() => coverPage()}
+            exit={demo ? undefined : quickExit}
             returnFocus={lastInteraction.current}
             destination={destination}
             demo={demo}

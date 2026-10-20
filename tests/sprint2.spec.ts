@@ -113,9 +113,7 @@ test("data boundary and reading comfort are visible and ephemeral", async ({
   ).toBeVisible();
   await page.getByRole("button", { name: "Larger text", exact: true }).click();
   await expect(page.locator(".app")).toHaveClass(/comfortable/);
-  expect(await page.evaluate(() => Object.keys(localStorage))).toEqual([
-    "sakhi.locale",
-  ]);
+  expect(await page.evaluate(() => Object.keys(localStorage))).toEqual([]);
 });
 test("community proposal is local and never submits a case", async ({
   page,
@@ -262,9 +260,7 @@ test("clear session discards contribution and coarse map choices", async ({
     .click();
   await page.getByRole("link", { name: "Public places", exact: true }).click();
   await expect(page.getByLabel("Choose a city or district")).toHaveValue("");
-  expect(await page.evaluate(() => Object.keys(localStorage))).toEqual([
-    "sakhi.locale",
-  ]);
+  expect(await page.evaluate(() => Object.keys(localStorage))).toEqual([]);
 });
 test("fictional examples cannot use new downloads or external handoffs", async ({
   page,

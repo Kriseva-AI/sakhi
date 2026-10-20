@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight, MessageCircle, MapPin } from "lucide-react";
 import type { Destination } from "../Modal";
 import { LocalPosition, type PositionSnapshot } from "./LocalPosition";
@@ -27,6 +27,13 @@ export function LovedOneUpdate({
     [live, setLive] = useState(false);
   const [position, setPosition] = useState<PositionSnapshot | null>(null);
   const [locationSession, setLocationSession] = useState(0);
+  const approvalVersion = useRef(0);
+  useEffect(
+    () => () => {
+      approvalVersion.current++;
+    },
+    [],
+  );
   const positionText = position
     ? `\nOne-time position: ${position.lat.toFixed(6)}, ${position.lon.toFixed(6)}; accuracy estimate ${position.accuracy} m; recorded ${new Date(position.at).toISOString()}. https://www.openstreetmap.org/?mlat=${position.lat.toFixed(6)}&mlon=${position.lon.toFixed(6)}#map=17/${position.lat.toFixed(6)}/${position.lon.toFixed(6)} This is not a live tracking link.`
     : "";
@@ -35,6 +42,7 @@ export function LovedOneUpdate({
     if (!position) return;
     const timer = setTimeout(
       () => {
+        approvalVersion.current++;
         setPosition(null);
         setConsent(false);
         setError(
@@ -46,6 +54,7 @@ export function LovedOneUpdate({
     return () => clearTimeout(timer);
   }, [position]);
   const resetApproval = () => {
+    approvalVersion.current++;
     setConsent(false);
     setOpened(false);
     setSent(false);
@@ -82,7 +91,22 @@ export function LovedOneUpdate({
       return;
     }
     setError("");
+    const approvedVersion = approvalVersion.current;
+    const expiresAt = position ? position.at + 120000 : undefined;
     open({
+      sensitive: true,
+      expiresAt,
+      isValid: () =>
+        approvedVersion === approvalVersion.current &&
+        !document.hidden &&
+        (expiresAt === undefined || Date.now() < expiresAt),
+      onInvalidate: () => {
+        resetApproval();
+        setPosition(null);
+        setError(
+          "Preview approval expired or was revoked. Review this update again before opening it.",
+        );
+      },
       kind: "whatsapp",
       title: "Review your loved-one update",
       url: `https://wa.me/${phone}?text=${encodeURIComponent(exactMessage)}`,
@@ -165,6 +189,7 @@ export function LovedOneUpdate({
           setPosition(p);
         }}
         onClear={() => {
+          approvalVersion.current++;
           setPosition(null);
           setConsent(false);
         }}
@@ -194,6 +219,7 @@ export function LovedOneUpdate({
           type="checkbox"
           checked={consent}
           onChange={(e) => {
+            approvalVersion.current++;
             setConsent(e.target.checked);
             setError("");
           }}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { ExternalLink, ShieldCheck } from "lucide-react";
 export interface Destination {
   url: string;
@@ -7,6 +7,10 @@ export interface Destination {
   fields?: { label: string; value: string }[];
   disclosure?: string;
   onOpen?: () => void;
+  sensitive?: boolean;
+  expiresAt?: number;
+  isValid?: () => boolean;
+  onInvalidate?: () => void;
 }
 export function OutboundModal({
   destination,
@@ -14,16 +18,52 @@ export function OutboundModal({
   t,
   close,
   returnFocus,
+  hide,
+  exit,
 }: {
   destination: Destination;
   demo: boolean;
   t: (key: string) => string;
   close: () => void;
   returnFocus?: HTMLElement | null;
+  hide?: () => void;
+  exit?: () => void;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLElement | null>(returnFocus ?? null);
   const [checked, setChecked] = useState(false);
+  const valid = () => !destination.isValid || destination.isValid();
+  const invalidate = () => {
+    destination.onInvalidate?.();
+    close();
+  };
+  useEffect(() => {
+    if (!destination.sensitive) return;
+    const hidden = () => {
+      if (document.hidden) invalidate();
+    };
+    document.addEventListener("visibilitychange", hidden);
+    const timer =
+      destination.expiresAt === undefined
+        ? undefined
+        : setTimeout(
+            invalidate,
+            Math.max(0, destination.expiresAt - Date.now()),
+          );
+    return () => {
+      document.removeEventListener("visibilitychange", hidden);
+      if (timer !== undefined) clearTimeout(timer);
+    };
+  }, [destination]);
+  const activate = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (!checked || !valid()) {
+      event.preventDefault();
+      if (!valid()) invalidate();
+      return;
+    }
+    destination.onOpen?.();
+    close();
+  };
   useEffect(() => {
     const dialog = ref.current;
     if (!trigger.current)
@@ -50,6 +90,18 @@ export function OutboundModal({
       lang="en-IN"
       dir="ltr"
     >
+      <div className="modal-safety">
+        {hide && (
+          <button className="button quiet" onClick={hide}>
+            Hide page
+          </button>
+        )}
+        {exit && (
+          <button className="text-button" onClick={exit}>
+            Quick exit to Google
+          </button>
+        )}
+      </div>
       <div className="modal-icon">
         <ShieldCheck size={26} />
       </div>
@@ -95,15 +147,16 @@ export function OutboundModal({
           </label>
           <a
             className={`button primary ${!checked ? "disabled" : ""}`}
-            href={checked ? destination.url : undefined}
-            aria-disabled={!checked}
+            href={checked && valid() ? destination.url : undefined}
+            aria-disabled={!checked || !valid()}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => {
-              if (!checked) e.preventDefault();
-              else {
-                destination.onOpen?.();
-                close();
+            onClick={activate}
+            onAuxClick={activate}
+            onContextMenu={(event) => {
+              if (!valid()) {
+                event.preventDefault();
+                invalidate();
               }
             }}
           >
