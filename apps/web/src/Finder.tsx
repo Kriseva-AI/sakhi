@@ -159,11 +159,18 @@ export function Finder({
         <AACBoard
           onClose={() => setInputMode(undefined)}
           onConfirm={(choice) => {
+            submission.current++;
+            cancel();
+            setBusy(false);
+            setError("");
             setCategory(choice);
             setGoal("understand");
             setText("");
             setInputMode(undefined);
             setStep(adult ? 2 : 1);
+            requestAnimationFrame(() =>
+              heading.current?.focus({ preventScroll: true }),
+            );
           }}
         />
       )}
