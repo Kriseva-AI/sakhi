@@ -22,6 +22,13 @@ jobs:
       - run: npm ci
       - run: uv sync --frozen --group dev
       - run: npx playwright install --with-deps chromium firefox webkit
+      - name: Start synthetic audio output
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pulseaudio
+          pulseaudio --start --exit-idle-time=-1
+          pactl load-module module-null-sink sink_name=sakhi_test_output
+          pactl set-default-sink sakhi_test_output
       - run: make verify
       - run: make quality
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

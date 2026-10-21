@@ -269,6 +269,9 @@ test("Hide stops decoded audio playback, including a retained media element", as
     });
   await page.locator("audio").evaluate(async (audio) => {
     (window as any).heldAudio = audio;
+    // Decode/play without emitting test audio. CI uses a null output sink;
+    // neither this check nor the synthetic recording driver tests a real mic.
+    audio.muted = true;
     await audio.play();
   });
   expect(await page.evaluate(() => (window as any).heldAudio.paused)).toBe(
@@ -281,4 +284,47 @@ test("Hide stops decoded audio playback, including a retained media element", as
   expect(
     await page.evaluate(() => (window as any).heldAudio.getAttribute("src")),
   ).toBe(null);
+});
+
+test("a decoder failure clears the source and offers text or symbols without upload", async ({
+  page,
+}) => {
+  const posts: string[] = [];
+  page.on("request", (request) => {
+    if (["POST", "PUT"].includes(request.method())) posts.push(request.url());
+  });
+  await adultMedia(page);
+  await page
+    .getByLabel("Choose an existing audio or video file")
+    .setInputFiles({
+      name: "synthetic-silence.wav",
+      mimeType: "audio/wav",
+      buffer: wav(),
+    });
+  await expect(
+    page.getByRole("status").filter({ hasText: "Local preview ready" }),
+  ).toBeVisible();
+  const source = await page.locator("audio").getAttribute("src");
+  await page.locator("audio").evaluate((audio) => {
+    (window as any).failedAudio = audio;
+    audio.dispatchEvent(new Event("error"));
+  });
+  await expect(
+    page.getByRole("status").filter({ hasText: "Audio format could not play" }),
+  ).toBeVisible();
+  await expect(page.locator("audio")).toHaveCount(0);
+  expect(
+    await page.evaluate(() => (window as any).failedAudio.getAttribute("src")),
+  ).toBeNull();
+  expect(
+    await page.evaluate(async (url) => {
+      try {
+        await fetch(url!);
+        return false;
+      } catch {
+        return true;
+      }
+    }, source),
+  ).toBe(true);
+  expect(posts).toEqual([]);
 });

@@ -3,7 +3,7 @@
   padding-block: 18px;
 }
 .compact-entry .site-header {
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   border-bottom: 1px solid var(--line);
 }
 .brand-symbol {
