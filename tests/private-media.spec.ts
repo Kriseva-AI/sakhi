@@ -73,10 +73,20 @@ test("local file preview never uploads and Hide revokes the object URL", async (
 });
 test("declined microphone gives a useful alternative", async ({ page }) => {
   await page.addInitScript(() => {
-    Object.defineProperty(navigator.mediaDevices, "getUserMedia", {
-      value: async () => {
-        throw new DOMException("denied", "NotAllowedError");
+    // Permission policy is independent of native codec support. Linux WebKit
+    // can lack MediaRecorder; this fixture never constructs a recorder.
+    (window as any).MediaRecorder = class {
+      constructor() {
+        throw new Error("A declined request must not construct a recorder");
+      }
+    };
+    Object.defineProperty(navigator, "mediaDevices", {
+      value: {
+        getUserMedia: async () => {
+          throw new DOMException("denied", "NotAllowedError");
+        },
       },
+      configurable: true,
     });
   });
   await adultMedia(page);
@@ -94,6 +104,12 @@ test("late microphone permission after cancelling is stopped and discarded", asy
   page,
 }) => {
   await page.addInitScript(() => {
+    (window as any).MediaRecorder = class {
+      constructor() {
+        (window as any).unexpectedRecorderConstruction = true;
+        throw new Error("Cancelled permission must not construct a recorder");
+      }
+    };
     Object.defineProperty(navigator, "mediaDevices", {
       value: {
         getUserMedia: () =>
@@ -125,9 +141,41 @@ test("late microphone permission after cancelling is stopped and discarded", asy
     .poll(() => page.evaluate(() => (window as any).micStopped))
     .toBe(true);
   await expect(page.locator("audio")).toHaveCount(0);
+  expect(
+    await page.evaluate(() => (window as any).unexpectedRecorderConstruction),
+  ).toBeUndefined();
   await expect(
     page.getByRole("button", { name: "Stop recording", exact: true }),
   ).toHaveCount(0);
+});
+test("unsupported recording offers alternatives without requesting the microphone", async ({
+  page,
+}) => {
+  await page.addInitScript(() => {
+    (window as any).MediaRecorder = undefined;
+    Object.defineProperty(navigator, "mediaDevices", {
+      value: {
+        getUserMedia: async () => {
+          (window as any).unexpectedMicRequest = true;
+          throw new Error("Unsupported recording must not request permission");
+        },
+      },
+      configurable: true,
+    });
+  });
+  await adultMedia(page);
+  await page
+    .getByRole("button", { name: "Record a voice note", exact: true })
+    .click();
+  await expect(
+    page.getByRole("status").filter({ hasText: "Recording is unavailable" }),
+  ).toBeVisible();
+  await expect(
+    page.getByLabel("Choose an existing audio or video file"),
+  ).toBeVisible();
+  expect(
+    await page.evaluate(() => (window as any).unexpectedMicRequest),
+  ).toBeUndefined();
 });
 test("invalid file has a recovery path and the original filename is not exposed", async ({
   page,

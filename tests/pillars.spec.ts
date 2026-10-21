@@ -96,11 +96,25 @@ test("browser font preference at 200 percent still reflows the main journey", as
     .locator(".sprint2-intro")
     .evaluate((e) => parseFloat(getComputedStyle(e).fontSize));
   expect(after).toBeGreaterThanOrEqual(before * 1.9);
-  expect(
-    await page.evaluate(
-      () => document.documentElement.scrollWidth <= innerWidth,
-    ),
-  ).toBe(true);
+  const layout = await page.evaluate(() => ({
+    width: innerWidth,
+    scrollWidth: document.documentElement.scrollWidth,
+    overflowing: [...document.querySelectorAll<HTMLElement>("body *")]
+      .filter((element) => {
+        const box = element.getBoundingClientRect();
+        return box.width > 0 && box.right > innerWidth + 1;
+      })
+      .map((element) => ({
+        tag: element.tagName,
+        class: element.className,
+        text: element.textContent?.slice(0, 80),
+        right: element.getBoundingClientRect().right,
+        font: getComputedStyle(element).fontFamily,
+      })),
+  }));
+  expect(layout.scrollWidth, JSON.stringify(layout)).toBeLessThanOrEqual(
+    layout.width,
+  );
   await page
     .getByRole("button", { name: "Find my next step", exact: true })
     .click();
@@ -194,11 +208,25 @@ test("font download failure preserves readable reflow", async ({ page }) => {
   await expect(
     page.getByRole("button", { name: "Find my next step", exact: true }),
   ).toBeVisible();
-  expect(
-    await page.evaluate(
-      () => document.documentElement.scrollWidth <= innerWidth,
-    ),
-  ).toBe(true);
+  const layout = await page.evaluate(() => ({
+    width: innerWidth,
+    scrollWidth: document.documentElement.scrollWidth,
+    overflowing: [...document.querySelectorAll<HTMLElement>("body *")]
+      .filter((element) => {
+        const box = element.getBoundingClientRect();
+        return box.width > 0 && box.right > innerWidth + 1;
+      })
+      .map((element) => ({
+        tag: element.tagName,
+        class: element.className,
+        text: element.textContent?.slice(0, 80),
+        right: element.getBoundingClientRect().right,
+        font: getComputedStyle(element).fontFamily,
+      })),
+  }));
+  expect(layout.scrollWidth, JSON.stringify(layout)).toBeLessThanOrEqual(
+    layout.width,
+  );
 });
 
 test("critical service eligibility limits remain visible before opening details", async ({
